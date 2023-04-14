@@ -198,7 +198,6 @@
 
 
     <!--메인 하단바 커뮤니티, 지도, 설정-->
-
     <View
         android:background="#000"
         android:layout_width="match_parent"
