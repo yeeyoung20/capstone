@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CategoryMain4">
+
+    <!--맨 위 뒤로가기, 카테고리 이름, 검색창-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <ImageButton
+            android:id="@+id/back"
+            android:src="@drawable/back"
+            android:backgroundTint="#fff"
+            android:layout_marginTop="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <TextView
+            android:text="욕실용품"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="#000"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="10dp"
+        android:background="#000"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+    <!--메뉴 스크롤-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:text="치약"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="규조토 매트"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="두루마루 휴지"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="브리타 정수기 필터"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="수건"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="청소 솔"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="칫솔"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="펌프형 용기"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

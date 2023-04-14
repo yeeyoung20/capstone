@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CategoryMain5">
+
+    <!--맨 위 뒤로가기, 카테고리 이름, 검색창-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <ImageButton
+            android:id="@+id/back"
+            android:src="@drawable/back"
+            android:backgroundTint="#fff"
+            android:layout_marginTop="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <TextView
+            android:text="도서/문구"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="#000"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="10dp"
+        android:background="#000"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+    <!--메뉴 스크롤-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:text="일반 종이"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="CD, DVD"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="비디오 테이프"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="스테이플러, 심"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="자석"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="책, 노트, 잡지"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="카세트 테이프"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="커터칼"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="필기구"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
