@@ -5,6 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ChattingMain">
+    tools:context=".CommunityMain">
+
+    <!--맨 위 뒤로가기, 카테고리 이름-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <ImageButton
+            android:id="@+id/back"
+            android:src="@drawable/back"
+            android:backgroundTint="#fff"
+            android:layout_marginTop="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <TextView
+            android:text="채팅"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="#000"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!--선-->
+    <View
+        android:layout_marginTop="10dp"
+        android:background="#000"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
 
 </LinearLayout>
