@@ -19,19 +19,21 @@ class MyPage : AppCompatActivity() {
         val changepwd=findViewById<ImageView>(R.id.changepwd)
         val signout = findViewById<LinearLayout>(R.id.signout)
 
+        //테스트 하는데 오류떠서 주석처리함
+        //주석만 빼면 오케이
 
-        changeid.setOnClickListener{
-            val intent= Intent(this, ChangeId::class.java)
-            startActivity(intent)
-        }
-        changeprofile.setOnClickListener{
-            val intent= Intent(this, ChangeProfile::class.java)
-            startActivity(intent)
-        }
-        changepwd.setOnClickListener{
-            val intent= Intent(this, ChangePwd::class.java)
-            startActivity(intent)
-        }
+//        changeid.setOnClickListener{
+//            val intent= Intent(this, ChangeId::class.java)
+//            startActivity(intent)
+//        }
+//        changeprofile.setOnClickListener{
+//            val intent= Intent(this, ChangeProfile::class.java)
+//            startActivity(intent)
+//        }
+//        changepwd.setOnClickListener{
+//            val intent= Intent(this, ChangePwd::class.java)
+//            startActivity(intent)
+//        }
         val builder = AlertDialog.Builder(this)
 
 //로그아웃 버튼 눌렀을 때 다시 한 번 확인하는 다이얼로그 띄우기
