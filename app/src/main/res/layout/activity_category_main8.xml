@@ -45,6 +45,7 @@
             android:orientation="vertical" >
 
             <Button
+                android:id="@+id/eggshell"
                 android:text="달걀 껍질"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -53,6 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/nutshell"
                 android:text="견과류 껍질"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -61,6 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/chili"
                 android:text="고추"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -69,6 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/fruitpeel"
                 android:text="과일 껍질"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -77,6 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/fruitseed"
                 android:text="과일 씨"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -85,6 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/skintangerine"
                 android:text="귤 껍질"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -93,6 +99,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/animalbones"
                 android:text="동물 뼈"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -101,6 +108,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/garlic"
                 android:text="마늘"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -109,6 +117,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/skinmelon"
                 android:text="멜론 껍질"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -117,6 +126,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/bananapeel"
                 android:text="바나나 껍질"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -125,6 +135,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/applepeel"
                 android:text="사과 껍질,심,씨방"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -133,6 +144,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/skinwatermelon"
                 android:text="수박 껍질"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -141,6 +153,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/oil"
                 android:text="식용유, 기름"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -149,6 +162,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/avocadopeel"
                 android:text="아보카도 껍질,씨"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -157,6 +171,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/medicine"
                 android:text="약,영양제"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -165,6 +180,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/onion"
                 android:text="양파"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -173,6 +189,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/orangepeel"
                 android:text="오렌지 껍질"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -181,6 +198,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/corner"
                 android:text="옥수수"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -189,6 +207,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/jang"
                 android:text="장류"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -197,6 +216,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/coffeegrounds"
                 android:text="커피 찌꺼기"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -205,6 +225,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/coconutshell"
                 android:text="코코넛 껍질"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -213,6 +234,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/kiwishell"
                 android:text="키위 껍질"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -221,6 +243,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/teabag"
                 android:text="티백"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -229,6 +252,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/greenonion"
                 android:text="파"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -237,6 +261,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/pineapplepeel"
                 android:text="파인애플 껍질,줄기"
                 android:textSize="20dp"
                 android:textColor="#000"

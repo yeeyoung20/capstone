@@ -45,6 +45,7 @@
             android:orientation="vertical" >
 
             <Button
+                android:id="@+id/styrofoam"
                 android:text="스티로폼"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -53,6 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/gascontainer"
                 android:text="가스용기"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -61,6 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/packagingbag"
                 android:text="개별 포장 봉지"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -69,6 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/eggplant"
                 android:text="계란판"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -77,6 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/snackbox"
                 android:text="과자 박스"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -85,6 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/confectionerybag"
                 android:text="과자 봉지"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -93,6 +99,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/oilbottle"
                 android:text="기름병"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -101,6 +108,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/ramenbag"
                 android:text="라면 봉지"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -109,6 +117,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/sterilizationpack"
                 android:text="멸균팩"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -117,6 +126,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/box"
                 android:text="박스"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -125,6 +135,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/deliveryplasticcontainer"
                 android:text="배달 플라스틱 용기"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -133,6 +144,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/nonwovenbag"
                 android:text="부직포 가방"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -141,6 +153,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/milkpowder"
                 android:text="분유통"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -149,6 +162,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/plasticbag"
                 android:text="비닐봉투"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -157,6 +171,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/plasticpackaging"
                 android:text="비닐포장재"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -165,6 +180,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/shoppingbag"
                 android:text="쇼핑백"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -173,6 +189,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/alcoholsodabottle"
                 android:text="술,탄산음료병"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -181,6 +198,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/silicon"
                 android:text="실리콘"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -189,6 +207,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/icepack"
                 android:text="아이스팩"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -197,6 +216,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/aluminumcan"
                 android:text="알루미늄 캔"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -205,6 +225,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/aircap"
                 android:text="에어캡"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -213,6 +234,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/yogurtcontainer"
                 android:text="요거트 용기"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -221,6 +243,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/yogurtbottle"
                 android:text="요구르트 병"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -229,6 +252,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/milkpack"
                 android:text="우튜팩"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -237,6 +261,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/glassbottle"
                 android:text="유리병"
                 android:textSize="20dp"
                 android:textColor="#000"

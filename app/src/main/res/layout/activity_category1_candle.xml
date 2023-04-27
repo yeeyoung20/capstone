@@ -60,7 +60,6 @@
     <TextView
         android:text="- 유리 케이스에 들어있는 양초는 뜨거운 물에 중탕하거나 유리 안의 양초에 직접 뜨거운 물을 부어주면 유리 케이스와 양초가 쉽게 분리됩니다."
         android:layout_marginTop="20dp"
-
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_width="match_parent"

@@ -12,6 +12,7 @@ class CategoryMain1 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category_main1)
+
         val back=findViewById<ImageButton>(R.id.back)
         val wallpaper=findViewById<Button>(R.id.wallpaper)
         val led=findViewById<Button>(R.id.led)

@@ -60,7 +60,6 @@
     <TextView
         android:text="- 부피가 크거나 양이 많으신 경우에는 주민센터, 구청 등의 지자체를 통해 대형생활폐기물로 신고/배출해주세요."
         android:layout_marginTop="20dp"
-
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_width="match_parent"

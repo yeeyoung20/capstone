@@ -60,7 +60,6 @@
     <TextView
         android:text="- 부서진 의자는 수거할 때 어려움이 없도록 끈이나 테이프로 단단히 묶어서 집 밖으로 배출해주세요."
         android:layout_marginTop="20dp"
-
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_width="match_parent"
