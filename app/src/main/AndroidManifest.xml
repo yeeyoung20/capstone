@@ -12,11 +12,72 @@
         android:theme="@style/Theme.EcoProject_android"
         tools:targetApi="31">
         <activity
+            android:name=".Category1Pot"
+            android:exported="false" />
+        <activity
+            android:name=".Category1Lamp"
+            android:exported="false" />
+        <activity
+            android:name=".Category1Paintbucket"
+            android:exported="false" />
+        <activity
+            android:name=".Category1Curtain"
+            android:exported="false" />
+        <activity
+            android:name=".Category1Cattower"
+            android:exported="false" />
+        <activity
+            android:name=".Category1Bed"
+            android:exported="false" />
+        <activity
+            android:name=".Category1Bulb"
+            android:exported="false" />
+        <activity
+            android:name=".Category1Bedding"
+            android:exported="false" />
+        <activity
+            android:name=".Category1Chair"
+            android:exported="false" />
+        <activity
+            android:name=".Category1Candle"
+            android:exported="false" />
+        <activity
+            android:name=".Category1Sofa"
+            android:exported="false" />
+        <activity
+            android:name=".Category1Pillow"
+            android:exported="false" />
+        <activity
+            android:name=".Category1Cushion"
+            android:exported="false" />
+        <activity
+            android:name=".Category1Matrix"
+            android:exported="false" />
+        <activity
+            android:name=".Category1Latex"
+            android:exported="false" />
+        <activity
+            android:name=".Category1Ceramic"
+            android:exported="false" />
+        <activity
+            android:name=".Category1Tree"
+            android:exported="false" />
+        <activity
+            android:name=".Category1Mirror"
+            android:exported="false" />
+        <activity
+            android:name=".Category1Furniture"
+            android:exported="false" />
+        <activity
+            android:name=".Category1Led"
+            android:exported="false" />
+        <activity
             android:name=".ChattingMain"
             android:exported="false" />
         <activity
             android:name=".MyInfoChange"
             android:exported="false" />
+
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
             android:value="gltf29rywr" />
@@ -25,16 +86,7 @@
             android:name=".Map"
             android:exported="false" />
         <activity
-            android:name=".CategoryEx1"
-            android:exported="false" />
-        <activity
-            android:name=".ChangePwd"
-            android:exported="false" />
-        <activity
-            android:name=".ChangeProfile"
-            android:exported="false" />
-        <activity
-            android:name=".ChangeId"
+            android:name=".Category1Wallpaper"
             android:exported="false" />
         <activity
             android:name=".CommunityWrite"

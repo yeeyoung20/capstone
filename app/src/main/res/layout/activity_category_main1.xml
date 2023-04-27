@@ -54,6 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/led"
                 android:text="LED"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -62,6 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/furniture"
                 android:text="가구"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -70,6 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/mirror"
                 android:text="거울"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -78,6 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/tree"
                 android:text="나무"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -86,6 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/ceramic"
                 android:text="도자기"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -94,6 +99,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/latex"
                 android:text="라텍스"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -102,6 +108,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/matrix"
                 android:text="매트리스"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -110,6 +117,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/cushion"
                 android:text="방석"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -118,6 +126,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/pillow"
                 android:text="베개"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -126,6 +135,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/sofa"
                 android:text="소파"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -134,6 +144,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/candle"
                 android:text="양초"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -142,6 +153,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/chair"
                 android:text="의자"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -150,6 +162,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/bedding"
                 android:text="이불"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -158,6 +171,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/bulb"
                 android:text="전구(백열등)"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -166,6 +180,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/bed"
                 android:text="침대"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -174,6 +189,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/cattower"
                 android:text="캣타워"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -182,6 +198,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/curtain"
                 android:text="커튼"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -190,6 +207,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/paintbucket"
                 android:text="페인트통"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -198,6 +216,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/lamp"
                 android:text="형광등"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -206,6 +225,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/pot"
                 android:text="화분"
                 android:textSize="20dp"
                 android:textColor="#000"
