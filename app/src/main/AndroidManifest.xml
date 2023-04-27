@@ -12,6 +12,201 @@
         android:theme="@style/Theme.EcoProject_android"
         tools:targetApi="31">
         <activity
+            android:name=".Category6Cosmeticspumptype"
+            android:exported="false" />
+        <activity
+            android:name=".Category6Cosmeticstube"
+            android:exported="false" />
+        <activity
+            android:name=".Category6Cosmeticsstick"
+            android:exported="false" />
+        <activity
+            android:name=".Category6Perfume"
+            android:exported="false" />
+        <activity
+            android:name=".Category6Cosmetics"
+            android:exported="false" />
+        <activity
+            android:name=".Category5Writinginstrument"
+            android:exported="false" />
+        <activity
+            android:name=".Category5Cutterknife"
+            android:exported="false" />
+        <activity
+            android:name=".Category5Cassettetape"
+            android:exported="false" />
+        <activity
+            android:name=".Category5Book"
+            android:exported="false" />
+        <activity
+            android:name=".Category5Magnet"
+            android:exported="false" />
+        <activity
+            android:name=".Category5Stapler"
+            android:exported="false" />
+        <activity
+            android:name=".Category5Videotape"
+            android:exported="false" />
+        <activity
+            android:name=".Category5Cddvd"
+            android:exported="false" />
+        <activity
+            android:name=".Category5Paper"
+            android:exported="false" />
+        <activity
+            android:name=".Category4Pumpcontainer"
+            android:exported="false" />
+        <activity
+            android:name=".Category4Toothbrush"
+            android:exported="false" />
+        <activity
+            android:name=".Category4Cleaningbrush"
+            android:exported="false" />
+        <activity
+            android:name=".Category4Towel"
+            android:exported="false" />
+        <activity
+            android:name=".Category4Waterfilter"
+            android:exported="false" />
+        <activity
+            android:name=".Category4Toiletroll"
+            android:exported="false" />
+        <activity
+            android:name=".Category4Diatomitemat"
+            android:exported="false" />
+        <activity
+            android:name=".Category4Toothpaste"
+            android:exported="false" />
+        <activity
+            android:name=".Category3Lighter"
+            android:exported="false" />
+        <activity
+            android:name=".Category3Stringinstrument"
+            android:exported="false" />
+        <activity
+            android:name=".Category3Hotpack"
+            android:exported="false" />
+        <activity
+            android:name=".Category3Tape"
+            android:exported="false" />
+        <activity
+            android:name=".Category3Condom"
+            android:exported="false" />
+        <activity
+            android:name=".Category3Toy"
+            android:exported="false" />
+        <activity
+            android:name=".Category3Umbrella"
+            android:exported="false" />
+        <activity
+            android:name=".Category3Yogamat"
+            android:exported="false" />
+        <activity
+            android:name=".Category3Plant"
+            android:exported="false" />
+        <activity
+            android:name=".Category3Moistureremover"
+            android:exported="false" />
+        <activity
+            android:name=".Category3Sanitarypad"
+            android:exported="false" />
+        <activity
+            android:name=".Category3Wettissue"
+            android:exported="false" />
+        <activity
+            android:name=".Category3Mosquitorepellent"
+            android:exported="false" />
+        <activity
+            android:name=".Category3Mask"
+            android:exported="false" />
+        <activity
+            android:name=".Category3Racket"
+            android:exported="false" />
+        <activity
+            android:name=".Category3Ball"
+            android:exported="false" />
+        <activity
+            android:name=".Category3Golfbag"
+            android:exported="false" />
+        <activity
+            android:name=".Category3Battery"
+            android:exported="false" />
+        <activity
+            android:name=".Category3Scrapmetal"
+            android:exported="false" />
+        <activity
+            android:name=".Category2Keyboard"
+            android:exported="false" />
+        <activity
+            android:name=".Category2Harddisk"
+            android:exported="false" />
+        <activity
+            android:name=".Category2Printer"
+            android:exported="false" />
+        <activity
+            android:name=".Category2Inkcartridge"
+            android:exported="false" />
+        <activity
+            android:name=".Category2Tablet"
+            android:exported="false" />
+        <activity
+            android:name=".Category2Computer"
+            android:exported="false" />
+        <activity
+            android:name=".Category2Charger"
+            android:exported="false" />
+        <activity
+            android:name=".Category2Wire"
+            android:exported="false" />
+        <activity
+            android:name=".Category2Electricpad"
+            android:exported="false" />
+        <activity
+            android:name=".Category2Electricrazor"
+            android:exported="false" />
+        <activity
+            android:name=".Category2Earphone"
+            android:exported="false" />
+        <activity
+            android:name=".Category2Hotwatermat"
+            android:exported="false" />
+        <activity
+            android:name=".Category2Speaker"
+            android:exported="false" />
+        <activity
+            android:name=".Category2Smallheater"
+            android:exported="false" />
+        <activity
+            android:name=".Category2Washingmachine"
+            android:exported="false" />
+        <activity
+            android:name=".Category2Auxiliarybattery"
+            android:exported="false" />
+        <activity
+            android:name=".Category2Monitor"
+            android:exported="false" />
+        <activity
+            android:name=".Category2Multitap"
+            android:exported="false" />
+        <activity
+            android:name=".Category2Mouse"
+            android:exported="false" />
+        <activity
+            android:name=".Category2Laptopbattery"
+            android:exported="false" />
+        <activity
+            android:name=".Category2Laptop"
+            android:exported="false" />
+        <activity
+            android:name=".Category2Refrigerator"
+            android:exported="false" />
+        <activity
+            android:name=".Category2Filter"
+            android:exported="false" />
+        <activity
+            android:name=".Category2Tv"
+            android:exported="false" />
+        <activity
             android:name=".Category1Pot"
             android:exported="false" />
         <activity

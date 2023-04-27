@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Category2Tablet">
+
+    <!--맨 위 뒤로가기, 카테고리 이름-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <ImageButton
+            android:id="@+id/back"
+            android:src="@drawable/back"
+            android:backgroundTint="#fff"
+            android:layout_marginTop="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <TextView
+            android:text="태블릿"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="#000"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!--선-->
+    <View
+        android:layout_marginTop="10dp"
+        android:background="#000"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+    <TextView
+        android:text="버리는 방법"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--<ImageView
+        android:src="@drawable/wallpaper"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="150dp" />-->
+    <TextView
+        android:text="- 소형가전제품 전용수거함이 있는 경우에는 수거함에 상시 배출할 수 있어요."
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="- 5개 이상 소형가전 대상 품목 배출시 방문 수거 서비스 이용이 가능하답니다. '폐가전무상방문수거'서비스를 신청하여 무상으로 폐기하실 수 있어요."
+        android:layout_marginTop="20dp"
+
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="- 5개 이상 동시 배출시 수거 가능한 소형가전 품목은 다음과 같습니다. 아래에 포함되지 않는 품목도 지역에 따라 수거가 가능한 경우가 있으니 신청 전 문의를 통해 확인해보시는걸 추천드려요."
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="- [가습기, 비디오플레이어, 스캐너, 연수기, 음식물처 리기, 전기밥솥, 전기온수기, 전기히터, 청소기, 튀김기, 감시카메라(CCTV), 빔프로젝터, 식품건조기, 영상게임기, 전기재봉틀, 전기비데, 전기주전자, 제빵기, 커피메이커, 헤어드라이어, 믹서기(쥬서기), 선풍기, 약탕기, 유무선공유기, 전기다리미, 전기안마기(안마의자 제외), 전기후라이팬, 족욕기, 토스트기, 모니터, 노트북, 내비게이션, 팩시밀리, 휴대폰, 오디오 본체, 오디오 스피커, 오디오 포터블, 프린터]"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

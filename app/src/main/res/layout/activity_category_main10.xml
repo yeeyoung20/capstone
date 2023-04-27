@@ -44,6 +44,7 @@
             android:orientation="vertical" >
 
             <Button
+                android:id="@+id/hanger"
                 android:text="옷걸이"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -52,6 +53,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/bag"
                 android:text="가방"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -60,6 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/leggings"
                 android:text="레깅스"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -68,6 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/hat"
                 android:text="모자"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -76,6 +80,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/underwear"
                 android:text="속옷"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -84,6 +89,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/stockings"
                 android:text="스타킹"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -92,6 +98,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/shoes"
                 android:text="신발"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -100,6 +107,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/glasses"
                 android:text="안경,선글라스"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -108,6 +116,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/socks"
                 android:text="양말"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -116,6 +125,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/travelbag"
                 android:text="여행용 가방"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -124,6 +134,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/clothes"
                 android:text="의류"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -132,6 +143,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/wallet"
                 android:text="지갑"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -140,6 +152,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/hanbok"
                 android:text="한복"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -148,6 +161,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/jewelry"
                 android:text="주얼리"
                 android:textSize="20dp"
                 android:textColor="#000"

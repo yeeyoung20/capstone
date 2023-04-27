@@ -45,6 +45,7 @@
             android:orientation="vertical" >
 
             <Button
+                android:id="@+id/toothpaste"
                 android:text="치약"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -53,6 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/diatomitemat"
                 android:text="규조토 매트"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -61,6 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/toiletroll"
                 android:text="두루마루 휴지"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -69,6 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/waterfilter"
                 android:text="브리타 정수기 필터"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -77,6 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/towel"
                 android:text="수건"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -85,6 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/cleaningbrush"
                 android:text="청소 솔"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -93,6 +99,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/toothbrush"
                 android:text="칫솔"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -101,6 +108,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/pumpcontainer"
                 android:text="펌프형 용기"
                 android:textSize="20dp"
                 android:textColor="#000"

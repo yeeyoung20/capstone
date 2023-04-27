@@ -32,6 +32,7 @@
             android:paddingTop="40dp"
             android:paddingLeft="50dp" />
         <EditText
+            android:id="@+id/inputnickname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="25dp"
@@ -48,6 +49,7 @@
             android:paddingTop="10dp"
             android:paddingLeft="50dp" />
         <EditText
+            android:id="@+id/inputpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="25dp"
@@ -64,6 +66,7 @@
             android:paddingTop="5dp"
             android:paddingLeft="50dp" />
         <EditText
+            android:id="@+id/reinputpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="25dp"
@@ -105,6 +108,7 @@
             android:background="@drawable/signup_shadow"
             android:elevation="5dp" />
         <Button
+            android:id="@+id/signupbutton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="회원 가입!"

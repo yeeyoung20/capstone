@@ -44,6 +44,7 @@
             android:orientation="vertical" >
 
             <Button
+                android:id="@+id/cosmetics"
                 android:text="화장품"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -52,6 +53,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/perfume"
                 android:text="향수"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -60,6 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/cosmeticsstick"
                 android:text="화장품(스틱)"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -68,6 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/cosmeticstube"
                 android:text="화장품(튜브)"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -76,6 +80,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/cosmeticspumptype"
                 android:text="화장품(펌프형)"
                 android:textSize="20dp"
                 android:textColor="#000"

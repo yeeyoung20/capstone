@@ -45,6 +45,7 @@
             android:orientation="vertical" >
 
             <Button
+                android:id="@+id/receipt"
                 android:text="영수증"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -53,6 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/rubber"
                 android:text="고무"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -61,6 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/brokenglass"
                 android:text="깨진 유리"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -69,6 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/vinylother"
                 android:text="비닐류 OTHER"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -77,6 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/creditcard"
                 android:text="신용카드"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -85,6 +90,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/unacceptableplastic"
                 android:text="재활용 불가 플라스틱"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -93,6 +99,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/leaflet"
                 android:text="전단지"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -101,6 +108,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/noncombustiblegarbage"
                 android:text="타지 않는 쓰레기"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -109,6 +117,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/plasticother"
                 android:text="플라스틱 OTHER"
                 android:textSize="20dp"
                 android:textColor="#000"
@@ -117,6 +126,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:id="@+id/mixedpaper"
                 android:text="혼합종이"
                 android:textSize="20dp"
                 android:textColor="#000"
