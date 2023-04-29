@@ -90,7 +90,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         main2_4.setOnClickListener{
-            val intent= Intent(this, MyInfoChange::class.java)
+            val intent= Intent(this, MainActivityMorepage::class.java)
             startActivity(intent)
         }
 

@@ -59,7 +59,8 @@
             </androidx.cardview.widget.CardView>
         </LinearLayout>
 
-        <!--메인 카테고리별 분리배출 이미지 버튼 첫째줄-->
+
+            <!--메인 카테고리별 분리배출 이미지 버튼 첫째줄-->
         <LinearLayout
             android:gravity="center"
             android:layout_marginTop="40dp"

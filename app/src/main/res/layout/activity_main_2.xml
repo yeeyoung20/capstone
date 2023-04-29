@@ -24,9 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:orientation="horizontal"
-
-                >
+                android:orientation="horizontal" >
 
                 <TextView
                     android:id="@+id/teamname"
@@ -176,7 +174,7 @@
                         android:background="@drawable/main_category_shdow"
                         android:backgroundTint="#fff"
                         android:drawableTop="@drawable/smain1_7xml"
-                        android:text="가구/인테리어"
+                        android:text="주방용"
                         android:textColor="#000"
                         android:textSize="8dp"
                         app:layout_constraintBottom_toTopOf="@id/main1_11"
@@ -191,7 +189,7 @@
                         android:background="@drawable/main_category_shdow"
                         android:backgroundTint="#fff"
                         android:drawableTop="@drawable/smain1_8xml"
-                        android:text="가구/인테리어"
+                        android:text="식품"
                         android:textColor="#000"
                         android:textSize="8dp"
                         app:layout_constraintBottom_toTopOf="@id/view"
@@ -206,7 +204,7 @@
                         android:background="@drawable/main_category_shdow"
                         android:backgroundTint="#fff"
                         android:drawableTop="@drawable/smain1_11xml"
-                        android:text="가구/인테리어"
+                        android:text="기타"
                         android:textColor="#000"
                         android:textSize="8dp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -221,7 +219,7 @@
                         android:background="@drawable/main_category_shdow"
                         android:backgroundTint="#fff"
                         android:drawableTop="@drawable/smain1_9xml"
-                        android:text="가구/인테리어"
+                        android:text="용기/포장재"
                         android:textColor="#000"
                         android:textSize="8dp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -236,7 +234,7 @@
                         android:background="@drawable/main_category_shdow"
                         android:backgroundTint="#fff"
                         android:drawableTop="@drawable/smain1_10xml"
-                        android:text="가구/인테리어"
+                        android:text="패션/잡화"
                         android:textColor="#000"
                         android:textSize="8dp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -252,11 +250,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@id/main1_11"
                         app:layout_constraintTop_toBottomOf="@id/main1_8" />
-
-
                 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
             </LinearLayout>
 
             <LinearLayout
@@ -468,8 +462,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/smain2_4"
             app:layout_constraintTop_toTopOf="parent" />
-        "/>
-
+        />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

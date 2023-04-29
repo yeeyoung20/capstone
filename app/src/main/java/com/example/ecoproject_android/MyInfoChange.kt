@@ -32,7 +32,7 @@ class MyInfoChange : AppCompatActivity() {
         val goback = findViewById<Button>(R.id.goback)
 
         goback.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, MainActivityMorepage::class.java)
             startActivity(intent)
         }
 
