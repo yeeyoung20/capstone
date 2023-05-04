@@ -41,6 +41,94 @@ class CategoryMain7 : AppCompatActivity() {
             val intent= Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
-
+        //버튼 누르면 분리배출 방법 안내 예시
+        fryingpan.setOnClickListener{
+            val intent= Intent(this, Category7Fryingpan::class.java)
+            startActivity(intent)
+        }
+        scissors.setOnClickListener{
+            val intent= Intent(this, Category7Scissors::class.java)
+            startActivity(intent)
+        }
+        rubberband.setOnClickListener{
+            val intent= Intent(this, Category7Rubberband::class.java)
+            startActivity(intent)
+        }
+        rubberglove.setOnClickListener{
+            val intent= Intent(this, Category7Rubberglove::class.java)
+            startActivity(intent)
+        }
+        bowl.setOnClickListener{
+            val intent= Intent(this, Category7Bowl::class.java)
+            startActivity(intent)
+        }
+        woodenchopsticks.setOnClickListener{
+            val intent= Intent(this, Category7Woodenchopsticks::class.java)
+            startActivity(intent)
+        }
+        skillet.setOnClickListener{
+            val intent= Intent(this, Category7Skillet::class.java)
+            startActivity(intent)
+        }
+        cuttingboard.setOnClickListener{
+            val intent= Intent(this, Category7Cuttingboard::class.java)
+            startActivity(intent)
+        }
+        coldbag.setOnClickListener{
+            val intent= Intent(this, Category7Coldbag::class.java)
+            startActivity(intent)
+        }
+        plasticwrap.setOnClickListener{
+            val intent= Intent(this, Category7Plasticwrap::class.java)
+            startActivity(intent)
+        }
+        straw.setOnClickListener{
+            val intent= Intent(this, Category7Straw::class.java)
+            startActivity(intent)
+        }
+        breadclip.setOnClickListener{
+            val intent= Intent(this, Category7Breadclip::class.java)
+            startActivity(intent)
+        }
+        grill.setOnClickListener{
+            val intent= Intent(this, Category7Grill::class.java)
+            startActivity(intent)
+        }
+        utensils.setOnClickListener{
+            val intent= Intent(this, Category7Utensils::class.java)
+            startActivity(intent)
+        }
+        kitchenknife.setOnClickListener{
+            val intent= Intent(this, Category7Kitchenknife::class.java)
+            startActivity(intent)
+        }
+        cookware.setOnClickListener{
+            val intent= Intent(this, Category7Cookware::class.java)
+            startActivity(intent)
+        }
+        cup.setOnClickListener{
+            val intent= Intent(this, Category7Cup::class.java)
+            startActivity(intent)
+        }
+        cookingfoil.setOnClickListener{
+            val intent= Intent(this, Category7Cookingfoil::class.java)
+            startActivity(intent)
+        }
+        tissue.setOnClickListener{
+            val intent= Intent(this, Category7Tissue::class.java)
+            startActivity(intent)
+        }
+        jar.setOnClickListener{
+            val intent= Intent(this, Category7Jar::class.java)
+            startActivity(intent)
+        }
+        butanegas.setOnClickListener{
+            val intent= Intent(this, Category7Butanegas::class.java)
+            startActivity(intent)
+        }
+        onionnet.setOnClickListener{
+            val intent= Intent(this, Category7Onionnet::class.java)
+            startActivity(intent)
+        }
     }
 }

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".MainActivityMorePage2"
     android:orientation="vertical"
     android:background="#E6F2EC">
 
@@ -216,9 +217,6 @@
                     android:background="@drawable/more_button_bg"
                     android:drawableEnd="@drawable/doublearrowxml"
                     />
-
-
-
             </LinearLayout>
 
 
@@ -238,14 +236,8 @@
                     android:text="로그인하기"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-
         </LinearLayout>
 
-
     </ScrollView>
-
-
-
 
 </LinearLayout>

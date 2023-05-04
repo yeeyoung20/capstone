@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
@@ -30,7 +29,7 @@ class CommunityMain : AppCompatActivity() {
         write_button.setOnClickListener {
 
             //로그인 돼있으면 글쓰기 화면으로 전환
-//            if(){
+//            if(==true){
 //                val intent=Intent(this, CommunityWrite::class.java)
 //                startActivity(intent)
 //            }

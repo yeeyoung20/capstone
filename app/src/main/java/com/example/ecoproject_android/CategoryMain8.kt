@@ -43,6 +43,106 @@ class CategoryMain8 : AppCompatActivity() {
             val intent= Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
-
+        //버튼 누르면 분리배출 방법 안내 예시
+        eggshell.setOnClickListener{
+            val intent= Intent(this, Category8Eggshell::class.java)
+            startActivity(intent)
+        }
+        nutshell.setOnClickListener{
+            val intent= Intent(this, Category8Nutshell::class.java)
+            startActivity(intent)
+        }
+        chili.setOnClickListener{
+            val intent= Intent(this, Category8Chili::class.java)
+            startActivity(intent)
+        }
+        fruitpeel.setOnClickListener{
+            val intent= Intent(this, Category8Fruitpeel::class.java)
+            startActivity(intent)
+        }
+        fruitseed.setOnClickListener{
+            val intent= Intent(this, Category8Fruitseed::class.java)
+            startActivity(intent)
+        }
+        skintangerine.setOnClickListener{
+            val intent= Intent(this, Category8Skintangerine::class.java)
+            startActivity(intent)
+        }
+        animalbones.setOnClickListener{
+            val intent= Intent(this, Category8Animalbones::class.java)
+            startActivity(intent)
+        }
+        garlic.setOnClickListener{
+            val intent= Intent(this, Category8Garlic::class.java)
+            startActivity(intent)
+        }
+        skinmelon.setOnClickListener{
+            val intent= Intent(this, Category8Skinmelon::class.java)
+            startActivity(intent)
+        }
+        bananapeel.setOnClickListener{
+            val intent= Intent(this, Category8Bananapeel::class.java)
+            startActivity(intent)
+        }
+        applepeel.setOnClickListener{
+            val intent= Intent(this, Category8Applepeel::class.java)
+            startActivity(intent)
+        }
+        skinwatermelon.setOnClickListener{
+            val intent= Intent(this, Category8Skinwatermelon::class.java)
+            startActivity(intent)
+        }
+        oil.setOnClickListener{
+            val intent= Intent(this, Category8Oil::class.java)
+            startActivity(intent)
+        }
+        avocadopeel.setOnClickListener{
+            val intent= Intent(this, Category8Avocadopeel::class.java)
+            startActivity(intent)
+        }
+        medicine.setOnClickListener{
+            val intent= Intent(this, Category8Medicine::class.java)
+            startActivity(intent)
+        }
+        onion.setOnClickListener{
+            val intent= Intent(this, Category8Onion::class.java)
+            startActivity(intent)
+        }
+        orangepeel.setOnClickListener{
+            val intent= Intent(this, Category8Orangepeel::class.java)
+            startActivity(intent)
+        }
+        corner.setOnClickListener{
+            val intent= Intent(this, Category8Corner::class.java)
+            startActivity(intent)
+        }
+        jang.setOnClickListener{
+            val intent= Intent(this, Category8Jang::class.java)
+            startActivity(intent)
+        }
+        coffeegrounds.setOnClickListener{
+            val intent= Intent(this, Category8Coffeegrounds::class.java)
+            startActivity(intent)
+        }
+        coconutshell.setOnClickListener{
+            val intent= Intent(this, Category8Coconutshell::class.java)
+            startActivity(intent)
+        }
+        kiwishell.setOnClickListener{
+            val intent= Intent(this, Category8Kiwishell::class.java)
+            startActivity(intent)
+        }
+        teabag.setOnClickListener{
+            val intent= Intent(this, Category8Teabag::class.java)
+            startActivity(intent)
+        }
+        greenonion.setOnClickListener{
+            val intent= Intent(this, Category8Greenonion::class.java)
+            startActivity(intent)
+        }
+        pineapplepeel.setOnClickListener{
+            val intent= Intent(this, Category8Pineapplepeel::class.java)
+            startActivity(intent)
+        }
     }
 }
