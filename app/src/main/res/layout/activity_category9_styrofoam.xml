@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Category9Styrofoam">
+
+    <!--맨 위 뒤로가기, 카테고리 이름-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <ImageButton
+            android:id="@+id/back"
+            android:src="@drawable/back"
+            android:backgroundTint="#fff"
+            android:layout_marginTop="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <TextView
+            android:text="스티로폼"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="#000"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!--선-->
+    <View
+        android:layout_marginTop="10dp"
+        android:background="#000"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+    <TextView
+        android:text="버리는 방법"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--<ImageView
+        android:src="@drawable/wallpaper"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="150dp" />-->
+    <TextView
+        android:text="- 스티로폼 박스 안의 내용물을 모두 비우고, 음식물 등의 이물질이 묻어있을 경우 물로 깨끗이 세척한 후 분리 배출해요."
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="- 박스에 붙어있는 택배송장, 테이프, 스티커는 완전히 떼어내서 일반쓰레기로 버려요."
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="- 정육점에서 사용하는 스티로폼 트레이처럼 무늬와 색상이 있거나 비닐이 코팅된 스티로폼은 재활용이 불가능하니 일반쓰레기(종량제봉투)로 버려주세요."
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="- 사과, 배 등의 과일 개별 포장에 쓰이는 스티로폼은 재활용 가치가 낮아 모두 폐기된다고 하니 일반쓰레기(종량제봉투)로 버려주세요."
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="- 일회용 접시, 컵라면 용기 등의 스티로폼은 음식물이 완전히 제거되어 흰색 스티로폼 상태여야만 재활용이 가능해요. 음식물을 깨끗이 씻어낸 후 배출하고, 씻어도 완전히 제거되지 않으면 그냥 일반쓰레기(종량제봉투)로 버려주세요."
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

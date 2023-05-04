@@ -136,7 +136,7 @@
                 android:layout_height="wrap_content" />
             <Button
                 android:id="@+id/applepeel"
-                android:text="사과 껍질,심,씨방"
+                android:text="사과 껍질, 심, 씨방"
                 android:textSize="20dp"
                 android:textColor="#000"
                 android:gravity="left"
@@ -163,7 +163,7 @@
                 android:layout_height="wrap_content" />
             <Button
                 android:id="@+id/avocadopeel"
-                android:text="아보카도 껍질,씨"
+                android:text="아보카도 껍질, 씨"
                 android:textSize="20dp"
                 android:textColor="#000"
                 android:gravity="left"
@@ -172,7 +172,7 @@
                 android:layout_height="wrap_content" />
             <Button
                 android:id="@+id/medicine"
-                android:text="약,영양제"
+                android:text="약, 영양제"
                 android:textSize="20dp"
                 android:textColor="#000"
                 android:gravity="left"

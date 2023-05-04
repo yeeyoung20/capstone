@@ -50,7 +50,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp" />-->
     <TextView
-        android:text="- 사기 그릇 (도자기)이나 유리 그릇은 재활용이 불가능하고 불에 타지 않는 쓰레기이므로 불연성 쓰레기봉투(마대)에 넣어서 버려주세요."
+        android:text="- 사기 그릇(도자기)이나 유리 그릇은 재활용이 불가능하고 불에 타지 않는 쓰레기이므로 불연성 쓰레기봉투(마대)에 넣어서 버려주세요."
         android:layout_marginTop="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -66,7 +66,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="- 유기 그릇 (방짜 유기, 스테인리스, 놋그릇 등)도 재활용이 가능하니 깨끗이 씻어서 캔류 (고철) 사기 그릇 버리기로 분리 배출해주세요."
+        android:text="- 유기 그릇(방짜 유기, 스테인리스, 놋그릇 등)도 재활용이 가능하니 깨끗이 씻어서 분리 배출해주세요."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

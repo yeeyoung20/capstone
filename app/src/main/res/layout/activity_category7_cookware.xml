@@ -75,7 +75,7 @@
 
     <TextView
         android:text="- 나무주걱, 국자, 실리콘 뒤집개 등 나무 또는 실리콘재질의 조리 용품는 모두 일반쓰레기(종량제봉투)로 버려주세요."
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_width="match_parent"

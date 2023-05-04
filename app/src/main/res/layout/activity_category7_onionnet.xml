@@ -58,7 +58,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="- 재활용이 가능한 품목이지만 선별장에선 대부분 일반쓰레기로 폐기된다고 합니다. (경제성이 없기 때문이겠죠..)"
+        android:text="- 재활용이 가능한 품목이지만 선별장에선 대부분 일반쓰레기로 폐기됩니다."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

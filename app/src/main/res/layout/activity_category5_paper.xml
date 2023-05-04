@@ -74,7 +74,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="- 종이와 종이팩은 다른 방식으로 재활용돼요. 반드시종이팩이 아닌 종이로 분리 배출하세요."
+        android:text="- 종이와 종이팩은 다른 방식으로 재활용돼요. 반드시 종이팩이 아닌 종이로 분리 배출하세요."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

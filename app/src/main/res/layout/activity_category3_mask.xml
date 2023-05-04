@@ -58,7 +58,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="- 버릴 때는 마스크의 오염된 겉면이 손에 닿지 않도록마스크 안쪽에서부터 반으로 접은 후 종량제 봉투에넣어요."
+        android:text="- 버릴 때는 마스크의 오염된 겉면이 손에 닿지 않도록 마스크 안쪽에서부터 반으로 접은 후 종량제 봉투에 넣어요."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

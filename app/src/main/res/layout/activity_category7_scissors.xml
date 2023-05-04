@@ -50,7 +50,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp" />-->
     <TextView
-        android:text="- 가위는 고철류지만 재활용 업체의 수거, 선별 과정에서 사람이 다칠 위험이 있기 때문에 고철로 배출하면안되고 일반쓰레기(종량제봉투)로 버려야 해요."
+        android:text="- 가위는 고철류지만 재활용 업체의 수거, 선별 과정에서 사람이 다칠 위험이 있기 때문에 고철로 배출하면 안되고 일반쓰레기(종량제봉투)로 버려야 해요."
         android:layout_marginTop="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -58,7 +58,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="- 가위의 날카로운 날이 종량제 봉투를 찢고 나와 수거하시는 분이 다치는 경우가 자주 발생한다고 해요. 그런 사고가 일어나지 않도록 가위를 신문지로 여러겹싸고 테이프로 단단히 고정해서 종량제봉투에 넣어주세요."
+        android:text="- 가위의 날카로운 날이 종량제 봉투를 찢고 나와 수거하시는 분이 다치는 경우가 자주 발생한다고 해요. 그런 사고가 일어나지 않도록 가위를 신문지로 여러겹 싸고 테이프로 단단히 고정해서 종량제봉투에 넣어주세요."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

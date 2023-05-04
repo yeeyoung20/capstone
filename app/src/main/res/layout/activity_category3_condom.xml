@@ -58,7 +58,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="- 콘돔 포장재는 보통 비닐류로 제조되었으며, 내부의윤활제 성분을 물로 깨끗이 세척한 뒤 비닐류로 분리배출할 수 있습니다."
+        android:text="- 콘돔 포장재는 보통 비닐류로 제조되었으며, 내부의 윤활제 성분을 물로 깨끗이 세척한 뒤 비닐류로 분리배출할 수 있습니다."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

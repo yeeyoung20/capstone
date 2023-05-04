@@ -74,7 +74,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="- 테이프를 위 과정으로 분해하는게 어렵다면 통째로일반쓰레기(종량제봉투)로 버려요."
+        android:text="- 테이프를 위 과정으로 분해하는게 어렵다면 통째로 일반쓰레기(종량제봉투)로 버려요."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

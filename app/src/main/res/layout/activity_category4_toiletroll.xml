@@ -75,7 +75,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="- 티슈(미용화장지)나 물티슈는 반드시 일반쓰레기(종량제봉투)로 버려주세요. 두루마리 휴지처럼 변기에버리면 절대 안됩니다!"
+        android:text="- 티슈(미용화장지)나 물티슈는 반드시 일반쓰레기(종량제봉투)로 버려주세요. 두루마리 휴지처럼 변기에 버리면 절대 안됩니다."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

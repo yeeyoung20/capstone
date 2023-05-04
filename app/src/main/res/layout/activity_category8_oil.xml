@@ -50,7 +50,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp" />-->
     <TextView
-        android:text="- 아파트 단지나 근처에 폐식용유 수거함이 있다면 이 물질이 섞이지 않게 잘 모아서 배출해요."
+        android:text="- 아파트 단지나 근처에 폐식용유 수거함이 있다면 이물질이 섞이지 않게 잘 모아서 배출해요."
         android:layout_marginTop="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

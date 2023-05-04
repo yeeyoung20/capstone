@@ -75,7 +75,7 @@
 
     <TextView
         android:text="- 사용기간이 짧고, 비교적 상태가 좋은 노트북은 아름다운가게, 굿윌스토어 등의 기부단체에 기증할 수 있습니다. 단체별로 기증가능 품목이 다르므로 웹사이트를 통해 품목을 미리 확인해주세요."
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_width="match_parent"

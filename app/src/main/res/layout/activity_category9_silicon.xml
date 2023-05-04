@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Category9Silicon">
+
+    <!--맨 위 뒤로가기, 카테고리 이름-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <ImageButton
+            android:id="@+id/back"
+            android:src="@drawable/back"
+            android:backgroundTint="#fff"
+            android:layout_marginTop="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <TextView
+            android:text="실리콘"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="#000"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!--선-->
+    <View
+        android:layout_marginTop="10dp"
+        android:background="#000"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+    <TextView
+        android:text="버리는 방법"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--<ImageView
+        android:src="@drawable/wallpaper"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="150dp" />-->
+    <TextView
+        android:text="- 실리콘은 천연원료(모래)를 화학적으로 가공하여 추출해내는 재질로 물과 열에 강하고 인체에 무해하다고 알려져있어 플라스틱을 대체할 수 있는 재질로 각광받고 있습니다."
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="- 그러나 아직 폐실리콘을 재활용할 수 있는 방법이 없고, 자연상태에서 분해되는데는 플라스틱과 마찬가지로 수백년이 걸린다고 합니다."
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="- 일회용 플라스틱의 대체재로 사용하는 것은 좋지만 실리콘 역시 재활용이 불가능하다는 점을 인식하고 꼭 필요한 제품만 구입해서 오랫동안 사용할 것을 권장드립니다."
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

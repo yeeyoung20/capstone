@@ -50,7 +50,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp" />-->
     <TextView
-        android:text="- 다 쓴 건전지는 반드시 가까운 주민센터, 구청 또는아파트 단지 내에 설치된 폐건전지 전용 수거함에 버려주세요."
+        android:text="- 다 쓴 건전지는 반드시 가까운 주민센터, 구청 또는 아파트 단지 내에 설치된 폐건전지 전용 수거함에 버려주세요."
         android:layout_marginTop="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -58,7 +58,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="- 만약 가까운 곳에 폐건전지 수거함이 없다면 박스 등한곳에 모아두었다가 양이 많아지면 한번에 버려주세요."
+        android:text="- 만약 가까운 곳에 폐건전지 수거함이 없다면 박스 등 한 곳에 모아두었다가 양이 많아지면 한번에 버려주세요."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

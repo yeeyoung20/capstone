@@ -50,7 +50,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp" />-->
     <TextView
-        android:text="- 고무대야는 합성 고무 제품으로 재활용이 어려워서 분리 수거되지 않으니 모두 일반쓰레기종량제봉투)로 버려주세요."
+        android:text="- 고무대야는 합성 고무 제품으로 재활용이 어려워서 분리수거 되지 않으니 모두 일반쓰레기(종량제봉투)로 버려주세요."
         android:layout_marginTop="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

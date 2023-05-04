@@ -58,7 +58,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="- 음식물 쓰레기는 살균 처리와 고온 건조 과정을 거쳐동물용 사료 또는 경작용 퇴비로 재활용됩니다. 그래서 너무 단단하거나 질겨서 쉽게 분해되지 않거나 염분 등의 첨가물로 인해 사료나 퇴비로 쓰일 수 없는음식물은 재활용이 불가능합니다."
+        android:text="- 음식물 쓰레기는 살균 처리와 고온 건조 과정을 거쳐 동물용 사료 또는 경작용 퇴비로 재활용됩니다. 그래서 너무 단단하거나 질겨서 쉽게 분해되지 않거나 염분 등의 첨가물로 인해 사료나 퇴비로 쓰일 수 없는 음식물은 재활용이 불가능합니다."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

@@ -50,7 +50,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp" />-->
     <TextView
-        android:text="- 칫솔은 부피가 작고, 칫솔모, 고무 손잡이 등 다른 재질이 혼합되어 있어서 플라스틱으로 재활용이 불가능해요. 모두 일반쓰레기 (종량제봉투)로 버려주세요."
+        android:text="- 칫솔은 부피가 작고, 칫솔모, 고무 손잡이 등 다른 재질이 혼합되어 있어서 플라스틱으로 재활용이 불가능해요. 모두 일반쓰레기(종량제봉투)로 버려주세요."
         android:layout_marginTop="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

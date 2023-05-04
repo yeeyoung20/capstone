@@ -74,7 +74,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="- 비디오 테이프를 분해하는게 어렵다면 통째로 일반쓰레기종량제봉투)로 버려요."
+        android:text="- 비디오 테이프를 분해하는게 어렵다면 통째로 일반쓰레기(종량제봉투)로 버려요."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -82,7 +82,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="- 비디오 테이프를 보관하는 플라스틱 케이스(비디오테이프 집)도 겉면의 비닐과 비닐 안쪽의 종이 커버를잘라서 제거한 후 플라스틱으로 배출해요."
+        android:text="- 비디오 테이프를 보관하는 플라스틱 케이스(비디오테이프 집)도 겉면의 비닐과 비닐 안쪽의 종이 커버를 잘라서 제거한 후 플라스틱으로 배출해요."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

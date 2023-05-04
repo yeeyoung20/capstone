@@ -50,7 +50,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp" />-->
     <TextView
-        android:text="- 사용한 생리대는 물에 녹지 않기 때문에 절대로 변기에 버리시면 안되요. 화장실에 비치된 휴지통이나 위생수거함에 버려주세요. 가정에서는 종량제 봉투에 담아 일반쓰레기로 버려주세요."
+        android:text="- 사용한 생리대는 물에 녹지 않기 때문에 절대로 변기에 버리시면 안돼요. 화장실에 비치된 휴지통이나 위생수거함에 버려주세요. 가정에서는 종량제 봉투에 담아 일반쓰레기로 버려주세요."
         android:layout_marginTop="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

@@ -58,7 +58,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="- 종이곽, 설명서, 약국 봉투 등의 종이 포장재는 일반쓰레기나 종이로 분리 배출하고, 약 봉지, 플라스틱알약 포장재, 연고(튜브), 물약, 안약, 영양제통 등은그대로 폐의약품 수거함으로 배출해주세요."
+        android:text="- 종이곽, 설명서, 약국 봉투 등의 종이 포장재는 일반쓰레기나 종이로 분리 배출하고, 약 봉지, 플라스틱알약 포장재, 연고(튜브), 물약, 안약, 영양제통 등은 그대로 폐의약품 수거함으로 배출해주세요."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

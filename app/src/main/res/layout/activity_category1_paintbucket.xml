@@ -75,7 +75,7 @@
 
     <TextView
         android:text="- 라벨, 스티커 등이 붙어있으면 깨끗이 떼어내서 일반쓰레기(종량제봉투)로 버려요."
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_width="match_parent"

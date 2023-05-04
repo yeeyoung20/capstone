@@ -58,7 +58,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="- 다 사용한 티슈 갑은 종이 상자에서 비닐 재질의 입구를 떼어낸 후 상자는 종이로, 비닐 입구는 비닐류로분리배출해요."
+        android:text="- 다 사용한 티슈 갑은 종이 상자에서 비닐 재질의 입구를 떼어낸 후 상자는 종이로, 비닐 입구는 비닐류로 분리배출해요."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

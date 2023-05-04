@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Category9Confectionerybag">
+
+    <!--맨 위 뒤로가기, 카테고리 이름-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <ImageButton
+            android:id="@+id/back"
+            android:src="@drawable/back"
+            android:backgroundTint="#fff"
+            android:layout_marginTop="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <TextView
+            android:text="과자 봉지"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="#000"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!--선-->
+    <View
+        android:layout_marginTop="10dp"
+        android:background="#000"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+    <TextView
+        android:text="버리는 방법"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--<ImageView
+        android:src="@drawable/wallpaper"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_width="150dp"
+        android:layout_height="150dp" />-->
+    <TextView
+        android:text="- 다 먹고난 과자 봉지는 내부의 기름기와 음식물을 깨끗이 세척한 후 배출해요."
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="- 소량으로 개별포장된 과자봉지도 마찬가지로 비닐류로 분리배출해요."
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="- 스티커, 테이프 등이 붙어있으면 모두 떼어내서 일반쓰레기(종량제봉투)로 버린 후 과자 비닐만 비닐류로분리배출해요."
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:text="- 과자봉지를 딱지 모양으로 접지 말고 펼쳐진 채로 배출해주세요. 재활용장의 컨베이어 벨트 위에서 수동으로 선별할 때 비닐 종류를 빠르게 확인할 수 없을뿐더러, 기계를 이용한 자동 선별장에서도 비닐을 바람에 날려 질량 차이를 이용해 비닐류를 선별하기 때문에 딱지 모양으로 배출시 선별이 안되고 모두 폐기될 가능성이 높습니다."
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

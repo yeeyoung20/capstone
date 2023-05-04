@@ -58,7 +58,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="- 가위나 칼을 이용해 우산 천(또는 비닐)과 우산대(우산살)를 분리하면 재질에 따라 분리배출이 가능할 수도 있지만 우산대에 알루미늄과 함께 유리섬유(파이버글래스)를 사용하는 경우가 많아 분리과정에서 유리섬유가 손에 박히거나 하는 위험성이 있습니다.(Seung6109님 제보)"
+        android:text="- 가위나 칼을 이용해 우산 천(또는 비닐)과 우산대(우산살)를 분리하면 재질에 따라 분리배출이 가능할 수도 있지만 우산대에 알루미늄과 함께 유리섬유(파이버글래스)를 사용하는 경우가 많아 분리과정에서 유리섬유가 손에 박히거나 하는 위험성이 있습니다."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

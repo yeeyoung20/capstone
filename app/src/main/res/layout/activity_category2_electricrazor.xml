@@ -58,7 +58,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="- 수거함이 설치되어 있는 주민센터가 있는경우가 있답니다. 거주지역의 주민센터에 문의해보세요."
+        android:text="- 수거함이 설치되어 있는 주민센터가 있는 경우가 있답니다. 거주지역의 주민센터에 문의해보세요."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

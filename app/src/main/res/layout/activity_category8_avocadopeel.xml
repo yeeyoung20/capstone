@@ -50,7 +50,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp" />-->
     <TextView
-        android:text="- 다 먹고난 아보카도 껍질은 일반쓰레기 (종량제봉투)로 버려요."
+        android:text="- 다 먹고난 아보카도 껍질은 일반쓰레기(종량제봉투)로 버려요."
         android:layout_marginTop="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -58,7 +58,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="- 아보카도의 단단한 씨도 일반쓰레기 (종량제봉투)로 버려요."
+        android:text="- 아보카도의 단단한 씨도 일반쓰레기(종량제봉투)로 버려요."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

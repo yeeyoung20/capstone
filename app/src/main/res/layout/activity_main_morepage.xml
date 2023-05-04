@@ -116,7 +116,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="오늘 쓰레기 버리는 날입니다! 버리셔싼요??"
+                    android:text="오늘 쓰레기 버리는 날입니다! 버리셨나요??"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

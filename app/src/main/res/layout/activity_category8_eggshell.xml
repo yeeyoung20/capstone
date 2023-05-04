@@ -50,7 +50,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp" />-->
     <TextView
-        android:text="- 달걀의 단단한 껍질은 일반쓰레기 (종량제봉투)로버려요."
+        android:text="- 달걀의 단단한 껍질은 일반쓰레기(종량제봉투)로 버려요."
         android:layout_marginTop="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

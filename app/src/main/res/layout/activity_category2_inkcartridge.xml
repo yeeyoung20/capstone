@@ -50,7 +50,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp" />-->
     <TextView
-        android:text="- 폐토너/잉크 카트리지는 판매 회사, 전문 수거업체 등을 통해 회수되어 재생 카트리지로 재활용이 가능한 품목입니다. 그러나 업체 또는 제품에 따라 수거하지 않는 경우도 있ㄴ으니 웹사이트 등을 통해 미리 확인하여 수거 신청해주세요."
+        android:text="- 폐토너/잉크 카트리지는 판매 회사, 전문 수거업체 등을 통해 회수되어 재생 카트리지로 재활용이 가능한 품목입니다. 그러나 업체 또는 제품에 따라 수거하지 않는 경우도 있으니 웹사이트 등을 통해 미리 확인하여 수거 신청해주세요."
         android:layout_marginTop="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

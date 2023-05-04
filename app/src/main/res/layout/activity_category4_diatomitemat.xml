@@ -51,7 +51,7 @@
         android:layout_height="150dp" />-->
 
     <TextView
-        android:text="- 규조토 발매트는 재활용이 안되고 불에도 타지 않는재질이므로 불연성 쓰레기 봉투(마대봉투)로 버려주세요."
+        android:text="- 규조토 발매트는 재활용이 안되고 불에도 타지 않는 재질이므로 불연성 쓰레기 봉투(마대봉투)로 버려주세요."
         android:layout_marginTop="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

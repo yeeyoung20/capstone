@@ -50,7 +50,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp" />-->
     <TextView
-        android:text="- 스테이플러는 고철, 플라스틱, 고무 등 여러 재질이섞인 경우가 대부분이라 완전 분해하지 않는 한 재활용이 어려워요. 나사를 풀면 분리되도록 만들어진 제품도 아니라서 분해도 굉장히 어렵습니다. 통째로 일반쓰레기종량제봉투)로 버려주세요."
+        android:text="- 스테이플러는 고철, 플라스틱, 고무 등 여러 재질이 섞인 경우가 대부분이라 완전 분해하지 않는 한 재활용이 어려워요. 나사를 풀면 분리되도록 만들어진 제품도 아니라서 분해도 굉장히 어렵습니다. 통째로 일반쓰레기(종량제봉투)로 버려주세요."
         android:layout_marginTop="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -58,7 +58,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="- 스테이플러 심은 모아서 투명 비닐봉지에 담아 캔류로 배출해주세요. 매우 소량이거나 낱개로 배출해야한다면 일반쓰레기(종량제봉투)로 버려주세요."
+        android:text="- 스테이플러 심은 모아서 투명 비닐봉지에 담아 캔류로 배출해주세요. 매우 소량이거나 낱개로 배출해야 한다면 일반쓰레기(종량제봉투)로 버려주세요."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

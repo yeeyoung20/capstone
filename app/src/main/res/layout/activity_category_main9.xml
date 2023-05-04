@@ -253,7 +253,7 @@
                 android:layout_height="wrap_content" />
             <Button
                 android:id="@+id/milkpack"
-                android:text="우튜팩"
+                android:text="우유팩"
                 android:textSize="20dp"
                 android:textColor="#000"
                 android:gravity="left"

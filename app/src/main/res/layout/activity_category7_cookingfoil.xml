@@ -58,7 +58,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="- 알루미늄 호일은 얇게 특수 가공되었기 때문에 다른알루미늄 제품처럼 재활용되는 게 불가능해요. 알루미늄으로 배출하지 말고 일반쓰레기로 버려주세요."
+        android:text="- 알루미늄 호일은 얇게 특수 가공되었기 때문에 다른 알루미늄 제품처럼 재활용되는 게 불가능해요. 알루미늄으로 배출하지 말고 일반쓰레기로 버려주세요."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -66,7 +66,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="- 종이 호일도 열에 강한 특수 재질이 포함된 혼합 종이로 일반 종이와 함께 재활용되는 것이 불가능하니종이로 배출하지 말고 일반쓰레기로 버려주세요."
+        android:text="- 종이 호일도 열에 강한 특수 재질이 포함된 혼합 종이로 일반 종이와 함께 재활용되는 것이 불가능하니 종이로 배출하지 말고 일반쓰레기로 버려주세요."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -75,7 +75,7 @@
 
     <TextView
         android:text="- 다 쓰고난 호일 패키지(종이박스)와 종이심은 종이로 분리배출해요."
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_width="match_parent"
@@ -83,7 +83,7 @@
 
     <TextView
         android:text="- 호일 패키지에 호일을 잘라내는 용도로 붙어있는 금속 칼날도 잘 분리해서 캔류로 분리배출해요."
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_width="match_parent"
@@ -91,7 +91,7 @@
 
     <TextView
         android:text="- 초콜릿을 감싸고 있는 은박 포장지나 일회용 은박접시도 모두 알루미늄 호일과 같은 재질이에요. 일반쓰레기로 버려주세요."
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_width="match_parent"

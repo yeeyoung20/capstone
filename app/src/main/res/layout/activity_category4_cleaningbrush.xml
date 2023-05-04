@@ -50,7 +50,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp" />-->
     <TextView
-        android:text="- 청소 솔은 솔과 플라스틱 손잡이를 분리할 수 있고,손잡이에 고무 등 다른 재질이 붙어있지 않은 경우만플라스틱으로 분리배출이 가능해요."
+        android:text="- 청소 솔은 솔과 플라스틱 손잡이를 분리할 수 있고, 손잡이에 고무 등 다른 재질이 붙어있지 않은 경우만 플라스틱으로 분리배출이 가능해요."
         android:layout_marginTop="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -58,7 +58,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="- 솔과 손잡이를 분리할 수 없고, 다른 재질이 혼합되어 있으면 플라스틱으로 재활용이 불가능하니 모두일반쓰레기(종량제봉투)로 버려주세요."
+        android:text="- 솔과 손잡이를 분리할 수 없고, 다른 재질이 혼합되어 있으면 플라스틱으로 재활용이 불가능하니 모두 일반쓰레기(종량제봉투)로 버려주세요."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

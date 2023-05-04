@@ -74,7 +74,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="- 알루미늄 튜브 용기는 재활용이 가능한 재질이더라도 재활용 의무대상이 아니라서 캔류로 재활용이 안된다고 합니다. 일반쓰레기종량제봉투)로 버려주세요."
+        android:text="- 알루미늄 튜브 용기는 재활용이 가능한 재질이더라도 재활용 의무대상이 아니라서 캔류로 재활용이 안된다고 합니다. 일반쓰레기(종량제봉투)로 버려주세요."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

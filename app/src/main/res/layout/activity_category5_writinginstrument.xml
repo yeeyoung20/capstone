@@ -50,7 +50,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp" />-->
     <TextView
-        android:text="- 볼펜 등의 플라스틱 필기구는 부피가 작고, 고무 손잡이, 쇠 스프링 등 다른 재질이 혼합되어 있어서 재활용이 불가능해요. 모두 일반쓰레기(종량제봉투)로버려주세요."
+        android:text="- 볼펜 등의 플라스틱 필기구는 부피가 작고, 고무 손잡이, 쇠 스프링 등 다른 재질이 혼합되어 있어서 재활용이 불가능해요. 모두 일반쓰레기(종량제봉투)로 버려주세요."
         android:layout_marginTop="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

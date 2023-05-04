@@ -66,7 +66,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="- CD 케이스 안의 앨범 커버, 종이 속지는 따로 빼서종이류로 배출해요."
+        android:text="- CD 케이스 안의 앨범 커버, 종이 속지는 따로 빼서 종이류로 배출해요."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

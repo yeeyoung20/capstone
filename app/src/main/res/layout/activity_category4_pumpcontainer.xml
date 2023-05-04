@@ -50,7 +50,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp" />-->
     <TextView
-        android:text="- 용기 내부에 남아있는 샴푸 등의 용액을 물로 깨끗이헹궈낸 뒤 분리배출해요."
+        android:text="- 용기 내부에 남아있는 샴푸 등의 용액을 물로 깨끗이 헹궈낸 뒤 분리배출해요."
         android:layout_marginTop="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -58,7 +58,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="- 펌프가 달린 뚜껑 부분은 해체가 가능하다면 헤드,몸통, 스프링, 튜브(빨대)로 분리해서 스프링은 일반쓰레기, 나머지는 플라스틱으로 분리배출해요. (펜치,칼 등의 도구가 없으면 쉽지 않을 수 있어요.) 분해가불가능하다면 뚜껑 부분 통째로 일반쓰레기(종량제봉투)로 버려주세요."
+        android:text="- 펌프가 달린 뚜껑 부분은 해체가 가능하다면 헤드, 몸통, 스프링, 튜브(빨대)로 분리해서 스프링은 일반쓰레기, 나머지는 플라스틱으로 분리배출해요. (펜치,칼 등의 도구가 없으면 쉽지 않을 수 있어요.) 분해가 불가능하다면 뚜껑 부분 통째로 일반쓰레기(종량제봉투)로 버려주세요."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

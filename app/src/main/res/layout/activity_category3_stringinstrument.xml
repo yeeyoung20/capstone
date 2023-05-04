@@ -67,7 +67,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="- 현악기 줄(스트링)은 일반적으로 여러 금속류가 섞인 합금 재질 또는 나일론 등을 혼합한 합성 현이라고합니다. 그래서 캔류(고철)로 재활용될 수 없으니 일반쓰레기(종량제봉투)로 버리시기 바랍니다."
+        android:text="- 현악기 줄(스트링)은 일반적으로 여러 금속류가 섞인 합금 재질 또는 나일론 등을 혼합한 합성 현이라고 합니다. 그래서 캔류(고철)로 재활용될 수 없으니 일반쓰레기(종량제봉투)로 버리시기 바랍니다."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

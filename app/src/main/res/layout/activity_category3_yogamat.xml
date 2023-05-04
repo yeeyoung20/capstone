@@ -50,7 +50,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp" />-->
     <TextView
-        android:text="- 요가 매트, 놀이방 매트 등 바닥 매트는 가위로 잘게잘라서 일반쓰레기(종량제봉투)로 버리거나 너무 커서 종량제봉투에 넣기 어려운 경우엔 대형 생활 폐기물로 신고/배출해주세요."
+        android:text="- 요가 매트, 놀이방 매트 등 바닥 매트는 가위로 잘게 잘라서 일반쓰레기(종량제봉투)로 버리거나 너무 커서 종량제봉투에 넣기 어려운 경우엔 대형 생활 폐기물로 신고/배출해주세요."
         android:layout_marginTop="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

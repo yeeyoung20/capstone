@@ -50,7 +50,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp" />-->
     <TextView
-        android:text="- 내부의 가스 등 내용물을 거꾸로 노즐을 눌러주거나용기 아래쪽에 송곳 등으로 구멍을 내서 완전히 비워요."
+        android:text="- 내부의 가스 등 내용물을 거꾸로 노즐을 눌러주거나 용기 아래쪽에 송곳 등으로 구멍을 내서 완전히 비워요."
         android:layout_marginTop="50dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -58,7 +58,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="- 송곳, 망치를 사용하면 가스가 튀거나 스파크로 인한폭발의 위험이 있을 수 있으니 가스제거기(마트, 다이소 등에서 판매)를 사용하는 것이 더 안전해요. (‘포항청년'님의 제보)"
+        android:text="- 송곳, 망치를 사용하면 가스가 튀거나 스파크로 인한 폭발의 위험이 있을 수 있으니 가스제거기(마트, 다이소 등에서 판매)를 사용하는 것이 더 안전해요."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -74,7 +74,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="- 라벨, 스티커 등이 붙어있을 경우 깨끗하게 떼어낸후 버려요."
+        android:text="- 라벨, 스티커 등이 붙어있을 경우 깨끗하게 떼어낸 후 버려요."
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
