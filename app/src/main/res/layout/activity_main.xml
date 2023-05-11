@@ -4,263 +4,457 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_weight="1">
-        <!--메인 검색창-->
-        <LinearLayout
-            android:elevation="20dp"
-            android:paddingTop="30dp"
-            android:background="#ABE6AC"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-            <TextView
-                android:layout_marginLeft="10dp"
-                android:text="환경구조"
-                android:textSize="30dp"
-                android:textColor="#007521"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content" />
-            <ImageButton
-                android:id="@+id/main3"
-                android:src="@drawable/main3"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:backgroundTint="#ABE6AC"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout">
 
-        <!--캠페인 배너..둥글게도 만들었음 ㅡㅡ 힘들었음-->
         <LinearLayout
-            android:elevation="20dp"
-            android:paddingBottom="10dp"
-            android:paddingHorizontal="53dp"
-            android:clipToPadding="false"
-            android:background="#ABE6AC"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <androidx.cardview.widget.CardView
-                app:cardCornerRadius="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
-                <ImageView
-                    android:scaleType="fitXY"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+<!--      환경구조및 검색줄       -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/teamname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="환경구조"
+                    android:textColor="#007521"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/searchid"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/banner"
-                    android:layout_width="300dp"
-                    android:layout_height="98dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/search_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--      배너줄      -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="135dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/banner" />
+            </LinearLayout>
+            <!--      분리수거 메인 버튼      -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/main_category_shdow">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+
+                    <Button
+                        android:id="@+id/main1_1"
+                        android:layout_width="70dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/main_category_shdow"
+                        android:backgroundTint="#fff"
+                        android:drawableTop="@drawable/smain1_1xml"
+                        android:text="가구/인테리어"
+                        android:textColor="#000"
+                        android:textSize="8dp"
+                        app:layout_constraintBottom_toTopOf="@id/main1_5"
+                        app:layout_constraintEnd_toStartOf="@id/main1_2"
+                        app:layout_constraintHorizontal_chainStyle="spread"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="spread" />
+
+                    <Button
+                        android:id="@+id/main1_2"
+                        android:layout_width="70dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/main_category_shdow"
+                        android:backgroundTint="#fff"
+                        android:drawableTop="@drawable/smain1_2xml"
+                        android:text="가전제품"
+                        android:textColor="#000"
+                        android:textSize="8dp"
+                        app:layout_constraintBottom_toTopOf="@id/main1_6"
+                        app:layout_constraintEnd_toStartOf="@id/main1_3"
+                        app:layout_constraintStart_toEndOf="@id/main1_1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/main1_3"
+                        android:layout_width="70dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/main_category_shdow"
+                        android:backgroundTint="#fff"
+                        android:drawableTop="@drawable/smain1_3xml"
+                        android:text="생활용품"
+                        android:textColor="#000"
+                        android:textSize="8dp"
+                        app:layout_constraintBottom_toTopOf="@id/main1_7"
+                        app:layout_constraintEnd_toStartOf="@id/main1_4"
+                        app:layout_constraintStart_toEndOf="@id/main1_2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/main1_4"
+                        android:layout_width="70dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/main_category_shdow"
+                        android:backgroundTint="#fff"
+                        android:drawableTop="@drawable/smain1_4xml"
+                        android:text="욕실용품"
+                        android:textColor="#000"
+                        android:textSize="8dp"
+                        app:layout_constraintBottom_toTopOf="@id/main1_8"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/main1_3"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/main1_5"
+                        android:layout_width="70dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/main_category_shdow"
+                        android:backgroundTint="#fff"
+                        android:drawableTop="@drawable/smain1_5xml"
+                        android:text="도서/문구"
+                        android:textColor="#000"
+                        android:textSize="8dp"
+                        app:layout_constraintBottom_toTopOf="@id/main1_9"
+                        app:layout_constraintEnd_toStartOf="@id/main1_6"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/main1_1" />
+
+                    <Button
+                        android:id="@+id/main1_6"
+                        android:layout_width="70dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/main_category_shdow"
+                        android:backgroundTint="#fff"
+                        android:drawableTop="@drawable/smain1_6xml"
+                        android:text="미용/화장품"
+                        android:textColor="#000"
+                        android:textSize="8dp"
+                        app:layout_constraintBottom_toTopOf="@id/main1_10"
+                        app:layout_constraintEnd_toStartOf="@id/main1_7"
+                        app:layout_constraintStart_toEndOf="@id/main1_5"
+                        app:layout_constraintTop_toBottomOf="@id/main1_2" />
+
+                    <Button
+                        android:id="@+id/main1_7"
+                        android:layout_width="70dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/main_category_shdow"
+                        android:backgroundTint="#fff"
+                        android:drawableTop="@drawable/smain1_7xml"
+                        android:text="주방용"
+                        android:textColor="#000"
+                        android:textSize="8dp"
+                        app:layout_constraintBottom_toTopOf="@id/main1_11"
+                        app:layout_constraintEnd_toStartOf="@id/main1_8"
+                        app:layout_constraintStart_toEndOf="@id/main1_6"
+                        app:layout_constraintTop_toBottomOf="@id/main1_3" />
+
+                    <Button
+                        android:id="@+id/main1_8"
+                        android:layout_width="70dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/main_category_shdow"
+                        android:backgroundTint="#fff"
+                        android:drawableTop="@drawable/smain1_8xml"
+                        android:text="식품"
+                        android:textColor="#000"
+                        android:textSize="8dp"
+                        app:layout_constraintBottom_toTopOf="@id/view"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/main1_7"
+                        app:layout_constraintTop_toBottomOf="@id/main1_4" />
+
+                    <Button
+                        android:id="@+id/main1_11"
+                        android:layout_width="70dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/main_category_shdow"
+                        android:backgroundTint="#fff"
+                        android:drawableTop="@drawable/smain1_11xml"
+                        android:text="기타"
+                        android:textColor="#000"
+                        android:textSize="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/view"
+                        app:layout_constraintStart_toEndOf="@id/main1_10"
+                        app:layout_constraintTop_toBottomOf="@id/main1_7" />
+
+                    <Button
+                        android:id="@+id/main1_9"
+                        android:layout_width="70dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/main_category_shdow"
+                        android:backgroundTint="#fff"
+                        android:drawableTop="@drawable/smain1_9xml"
+                        android:text="용기/포장재"
+                        android:textColor="#000"
+                        android:textSize="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/main1_10"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/main1_5" />
+
+                    <Button
+                        android:id="@+id/main1_10"
+                        android:layout_width="70dp"
+                        android:layout_height="60dp"
+                        android:background="@drawable/main_category_shdow"
+                        android:backgroundTint="#fff"
+                        android:drawableTop="@drawable/smain1_10xml"
+                        android:text="패션/잡화"
+                        android:textColor="#000"
+                        android:textSize="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/main1_11"
+                        app:layout_constraintStart_toEndOf="@id/main1_9"
+                        app:layout_constraintTop_toBottomOf="@id/main1_6" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="70dp"
+                        android:layout_height="60dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/main1_11"
+                        app:layout_constraintTop_toBottomOf="@id/main1_8" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="오늘의 아나바다"
+                    android:textSize="25dp"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="150dp"
+                        android:orientation="vertical"
+                        android:layout_margin="10dp">
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/maintestimg"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="옷나눠쓰실분있나요?"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="150dp"
+                        android:orientation="vertical"
+                        android:layout_margin="10dp">
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/maintestimg"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="옷나눠쓰실분있나요?"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="150dp"
+                        android:orientation="vertical"
+                        android:layout_margin="10dp">
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/maintestimg"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="옷나눠쓰실분있나요?"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="150dp"
+                        android:orientation="vertical"
+                        android:layout_margin="10dp">
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/maintestimg"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="옷나눠쓰실분있나요?"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="150dp"
+                        android:orientation="vertical"
+                        android:layout_margin="10dp">
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/maintestimg"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="옷나눠쓰실분있나요?"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="150dp"
+                        android:orientation="vertical"
+                        android:layout_margin="10dp">
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/maintestimg"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="옷나눠쓰실분있나요?"/>
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="내 주변 의류수거함"
+                    android:textSize="25dp"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+
+            <!-- 지도 -->
+
+            <LinearLayout
+                android:layout_width="380dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                >
+                <fragment
+                    android:id="@+id/map_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:name="com.naver.maps.map.MapFragment"
                     />
-            </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
         </LinearLayout>
 
-
-            <!--메인 카테고리별 분리배출 이미지 버튼 첫째줄-->
-        <LinearLayout
-            android:gravity="center"
-            android:layout_marginTop="40dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-            <ImageButton
-                android:id="@+id/main1_1"
-                android:src="@drawable/main1_1"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:maxHeight="100dp"
-                android:maxWidth="100dp"
-                android:backgroundTint="#FFFFFF"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <ImageButton
-                android:id="@+id/main1_2"
-                android:src="@drawable/main1_2"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:maxHeight="100dp"
-                android:maxWidth="100dp"
-                android:backgroundTint="#FFFFFF"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <ImageButton
-                android:id="@+id/main1_3"
-                android:src="@drawable/main1_3"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:maxHeight="100dp"
-                android:maxWidth="100dp"
-                android:backgroundTint="#FFFFFF"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <ImageButton
-                android:id="@+id/main1_4"
-                android:src="@drawable/main1_4"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:maxHeight="100dp"
-                android:maxWidth="100dp"
-                android:backgroundTint="#FFFFFF"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-
-
-        <!--메인 카테고리별 분리배출 이미지 버튼 둘째줄-->
-        <LinearLayout
-            android:gravity="center"
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-            <ImageButton
-                android:id="@+id/main1_5"
-                android:src="@drawable/main1_5"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:maxHeight="100dp"
-                android:maxWidth="100dp"
-                android:backgroundTint="#FFFFFF"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <ImageButton
-                android:id="@+id/main1_6"
-                android:src="@drawable/main1_6"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:maxHeight="100dp"
-                android:maxWidth="100dp"
-                android:backgroundTint="#FFFFFF"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <ImageButton
-                android:id="@+id/main1_7"
-                android:src="@drawable/main1_7"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:maxHeight="100dp"
-                android:maxWidth="100dp"
-                android:backgroundTint="#FFFFFF"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <ImageButton
-                android:id="@+id/main1_8"
-                android:src="@drawable/main1_8"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:maxHeight="100dp"
-                android:maxWidth="100dp"
-                android:backgroundTint="#FFFFFF"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-
-        <!--메인 카테고리별 분리배출 이미지 버튼 셋째줄-->
-        <LinearLayout
-            android:gravity="center"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-            <ImageButton
-                android:id="@+id/main1_9"
-                android:src="@drawable/main1_9"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:maxHeight="100dp"
-                android:maxWidth="100dp"
-                android:backgroundTint="#FFFFFF"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <ImageButton
-                android:id="@+id/main1_10"
-                android:src="@drawable/main1_10"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:maxHeight="100dp"
-                android:maxWidth="100dp"
-                android:backgroundTint="#FFFFFF"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <ImageButton
-                android:id="@+id/main1_11"
-                android:src="@drawable/main1_11"
-                android:adjustViewBounds="true"
-                android:scaleType="fitCenter"
-                android:maxHeight="100dp"
-                android:maxWidth="100dp"
-                android:backgroundTint="#FFFFFF"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-    </LinearLayout>
-
-
-    <!--메인 하단바 커뮤니티, 지도, 설정-->
+    </ScrollView>
     <View
-        android:background="#000"
+        android:background="#CDCDCD"
         android:layout_width="match_parent"
-        android:layout_height="2dp" />
+        android:layout_height="1dp" />
 
-    <LinearLayout
-        android:orientation="horizontal"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:layout_gravity="bottom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-        <ImageButton
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
             android:id="@+id/main2_1"
-            android:src="@drawable/main2_1"
-            android:adjustViewBounds="true"
-            android:scaleType="fitCenter"
-            android:layout_marginTop="5dp"
-            android:maxHeight="70dp"
-            android:maxWidth="70dp"
-            android:backgroundTint="#FFFFFF"
-            android:layout_marginRight="65dp"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/main2_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/main2_2"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-
-        <ImageButton
+        <Button
             android:id="@+id/main2_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="65dp"
-            android:layout_weight="1"
-            android:adjustViewBounds="true"
-            android:backgroundTint="#FFFFFF"
-            android:maxWidth="70dp"
-            android:maxHeight="70dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/main2_2" />
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/main2_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/main2_3"
+            app:layout_constraintStart_toEndOf="@+id/main2_1"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageButton
+
+        <Button
             android:id="@+id/main2_3"
-            android:src="@drawable/main2_3"
-            android:adjustViewBounds="true"
-            android:scaleType="fitCenter"
-            android:maxHeight="70dp"
-            android:maxWidth="70dp"
-            android:backgroundTint="#FFFFFF"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <ImageButton
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/main2_3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/main2_4"
+            app:layout_constraintStart_toEndOf="@+id/main2_2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
             android:id="@+id/main2_4"
-            android:src="@drawable/main2_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="65dp"
-            android:adjustViewBounds="true"
-            android:backgroundTint="#FFFFFF"
-            android:layout_weight="1"
-            android:scaleType="fitCenter"
-            android:maxWidth="70dp"
-            android:maxHeight="70dp" />
-    </LinearLayout>
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/main2_4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/main2_3"
+            app:layout_constraintTop_toTopOf="parent" />
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

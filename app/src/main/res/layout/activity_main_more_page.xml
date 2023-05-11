@@ -6,13 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".MainActivityMorePage2"
     android:orientation="vertical"
-    android:background="#E6F2EC">
+    android:background="#E5F1EB">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="right"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="#fff">
         <Button
             android:layout_width="15dp"
             android:layout_height="15dp"
@@ -42,8 +43,7 @@
                 android:id="@+id/inmypage"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:layout_margin="10dp"
-                android:background="@drawable/more_profile_bg"
+                android:background="#fff"
                 >
 
                 <ImageView
@@ -123,118 +123,124 @@
                     app:layout_constraintTop_toTopOf="parent"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-            <View
-                android:layout_width="390dp"
-                android:layout_height="1dp"
-                android:layout_gravity="center"
-                android:background="#A8C8A8"
-                />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@drawable/more_community_bg"
-                android:layout_margin="15dp">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="커뮤니티"
-                    android:textSize="24dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="20dp"
-                    />
-
-
-                <Button
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:background="@drawable/more_button_bg"
-                    android:drawableEnd="@drawable/doublearrowxml"
-                    android:text="공지사항"/>
+                    android:orientation="vertical">
 
-                <Button
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="커뮤니티"
+                        android:textSize="24dp" />
+
+
+                    <LinearLayout
+                        android:background="@drawable/more_community_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        >
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/more_button_bg"
+                            android:drawableEnd="@drawable/doublearrowxml"
+                            android:text="공지사항"
+                            android:layout_margin="5dp"
+                            />
+
+
+                        <Button
+                            android:id="@+id/myanabadabtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/more_button_bg"
+                            android:drawableEnd="@drawable/doublearrowxml"
+                            android:text="내 아나바다"
+                            android:layout_margin="5dp"
+                            />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/more_button_bg"
+                            android:drawableEnd="@drawable/doublearrowxml"
+                            android:text="내 채팅"
+                            android:layout_margin="5dp"
+                            />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="내가 쓴 글 보러가기"
-                    android:background="@drawable/more_button_bg"
-                    android:drawableEnd="@drawable/doublearrowxml"
-                    />
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
 
-                <Button
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="지도"
+                        android:textSize="24dp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/more_community_bg"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/more_button_bg"
+                            android:drawableEnd="@drawable/doublearrowxml"
+                            android:text="지도" />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/more_button_bg"
+                            android:drawableEnd="@drawable/doublearrowxml"
+                            android:text="내주변 의류 수거함" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="내 채팅"
-                    android:background="@drawable/more_button_bg"
-                    android:drawableEnd="@drawable/doublearrowxml"
-                    />
+                    android:layout_marginBottom="10dp">
 
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="좋아요한 글 보러가기"
-                    android:background="@drawable/more_button_bg"
-                    android:drawableEnd="@drawable/doublearrowxml"
-                    />
+                    <Button
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="로그인하기"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@drawable/more_community_bg"
-                android:layout_margin="15dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="지도"
-                    android:textSize="24dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="20dp"
-                    />
-
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/more_button_bg"
-                    android:drawableEnd="@drawable/doublearrowxml"
-                    android:text="지도"/>
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="내주변 의류 수거함"
-                    android:background="@drawable/more_button_bg"
-                    android:drawableEnd="@drawable/doublearrowxml"
-                    />
-            </LinearLayout>
-
-
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp">
-
-                <Button
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:text="로그인하기"/>
-            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
 
