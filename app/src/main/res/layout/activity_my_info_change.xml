@@ -86,16 +86,12 @@
         </LinearLayout>
 
         <!--선-->
-        <View
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="#A8C8A8"
-            android:layout_width="390dp"
-            android:layout_height="1dp" />
+
 
         <!--기존 비밀번호-->
         <LinearLayout
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
             <TextView
@@ -113,17 +109,12 @@
         </LinearLayout>
 
 
-        <!--선-->
-        <View
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="#A8C8A8"
-            android:layout_width="390dp"
-            android:layout_height="1dp" />
+
 
         <!--새 비밀번호-->
         <LinearLayout
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
             <TextView
@@ -141,17 +132,13 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
 
-        <!--선-->
-        <View
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="#A8C8A8"
-            android:layout_width="390dp"
-            android:layout_height="1dp" />
+
+
 
         <!--비밀번호 확인-->
         <LinearLayout
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
             <TextView
@@ -168,17 +155,12 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
 
-        <!--선-->
-        <View
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="#A8C8A8"
-            android:layout_width="390dp"
-            android:layout_height="1dp" />
+
 
         <!--지역-->
         <LinearLayout
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
             <TextView

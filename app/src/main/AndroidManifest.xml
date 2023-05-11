@@ -626,6 +626,12 @@
             android:name=".CategoryMain1"
             android:exported="false" />
         <activity
+            android:name=".mypost"
+            android:exported="false" />
+        <activity
+            android:name=".search_page"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

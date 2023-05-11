@@ -8,7 +8,7 @@ import android.widget.ImageButton
 class Category1Wallpaper : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.category1_wallpaper)
+        setContentView(R.layout.activity_category1_wallpaper)
 
         val back=findViewById<ImageButton>(R.id.back)
 
