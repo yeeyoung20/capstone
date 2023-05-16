@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        val search=findViewById<ImageButton>(R.id.searchid)
+        val search=findViewById<Button>(R.id.searchid)
 
 
         val main1_1=findViewById<Button>(R.id.main1_1)
@@ -28,8 +28,8 @@ class MainActivity : AppCompatActivity() {
         val main1_11=findViewById<Button>(R.id.main1_11)
         val main2_1=findViewById<Button>(R.id.main2_1)
         val main2_2=findViewById<Button>(R.id.main2_2)
-        val main2_3=findViewById<Button>(R.id.main2_3)
         val main2_4=findViewById<Button>(R.id.main2_4)
+        val main2_5=findViewById<Button>(R.id.main2_5)
 
 
 
@@ -93,11 +93,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ChattingMain::class.java)
             startActivity(intent)
         }
-        main2_3.setOnClickListener {
-            val intent = Intent(this, Map::class.java)
+
+        main2_4.setOnClickListener{
+            val intent= Intent(this, Map::class.java)
             startActivity(intent)
         }
-        main2_4.setOnClickListener{
+        main2_5.setOnClickListener{
             val intent= Intent(this, MainActivityMorepage::class.java)
             startActivity(intent)
         }

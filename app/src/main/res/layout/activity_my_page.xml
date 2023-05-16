@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:src="@drawable/main2_4"
+        android:src="@drawable/main2_5"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="20dp"

@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,561 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EcoProject_android"
         tools:targetApi="31">
-        <activity
-            android:name=".Category11Mixedpaper"
-            android:exported="false" />
-        <activity
-            android:name=".Category11Plasticother"
-            android:exported="false" />
-        <activity
-            android:name=".Category11Noncombustiblegarbage"
-            android:exported="false" />
-        <activity
-            android:name=".Category11Leaflet"
-            android:exported="false" />
-        <activity
-            android:name=".Category11Unacceptableplastic"
-            android:exported="false" />
-        <activity
-            android:name=".Category11Creditcard"
-            android:exported="false" />
-        <activity
-            android:name=".Category11Vinylother"
-            android:exported="false" />
-        <activity
-            android:name=".Category11Brokenglass"
-            android:exported="false" />
-        <activity
-            android:name=".Category11Rubber"
-            android:exported="false" />
-        <activity
-            android:name=".Category11Receipt"
-            android:exported="false" />
-        <activity
-            android:name=".Category10Jewelry"
-            android:exported="false" />
-        <activity
-            android:name=".Category10Hanbok"
-            android:exported="false" />
-        <activity
-            android:name=".Category10Wallet"
-            android:exported="false" />
-        <activity
-            android:name=".Category10Clothes"
-            android:exported="false" />
-        <activity
-            android:name=".Category10Travelbag"
-            android:exported="false" />
-        <activity
-            android:name=".Category10Socks"
-            android:exported="false" />
-        <activity
-            android:name=".Category10Glasses"
-            android:exported="false" />
-        <activity
-            android:name=".Category10Shoes"
-            android:exported="false" />
-        <activity
-            android:name=".Category10Stockings"
-            android:exported="false" />
-        <activity
-            android:name=".Category10Underwear"
-            android:exported="false" />
-        <activity
-            android:name=".Category10Hat"
-            android:exported="false" />
-        <activity
-            android:name=".Category10Leggings"
-            android:exported="false" />
-        <activity
-            android:name=".Category10Bag"
-            android:exported="false" />
-        <activity
-            android:name=".Category10Hanger"
-            android:exported="false" />
-        <activity
-            android:name=".Category9Glassbottle"
-            android:exported="false" />
-        <activity
-            android:name=".Category9Milkpack"
-            android:exported="false" />
-        <activity
-            android:name=".Category9Yogurtbottle"
-            android:exported="false" />
-        <activity
-            android:name=".Category9Yogurtcontainer"
-            android:exported="false" />
-        <activity
-            android:name=".Category9Aircap"
-            android:exported="false" />
-        <activity
-            android:name=".Category9Aluminumcan"
-            android:exported="false" />
-        <activity
-            android:name=".Category9Icepack"
-            android:exported="false" />
-        <activity
-            android:name=".Category9Silicon"
-            android:exported="false" />
-        <activity
-            android:name=".Category9Alcoholsodabottle"
-            android:exported="false" />
-        <activity
-            android:name=".Category9Shoppingbag"
-            android:exported="false" />
-        <activity
-            android:name=".Category9Plasticpackaging"
-            android:exported="false" />
-        <activity
-            android:name=".Category9Plasticbag"
-            android:exported="false" />
-        <activity
-            android:name=".Category9Milkpowder"
-            android:exported="false" />
-        <activity
-            android:name=".Category9Nonwovenbag"
-            android:exported="false" />
-        <activity
-            android:name=".Category9Deliveryplasticcontainer"
-            android:exported="false" />
-        <activity
-            android:name=".Category9Box"
-            android:exported="false" />
-        <activity
-            android:name=".Category9Sterilizationpack"
-            android:exported="false" />
-        <activity
-            android:name=".Category9Ramenbag"
-            android:exported="false" />
-        <activity
-            android:name=".Category9Oilbottle"
-            android:exported="false" />
-        <activity
-            android:name=".Category9Confectionerybag"
-            android:exported="false" />
-        <activity
-            android:name=".Category9Snackbox"
-            android:exported="false" />
-        <activity
-            android:name=".Category9Eggplant"
-            android:exported="false" />
-        <activity
-            android:name=".Category9Packagingbag"
-            android:exported="false" />
-        <activity
-            android:name=".Category9Gascontainer"
-            android:exported="false" />
-        <activity
-            android:name=".Category9Styrofoam"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivityMorePage2"
-            android:exported="false" />
-        <activity
-            android:name=".Category8Pineapplepeel"
-            android:exported="false" />
-        <activity
-            android:name=".Category8Greenonion"
-            android:exported="false" />
-        <activity
-            android:name=".Category8Teabag"
-            android:exported="false" />
-        <activity
-            android:name=".Category8Kiwishell"
-            android:exported="false" />
-        <activity
-            android:name=".Category8Coconutshell"
-            android:exported="false" />
-        <activity
-            android:name=".Category8Coffeegrounds"
-            android:exported="false" />
-        <activity
-            android:name=".Category8Jang"
-            android:exported="false" />
-        <activity
-            android:name=".Category8Corner"
-            android:exported="false" />
-        <activity
-            android:name=".Category8Orangepeel"
-            android:exported="false" />
-        <activity
-            android:name=".Category8Onion"
-            android:exported="false" />
-        <activity
-            android:name=".Category8Medicine"
-            android:exported="false" />
-        <activity
-            android:name=".Category8Avocadopeel"
-            android:exported="false" />
-        <activity
-            android:name=".Category8Oil"
-            android:exported="false" />
-        <activity
-            android:name=".Category8Skinwatermelon"
-            android:exported="false" />
-        <activity
-            android:name=".Category8Applepeel"
-            android:exported="false" />
-        <activity
-            android:name=".Category8Bananapeel"
-            android:exported="false" />
-        <activity
-            android:name=".Category8Skinmelon"
-            android:exported="false" />
-        <activity
-            android:name=".Category8Garlic"
-            android:exported="false" />
-        <activity
-            android:name=".Category8Animalbones"
-            android:exported="false" />
-        <activity
-            android:name=".Category8Skintangerine"
-            android:exported="false" />
-        <activity
-            android:name=".Category8Fruitseed"
-            android:exported="false" />
-        <activity
-            android:name=".Category8Fruitpeel"
-            android:exported="false" />
-        <activity
-            android:name=".Category8Chili"
-            android:exported="false" />
-        <activity
-            android:name=".Category8Nutshell"
-            android:exported="false" />
-        <activity
-            android:name=".Category8Eggshell"
-            android:exported="false" />
-        <activity
-            android:name=".Category7Onionnet"
-            android:exported="false" />
-        <activity
-            android:name=".Category7Butanegas"
-            android:exported="false" />
-        <activity
-            android:name=".Category7Jar"
-            android:exported="false" />
-        <activity
-            android:name=".Category7Tissue"
-            android:exported="false" />
-        <activity
-            android:name=".Category7Cookingfoil"
-            android:exported="false" />
-        <activity
-            android:name=".Category7Cup"
-            android:exported="false" />
-        <activity
-            android:name=".Category7Cookware"
-            android:exported="false" />
-        <activity
-            android:name=".Category7Kitchenknife"
-            android:exported="false" />
-        <activity
-            android:name=".Category7Utensils"
-            android:exported="false" />
-        <activity
-            android:name=".Category7Grill"
-            android:exported="false" />
-        <activity
-            android:name=".Category7Breadclip"
-            android:exported="false" />
-        <activity
-            android:name=".Category7Straw"
-            android:exported="false" />
-        <activity
-            android:name=".Category7Plasticwrap"
-            android:exported="false" />
-        <activity
-            android:name=".Category7Coldbag"
-            android:exported="false" />
-        <activity
-            android:name=".Category7Cuttingboard"
-            android:exported="false" />
-        <activity
-            android:name=".Category7Skillet"
-            android:exported="false" />
-        <activity
-            android:name=".Category7Woodenchopsticks"
-            android:exported="false" />
-        <activity
-            android:name=".Category7Bowl"
-            android:exported="false" />
-        <activity
-            android:name=".Category7Rubberglove"
-            android:exported="false" />
-        <activity
-            android:name=".Category7Rubberband"
-            android:exported="false" />
-        <activity
-            android:name=".Category7Scissors"
-            android:exported="false" />
-        <activity
-            android:name=".Category7Fryingpan"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivityMorepage"
-            android:exported="false" />
-        <activity
-            android:name=".Category6Cosmeticspumptype"
-            android:exported="false" />
-        <activity
-            android:name=".Category6Cosmeticstube"
-            android:exported="false" />
-        <activity
-            android:name=".Category6Cosmeticsstick"
-            android:exported="false" />
-        <activity
-            android:name=".Category6Perfume"
-            android:exported="false" />
-        <activity
-            android:name=".Category6Cosmetics"
-            android:exported="false" />
-        <activity
-            android:name=".Category5Writinginstrument"
-            android:exported="false" />
-        <activity
-            android:name=".Category5Cutterknife"
-            android:exported="false" />
-        <activity
-            android:name=".Category5Cassettetape"
-            android:exported="false" />
-        <activity
-            android:name=".Category5Book"
-            android:exported="false" />
-        <activity
-            android:name=".Category5Magnet"
-            android:exported="false" />
-        <activity
-            android:name=".Category5Stapler"
-            android:exported="false" />
-        <activity
-            android:name=".Category5Videotape"
-            android:exported="false" />
-        <activity
-            android:name=".Category5Cddvd"
-            android:exported="false" />
-        <activity
-            android:name=".Category5Paper"
-            android:exported="false" />
-        <activity
-            android:name=".Category4Pumpcontainer"
-            android:exported="false" />
-        <activity
-            android:name=".Category4Toothbrush"
-            android:exported="false" />
-        <activity
-            android:name=".Category4Cleaningbrush"
-            android:exported="false" />
-        <activity
-            android:name=".Category4Towel"
-            android:exported="false" />
-        <activity
-            android:name=".Category4Waterfilter"
-            android:exported="false" />
-        <activity
-            android:name=".Category4Toiletroll"
-            android:exported="false" />
-        <activity
-            android:name=".Category4Diatomitemat"
-            android:exported="false" />
-        <activity
-            android:name=".Category4Toothpaste"
-            android:exported="false" />
-        <activity
-            android:name=".Category3Lighter"
-            android:exported="false" />
-        <activity
-            android:name=".Category3Stringinstrument"
-            android:exported="false" />
-        <activity
-            android:name=".Category3Hotpack"
-            android:exported="false" />
-        <activity
-            android:name=".Category3Tape"
-            android:exported="false" />
-        <activity
-            android:name=".Category3Condom"
-            android:exported="false" />
-        <activity
-            android:name=".Category3Toy"
-            android:exported="false" />
-        <activity
-            android:name=".Category3Umbrella"
-            android:exported="false" />
-        <activity
-            android:name=".Category3Yogamat"
-            android:exported="false" />
-        <activity
-            android:name=".Category3Plant"
-            android:exported="false" />
-        <activity
-            android:name=".Category3Moistureremover"
-            android:exported="false" />
-        <activity
-            android:name=".Category3Sanitarypad"
-            android:exported="false" />
-        <activity
-            android:name=".Category3Wettissue"
-            android:exported="false" />
-        <activity
-            android:name=".Category3Mosquitorepellent"
-            android:exported="false" />
-        <activity
-            android:name=".Category3Mask"
-            android:exported="false" />
-        <activity
-            android:name=".Category3Racket"
-            android:exported="false" />
-        <activity
-            android:name=".Category3Ball"
-            android:exported="false" />
-        <activity
-            android:name=".Category3Golfbag"
-            android:exported="false" />
-        <activity
-            android:name=".Category3Battery"
-            android:exported="false" />
-        <activity
-            android:name=".Category3Scrapmetal"
-            android:exported="false" />
-        <activity
-            android:name=".Category2Keyboard"
-            android:exported="false" />
-        <activity
-            android:name=".Category2Harddisk"
-            android:exported="false" />
-        <activity
-            android:name=".Category2Printer"
-            android:exported="false" />
-        <activity
-            android:name=".Category2Inkcartridge"
-            android:exported="false" />
-        <activity
-            android:name=".Category2Tablet"
-            android:exported="false" />
-        <activity
-            android:name=".Category2Computer"
-            android:exported="false" />
-        <activity
-            android:name=".Category2Charger"
-            android:exported="false" />
-        <activity
-            android:name=".Category2Wire"
-            android:exported="false" />
-        <activity
-            android:name=".Category2Electricpad"
-            android:exported="false" />
-        <activity
-            android:name=".Category2Electricrazor"
-            android:exported="false" />
-        <activity
-            android:name=".Category2Earphone"
-            android:exported="false" />
-        <activity
-            android:name=".Category2Hotwatermat"
-            android:exported="false" />
-        <activity
-            android:name=".Category2Speaker"
-            android:exported="false" />
-        <activity
-            android:name=".Category2Smallheater"
-            android:exported="false" />
-        <activity
-            android:name=".Category2Washingmachine"
-            android:exported="false" />
-        <activity
-            android:name=".Category2Auxiliarybattery"
-            android:exported="false" />
-        <activity
-            android:name=".Category2Monitor"
-            android:exported="false" />
-        <activity
-            android:name=".Category2Multitap"
-            android:exported="false" />
-        <activity
-            android:name=".Category2Mouse"
-            android:exported="false" />
-        <activity
-            android:name=".Category2Laptopbattery"
-            android:exported="false" />
-        <activity
-            android:name=".Category2Laptop"
-            android:exported="false" />
-        <activity
-            android:name=".Category2Refrigerator"
-            android:exported="false" />
-        <activity
-            android:name=".Category2Filter"
-            android:exported="false" />
-        <activity
-            android:name=".Category2Tv"
-            android:exported="false" />
-        <activity
-            android:name=".Category1Pot"
-            android:exported="false" />
-        <activity
-            android:name=".Category1Lamp"
-            android:exported="false" />
-        <activity
-            android:name=".Category1Paintbucket"
-            android:exported="false" />
-        <activity
-            android:name=".Category1Curtain"
-            android:exported="false" />
-        <activity
-            android:name=".Category1Cattower"
-            android:exported="false" />
-        <activity
-            android:name=".Category1Bed"
-            android:exported="false" />
-        <activity
-            android:name=".Category1Bulb"
-            android:exported="false" />
-        <activity
-            android:name=".Category1Bedding"
-            android:exported="false" />
-        <activity
-            android:name=".Category1Chair"
-            android:exported="false" />
-        <activity
-            android:name=".Category1Candle"
-            android:exported="false" />
-        <activity
-            android:name=".Category1Sofa"
-            android:exported="false" />
-        <activity
-            android:name=".Category1Pillow"
-            android:exported="false" />
-        <activity
-            android:name=".Category1Cushion"
-            android:exported="false" />
-        <activity
-            android:name=".Category1Matrix"
-            android:exported="false" />
-        <activity
-            android:name=".Category1Latex"
-            android:exported="false" />
-        <activity
-            android:name=".Category1Ceramic"
-            android:exported="false" />
-        <activity
-            android:name=".Category1Tree"
-            android:exported="false" />
-        <activity
-            android:name=".Category1Mirror"
-            android:exported="false" />
-        <activity
-            android:name=".Category1Furniture"
-            android:exported="false" />
-        <activity
-            android:name=".Category1Led"
-            android:exported="false" />
-        <activity
-            android:name=".ChattingMain"
-            android:exported="false" />
-        <activity
-            android:name=".MyInfoChange"
-            android:exported="false" />
+
 
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
@@ -573,64 +23,71 @@
 
         <activity
             android:name=".Map"
-            android:exported="false" />
+            android:exported="true" />
         <activity
-            android:name=".Category1Wallpaper"
-            android:exported="false" />
+            android:name=".CategoryDetail"
+            android:exported="true" />
         <activity
             android:name=".CommunityWrite"
-            android:exported="false" />
-        <activity
-            android:name=".MyPage"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".CommunityMain"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".SignUp"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".SignIn"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".CategoryMain11"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".CategoryMain10"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".CategoryMain9"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".CategoryMain8"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".CategoryMain7"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".CategoryMain6"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".CategoryMain5"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".CategoryMain4"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".CategoryMain3"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".CategoryMain2"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".CategoryMain1"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".mypost"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".search_page"
-            android:exported="false" />
+            android:exported="true" />
+        <activity
+            android:name=".MainActivityMorepage"
+            android:exported="true" />
+        <activity
+            android:name=".ChattingMain"
+            android:exported="true" />
+        <activity
+            android:name=".MyInfoChange"
+            android:exported="true" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

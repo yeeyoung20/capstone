@@ -11,7 +11,7 @@ class CategoryMain10 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category_main10)
 
-        val back=findViewById<ImageButton>(R.id.back)
+        val back=findViewById<Button>(R.id.back)
         val hanger=findViewById<Button>(R.id.hanger)
         val bag=findViewById<Button>(R.id.bag)
         val leggings=findViewById<Button>(R.id.leggings)
@@ -29,66 +29,77 @@ class CategoryMain10 : AppCompatActivity() {
 
 
         //뒤로가기
-        back.setOnClickListener{
-            val intent= Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
+        back.setOnClickListener{finish()}
 
         //버튼 누르면 분리배출 방법 안내 예시
         hanger.setOnClickListener{
-            val intent= Intent(this, Category10Hanger::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "옷걸이")
             startActivity(intent)
         }
         bag.setOnClickListener{
-            val intent= Intent(this, Category10Bag::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "가방")
             startActivity(intent)
         }
         leggings.setOnClickListener{
-            val intent= Intent(this, Category10Leggings::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "레깅스")
             startActivity(intent)
         }
         hat.setOnClickListener{
-            val intent= Intent(this, Category10Hat::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "모자")
             startActivity(intent)
         }
         underwear.setOnClickListener{
-            val intent= Intent(this, Category10Underwear::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "속옷")
             startActivity(intent)
         }
         stockings.setOnClickListener{
-            val intent= Intent(this, Category10Stockings::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "스타킹")
             startActivity(intent)
         }
         shoes.setOnClickListener{
-            val intent= Intent(this, Category10Shoes::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "신발")
             startActivity(intent)
         }
         glasses.setOnClickListener{
-            val intent= Intent(this, Category10Glasses::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "안경, 선글라스")
             startActivity(intent)
         }
         socks.setOnClickListener{
-            val intent= Intent(this, Category10Socks::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "양말")
             startActivity(intent)
         }
         travelbag.setOnClickListener{
-            val intent= Intent(this, Category10Travelbag::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "여행용 가방")
             startActivity(intent)
         }
         clothes.setOnClickListener{
-            val intent= Intent(this, Category10Clothes::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "의류")
             startActivity(intent)
         }
         wallet.setOnClickListener{
-            val intent= Intent(this, Category10Wallet::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "지갑")
             startActivity(intent)
         }
         hanbok.setOnClickListener{
-            val intent= Intent(this, Category10Hanbok::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "한복")
             startActivity(intent)
         }
         jewelry.setOnClickListener{
-            val intent= Intent(this, Category10Jewelry::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "주얼리")
             startActivity(intent)
         }
     }

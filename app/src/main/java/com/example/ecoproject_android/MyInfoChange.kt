@@ -31,10 +31,7 @@ class MyInfoChange : AppCompatActivity() {
         //취소 누르면 뒤로가기
         val goback = findViewById<Button>(R.id.goback)
 
-        goback.setOnClickListener {
-            val intent = Intent(this, MainActivityMorepage::class.java)
-            startActivity(intent)
-        }
+        goback.setOnClickListener {finish()}
 
         //수정완료 누르면 다시 한 번 확인하는 다이얼로그 띄우기
         finishchange.setOnClickListener {

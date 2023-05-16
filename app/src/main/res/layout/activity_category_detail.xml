@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".CommunityMain">
+    tools:context=".CategoryDetail">
 
     <!--맨 위 뒤로가기, 카테고리 이름-->
     <LinearLayout
@@ -18,7 +18,8 @@
             android:layout_width="40dp"
             android:layout_height="40dp" />
         <TextView
-            android:text="커뮤니티"
+            android:id="@+id/smallCategoryname"
+            android:text="소분류 이름"
             android:textSize="30dp"
             android:gravity="center"
             android:layout_gravity="center"
@@ -32,15 +33,22 @@
         android:layout_marginTop="10dp"
         android:background="#000"
         android:layout_width="match_parent"
-        android:layout_height="2dp" />
+        android:layout_height="1dp" />
 
-    <!--글쓰기 버튼-->
-    <Button
-        android:id="@+id/write_button"
-        android:text="글쓰기"
-        android:textColor="#000"
-        android:backgroundTint="#fff"
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
+    <TextView
+        android:text="버리는 방법"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 </LinearLayout>

@@ -11,7 +11,7 @@ class CategoryMain3 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category_main3)
 
-        val back=findViewById<ImageButton>(R.id.back)
+        val back=findViewById<Button>(R.id.back)
         val scrapmetal=findViewById<Button>(R.id.scrapmetal)
         val battery=findViewById<Button>(R.id.battery)
         val golfbag=findViewById<Button>(R.id.golfbag)
@@ -35,86 +35,102 @@ class CategoryMain3 : AppCompatActivity() {
 
 
         //뒤로가기
-        back.setOnClickListener{
-            val intent= Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
+        back.setOnClickListener{finish()}
 
         //버튼 누르면 분리배출 방법 안내 예시
         scrapmetal.setOnClickListener{
-            val intent= Intent(this, Category3Scrapmetal::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "고철")
             startActivity(intent)
         }
         battery.setOnClickListener{
-            val intent= Intent(this, Category3Battery::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "건전지")
             startActivity(intent)
         }
         golfbag.setOnClickListener{
-            val intent= Intent(this, Category3Golfbag::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "골프 가방")
             startActivity(intent)
         }
         ball.setOnClickListener{
-            val intent= Intent(this, Category3Ball::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "공")
             startActivity(intent)
         }
         racket.setOnClickListener{
-            val intent= Intent(this, Category3Racket::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "라켓")
             startActivity(intent)
         }
         mask.setOnClickListener{
-            val intent= Intent(this, Category3Mask::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "마스크")
             startActivity(intent)
         }
         mosquitorepellent.setOnClickListener{
-            val intent= Intent(this, Category3Mosquitorepellent::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "모기향")
             startActivity(intent)
         }
         wettissue.setOnClickListener{
-            val intent= Intent(this, Category3Wettissue::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "물티슈")
             startActivity(intent)
         }
         sanitarypad.setOnClickListener{
-            val intent= Intent(this, Category3Sanitarypad::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "생리대")
             startActivity(intent)
         }
         moistureremover.setOnClickListener{
-            val intent= Intent(this, Category3Moistureremover::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "습기제거제")
             startActivity(intent)
         }
         plant.setOnClickListener{
-            val intent= Intent(this, Category3Plant::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "식물")
             startActivity(intent)
         }
         yogamat.setOnClickListener{
-            val intent= Intent(this, Category3Yogamat::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "요가 매트")
             startActivity(intent)
         }
         umbrella.setOnClickListener{
-            val intent= Intent(this, Category3Umbrella::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "우산")
             startActivity(intent)
         }
         toy.setOnClickListener{
-            val intent= Intent(this, Category3Toy::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "장난감")
             startActivity(intent)
         }
         condom.setOnClickListener{
-            val intent= Intent(this, Category3Condom::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "콘돔")
             startActivity(intent)
         }
         tape.setOnClickListener{
-            val intent= Intent(this, Category3Tape::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "테이프")
             startActivity(intent)
         }
         hotpack.setOnClickListener{
-            val intent= Intent(this, Category3Hotpack::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "핫팩")
             startActivity(intent)
         }
         stringinstrument.setOnClickListener{
-            val intent= Intent(this, Category3Stringinstrument::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "현악기")
             startActivity(intent)
         }
         lighter.setOnClickListener{
-            val intent= Intent(this, Category3Lighter::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "라이터")
             startActivity(intent)
         }
 

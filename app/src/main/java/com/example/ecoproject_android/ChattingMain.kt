@@ -3,6 +3,7 @@ package com.example.ecoproject_android
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
 
 class ChattingMain : AppCompatActivity() {
@@ -10,12 +11,9 @@ class ChattingMain : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chatting_main)
 
-        val back=findViewById<ImageButton>(R.id.back)
+        val back=findViewById<Button>(R.id.back)
 
         //뒤로가기
-        back.setOnClickListener{
-            val intent= Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
+        back.setOnClickListener{finish()}
     }
 }

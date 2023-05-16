@@ -13,6 +13,12 @@ class MainActivityMorepage : AppCompatActivity() {
         //val usermore = findViewById<Button>(R.id.usermore)
         val inmypage = findViewById<androidx.constraintlayout.widget.ConstraintLayout>(R.id.inmypage)
         val myanabadabtn = findViewById<Button>(R.id.myanabadabtn)
+        val map = findViewById<Button>(R.id.map)
+        val back = findViewById<Button>(R.id.back)
+
+
+
+        back.setOnClickListener{finish()}
 
         //정보수정화면으로 전환
         inmypage.setOnClickListener{
@@ -22,6 +28,11 @@ class MainActivityMorepage : AppCompatActivity() {
 
         myanabadabtn.setOnClickListener{
             val intent= Intent(this, mypost::class.java)
+            startActivity(intent)
+        }
+
+        map.setOnClickListener{
+            val intent= Intent(this, Map::class.java)
             startActivity(intent)
         }
     }

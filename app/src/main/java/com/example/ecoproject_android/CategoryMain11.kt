@@ -11,7 +11,7 @@ class CategoryMain11 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category_main11)
 
-        val back=findViewById<ImageButton>(R.id.back)
+        val back=findViewById<Button>(R.id.back)
         val receipt=findViewById<Button>(R.id.receipt)
         val rubber=findViewById<Button>(R.id.rubber)
         val brokenglass=findViewById<Button>(R.id.brokenglass)
@@ -24,49 +24,56 @@ class CategoryMain11 : AppCompatActivity() {
         val mixedpaper=findViewById<Button>(R.id.mixedpaper)
 
         //뒤로가기
-        back.setOnClickListener{
-            val intent= Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
+        back.setOnClickListener{finish()}
         //버튼 누르면 분리배출 방법 안내 예시
         receipt.setOnClickListener{
-            val intent= Intent(this, Category11Receipt::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "영수증")
             startActivity(intent)
         }
         rubber.setOnClickListener{
-            val intent= Intent(this, Category11Rubber::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "고무")
             startActivity(intent)
         }
         brokenglass.setOnClickListener{
-            val intent= Intent(this, Category11Brokenglass::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "깨진 유리")
             startActivity(intent)
         }
         vinylother.setOnClickListener{
-            val intent= Intent(this, Category11Vinylother::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "비닐류 OTHER")
             startActivity(intent)
         }
         creditcard.setOnClickListener{
-            val intent= Intent(this, Category11Creditcard::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "신용카드")
             startActivity(intent)
         }
         unacceptableplastic.setOnClickListener{
-            val intent= Intent(this, Category11Unacceptableplastic::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "재활용 불가 플라스틱")
             startActivity(intent)
         }
         leaflet.setOnClickListener{
-            val intent= Intent(this, Category11Leaflet::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "전단지")
             startActivity(intent)
         }
         noncombustiblegarbage.setOnClickListener{
-            val intent= Intent(this, Category11Noncombustiblegarbage::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "타지 않는 쓰레기")
             startActivity(intent)
         }
         plasticother.setOnClickListener{
-            val intent= Intent(this, Category11Plasticother::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "플라스틱 OTHER")
             startActivity(intent)
         }
         mixedpaper.setOnClickListener{
-            val intent= Intent(this, Category11Mixedpaper::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "혼합종이")
             startActivity(intent)
         }
     }

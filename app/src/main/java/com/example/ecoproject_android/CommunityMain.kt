@@ -16,15 +16,12 @@ class CommunityMain : AppCompatActivity() {
         DB=DBHelper(this)
 
         val write_button = findViewById<Button>(R.id.write_button)
-        val back=findViewById<ImageButton>(R.id.back)
+        val back=findViewById<Button>(R.id.back)
         val builder = AlertDialog.Builder(this)
 
 
         //뒤로가기
-        back.setOnClickListener{
-            val intent= Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
+        back.setOnClickListener{finish()}
 
         write_button.setOnClickListener {
 

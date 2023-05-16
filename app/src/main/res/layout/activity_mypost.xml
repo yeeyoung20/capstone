@@ -7,8 +7,9 @@
     android:orientation="vertical"
     tools:context=".mypost">
 
-    <ImageView
-        android:src="@drawable/back"
+    <Button
+        android:id="@+id/back"
+        android:background="@drawable/back"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="20dp"
@@ -43,6 +44,7 @@
             android:layout_height="55dp"/>
     </LinearLayout>
     <Button
+        android:id="@+id/writepost"
         android:text="글 쓰기"
         android:layout_marginLeft="20dp"
         android:layout_width="wrap_content"

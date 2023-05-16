@@ -19,12 +19,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-<!--      환경구조및 검색줄       -->
+            <!--      환경구조및 검색줄       -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/teamname"
@@ -39,7 +39,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageButton
+                <Button
                     android:id="@+id/searchid"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
@@ -80,7 +80,7 @@
                         android:layout_height="60dp"
                         android:background="@drawable/main_category_shdow"
                         android:backgroundTint="#fff"
-                        android:drawableTop="@drawable/smain1_1xml"
+                        android:drawableTop="@drawable/main1_1xml"
                         android:text="가구/인테리어"
                         android:textColor="#000"
                         android:textSize="8dp"
@@ -97,7 +97,7 @@
                         android:layout_height="60dp"
                         android:background="@drawable/main_category_shdow"
                         android:backgroundTint="#fff"
-                        android:drawableTop="@drawable/smain1_2xml"
+                        android:drawableTop="@drawable/main1_2xml"
                         android:text="가전제품"
                         android:textColor="#000"
                         android:textSize="8dp"
@@ -112,7 +112,7 @@
                         android:layout_height="60dp"
                         android:background="@drawable/main_category_shdow"
                         android:backgroundTint="#fff"
-                        android:drawableTop="@drawable/smain1_3xml"
+                        android:drawableTop="@drawable/main1_3xml"
                         android:text="생활용품"
                         android:textColor="#000"
                         android:textSize="8dp"
@@ -127,7 +127,7 @@
                         android:layout_height="60dp"
                         android:background="@drawable/main_category_shdow"
                         android:backgroundTint="#fff"
-                        android:drawableTop="@drawable/smain1_4xml"
+                        android:drawableTop="@drawable/main1_4xml"
                         android:text="욕실용품"
                         android:textColor="#000"
                         android:textSize="8dp"
@@ -142,7 +142,7 @@
                         android:layout_height="60dp"
                         android:background="@drawable/main_category_shdow"
                         android:backgroundTint="#fff"
-                        android:drawableTop="@drawable/smain1_5xml"
+                        android:drawableTop="@drawable/main1_5xml"
                         android:text="도서/문구"
                         android:textColor="#000"
                         android:textSize="8dp"
@@ -157,7 +157,7 @@
                         android:layout_height="60dp"
                         android:background="@drawable/main_category_shdow"
                         android:backgroundTint="#fff"
-                        android:drawableTop="@drawable/smain1_6xml"
+                        android:drawableTop="@drawable/main1_6xml"
                         android:text="미용/화장품"
                         android:textColor="#000"
                         android:textSize="8dp"
@@ -172,7 +172,7 @@
                         android:layout_height="60dp"
                         android:background="@drawable/main_category_shdow"
                         android:backgroundTint="#fff"
-                        android:drawableTop="@drawable/smain1_7xml"
+                        android:drawableTop="@drawable/main1_7xml"
                         android:text="주방용"
                         android:textColor="#000"
                         android:textSize="8dp"
@@ -187,7 +187,7 @@
                         android:layout_height="60dp"
                         android:background="@drawable/main_category_shdow"
                         android:backgroundTint="#fff"
-                        android:drawableTop="@drawable/smain1_8xml"
+                        android:drawableTop="@drawable/main1_8xml"
                         android:text="식품"
                         android:textColor="#000"
                         android:textSize="8dp"
@@ -202,7 +202,7 @@
                         android:layout_height="60dp"
                         android:background="@drawable/main_category_shdow"
                         android:backgroundTint="#fff"
-                        android:drawableTop="@drawable/smain1_11xml"
+                        android:drawableTop="@drawable/main1_11xml"
                         android:text="기타"
                         android:textColor="#000"
                         android:textSize="8dp"
@@ -217,7 +217,7 @@
                         android:layout_height="60dp"
                         android:background="@drawable/main_category_shdow"
                         android:backgroundTint="#fff"
-                        android:drawableTop="@drawable/smain1_9xml"
+                        android:drawableTop="@drawable/main1_9xml"
                         android:text="용기/포장재"
                         android:textColor="#000"
                         android:textSize="8dp"
@@ -232,7 +232,7 @@
                         android:layout_height="60dp"
                         android:background="@drawable/main_category_shdow"
                         android:backgroundTint="#fff"
-                        android:drawableTop="@drawable/smain1_10xml"
+                        android:drawableTop="@drawable/main1_10xml"
                         android:text="패션/잡화"
                         android:textColor="#000"
                         android:textSize="8dp"
@@ -255,113 +255,125 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:text="오늘의 아나바다"
-                    android:textSize="25dp"
-                    android:layout_marginLeft="10dp"/>
+                    android:textSize="25dp" />
             </LinearLayout>
 
             <HorizontalScrollView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"                >
+                android:layout_height="wrap_content">
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
+                    android:orientation="horizontal">
+
                     <LinearLayout
                         android:layout_width="130dp"
                         android:layout_height="150dp"
-                        android:orientation="vertical"
-                        android:layout_margin="10dp">
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
                         <ImageView
                             android:layout_width="130dp"
                             android:layout_height="130dp"
-                            android:background="@drawable/maintestimg"/>
+                            android:background="@drawable/maintestimg" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="옷나눠쓰실분있나요?"/>
+                            android:text="옷나눠쓰실분있나요?" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="130dp"
                         android:layout_height="150dp"
-                        android:orientation="vertical"
-                        android:layout_margin="10dp">
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
                         <ImageView
                             android:layout_width="130dp"
                             android:layout_height="130dp"
-                            android:background="@drawable/maintestimg"/>
+                            android:background="@drawable/maintestimg" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="옷나눠쓰실분있나요?"/>
+                            android:text="옷나눠쓰실분있나요?" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="130dp"
                         android:layout_height="150dp"
-                        android:orientation="vertical"
-                        android:layout_margin="10dp">
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
                         <ImageView
                             android:layout_width="130dp"
                             android:layout_height="130dp"
-                            android:background="@drawable/maintestimg"/>
+                            android:background="@drawable/maintestimg" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="옷나눠쓰실분있나요?"/>
+                            android:text="옷나눠쓰실분있나요?" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="130dp"
                         android:layout_height="150dp"
-                        android:orientation="vertical"
-                        android:layout_margin="10dp">
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
                         <ImageView
                             android:layout_width="130dp"
                             android:layout_height="130dp"
-                            android:background="@drawable/maintestimg"/>
+                            android:background="@drawable/maintestimg" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="옷나눠쓰실분있나요?"/>
+                            android:text="옷나눠쓰실분있나요?" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="130dp"
                         android:layout_height="150dp"
-                        android:orientation="vertical"
-                        android:layout_margin="10dp">
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
                         <ImageView
                             android:layout_width="130dp"
                             android:layout_height="130dp"
-                            android:background="@drawable/maintestimg"/>
+                            android:background="@drawable/maintestimg" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="옷나눠쓰실분있나요?"/>
+                            android:text="옷나눠쓰실분있나요?" />
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="130dp"
                         android:layout_height="150dp"
-                        android:orientation="vertical"
-                        android:layout_margin="10dp">
+                        android:layout_margin="10dp"
+                        android:orientation="vertical">
+
                         <ImageView
                             android:layout_width="130dp"
                             android:layout_height="130dp"
-                            android:background="@drawable/maintestimg"/>
+                            android:background="@drawable/maintestimg" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="옷나눠쓰실분있나요?"/>
+                            android:text="옷나눠쓰실분있나요?" />
                     </LinearLayout>
-
-
 
 
                 </LinearLayout>
@@ -371,12 +383,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:text="내 주변 의류수거함"
-                    android:textSize="25dp"
-                    android:layout_marginLeft="10dp"/>
+                    android:textSize="25dp" />
             </LinearLayout>
 
             <!-- 지도 -->
@@ -385,19 +398,19 @@
                 android:layout_width="380dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
-                android:layout_margin="10dp"
-                >
-                <fragment
-                    android:id="@+id/map_fragment"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:name="com.naver.maps.map.MapFragment"
-                    />
+                android:layout_margin="10dp">
+                <!--                <fragment-->
+                <!--                    android:id="@+id/map_fragment"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:name="com.naver.maps.map.MapFragment"-->
+                <!--                    />-->
             </LinearLayout>
 
         </LinearLayout>
 
     </ScrollView>
+
     <View
         android:background="#CDCDCD"
         android:layout_width="match_parent"
@@ -409,13 +422,19 @@
         android:layout_height="50dp"
         android:layout_gravity="bottom"
         android:gravity="center"
+        android:background="#fff"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/main2_1"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:background="@drawable/main2_1"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:drawableTop="@drawable/main2_1xml"
+            android:backgroundTint="#fff"
+            android:background="@drawable/main_category_shdow"
+            android:text="커뮤니티"
+            android:textSize="8dp"
+            android:textColor="#000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/main2_2"
             app:layout_constraintHorizontal_chainStyle="spread"
@@ -425,33 +444,63 @@
 
         <Button
             android:id="@+id/main2_2"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:background="@drawable/main2_2"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:drawableTop="@drawable/main2_2xml"
+            android:backgroundTint="#fff"
+            android:background="@drawable/main_category_shdow"
+            android:text="채팅"
+            android:textSize="8dp"
+            android:textColor="#000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/main2_3"
             app:layout_constraintStart_toEndOf="@+id/main2_1"
             app:layout_constraintTop_toTopOf="parent" />
 
-
         <Button
             android:id="@+id/main2_3"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:background="@drawable/main2_3"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:drawableTop="@drawable/main2_3xml"
+            android:backgroundTint="#fff"
+            android:background="@drawable/main_category_shdow"
+            android:text="메인"
+            android:textSize="8dp"
+            android:textColor="#000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/main2_4"
             app:layout_constraintStart_toEndOf="@+id/main2_2"
             app:layout_constraintTop_toTopOf="parent" />
 
+
         <Button
             android:id="@+id/main2_4"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:background="@drawable/main2_4"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:drawableTop="@drawable/main2_4xml"
+            android:backgroundTint="#fff"
+            android:background="@drawable/main_category_shdow"
+            android:text="지도"
+            android:textSize="8dp"
+            android:textColor="#000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/main2_5"
+            app:layout_constraintStart_toEndOf="@+id/main2_3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/main2_5"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:drawableTop="@drawable/main2_5xml"
+            android:backgroundTint="#fff"
+            android:background="@drawable/main_category_shdow"
+            android:text="더보기"
+            android:textSize="8dp"
+            android:textColor="#000"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/main2_3"
+            app:layout_constraintStart_toEndOf="@+id/main2_4"
             app:layout_constraintTop_toTopOf="parent" />
         />
 

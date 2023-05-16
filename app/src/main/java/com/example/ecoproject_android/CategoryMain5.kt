@@ -11,7 +11,7 @@ class CategoryMain5 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category_main5)
 
-        val back=findViewById<ImageButton>(R.id.back)
+        val back=findViewById<Button>(R.id.back)
         val paper=findViewById<Button>(R.id.paper)
         val cddvd=findViewById<Button>(R.id.cddvd)
         val videotape=findViewById<Button>(R.id.videotape)
@@ -24,45 +24,51 @@ class CategoryMain5 : AppCompatActivity() {
 
 
         //뒤로가기
-        back.setOnClickListener{
-            val intent= Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
+        back.setOnClickListener{finish()}
         //버튼 누르면 분리배출 방법 안내 예시
         paper.setOnClickListener{
-            val intent= Intent(this, Category5Paper::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "일반 종이")
             startActivity(intent)
         }
         cddvd.setOnClickListener{
-            val intent= Intent(this, Category5Cddvd::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "CD, DVD")
             startActivity(intent)
         }
         videotape.setOnClickListener{
-            val intent= Intent(this, Category5Videotape::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "비디오 테이프")
             startActivity(intent)
         }
         stapler.setOnClickListener{
-            val intent= Intent(this, Category5Stapler::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "스테이플러, 심")
             startActivity(intent)
         }
         magnet.setOnClickListener{
-            val intent= Intent(this, Category5Magnet::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "자석")
             startActivity(intent)
         }
         book.setOnClickListener{
-            val intent= Intent(this, Category5Book::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "책, 노트, 잡지")
             startActivity(intent)
         }
         cassettetape.setOnClickListener{
-            val intent= Intent(this, Category5Cassettetape::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "카세트 테이프")
             startActivity(intent)
         }
         cutterknife.setOnClickListener{
-            val intent= Intent(this, Category5Cutterknife::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "커터칼")
             startActivity(intent)
         }
         writinginstrument.setOnClickListener{
-            val intent= Intent(this, Category5Writinginstrument::class.java)
+            val intent= Intent(this, CategoryDetail::class.java)
+            intent.putExtra("title", "필기구")
             startActivity(intent)
         }
 
