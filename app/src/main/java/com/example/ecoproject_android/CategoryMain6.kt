@@ -19,31 +19,34 @@ class CategoryMain6 : AppCompatActivity() {
         val cosmeticspumptype=findViewById<Button>(R.id.cosmeticspumptype)
 
         //뒤로가기
-        back.setOnClickListener{finish()}
+        back.setOnClickListener{
+            val intent= Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
         //버튼 누르면 분리배출 방법 안내 예시
         cosmetics.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("title", "화장품")
+            intent.putExtra("cosmetics", "화장품")
             startActivity(intent)
         }
         perfume.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("title", "향수")
+            intent.putExtra("perfume", "향수")
             startActivity(intent)
         }
         cosmeticsstick.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("title", "화장품(스틱)")
+            intent.putExtra("cosmeticsstick", "화장품(스틱)")
             startActivity(intent)
         }
         cosmeticstube.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("title", "화장품(튜브)")
+            intent.putExtra("cosmeticstube", "화장품(튜브)")
             startActivity(intent)
         }
         cosmeticspumptype.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("title", "화장품(펌프형)")
+            intent.putExtra("cosmeticspumptype", "화장품(펌프형)")
             startActivity(intent)
         }
 

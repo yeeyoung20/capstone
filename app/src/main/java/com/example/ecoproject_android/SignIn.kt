@@ -7,36 +7,38 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
 
 class SignIn : AppCompatActivity() {
-    var DB:DBHelper?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
-        DB=DBHelper(this)
 
-        val signup = findViewById<TextView>(R.id.signup)
-        val loginButton = findViewById<Button>(R.id.loginbutton)
-        val nickname = findViewById<EditText>(R.id.nickname)
+        lateinit var auth : FirebaseAuth
+
+        val userId = findViewById<EditText>(R.id.userId)
         val password = findViewById<EditText>(R.id.password)
+        val loginbutton = findViewById<Button>(R.id.loginbutton)
+        val signup = findViewById<TextView>(R.id.signup)
 
-        loginButton.setOnClickListener{
-            val user=nickname!!.text.toString()
-            val pass=password!!.text.toString()
-            if(user==""|| pass=="") Toast.makeText(
-                this, "회원정보를 전부 입력해주세요", Toast.LENGTH_SHORT
-            ).show() else{
-                val checkUserpass=DB!!.checkUserpass(user, pass)
-                if(checkUserpass==true){
-                    Toast.makeText(this, "로그인 되었습니다", Toast.LENGTH_SHORT).show()
-                    val intent=Intent(applicationContext, MainActivity::class.java)
-                    startActivity(intent)
+        auth = FirebaseAuth.getInstance()
+        loginbutton.setOnClickListener {
+            val email = userId.text.toString()
+            val password = password.text.toString()
+
+            auth.signInWithEmailAndPassword(email,password)
+                .addOnCompleteListener { task ->
+                    if(task.isSuccessful){
+                        Toast.makeText(this,"로그인에 성공했습니다!",Toast.LENGTH_SHORT).show()
+                        val intent = Intent(this, MainActivity::class.java)
+                        startActivity(intent)
+                    }else{
+                        Toast.makeText(this,"로그인에 실패했습니다.",Toast.LENGTH_SHORT).show()
+                    }
                 }
-                else{
-                    Toast.makeText(this, "회원정보가 존재하지 않습니다", Toast.LENGTH_SHORT).show()
-                }
-            }
+            auth.run {  }
         }
+
         signup.setOnClickListener{
             val intent= Intent(this, SignUp::class.java)
             startActivity(intent)

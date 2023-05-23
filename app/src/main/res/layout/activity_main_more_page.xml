@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".MainActivityMorepage"
     android:orientation="vertical"
     android:background="#E5F1EB">
 
@@ -14,7 +15,6 @@
         android:orientation="vertical"
         android:background="#fff">
         <Button
-            android:id="@+id/back"
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginTop="20dp"
@@ -116,7 +116,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="오늘 쓰레기 버리는 날입니다! 버리셔싼요??"
+                    android:text="오늘 쓰레기 버리는 날입니다! 버리셨나요??"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -231,6 +231,7 @@
                     android:layout_marginBottom="10dp">
 
                     <Button
+                        android:id="@+id/loginlogout"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:text="로그인하기"

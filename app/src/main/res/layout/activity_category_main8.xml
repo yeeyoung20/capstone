@@ -31,7 +31,7 @@
         android:layout_marginTop="10dp"
         android:background="#000"
         android:layout_width="match_parent"
-        android:layout_height="1dp" />
+        android:layout_height="2dp" />
 
     <!--메뉴 스크롤-->
     <ScrollView

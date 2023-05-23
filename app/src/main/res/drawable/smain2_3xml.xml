@@ -3,5 +3,5 @@
     <item
         android:width="30dp"
         android:height="30dp"
-        android:drawable="@drawable/main1_2"/>
+        android:drawable="@drawable/smain2_3"/>
 </layer-list>

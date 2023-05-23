@@ -20,7 +20,10 @@ class mypost : AppCompatActivity() {
 
 
         //뒤로가기
-        back
+        back.setOnClickListener{
+            val intent= Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
         writepost.setOnClickListener{
             val intent= Intent(this, CommunityWrite::class.java)
             startActivity(intent)
@@ -32,7 +35,7 @@ class mypost : AppCompatActivity() {
         tabHost.addTab(myposttab)
 
         val mylikeposttab = tabHost.newTabSpec("myposttab")
-        mylikeposttab.setIndicator("내가 좋아요한 글")
+        mylikeposttab.setIndicator("내가 쓴 글")
         mylikeposttab.setContent(R.id.mylike)
         tabHost.addTab(mylikeposttab)
     }

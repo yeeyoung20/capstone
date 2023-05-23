@@ -7,113 +7,114 @@
     android:orientation="vertical"
     tools:context=".SignUp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="환경구조"
-            android:textSize="28dp"
-            android:textColor="#007521"
-            android:paddingTop="80dp"
-            android:paddingLeft="30dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="환경구조"
+        android:textSize="28dp"
+        android:textColor="#007521"
+        android:paddingTop="80dp"
+        android:paddingLeft="30dp" />
 
-        <TextView
-            android:text="* 는 필수입력"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="20dp"
-            android:layout_gravity="right"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="* 아이디"
-            android:textSize="15dp"
-            android:textColor="#000"
-            android:paddingTop="40dp"
-            android:paddingLeft="50dp" />
-        <EditText
-            android:id="@+id/inputnickname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="25dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:background="@drawable/signup_shadow"
-            android:elevation="5dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="* 비밀번호"
-            android:textSize="15dp"
-            android:textColor="#000"
-            android:paddingTop="10dp"
-            android:paddingLeft="50dp" />
-        <EditText
-            android:id="@+id/inputpassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="25dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:background="@drawable/signup_shadow"
-            android:elevation="5dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="* 비밀번호 확인"
-            android:textSize="15dp"
-            android:textColor="#000"
-            android:paddingTop="5dp"
-            android:paddingLeft="50dp" />
-        <EditText
-            android:id="@+id/reinputpassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="25dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:background="@drawable/signup_shadow"
-            android:elevation="5dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="닉네임"
-            android:textSize="15dp"
-            android:textColor="#000"
-            android:paddingTop="10dp"
-            android:paddingLeft="50dp" />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="25dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:background="@drawable/signup_shadow"
-            android:elevation="5dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="지역"
-            android:textSize="15dp"
-            android:textColor="#000"
-            android:paddingTop="10dp"
-            android:paddingLeft="50dp" />
-        <Spinner
-            android:id="@+id/settingzone"
-            android:layout_width="match_parent"
-            android:layout_height="33dp"
-            android:textSize="25dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"
-            android:background="@drawable/signup_shadow"
-            android:elevation="5dp" />
-        <Button
-            android:id="@+id/signupbutton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="회원 가입!"
-            android:textSize="20dp"
-            android:textColor="@color/black"
-            android:layout_margin="40dp"
-            android:backgroundTint="#D8ECA1" />
-    </LinearLayout>
+    <TextView
+        android:text="* 는 필수입력"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="* 아이디"
+        android:textSize="15dp"
+        android:textColor="#000"
+        android:paddingTop="40dp"
+        android:paddingLeft="50dp" />
+    <EditText
+        android:id="@+id/userId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/signup_shadow"
+        android:elevation="5dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="* 비밀번호"
+        android:textSize="15dp"
+        android:textColor="#000"
+        android:paddingTop="10dp"
+        android:paddingLeft="50dp" />
+    <EditText
+        android:id="@+id/userPwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/signup_shadow"
+        android:elevation="5dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="* 비밀번호 확인"
+        android:textSize="15dp"
+        android:textColor="#000"
+        android:paddingTop="5dp"
+        android:paddingLeft="50dp" />
+    <EditText
+        android:id="@+id/passCheck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/signup_shadow"
+        android:elevation="5dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="닉네임"
+        android:textSize="15dp"
+        android:textColor="#000"
+        android:paddingTop="10dp"
+        android:paddingLeft="50dp" />
+    <EditText
+        android:id="@+id/userNickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/signup_shadow"
+        android:elevation="5dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="지역"
+        android:textSize="15dp"
+        android:textColor="#000"
+        android:paddingTop="10dp"
+        android:paddingLeft="50dp" />
+    <Spinner
+        android:id="@+id/settingzone"
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:textSize="25dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/signup_shadow"
+        android:elevation="5dp" />
+    <Button
+        android:id="@+id/signupbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="회원 가입!"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_margin="40dp"
+        android:backgroundTint="#D8ECA1" />
+</LinearLayout>

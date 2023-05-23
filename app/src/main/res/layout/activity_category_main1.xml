@@ -15,15 +15,15 @@
             android:id="@+id/back"
             android:background="@drawable/back"
             android:layout_marginTop="10dp"
-            android:layout_width="50dp"
-            android:layout_height="50dp" />
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
         <TextView
             android:text="가구/인테리어"
             android:textSize="30dp"
             android:gravity="center"
             android:layout_gravity="center"
             android:textColor="#000"
-            android:layout_width="290dp"
+            android:layout_width="310dp"
             android:layout_height="wrap_content" />
     </LinearLayout>
 
@@ -31,7 +31,7 @@
         android:layout_marginTop="10dp"
         android:background="#000"
         android:layout_width="match_parent"
-        android:layout_height="1dp" />
+        android:layout_height="2dp" />
 
     <!--메뉴 스크롤-->
     <ScrollView

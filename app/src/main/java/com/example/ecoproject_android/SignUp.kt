@@ -1,62 +1,58 @@
 package com.example.ecoproject_android
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
-import android.widget.Spinner
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
+import com.google.firebase.auth.FirebaseAuth
 
 class SignUp : AppCompatActivity() {
-    var DB:DBHelper?=null
-    @SuppressLint("MissingInflatedId")
+
+    private lateinit var auth : FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
-        DB=DBHelper(this)
+
+        val userId = findViewById<EditText>(R.id.userId)
+        val userPwd = findViewById<EditText>(R.id.userPwd)
+        val passCheck = findViewById<EditText>(R.id.passCheck)
+        val userNickname = findViewById<EditText>(R.id.userNickname)
 
         //지역 선택 스피너
         val settingzone=findViewById<Spinner>(R.id.settingzone)
-
         val sData=resources.getStringArray(R.array.zone)
         val adapter=ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, sData)
-
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
         settingzone.adapter=adapter
 
-        val inputnickname = findViewById<TextView>(R.id.inputnickname)
-        val inputpassword = findViewById<TextView>(R.id.inputpassword)
-        val reinputpassword = findViewById<TextView>(R.id.reinputpassword)
-        val signupbutton = findViewById<TextView>(R.id.signupbutton)
+        val signupbutton = findViewById<Button>(R.id.signupbutton)
 
-        signupbutton.setOnClickListener{
-            val user=inputnickname.text.toString()
-            val pass=inputpassword.text.toString()
-            val repass=reinputpassword.text.toString()
-            if(user==""||pass==""||repass=="") Toast.makeText(this, "회원정보를 전부 입력해주세요", Toast.LENGTH_SHORT).show()
-            else{
-                if(pass==repass){
-                    val checkUsername=DB!!.checkUsername(user)
-                    if(checkUsername==false){
-                        val insert=DB!!.insertData(user, pass)
-                        if(insert==true){
-                            Toast.makeText(this, "가입되었습니다", Toast.LENGTH_SHORT).show()
-                            val intent= Intent(applicationContext, SignIn::class.java)
+        auth =FirebaseAuth.getInstance()
+        signupbutton.setOnClickListener {
+            val email = userId.text.toString()
+            val password = userPwd.text.toString()
+            val passCheck = passCheck.text.toString()
+            val userNickname = userNickname.text.toString()
+
+            if(password!=passCheck){
+                Toast.makeText(this,"비밀번호가 일치하지 않습니다.",Toast.LENGTH_SHORT).show()
+            }else{
+                auth.createUserWithEmailAndPassword(email,password)
+                    .addOnCompleteListener { task ->
+                        if(task.isSuccessful){
+                            Toast.makeText(this,"회원가입에 성공했습니다!",Toast.LENGTH_SHORT).show()
+                            val intent = Intent(this, SignIn::class.java)
                             startActivity(intent)
                         }else{
-                            Toast.makeText(this, "비밀번호가 일치하지 않습니다", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this,"이미 존재하는 계정이거나, 회원가입에 실패했습니다.",Toast.LENGTH_SHORT).show()
                         }
-                    }else{
-                        Toast.makeText(this, "이미 가입된 회원입니다", Toast.LENGTH_SHORT).show()
                     }
-                }else{
-                    Toast.makeText(this, "비밀번호가 일치하지 않습니다", Toast.LENGTH_SHORT).show()
-                }
+                auth.run {  }
             }
-
         }
+
     }
+
+
 }

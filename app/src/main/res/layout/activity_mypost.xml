@@ -7,14 +7,14 @@
     android:orientation="vertical"
     tools:context=".mypost">
 
+
+
     <Button
         android:id="@+id/back"
         android:background="@drawable/back"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_width="30dp"
-        android:layout_height="30dp" />
+        android:layout_marginTop="10dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -243,18 +243,11 @@
                             android:text="집에 가고 싶어요"
                             android:background="@drawable/more_button_bg"
                             />
-
                     </LinearLayout>
                 </ScrollView>
-
             </LinearLayout>
-
         </FrameLayout>
         </LinearLayout>
-
     </TabHost>
-
-
-
 </LinearLayout>
 

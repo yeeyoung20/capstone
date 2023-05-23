@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".CommunityMain">
+    tools:context=".ChattingMain">
 
     <!--맨 위 뒤로가기, 카테고리 이름-->
     <LinearLayout
@@ -33,5 +33,10 @@
         android:background="#000"
         android:layout_width="match_parent"
         android:layout_height="2dp" />
+
+    <ListView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>

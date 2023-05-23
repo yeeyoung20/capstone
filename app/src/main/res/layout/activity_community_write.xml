@@ -39,6 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <EditText
+        android:id="@+id/title"
         android:hint="제목을 입력하세요"
         android:textSize="15dp"
         android:layout_width="match_parent"
@@ -54,6 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <EditText
+        android:id="@+id/change"
         android:hint="교환 희망 장소를 입력하세요"
         android:textSize="15dp"
         android:layout_width="match_parent"
@@ -61,6 +63,7 @@
 
     <!--글 입력-->
     <EditText
+        android:id="@+id/content"
         android:layout_marginTop="20dp"
         android:gravity="top"
         android:textSize="15dp"
@@ -97,6 +100,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
         <Button
+            android:id="@+id/back"
             android:text="돌아가기"
             android:backgroundTint="#B1B1B1"
             android:layout_marginLeft="10dp"
@@ -108,6 +112,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp" />
         <Button
+            android:id="@+id/done"
             android:text="완료"
             android:backgroundTint="#B1B1B1"
             android:layout_marginRight="10dp"

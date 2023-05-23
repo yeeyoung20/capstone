@@ -24,51 +24,54 @@ class CategoryMain5 : AppCompatActivity() {
 
 
         //뒤로가기
-        back.setOnClickListener{finish()}
+        back.setOnClickListener{
+            val intent= Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
         //버튼 누르면 분리배출 방법 안내 예시
         paper.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("title", "일반 종이")
+            intent.putExtra("paper", "일반 종이")
             startActivity(intent)
         }
         cddvd.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("title", "CD, DVD")
+            intent.putExtra("cddvd", "CD, DVD")
             startActivity(intent)
         }
         videotape.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("title", "비디오 테이프")
+            intent.putExtra("videotape", "비디오 테이프")
             startActivity(intent)
         }
         stapler.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("title", "스테이플러, 심")
+            intent.putExtra("stapler", "스테이플러, 심")
             startActivity(intent)
         }
         magnet.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("title", "자석")
+            intent.putExtra("magnet", "자석")
             startActivity(intent)
         }
         book.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("title", "책, 노트, 잡지")
+            intent.putExtra("book", "책, 노트, 잡지")
             startActivity(intent)
         }
         cassettetape.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("title", "카세트 테이프")
+            intent.putExtra("cassettetape", "카세트 테이프")
             startActivity(intent)
         }
         cutterknife.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("title", "커터칼")
+            intent.putExtra("cutterknife", "커터칼")
             startActivity(intent)
         }
         writinginstrument.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("title", "필기구")
+            intent.putExtra("writinginstrument", "필기구")
             startActivity(intent)
         }
 

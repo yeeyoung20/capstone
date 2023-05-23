@@ -27,7 +27,6 @@
                 android:background="#9C9C9C" />
 
             <Button
-                android:id="@+id/cancelbtn"
                 android:layout_width="15dp"
                 android:layout_height="15dp"
                 android:layout_margin="20dp"
