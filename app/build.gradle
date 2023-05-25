@@ -61,4 +61,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics-ktx'
     // 파이어베이스 디비
     implementation 'com.google.firebase:firebase-database-ktx'
+
+    //
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview-selection:1.1.0'
 }

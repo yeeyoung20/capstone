@@ -9,9 +9,14 @@ import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
+import java.text.FieldPosition
 
 class MyInfoChange : AppCompatActivity() {
+
+    private lateinit var firebaseDatabase: FirebaseDatabase
+
     @SuppressLint("WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -84,6 +89,8 @@ class MyInfoChange : AppCompatActivity() {
         //회원탈퇴 미완성
 
         val delete=findViewById<TextView>(R.id.delete)
+
+        firebaseDatabase = FirebaseDatabase.getInstance()
 
         delete.setOnClickListener{
             if(user!=null){
