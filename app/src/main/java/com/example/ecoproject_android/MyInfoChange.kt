@@ -3,15 +3,14 @@ package com.example.ecoproject_android
 import android.annotation.SuppressLint
 import android.content.DialogInterface
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
-import java.text.FieldPosition
 
 class MyInfoChange : AppCompatActivity() {
 
@@ -90,26 +89,30 @@ class MyInfoChange : AppCompatActivity() {
 
         val delete=findViewById<TextView>(R.id.delete)
 
-        firebaseDatabase = FirebaseDatabase.getInstance()
 
         delete.setOnClickListener{
             if(user!=null){
                 builder.setMessage("탈퇴 하시겠습니까?")
-                builder.setPositiveButton("확인", DialogInterface.OnClickListener({ dialog, id ->
+                builder.setPositiveButton("확인", ({ dialog, id ->
+
+
+                    val databaseReference = firebaseDatabase.getReference("users")
+
+                    databaseReference.removeValue()
+
                     //탈퇴 코드 필요
                     user.delete()
                         .addOnCompleteListener { task ->
                             if (task.isSuccessful) {
                                 Toast.makeText(this,"탈퇴 완료",Toast.LENGTH_SHORT).show()
                                 val intent = Intent(this, MainActivity::class.java)
-                                startActivity(intent)
                             }else{
                                 Toast.makeText(this,"탈퇴 실패",Toast.LENGTH_SHORT).show()
                             }
                         }
                     startActivity(intent)
                 }))
-                builder.setNegativeButton("취소", DialogInterface.OnClickListener({ dialog, id ->
+                builder.setNegativeButton("취소", ({ dialog, id ->
                     val intent = Intent(this, MyInfoChange::class.java)
                     startActivity(intent)
                 }))

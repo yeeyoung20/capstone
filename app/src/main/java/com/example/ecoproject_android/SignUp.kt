@@ -1,13 +1,11 @@
 package com.example.ecoproject_android
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ktx.database
-import com.google.firebase.ktx.Firebase
 
 class SignUp : AppCompatActivity() {
 
@@ -44,6 +42,9 @@ class SignUp : AppCompatActivity() {
             val userNickname = userNickname.text.toString()
             val zone = settingzone.selectedItem.toString()
 
+            
+
+
             if(email.equals("") || password.equals("") || passCheck.equals("")) {
                 Toast.makeText(this,"필수 정보를 입력하세요.",Toast.LENGTH_SHORT).show()
             }else{
@@ -63,7 +64,6 @@ class SignUp : AppCompatActivity() {
                                 databaseReference.child("email").setValue(email)
                                 databaseReference.child("userNickname").setValue(userNickname)
                                 databaseReference.child("zone").setValue(zone)
-
                             }else{
                                 Toast.makeText(this,"이미 존재하는 계정이거나, 회원가입에 실패했습니다.",Toast.LENGTH_SHORT).show()
                             }
@@ -71,10 +71,7 @@ class SignUp : AppCompatActivity() {
                     auth.run {}
                 }
             }
-
         }
-
     }
-
 
 }
