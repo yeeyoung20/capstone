@@ -13,12 +13,9 @@ class ChattingMain : AppCompatActivity() {
         setContentView(R.layout.activity_chatting_main)
 
         val back=findViewById<Button>(R.id.back)
-        val listview=findViewById<ListView>(R.id.listview)
+        //val listview=findViewById<ListView>(R.id.listview)
 
         //뒤로가기
-        back.setOnClickListener{
-            val intent= Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
+        back.setOnClickListener{finish()}
     }
 }

@@ -39,10 +39,7 @@ class MyInfoChange : AppCompatActivity() {
         //취소 누르면 뒤로가기
         val goback = findViewById<Button>(R.id.goback)
 
-        goback.setOnClickListener {
-            val intent = Intent(this, MainActivityMorepage::class.java)
-            startActivity(intent)
-        }
+        goback.setOnClickListener {finish()}
 
         //수정완료 누르면 다시 한 번 확인하는 다이얼로그 띄우기
         finishchange.setOnClickListener {
@@ -95,12 +92,15 @@ class MyInfoChange : AppCompatActivity() {
                 builder.setMessage("탈퇴 하시겠습니까?")
                 builder.setPositiveButton("확인", ({ dialog, id ->
 
-
+                    //회원탈퇴(회원들이 다 탈퇴돼서 고쳐야 함)
                     val databaseReference = firebaseDatabase.getReference("users")
 
                     databaseReference.removeValue()
 
-                    //탈퇴 코드 필요
+                    databaseReference.child("userNickname").removeValue()
+
+
+                    //탈퇴 코드
                     user.delete()
                         .addOnCompleteListener { task ->
                             if (task.isSuccessful) {

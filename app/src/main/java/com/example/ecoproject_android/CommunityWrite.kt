@@ -18,19 +18,21 @@ class CommunityWrite : AppCompatActivity() {
         val content=findViewById<EditText>(R.id.content)
         val done=findViewById<Button>(R.id.done)
 
+        val a = title.text.toString()
+        val b = change.text.toString()
+        val c = content.text.toString()
+
+
         //뒤로가기
-        back.setOnClickListener{
-            val intent= Intent(this, CommunityMain::class.java)
-            startActivity(intent)
-        }
+        back.setOnClickListener{finish()}
 
         //글을 작성한 뒤 완료 버튼을 눌렀을 때 내용이 비어있으면 토스트메시지로 입력하라고 안내하는..코딩인데 아직 안 됨
         done.setOnClickListener {
-            if(title==null){
+            if(a==null){
                 Toast.makeText(this,"제목을 입력하세요.", Toast.LENGTH_SHORT).show()
-            }else if(change==null){
+            }else if(b==null){
                 Toast.makeText(this,"교환희망장소를 입력하세요.", Toast.LENGTH_SHORT).show()
-            }else if(content==null){
+            }else if(c==null){
                 Toast.makeText(this,"내용을 입력하세요.", Toast.LENGTH_SHORT).show()
             }else{
                 val intent= Intent(this, CommunityMain::class.java)

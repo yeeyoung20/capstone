@@ -759,1665 +759,937 @@ class CategoryDetail : AppCompatActivity() {
             smallCategoryname.setText("벽지")
             content.setText(wallpaper)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain1::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data1_2=="LED") {
             smallCategoryname.setText("LED")
             content.setText(led)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain1::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data1_3=="가구") {
             smallCategoryname.setText("가구")
             content.setText(furniture)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain1::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data1_4=="거울") {
             smallCategoryname.setText("거울")
             content.setText(mirror)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain1::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data1_5=="나무") {
             smallCategoryname.setText("나무")
             content.setText(tree)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain1::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data1_6=="도자기") {
             smallCategoryname.setText("도자기")
             content.setText(ceramic)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain1::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data1_7=="라텍스") {
             smallCategoryname.setText("라텍스")
             content.setText(latex)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain1::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data1_8=="매트리스") {
             smallCategoryname.setText("매트리스")
             content.setText(matrix)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain1::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data1_9=="방석") {
             smallCategoryname.setText("방석")
             content.setText(cushion)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain1::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data1_10=="베개") {
             smallCategoryname.setText("베개")
             content.setText(pillow)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain1::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data1_11=="소파") {
             smallCategoryname.setText("소파")
             content.setText(sofa)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain1::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data1_12=="양초") {
             smallCategoryname.setText("양초")
             content.setText(candle)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain1::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data1_13=="의자") {
             smallCategoryname.setText("의자")
             content.setText(chair)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain1::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data1_14=="이불") {
             smallCategoryname.setText("이불")
             content.setText(bedding)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain1::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data1_15=="전구(백열등)") {
             smallCategoryname.setText("전구(백열등)")
             content.setText(bulb)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain1::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data1_16=="침대") {
             smallCategoryname.setText("침대")
             content.setText(bed)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain1::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data1_17=="캣타워") {
             smallCategoryname.setText("캣타워")
             content.setText(cattower)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain1::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data1_18=="커튼") {
             smallCategoryname.setText("커튼")
             content.setText(curtain)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain1::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data1_19=="페인트통") {
             smallCategoryname.setText("페인트통")
             content.setText(paintbucket)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain1::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data1_20=="형광등") {
             smallCategoryname.setText("형광등")
             content.setText(lamp)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain1::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }
         else if(data1_21=="화분") {
             smallCategoryname.setText("화분")
             content.setText(pot)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain1::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }
 
         if(data2_1=="TV") {
             smallCategoryname.setText("TV")
             content.setText(tv)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain2::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data2_2=="공기청정기 필터") {
             smallCategoryname.setText("공기청정기 필터")
             content.setText(filter)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain2::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data2_3=="냉장고") {
             smallCategoryname.setText("냉장고")
             content.setText(refrigerator)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain2::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data2_4=="노트북") {
             smallCategoryname.setText("노트북")
             content.setText(laptop)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain2::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data2_5=="노트북 배터리") {
             smallCategoryname.setText("노트북 배터리")
             content.setText(laptopbattery)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain2::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data2_6=="마우스") {
             smallCategoryname.setText("마우스")
             content.setText(mouse)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain2::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data2_7=="멀티탭") {
             smallCategoryname.setText("멀티탭")
             content.setText(multitap)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain2::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data2_8=="모니터") {
             smallCategoryname.setText("모니터")
             content.setText(monitor)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain2::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data2_9=="보조배터리") {
             smallCategoryname.setText("보조배터리")
             content.setText(auxiliarybattery)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain2::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data2_10=="세탁기") {
             smallCategoryname.setText("세탁기")
             content.setText(washingmachine)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain2::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data2_11=="소형 난방기구") {
             smallCategoryname.setText("소형 난방기구")
             content.setText(smallheater)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain2::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data2_12=="스피커") {
             smallCategoryname.setText("스피커")
             content.setText(speaker)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain2::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data2_13=="온수매트") {
             smallCategoryname.setText("온수매트")
             content.setText(hotwatermat)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain2::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data2_14=="이어폰") {
             smallCategoryname.setText("이어폰")
             content.setText(earphone)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain2::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data2_15=="전기면도기") {
             smallCategoryname.setText("전기면도기")
             content.setText(electricrazor)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain2::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data2_16=="전기장판") {
             smallCategoryname.setText("전기장판")
             content.setText(electricpad)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain2::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data2_17=="전선") {
             smallCategoryname.setText("전선")
             content.setText(wire)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain2::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data2_18=="충전기, 케이블") {
             smallCategoryname.setText("충전기, 케이블")
             content.setText(charger)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain2::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data2_19=="컴퓨터") {
             smallCategoryname.setText("컴퓨터")
             content.setText(computer)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain2::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data2_20=="키보드") {
             smallCategoryname.setText("키보드")
             content.setText(keyboard)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain2::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }
         else if(data2_21=="태블릿") {
             smallCategoryname.setText("태블릿")
             content.setText(tablet)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain2::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data2_22=="토너, 잉크 카트리지") {
             smallCategoryname.setText("토너, 잉크 카트리지")
             content.setText(inkcartridge)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain2::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data2_23=="프린터") {
             smallCategoryname.setText("프린터")
             content.setText(printer)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain2::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data2_24=="하드디스크") {
             smallCategoryname.setText("하드디스크")
             content.setText(harddisk)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain2::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }
 
         if(data3_1=="고철") {
             smallCategoryname.setText("고철")
             content.setText(scrapmetal)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain3::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data3_2=="건전지") {
             smallCategoryname.setText("건전지")
             content.setText(battery)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain3::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data3_3=="골프 가방") {
             smallCategoryname.setText("골프 가방")
             content.setText(golfbag)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain3::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data3_4=="공") {
             smallCategoryname.setText("공")
             content.setText(ball)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain3::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data3_5=="라켓") {
             smallCategoryname.setText("라켓")
             content.setText(racket)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain3::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data3_6=="마스크") {
             smallCategoryname.setText("마스크")
             content.setText(mask)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain3::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data3_7=="모기향") {
             smallCategoryname.setText("모기향")
             content.setText(mosquitorepellent)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain3::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data3_8=="물티슈") {
             smallCategoryname.setText("물티슈")
             content.setText(wettissue)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain3::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data3_9=="생리대") {
             smallCategoryname.setText("생리대")
             content.setText(sanitarypad)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain3::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data3_10=="습기제거제") {
             smallCategoryname.setText("습기제거제")
             content.setText(moistureremover)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain3::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data3_11=="식물") {
             smallCategoryname.setText("식물")
             content.setText(plant)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain3::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data3_12=="요가 매트") {
             smallCategoryname.setText("요가 매트")
             content.setText(yogamat)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain3::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data3_13=="우산") {
             smallCategoryname.setText("우산")
             content.setText(umbrella)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain3::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data3_14=="장난감") {
             smallCategoryname.setText("장난감")
             content.setText(toy)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain3::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data3_15=="콘돔") {
             smallCategoryname.setText("콘돔")
             content.setText(condom)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain3::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data3_16=="테이프") {
             smallCategoryname.setText("테이프")
             content.setText(tape)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain3::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data3_17=="핫팩") {
             smallCategoryname.setText("핫팩")
             content.setText(hotpack)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain3::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data3_18=="현악기") {
             smallCategoryname.setText("현악기")
             content.setText(stringinstrument)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain3::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data3_19=="라이터") {
             smallCategoryname.setText("라이터")
             content.setText(lighter)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain3::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }
 
         if(data4_1=="치약") {
             smallCategoryname.setText("치약")
             content.setText(toothpaste)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain4::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data4_2=="규조토 매트") {
             smallCategoryname.setText("규조토 매트")
             content.setText(diatomitemat)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain4::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data4_3=="두루마리 휴지") {
             smallCategoryname.setText("두루마리 휴지")
             content.setText(toiletroll)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain4::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data4_4=="브리타 정수기 필터") {
             smallCategoryname.setText("브리타 정수기 필터")
             content.setText(waterfilter)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain4::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data4_5=="수건") {
             smallCategoryname.setText("수건")
             content.setText(towel)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain4::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data4_6=="총소 솔") {
             smallCategoryname.setText("총소 솔")
             content.setText(cleaningbrush)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain4::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data4_7=="칫솔") {
             smallCategoryname.setText("칫솔")
             content.setText(toothbrush)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain4::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data4_8=="펌프형 용기") {
             smallCategoryname.setText("펌프형 용기")
             content.setText(pumpcontainer)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain4::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }
 
         if(data5_1=="일반 종이") {
             smallCategoryname.setText("일반 종이")
             content.setText(paper)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain5::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data5_2=="CD, DVD") {
             smallCategoryname.setText("CD, DVD")
             content.setText(cddvd)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain5::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data5_3=="비디오 테이프") {
             smallCategoryname.setText("비디오 테이프")
             content.setText(videotape)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain5::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data5_4=="스테이플러, 심") {
             smallCategoryname.setText("스테이플러, 심")
             content.setText(stapler)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain5::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data5_5=="자석") {
             smallCategoryname.setText("자석")
             content.setText(magnet)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain5::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data5_6=="책, 노트, 잡지") {
             smallCategoryname.setText("책, 노트, 잡지")
             content.setText(book)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain5::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data5_7=="카세트 테이프") {
             smallCategoryname.setText("카세트 테이프")
             content.setText(cassettetape)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain5::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data5_8=="커터칼") {
             smallCategoryname.setText("커터칼")
             content.setText(cutterknife)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain5::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data5_9=="필기구") {
             smallCategoryname.setText("필기구")
             content.setText(writinginstrument)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain5::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }
 
         if(data6_1=="화장품") {
             smallCategoryname.setText("화장품")
             content.setText(cosmetics)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain6::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data6_2=="향수") {
             smallCategoryname.setText("향수")
             content.setText(perfume)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain6::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data6_3=="화장품(스틱)") {
             smallCategoryname.setText("화장품(스틱)")
             content.setText(cosmeticsstick)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain6::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data6_4=="화장품(튜브)") {
             smallCategoryname.setText("화장품(튜브)")
             content.setText(cosmeticstube)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain6::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data6_5=="화장품(펌프형)") {
             smallCategoryname.setText("화장품(펌프형)")
             content.setText(cosmeticspumptype)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain6::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }
 
         if(data7_1=="후라이팬") {
             smallCategoryname.setText("후라이팬")
             content.setText(fryingpan)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain7::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data7_2=="가위") {
             smallCategoryname.setText("가위")
             content.setText(scissors)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain7::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data7_3=="고무대야") {
             smallCategoryname.setText("고무대야")
             content.setText(rubberband)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain7::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data7_4=="고무장갑") {
             smallCategoryname.setText("고무장갑")
             content.setText(rubberglove)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain7::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data7_5=="그릇") {
             smallCategoryname.setText("그릇")
             content.setText(bowl)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain7::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data7_6=="나무젓가락") {
             smallCategoryname.setText("나무젓가락")
             content.setText(woodenchopsticks)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain7::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data7_7=="냄비") {
             smallCategoryname.setText("냄비")
             content.setText(skillet)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain7::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data7_8=="도마") {
             smallCategoryname.setText("도마")
             content.setText(cuttingboard)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain7::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data7_9=="보냉백") {
             smallCategoryname.setText("보냉백")
             content.setText(coldbag)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain7::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data7_10=="비닐랩") {
             smallCategoryname.setText("비닐랩")
             content.setText(plasticwrap)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain7::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data7_11=="빨대") {
             smallCategoryname.setText("빨대")
             content.setText(straw)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain7::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data7_12=="빵클립") {
             smallCategoryname.setText("빵클립")
             content.setText(breadclip)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain7::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data7_13=="석쇠") {
             smallCategoryname.setText("석쇠")
             content.setText(grill)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain7::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data7_14=="식사 도구") {
             smallCategoryname.setText("식사 도구")
             content.setText(utensils)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain7::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data7_15=="식칼") {
             smallCategoryname.setText("식칼")
             content.setText(kitchenknife)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain7::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data7_16=="조리 기구") {
             smallCategoryname.setText("조리 기구")
             content.setText(cookware)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain7::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data7_17=="컵") {
             smallCategoryname.setText("컵")
             content.setText(cup)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain7::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data7_18=="쿠킹 호일") {
             smallCategoryname.setText("쿠킹 호일")
             content.setText(cookingfoil)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain7::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data7_19=="티슈, 냅킨") {
             smallCategoryname.setText("티슈, 냅킨")
             content.setText(tissue)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain7::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data7_20=="항아리") {
             smallCategoryname.setText("항아리")
             content.setText(jar)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain7::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }
         else if(data7_21=="휴대용 부탄가스") {
             smallCategoryname.setText("휴대용 부탄가스")
             content.setText(butanegas)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain7::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data7_22=="양파망") {
             smallCategoryname.setText("양파망")
             content.setText(onionnet)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain7::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }
 
         if(data8_1=="달걀 껍질") {
             smallCategoryname.setText("달걀 껍질")
             content.setText(eggshell)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain8::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data8_2=="견과류 껍질") {
             smallCategoryname.setText("견과류 껍질")
             content.setText(nutshell)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain8::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data8_3=="고추") {
             smallCategoryname.setText("고추")
             content.setText(chili)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain8::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data8_4=="과일 껍질") {
             smallCategoryname.setText("과일 껍질")
             content.setText(fruitpeel)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain8::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data8_5=="과일 씨") {
             smallCategoryname.setText("과일 씨")
             content.setText(fruitseed)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain8::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data8_6=="귤 껍질") {
             smallCategoryname.setText("귤 껍질")
             content.setText(skintangerine)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain8::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data8_7=="동물 뼈") {
             smallCategoryname.setText("동물 뼈")
             content.setText(animalbones)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain8::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data8_8=="마늘") {
             smallCategoryname.setText("마늘")
             content.setText(garlic)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain8::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data8_9=="멜론 껍질") {
             smallCategoryname.setText("멜론 껍질")
             content.setText(skinmelon)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain8::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data8_10=="바나나 껍질") {
             smallCategoryname.setText("바나나 껍질")
             content.setText(bananapeel)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain8::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data8_11=="사과 껍질, 심, 씨방") {
             smallCategoryname.setText("사과 껍질, 심, 씨방")
             content.setText(applepeel)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain8::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data8_12=="수박 껍질") {
             smallCategoryname.setText("수박 껍질")
             content.setText(skinwatermelon)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain8::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data8_13=="식용유, 기름") {
             smallCategoryname.setText("식용유, 기름")
             content.setText(oil)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain8::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data8_14=="아보카도 껍질, 씨") {
             smallCategoryname.setText("아보카도 껍질, 씨")
             content.setText(avocadopeel)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain8::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data8_15=="약, 영양제") {
             smallCategoryname.setText("약, 영양제")
             content.setText(medicine)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain8::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data8_16=="양파") {
             smallCategoryname.setText("양파")
             content.setText(onion)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain8::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data8_17=="오렌지 껍질") {
             smallCategoryname.setText("오렌지 껍질")
             content.setText(orangepeel)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain8::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data8_18=="옥수수") {
             smallCategoryname.setText("옥수수")
             content.setText(corner)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain8::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data8_19=="장류") {
             smallCategoryname.setText("장류")
             content.setText(jang)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain8::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data8_20=="커피 찌꺼기") {
             smallCategoryname.setText("커피 찌꺼기")
             content.setText(coffeegrounds)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain8::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }
         else if(data8_21=="코코넛 껍질") {
             smallCategoryname.setText("코코넛 껍질")
             content.setText(coconutshell)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain8::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data8_22=="키위 껍질") {
             smallCategoryname.setText("키위 껍질")
             content.setText(kiwishell)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain8::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data8_23=="티백") {
             smallCategoryname.setText("티백")
             content.setText(teabag)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain8::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data8_24=="파") {
             smallCategoryname.setText("파")
             content.setText(greenonion)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain8::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data8_25=="파인애플 껍질, 줄기") {
             smallCategoryname.setText("파인애플 껍질, 줄기")
             content.setText(pineapplepeel)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain8::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }
 
         if(data9_1=="스티로폼") {
             smallCategoryname.setText("스티로폼")
             content.setText(styrofoam)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain9::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data9_2=="가스용기") {
             smallCategoryname.setText("가스용기")
             content.setText(gascontainer)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain9::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data9_3=="개별 포장 봉지") {
             smallCategoryname.setText("개별 포장 봉지")
             content.setText(packagingbag)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain9::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data9_4=="계란판") {
             smallCategoryname.setText("계란판")
             content.setText(eggplant)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain9::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data9_5=="과자 박스") {
             smallCategoryname.setText("과자 박스")
             content.setText(snackbox)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain9::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data9_6=="과자 봉지") {
             smallCategoryname.setText("과자 봉지")
             content.setText(confectionerybag)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain9::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data9_7=="기름병") {
             smallCategoryname.setText("기름병")
             content.setText(oilbottle)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain9::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data9_8=="라면 봉지") {
             smallCategoryname.setText("라면 봉지")
             content.setText(ramenbag)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain9::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data9_9=="멸균팩") {
             smallCategoryname.setText("멸균팩")
             content.setText(sterilizationpack)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain9::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data9_10=="박스") {
             smallCategoryname.setText("박스")
             content.setText(box)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain9::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data9_11=="배달 플라스틱 용기") {
             smallCategoryname.setText("배달 플라스틱 용기")
             content.setText(deliveryplasticcontainer)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain9::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data9_12=="부직포 가방") {
             smallCategoryname.setText("부직포 가방")
             content.setText(nonwovenbag)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain9::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data9_13=="분유통") {
             smallCategoryname.setText("분유통")
             content.setText(milkpowder)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain9::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data9_14=="비닐봉투") {
             smallCategoryname.setText("비닐봉투")
             content.setText(plasticbag)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain9::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data9_15=="비닐포장재") {
             smallCategoryname.setText("비닐포장재")
             content.setText(plasticpackaging)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain9::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data9_16=="쇼핑백") {
             smallCategoryname.setText("쇼핑백")
             content.setText(shoppingbag)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain9::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data9_17=="술, 탄산음료병") {
             smallCategoryname.setText("술, 탄산음료병")
             content.setText(alcoholsodabottle)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain9::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data9_18=="실리콘") {
             smallCategoryname.setText("실리콘")
             content.setText(silicon)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain9::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data9_19=="아이스팩") {
             smallCategoryname.setText("아이스팩")
             content.setText(icepack)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain9::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data9_20=="알루미늄 캔") {
             smallCategoryname.setText("알루미늄 캔")
             content.setText(aluminumcan)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain9::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }
         else if(data9_21=="에어캡") {
             smallCategoryname.setText("에어캡")
             content.setText(aircap)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain9::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data9_22=="요거트 용기") {
             smallCategoryname.setText("요거트 용기")
             content.setText(yogurtcontainer)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain9::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data9_23=="요구르트 병") {
             smallCategoryname.setText("요구르트 병")
             content.setText(yogurtbottle)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain9::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data9_24=="우유팩") {
             smallCategoryname.setText("우유팩")
             content.setText(milkpack)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain9::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data9_25=="유리병") {
             smallCategoryname.setText("유리병")
             content.setText(glassbottle)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain9::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }
 
         if(data10_1=="옷걸이") {
             smallCategoryname.setText("옷걸이")
             content.setText(hanger)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain10::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data10_2=="가방") {
             smallCategoryname.setText("가방")
             content.setText(bag)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain10::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data10_3=="레깅스") {
             smallCategoryname.setText("레깅스")
             content.setText(leggings)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain10::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data10_4=="모자") {
             smallCategoryname.setText("모자")
             content.setText(hat)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain10::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data10_5=="속옷") {
             smallCategoryname.setText("속옷")
             content.setText(underwear)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain10::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data10_6=="스타킹") {
             smallCategoryname.setText("스타킹")
             content.setText(stockings)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain10::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data10_7=="신발") {
             smallCategoryname.setText("신발")
             content.setText(shoes)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain10::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data10_8=="안경, 선글라스") {
             smallCategoryname.setText("안경, 선글라스")
             content.setText(glasses)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain10::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data10_9=="양말") {
             smallCategoryname.setText("양말")
             content.setText(socks)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain10::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data10_10=="여행용 가방") {
             smallCategoryname.setText("여행용 가방")
             content.setText(travelbag)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain10::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data10_11=="의류") {
             smallCategoryname.setText("의류")
             content.setText(clothes)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain10::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data10_12=="지갑") {
             smallCategoryname.setText("지갑")
             content.setText(wallet)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain10::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data10_13=="한복") {
             smallCategoryname.setText("한복")
             content.setText(hanbok)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain10::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data10_14=="주얼리") {
             smallCategoryname.setText("주얼리")
             content.setText(jewelry)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain10::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }
 
         if(data11_1=="영수증") {
             smallCategoryname.setText("영수증")
             content.setText(receipt)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain11::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data11_2=="고무") {
             smallCategoryname.setText("고무")
             content.setText(rubber)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain11::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data11_3=="깨진 유리") {
             smallCategoryname.setText("깨진 유리")
             content.setText(brokenglass)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain11::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data11_4=="비닐류 OTHER") {
             smallCategoryname.setText("비닐류 OTHER")
             content.setText(vinylother)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain11::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data11_5=="신용카드") {
             smallCategoryname.setText("신용카드")
             content.setText(creditcard)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain11::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data11_6=="재활용 불가 플라스틱") {
             smallCategoryname.setText("재활용 불가 플라스틱")
             content.setText(unacceptableplastic)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain11::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data11_7=="전단지") {
             smallCategoryname.setText("전단지")
             content.setText(leaflet)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain11::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data11_8=="타지 않는 쓰레기") {
             smallCategoryname.setText("타지 않는 쓰레기")
             content.setText(noncombustiblegarbage)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain11::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data11_9=="플라스틱 OTHER") {
             smallCategoryname.setText("플라스틱 OTHER")
             content.setText(plasticother)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain11::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }else if(data11_10=="혼합종이") {
             smallCategoryname.setText("혼합종이")
             content.setText(mixedpaper)
 
-            //뒤로가기
-            back.setOnClickListener{
-                val intent= Intent(this, CategoryMain11::class.java)
-                startActivity(intent)
-            }
+            back.setOnClickListener{finish()}
         }
     }
 }

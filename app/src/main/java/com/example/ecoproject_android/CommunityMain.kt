@@ -49,9 +49,6 @@ class CommunityMain : AppCompatActivity() {
 
 
         //뒤로가기
-        back.setOnClickListener{
-            val intent= Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
+        back.setOnClickListener{finish()}
     }
 }

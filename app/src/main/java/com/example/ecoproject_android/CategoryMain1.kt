@@ -38,10 +38,7 @@ class CategoryMain1 : AppCompatActivity() {
 
 
         //뒤로가기
-        back.setOnClickListener{
-            val intent= Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
+        back.setOnClickListener{finish()}
         //버튼 누르면 분리배출 방법 안내 예시
         wallpaper.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)

@@ -30,7 +30,6 @@ class SignUp : AppCompatActivity() {
 
         val signupbutton = findViewById<Button>(R.id.signupbutton)
 
-        //
         firebaseDatabase = FirebaseDatabase.getInstance()
 
         auth =FirebaseAuth.getInstance()

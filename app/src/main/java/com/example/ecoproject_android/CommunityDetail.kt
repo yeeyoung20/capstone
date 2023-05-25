@@ -14,10 +14,7 @@ class CommunityDetail : AppCompatActivity() {
         val back=findViewById<Button>(R.id.back)
 
         //뒤로가기
-        back.setOnClickListener{
-            val intent= Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
+        back.setOnClickListener{finish()}
 
         val title=findViewById<TextView>(R.id.title)
         val date=findViewById<TextView>(R.id.date)
