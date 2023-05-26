@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
@@ -27,8 +28,10 @@ class MainActivityMorepage : AppCompatActivity() {
         val map = findViewById<Button>(R.id.map)
         val loginlogout = findViewById<Button>(R.id.loginlogout)
         val back=findViewById<LinearLayout>(R.id.back)
+        val username=findViewById<TextView>(R.id.username)
 
         back.setOnClickListener{finish()}
+
 
 
         myanabadabtn.setOnClickListener{
@@ -40,13 +43,14 @@ class MainActivityMorepage : AppCompatActivity() {
             val intent = Intent(this, Map::class.java)
             startActivity(intent)
         }
-
         //로그인 돼있으면 '로그아웃하기'로 텍스트 변경/기능 구현
         //로그아웃 돼있으면 '로그인하기'로 텍스트 변경/기능 구현
         val user = Firebase.auth.currentUser
         val builder = AlertDialog.Builder(this)
 
+
         if (user != null) {
+            //로그아웃
             loginlogout.setText("로그아웃 하기")
             loginlogout.setOnClickListener {
                 builder.setMessage("로그아웃 하시겠습니까?")

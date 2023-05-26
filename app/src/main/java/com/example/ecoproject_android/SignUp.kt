@@ -30,8 +30,6 @@ class SignUp : AppCompatActivity() {
 
         val signupbutton = findViewById<Button>(R.id.signupbutton)
 
-        firebaseDatabase = FirebaseDatabase.getInstance()
-
         auth =FirebaseAuth.getInstance()
 
         signupbutton.setOnClickListener {
@@ -41,8 +39,9 @@ class SignUp : AppCompatActivity() {
             val userNickname = userNickname.text.toString()
             val zone = settingzone.selectedItem.toString()
 
-            
-
+            val intent = Intent(this, MainActivityMorepage::class.java)
+            intent.putExtra(userNickname, userNickname)
+            startActivity(intent)
 
             if(email.equals("") || password.equals("") || passCheck.equals("")) {
                 Toast.makeText(this,"필수 정보를 입력하세요.",Toast.LENGTH_SHORT).show()
@@ -59,10 +58,14 @@ class SignUp : AppCompatActivity() {
                                 val intent = Intent(this, SignIn::class.java)
                                 startActivity(intent)
 
+                                firebaseDatabase = FirebaseDatabase.getInstance()
                                 val databaseReference = firebaseDatabase.getReference("users").push()
+
                                 databaseReference.child("email").setValue(email)
                                 databaseReference.child("userNickname").setValue(userNickname)
                                 databaseReference.child("zone").setValue(zone)
+
+
                             }else{
                                 Toast.makeText(this,"이미 존재하는 계정이거나, 회원가입에 실패했습니다.",Toast.LENGTH_SHORT).show()
                             }

@@ -9,7 +9,10 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.ktx.Firebase
 
 class MyInfoChange : AppCompatActivity() {
@@ -81,31 +84,27 @@ class MyInfoChange : AppCompatActivity() {
             builder.show()
         }
 
-
-        //회원탈퇴 미완성
-
         val delete=findViewById<TextView>(R.id.delete)
-
 
         delete.setOnClickListener{
             if(user!=null){
                 builder.setMessage("탈퇴 하시겠습니까?")
                 builder.setPositiveButton("확인", ({ dialog, id ->
 
-                    //회원탈퇴(회원들이 다 탈퇴돼서 고쳐야 함)
-                    val databaseReference = firebaseDatabase.getReference("users")
+                    val email = user.email
+                    if (email != null) {
+                        deleteUserData(email)
+                    }
 
-                    databaseReference.removeValue()
-
-                    databaseReference.child("userNickname").removeValue()
-
-
-                    //탈퇴 코드
+                    //그냥 데이터 탈퇴 코드(수정할 필요x)
                     user.delete()
                         .addOnCompleteListener { task ->
                             if (task.isSuccessful) {
                                 Toast.makeText(this,"탈퇴 완료",Toast.LENGTH_SHORT).show()
                                 val intent = Intent(this, MainActivity::class.java)
+
+                                startActivity(intent)
+
                             }else{
                                 Toast.makeText(this,"탈퇴 실패",Toast.LENGTH_SHORT).show()
                             }
@@ -122,5 +121,31 @@ class MyInfoChange : AppCompatActivity() {
             builder.create()
             builder.show()
         }
+    }
+
+    //firebase realtime database 특정 유저 정보만 삭제하기(수정할 필요x)
+    private fun deleteUserData(email: String) {
+        val databaseReference = FirebaseDatabase.getInstance().getReference("users")
+        databaseReference.orderByChild("email").equalTo(email)
+            .addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    for (snapshot in dataSnapshot.children) {
+                        snapshot.ref.removeValue()
+                            .addOnSuccessListener {
+                                // 데이터 삭제 성공
+                                // TODO: 추가적인 처리 및 UI 업데이트 등 수행
+                            }
+                            .addOnFailureListener { error ->
+                                // 데이터 삭제 실패
+                                // TODO: 실패에 대한 처리 수행
+                            }
+                    }
+                }
+
+                override fun onCancelled(databaseError: DatabaseError) {
+                    // 쿼리 취소됨
+                    // TODO: 에러 처리
+                }
+            })
     }
 }
