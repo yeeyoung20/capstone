@@ -21,11 +21,15 @@
             android:name="com.naver.maps.map.CLIENT_ID"
             android:value="gltf29rywr" />
 
+
         <activity
             android:name=".Map"
             android:exported="true" />
         <activity
             android:name=".CategoryDetail"
+            android:exported="true" />
+        <activity
+            android:name=".CommunityDetail"
             android:exported="true" />
         <activity
             android:name=".CommunityWrite"

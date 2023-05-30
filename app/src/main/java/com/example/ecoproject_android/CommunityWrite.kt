@@ -12,6 +12,7 @@ import com.google.firebase.database.FirebaseDatabase
 class CommunityWrite : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var database: FirebaseDatabase
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_community_write)
@@ -45,14 +46,14 @@ class CommunityWrite : AppCompatActivity() {
             }else{
                 val user = auth.currentUser
                 if (user != null) {
-                    val uid = user.uid
+                    val email = user.email
 
                     val postRef = database.getReference("posts").push()
                     val postId = postRef.key
 
                     if (postId != null) {
                         val post = mapOf(
-                            "userId" to uid,
+                            "email" to email,
                             "title" to a,
                             "change" to b,
                             "content" to c
@@ -77,7 +78,5 @@ class CommunityWrite : AppCompatActivity() {
                 }
             }
         }
-
-
     }
 }

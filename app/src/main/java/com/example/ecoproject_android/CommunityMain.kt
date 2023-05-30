@@ -21,10 +21,13 @@ class CommunityMain : AppCompatActivity() {
     private lateinit var database: FirebaseDatabase
     private lateinit var postsRef: DatabaseReference
     private lateinit var valueEventListener: ValueEventListener
+    private var postList: MutableList<Post> = mutableListOf() // 초기화 변경
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_community_main)
+
+        postList = mutableListOf()
 
         val write_button = findViewById<Button>(R.id.write_button)
         val back = findViewById<Button>(R.id.back)
@@ -56,24 +59,47 @@ class CommunityMain : AppCompatActivity() {
                     .create()
                     .show()
             }
+            adapter.notifyDataSetChanged() // 추가
         }
 
         // 뒤로가기
         back.setOnClickListener { finish() }
 
         listView.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
-            val selectedItem = adapter.getItem(position)
-            // Handle item click event
-            // ...
+            if(user!=null){
+                val selectedItem = adapter.getItem(position)
+                val post = postList[position] // 선택된 게시물 객체
+
+                // CommunityDetail 액티비티로 전환하고 선택된 게시물의 정보를 전달
+                val intent = Intent(this, CommunityDetail::class.java)
+                intent.putExtra("title", post.title)
+                intent.putExtra("change", post.change)
+                intent.putExtra("content", post.content)
+                startActivity(intent)
+            }else{
+                builder.setMessage("로그인 후 이용해주세요!")
+                    .setPositiveButton("확인") { dialog, id ->
+                        val intent = Intent(this, SignIn::class.java)
+                        startActivity(intent)
+                    }
+                    .setNegativeButton("취소") { dialog, id ->
+
+                    }
+                    .create()
+                    .show()
+            }
+
         }
 
         valueEventListener = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
+                postList.clear()
                 adapter.clear()
 
                 for (postSnapshot in dataSnapshot.children) {
                     val post = postSnapshot.getValue(Post::class.java)
                     post?.let {
+                        postList.add(it)
                         val data = "제목: ${it.title}\n교환희망장소: ${it.change}\n내용: ${it.content}"
                         adapter.add(data)
                     }
@@ -89,6 +115,7 @@ class CommunityMain : AppCompatActivity() {
         }
     }
 
+
     override fun onStart() {
         super.onStart()
         postsRef.addValueEventListener(valueEventListener)
@@ -101,7 +128,7 @@ class CommunityMain : AppCompatActivity() {
 }
 
 data class Post(
-    val userId: String? = null,
+    val email: String? = null,
     val title: String? = null,
     val change: String? = null,
     val content: String? = null
