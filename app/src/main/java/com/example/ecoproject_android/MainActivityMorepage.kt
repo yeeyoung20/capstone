@@ -1,6 +1,5 @@
 package com.example.ecoproject_android
 
-import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,16 +10,15 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
 import kotlin.collections.Map
 
 class MainActivityMorepage : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_more_page)
-
-
-
 
         //val usermore = findViewById<Button>(R.id.usermore)
         val inmypage = findViewById<androidx.constraintlayout.widget.ConstraintLayout>(R.id.inmypage)
@@ -28,10 +26,9 @@ class MainActivityMorepage : AppCompatActivity() {
         val map = findViewById<Button>(R.id.map)
         val loginlogout = findViewById<Button>(R.id.loginlogout)
         val back=findViewById<LinearLayout>(R.id.back)
-        val username=findViewById<TextView>(R.id.username)
+        val usernameTextView = findViewById<TextView>(R.id.username)
 
         back.setOnClickListener{finish()}
-
 
 
         myanabadabtn.setOnClickListener{
@@ -48,8 +45,31 @@ class MainActivityMorepage : AppCompatActivity() {
         val user = Firebase.auth.currentUser
         val builder = AlertDialog.Builder(this)
 
-
         if (user != null) {
+
+            // Firebase Realtime Database의 레퍼런스를 가져옵니다.
+            val database: FirebaseDatabase = FirebaseDatabase.getInstance()
+            val usersRef: DatabaseReference = database.getReference("users")
+
+            // 닉네임을 가져오기 위해 해당 사용자의 데이터를 조회합니다.
+            usersRef.orderByChild("email").equalTo(user.email).addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    // 해당 사용자의 데이터가 존재하는 경우
+                    if (dataSnapshot.exists()) {
+                        for (snapshot in dataSnapshot.children) {
+                            val userMap: Map<String, String> = snapshot.getValue() as Map<String, String>
+                            val nickname = userMap["userNickname"]
+                            usernameTextView.text = nickname
+                        }
+                    }
+                }
+
+                override fun onCancelled(databaseError: DatabaseError) {
+                    // 조회 중 에러가 발생한 경우
+                    // 에러 처리 로직을 추가하세요.
+                }
+            })
+
             //로그아웃
             loginlogout.setText("로그아웃 하기")
             loginlogout.setOnClickListener {

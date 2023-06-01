@@ -66,7 +66,28 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="작성일입니다."
+                    android:text="교환희망장소입니다."
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="작성자 닉네임"/>
+
+                <TextView
+                    android:id="@+id/userNickname"
+                    android:padding="16dp"
+                    android:background="#eeeeee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="작성자 닉네임."
                     />
             </LinearLayout>
             <LinearLayout

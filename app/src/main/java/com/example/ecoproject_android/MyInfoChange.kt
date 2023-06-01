@@ -9,11 +9,9 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
+import kotlin.collections.Map
 
 class MyInfoChange : AppCompatActivity() {
 
@@ -24,6 +22,9 @@ class MyInfoChange : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_info_change)
 
+        val userEmail = findViewById<TextView>(R.id.userEmail)
+        val userNickname = findViewById<EditText>(R.id.userNickname)
+
         //수정완료 버튼
         val finishchange = findViewById<Button>(R.id.finishchange)
         val builder = AlertDialog.Builder(this)
@@ -32,11 +33,8 @@ class MyInfoChange : AppCompatActivity() {
         //지역 선택 스피너
         val changezone=findViewById<Spinner>(R.id.changezone)
         val sData=resources.getStringArray(R.array.zone)
-
         val adapter=ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, sData)
-
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
         changezone.adapter=adapter
 
         //취소 누르면 뒤로가기
@@ -62,6 +60,36 @@ class MyInfoChange : AppCompatActivity() {
         }
 
         val user = Firebase.auth.currentUser
+
+        if (user != null) {
+            // Firebase Realtime Database의 레퍼런스를 가져옵니다.
+            val database: FirebaseDatabase = FirebaseDatabase.getInstance()
+            val usersRef: DatabaseReference = database.getReference("users")
+
+            userEmail.text = user.email
+
+            // 닉네임을 가져오기 위해 해당 사용자의 데이터를 조회합니다.
+            usersRef.orderByChild("email").equalTo(user.email).addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    // 해당 사용자의 데이터가 존재하는 경우
+                    if (dataSnapshot.exists()) {
+                        for (snapshot in dataSnapshot.children) {
+                            val userMap: Map<String, String> = snapshot.getValue() as Map<String, String>
+                            val nickname = userMap["userNickname"]
+                            val zone = userMap["zone"]
+                            userNickname.setText(nickname)
+                            changezone.setSelection(sData.indexOf(zone))
+                        }
+                    }
+                }
+
+                override fun onCancelled(databaseError: DatabaseError) {
+                    // 조회 중 에러가 발생한 경우
+                    // 에러 처리 로직을 추가하세요.
+                }
+            })
+
+        }
 
         //로그아웃
         logout.setOnClickListener {

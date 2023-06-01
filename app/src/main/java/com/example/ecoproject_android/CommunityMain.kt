@@ -75,6 +75,7 @@ class CommunityMain : AppCompatActivity() {
                 intent.putExtra("title", post.title)
                 intent.putExtra("change", post.change)
                 intent.putExtra("content", post.content)
+                intent.putExtra("userNickname", post.userNickname)
                 startActivity(intent)
             }else{
                 builder.setMessage("로그인 후 이용해주세요!")
@@ -100,7 +101,7 @@ class CommunityMain : AppCompatActivity() {
                     val post = postSnapshot.getValue(Post::class.java)
                     post?.let {
                         postList.add(it)
-                        val data = "제목: ${it.title}\n교환희망장소: ${it.change}\n내용: ${it.content}"
+                        val data = "제목: ${it.title}\n 교환희망장소: ${it.change}\n 작성자: ${it.userNickname}"
                         adapter.add(data)
                     }
                 }
@@ -129,6 +130,7 @@ class CommunityMain : AppCompatActivity() {
 
 data class Post(
     val email: String? = null,
+    val userNickname: String? = null,
     val title: String? = null,
     val change: String? = null,
     val content: String? = null

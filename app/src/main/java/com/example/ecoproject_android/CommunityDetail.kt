@@ -8,6 +8,7 @@ import android.widget.TextView
 import java.text.SimpleDateFormat
 import java.util.*
 
+
 class CommunityDetail : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,12 +21,14 @@ class CommunityDetail : AppCompatActivity() {
         val changeTextView = findViewById<TextView>(R.id.change)
         val contentTextView = findViewById<TextView>(R.id.content)
         val dateTextView = findViewById<TextView>(R.id.date) // 날짜를 표시할 TextView
+        val userNickname = findViewById<TextView>(R.id.userNickname)
 
 
         // Intent에서 데이터 추출
         val title = intent.getStringExtra("title")
         val change = intent.getStringExtra("change")
         val content = intent.getStringExtra("content")
+        val Nickname = intent.getStringExtra("userNickname")
 
         val currentDate = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Date())
 
@@ -34,6 +37,7 @@ class CommunityDetail : AppCompatActivity() {
         titleTextView.text = title
         changeTextView.text = change
         contentTextView.text = content
+        userNickname.text = Nickname
 
         dateTextView.text = currentDate // 날짜를 TextView에 설정
 

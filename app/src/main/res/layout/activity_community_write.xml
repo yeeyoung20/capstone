@@ -13,85 +13,106 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_weight="1">
-    <TextView
-        android:text="깨끗한 옷을 나누고 교환하는 커뮤니티입니다."
-        android:textSize="20dp"
-        android:textColor="#000"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:text="사진과 함께 글을 올려주세요."
-        android:textSize="20dp"
-        android:textColor="#000"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:text="깨끗한 옷을 나누고 교환하는 커뮤니티입니다."
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="사진과 함께 글을 올려주세요."
+            android:textSize="20dp"
+            android:textColor="#000"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-    <!--제목-->
-    <TextView
-        android:text="제목"
-        android:textSize="15dp"
-        android:textColor="#000"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <EditText
-        android:id="@+id/title"
-        android:hint="제목을 입력하세요"
-        android:textSize="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp">
+            <TextView
+                android:text="작성자 : "
+                android:textSize="15dp"
+                android:textColor="#000"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
-    <!--교환희망장소-->
-    <TextView
-        android:text="교환 희망 장소"
-        android:textSize="15dp"
-        android:textColor="#000"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <EditText
-        android:id="@+id/change"
-        android:hint="교환 희망 장소를 입력하세요"
-        android:textSize="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/userNickname"
+                android:textSize="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
 
-    <!--글 입력-->
-    <EditText
-        android:id="@+id/content"
-        android:layout_marginTop="20dp"
-        android:gravity="top"
-        android:textSize="15dp"
-        android:hint="글을 입력하세요"
-        android:layout_marginRight="5dp"
-        android:layout_marginLeft="5dp"
-        android:background="@drawable/edittextbox"
-        android:layout_width="match_parent"
-        android:layout_height="200dp" />
 
-    <!--이미지-->
-    <TextView
-        android:text="이미지"
-        android:textSize="15dp"
-        android:textColor="#000"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <!--제목-->
+        <TextView
+            android:text="제목"
+            android:textSize="15dp"
+            android:textColor="#000"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/title"
+            android:hint="제목을 입력하세요"
+            android:textSize="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    <!--사진 업로드 버튼-->
-    <Button
-        android:text="사진 업로드"
-        android:textSize="15dp"
-        android:textColor="#000"
-        android:backgroundTint="#7AFFFFFF"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <!--교환희망장소-->
+        <TextView
+            android:text="교환 희망 장소"
+            android:textSize="15dp"
+            android:textColor="#000"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/change"
+            android:hint="교환 희망 장소를 입력하세요"
+            android:textSize="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--글 입력-->
+        <EditText
+            android:id="@+id/content"
+            android:layout_marginTop="20dp"
+            android:gravity="top"
+            android:textSize="15dp"
+            android:hint="글을 입력하세요"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/edittextbox"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <!--이미지-->
+        <TextView
+            android:text="이미지"
+            android:textSize="15dp"
+            android:textColor="#000"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!--사진 업로드 버튼-->
+        <Button
+            android:text="사진 업로드"
+            android:textSize="15dp"
+            android:textColor="#000"
+            android:backgroundTint="#7AFFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
     <!--하단 돌아가기, 완료 버튼-->
