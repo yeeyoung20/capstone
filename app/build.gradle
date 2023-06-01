@@ -36,6 +36,13 @@ android {
     buildFeatures {
         viewBinding true
     }
+    sourceSets {
+        main {
+            assets {
+                srcDirs 'src\\main\\assets'
+            }
+        }
+    }
 
 }
 
@@ -55,6 +62,7 @@ dependencies {
 
     // 네이버 지도 SDK
     implementation 'com.naver.maps:map-sdk:3.16.2'
+    implementation'com.google.android.gms:play-services-location:17.0.0'//현재 위치 가져오게하는 종속성
 
     // 파이어베이스
     implementation platform('com.google.firebase:firebase-bom:32.0.0')

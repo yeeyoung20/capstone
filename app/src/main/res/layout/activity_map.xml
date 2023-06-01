@@ -5,10 +5,130 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Map">
-    <fragment
-        android:id="@+id/map_fragment"
+
+    <com.naver.maps.map.MapView
+        android:id="@+id/mapView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.naver.maps.map.MapFragment" />
+        android:name="com.naver.maps.map.MapFragment"/>
+
+    <com.naver.maps.map.widget.LocationButtonView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"/>
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05" />
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/linearLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        android:background="#fff"-->
+<!--        android:gravity="center"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent">-->
+
+<!--        <Button-->
+<!--            android:id="@+id/main2_1"-->
+<!--            android:layout_width="55dp"-->
+<!--            android:layout_height="45dp"-->
+<!--            android:background="@drawable/main_category_shdow"-->
+<!--            android:backgroundTint="#fff"-->
+<!--            android:drawableTop="@drawable/main2_1xml"-->
+<!--            android:text="커뮤니티"-->
+<!--            android:textColor="#000"-->
+<!--            android:textSize="8dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/main2_2"-->
+<!--            app:layout_constraintHorizontal_chainStyle="spread"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/main2_2"-->
+<!--            android:layout_width="55dp"-->
+<!--            android:layout_height="45dp"-->
+<!--            android:background="@drawable/main_category_shdow"-->
+<!--            android:backgroundTint="#fff"-->
+<!--            android:drawableTop="@drawable/main2_2xml"-->
+<!--            android:text="채팅"-->
+<!--            android:textColor="#000"-->
+<!--            android:textSize="8dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/main2_3"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/main2_1"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/main2_3"-->
+<!--            android:layout_width="55dp"-->
+<!--            android:layout_height="45dp"-->
+<!--            android:background="@drawable/main_category_shdow"-->
+<!--            android:backgroundTint="#fff"-->
+<!--            android:drawableTop="@drawable/main2_3xml"-->
+<!--            android:text="메인"-->
+<!--            android:textColor="#000"-->
+<!--            android:textSize="8dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/main2_4"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/main2_2"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+
+<!--        <Button-->
+<!--            android:id="@+id/main2_4"-->
+<!--            android:layout_width="55dp"-->
+<!--            android:layout_height="45dp"-->
+<!--            android:background="@drawable/main_category_shdow"-->
+<!--            android:backgroundTint="#fff"-->
+<!--            android:drawableTop="@drawable/main2_4xml"-->
+<!--            android:text="지도"-->
+<!--            android:textColor="#000"-->
+<!--            android:textSize="8dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/main2_5"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/main2_3"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/main2_5"-->
+<!--            android:layout_width="55dp"-->
+<!--            android:layout_height="45dp"-->
+<!--            android:background="@drawable/main_category_shdow"-->
+<!--            android:backgroundTint="#fff"-->
+<!--            android:drawableTop="@drawable/main2_5xml"-->
+<!--            android:text="더보기"-->
+<!--            android:textColor="#000"-->
+<!--            android:textSize="8dp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/main2_4"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
