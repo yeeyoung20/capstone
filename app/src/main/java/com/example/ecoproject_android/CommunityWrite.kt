@@ -25,6 +25,7 @@ class CommunityWrite : AppCompatActivity() {
         val content=findViewById<EditText>(R.id.content)
         val done=findViewById<Button>(R.id.done)
         val userNickname=findViewById<TextView>(R.id.userNickname)
+        val image=findViewById<Button>(R.id.image)
 
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()

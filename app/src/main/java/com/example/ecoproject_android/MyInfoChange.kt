@@ -24,6 +24,11 @@ class MyInfoChange : AppCompatActivity() {
 
         val userEmail = findViewById<TextView>(R.id.userEmail)
         val userNickname = findViewById<EditText>(R.id.userNickname)
+        val originalpwd = findViewById<EditText>(R.id.originalpwd)
+        val changepwd = findViewById<EditText>(R.id.changepwd)
+        val changepwdcheck = findViewById<EditText>(R.id.changepwdcheck)
+
+        firebaseDatabase = FirebaseDatabase.getInstance()
 
         //수정완료 버튼
         val finishchange = findViewById<Button>(R.id.finishchange)
@@ -31,33 +36,16 @@ class MyInfoChange : AppCompatActivity() {
         val logout = findViewById<TextView>(R.id.logout)
 
         //지역 선택 스피너
-        val changezone=findViewById<Spinner>(R.id.changezone)
-        val sData=resources.getStringArray(R.array.zone)
-        val adapter=ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, sData)
+        val changezone = findViewById<Spinner>(R.id.changezone)
+        val sData = resources.getStringArray(R.array.zone)
+        val adapter = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, sData)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        changezone.adapter=adapter
+        changezone.adapter = adapter
 
         //취소 누르면 뒤로가기
         val goback = findViewById<Button>(R.id.goback)
 
-        goback.setOnClickListener {finish()}
-
-        //수정완료 누르면 다시 한 번 확인하는 다이얼로그 띄우기
-        finishchange.setOnClickListener {
-            builder.setMessage("저장하시겠습니까?")
-            builder.setPositiveButton("확인", DialogInterface.OnClickListener({ dialog, id ->
-                val intent = Intent(this, MyInfoChange::class.java)
-                Toast.makeText(this, "저장 되었습니다.", Toast.LENGTH_SHORT).show() //외 않되지
-                startActivity(intent)
-            }))
-            builder.setNegativeButton("취소", DialogInterface.OnClickListener({ dialog, id ->
-                val intent = Intent(this, MyInfoChange::class.java)
-                startActivity(intent)
-            }))
-
-            builder.create()
-            builder.show()
-        }
+        goback.setOnClickListener { finish() }
 
         val user = Firebase.auth.currentUser
 
@@ -69,27 +57,56 @@ class MyInfoChange : AppCompatActivity() {
             userEmail.text = user.email
 
             // 닉네임을 가져오기 위해 해당 사용자의 데이터를 조회합니다.
-            usersRef.orderByChild("email").equalTo(user.email).addListenerForSingleValueEvent(object : ValueEventListener {
-                override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    // 해당 사용자의 데이터가 존재하는 경우
-                    if (dataSnapshot.exists()) {
-                        for (snapshot in dataSnapshot.children) {
-                            val userMap: Map<String, String> = snapshot.getValue() as Map<String, String>
-                            val nickname = userMap["userNickname"]
-                            val zone = userMap["zone"]
-                            userNickname.setText(nickname)
-                            changezone.setSelection(sData.indexOf(zone))
+            usersRef.orderByChild("email").equalTo(user.email)
+                .addListenerForSingleValueEvent(object : ValueEventListener {
+                    override fun onDataChange(dataSnapshot: DataSnapshot) {
+                        // 해당 사용자의 데이터가 존재하는 경우
+                        if (dataSnapshot.exists()) {
+                            for (snapshot in dataSnapshot.children) {
+                                val userMap: Map<String, String> =
+                                    snapshot.getValue() as Map<String, String>
+                                val nickname = userMap["userNickname"]
+                                val zone = userMap["zone"]
+                                userNickname.setText(nickname)
+                                changezone.setSelection(sData.indexOf(zone))
+                            }
                         }
                     }
-                }
 
-                override fun onCancelled(databaseError: DatabaseError) {
-                    // 조회 중 에러가 발생한 경우
-                    // 에러 처리 로직을 추가하세요.
-                }
-            })
+                    override fun onCancelled(databaseError: DatabaseError) {
+                        // 조회 중 에러가 발생한 경우
+                        // 에러 처리 로직을 추가하세요.
+                    }
+                })
 
         }
+
+
+        //수정완료 누르면
+        finishchange.setOnClickListener {
+            val nickname = userNickname.text.toString()
+
+            checkDuplicateNickname(nickname) { isDuplicate ->
+                if (isDuplicate) {
+                    Toast.makeText(this, "이미 사용 중인 닉네임입니다.", Toast.LENGTH_SHORT).show()
+                } else {
+                    val builder = AlertDialog.Builder(this)
+                    builder.setMessage("저장하시겠습니까?")
+                    builder.setPositiveButton("확인") { dialog, id ->
+                        updateNickname(nickname)
+                        val intent = Intent(this, MyInfoChange::class.java)
+                        Toast.makeText(this, "저장 되었습니다.", Toast.LENGTH_SHORT).show()
+                        startActivity(intent)
+                    }
+                    builder.setNegativeButton("취소") { dialog, id ->
+                        val intent = Intent(this, MyInfoChange::class.java)
+                        startActivity(intent)
+                    }
+                    builder.create().show()
+                }
+            }
+        }
+
 
         //로그아웃
         logout.setOnClickListener {
@@ -112,10 +129,10 @@ class MyInfoChange : AppCompatActivity() {
             builder.show()
         }
 
-        val delete=findViewById<TextView>(R.id.delete)
+        val delete = findViewById<TextView>(R.id.delete)
 
-        delete.setOnClickListener{
-            if(user!=null){
+        delete.setOnClickListener {
+            if (user != null) {
                 builder.setMessage("탈퇴 하시겠습니까?")
                 builder.setPositiveButton("확인", ({ dialog, id ->
 
@@ -128,13 +145,13 @@ class MyInfoChange : AppCompatActivity() {
                     user.delete()
                         .addOnCompleteListener { task ->
                             if (task.isSuccessful) {
-                                Toast.makeText(this,"탈퇴 완료",Toast.LENGTH_SHORT).show()
+                                Toast.makeText(this, "탈퇴 완료", Toast.LENGTH_SHORT).show()
                                 val intent = Intent(this, MainActivity::class.java)
 
                                 startActivity(intent)
 
-                            }else{
-                                Toast.makeText(this,"탈퇴 실패",Toast.LENGTH_SHORT).show()
+                            } else {
+                                Toast.makeText(this, "탈퇴 실패", Toast.LENGTH_SHORT).show()
                             }
                         }
                     startActivity(intent)
@@ -143,7 +160,7 @@ class MyInfoChange : AppCompatActivity() {
                     val intent = Intent(this, MyInfoChange::class.java)
                     startActivity(intent)
                 }))
-            }else {
+            } else {
                 Toast.makeText(this, "로그인을 먼저 하세요", Toast.LENGTH_SHORT).show()
             }
             builder.create()
@@ -175,5 +192,49 @@ class MyInfoChange : AppCompatActivity() {
                     // TODO: 에러 처리
                 }
             })
+    }
+
+    private fun checkDuplicateNickname(nickname: String, callback: (Boolean) -> Unit) {
+        val usersRef: DatabaseReference = firebaseDatabase.getReference("users")
+
+        usersRef.orderByChild("userNickname").equalTo(nickname)
+            .addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    // Check if there are any existing users with the same nickname
+                    val isDuplicate = dataSnapshot.exists()
+                    callback(isDuplicate)
+                }
+
+                override fun onCancelled(databaseError: DatabaseError) {
+                    // Error occurred while checking duplicate nicknames
+                    callback(true) // Treat as duplicate to avoid potential issues
+                }
+            })
+    }
+
+    private fun updateNickname(nickname: String) {
+        val user = Firebase.auth.currentUser
+        if (user != null) {
+            val databaseReference = firebaseDatabase.getReference("users")
+            databaseReference.orderByChild("email").equalTo(user.email)
+                .addListenerForSingleValueEvent(object : ValueEventListener {
+                    override fun onDataChange(dataSnapshot: DataSnapshot) {
+                        for (snapshot in dataSnapshot.children) {
+                            snapshot.ref.child("userNickname").setValue(nickname)
+                                .addOnSuccessListener {
+                                    Toast.makeText(this@MyInfoChange, "닉네임이 성공적으로 변경되었습니다.", Toast.LENGTH_SHORT).show()
+                                }
+                                .addOnFailureListener { error ->
+                                    Toast.makeText(this@MyInfoChange, "닉네임 변경에 실패했습니다. 다시 시도해주세요.", Toast.LENGTH_SHORT).show()
+                                }
+                        }
+                    }
+
+                    override fun onCancelled(databaseError: DatabaseError) {
+                        // Query canceled or failed
+                        Toast.makeText(this@MyInfoChange, "닉네임 변경에 실패했습니다. 다시 시도해주세요.", Toast.LENGTH_SHORT).show()
+                    }
+                })
+        }
     }
 }

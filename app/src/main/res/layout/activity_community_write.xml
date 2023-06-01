@@ -107,6 +107,7 @@
 
         <!--사진 업로드 버튼-->
         <Button
+            android:id="@+id/image"
             android:text="사진 업로드"
             android:textSize="15dp"
             android:textColor="#000"
