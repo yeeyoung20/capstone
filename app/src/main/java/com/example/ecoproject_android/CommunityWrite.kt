@@ -9,6 +9,8 @@ import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import java.text.SimpleDateFormat
+import java.util.*
 import kotlin.collections.Map
 
 class CommunityWrite : AppCompatActivity() {
@@ -68,6 +70,7 @@ class CommunityWrite : AppCompatActivity() {
             val a = title.text.toString()
             val b = change.text.toString()
             val c = content.text.toString()
+            val currentDate = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Date())
 
             if(a.isEmpty()){
                 Toast.makeText(this,"제목을 입력하세요.", Toast.LENGTH_SHORT).show()
@@ -86,7 +89,8 @@ class CommunityWrite : AppCompatActivity() {
                         "userNickname" to userNickname.text.toString(),
                         "title" to a,
                         "change" to b,
-                        "content" to c
+                        "content" to c,
+                        "date" to currentDate
                     )
                     postRef.setValue(post)
                         .addOnSuccessListener {

@@ -5,11 +5,14 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
 import android.widget.TextView
+import com.google.firebase.database.FirebaseDatabase
 import java.text.SimpleDateFormat
 import java.util.*
 
 
 class CommunityDetail : AppCompatActivity() {
+
+    private lateinit var database: FirebaseDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,13 +27,11 @@ class CommunityDetail : AppCompatActivity() {
         val userNickname = findViewById<TextView>(R.id.userNickname)
 
 
-        // Intent에서 데이터 추출
         val title = intent.getStringExtra("title")
         val change = intent.getStringExtra("change")
         val content = intent.getStringExtra("content")
         val Nickname = intent.getStringExtra("userNickname")
-
-        val currentDate = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Date())
+        val date = intent.getStringExtra("date")
 
 
         // 추출한 데이터를 TextView에 설정
@@ -38,8 +39,8 @@ class CommunityDetail : AppCompatActivity() {
         changeTextView.text = change
         contentTextView.text = content
         userNickname.text = Nickname
+        dateTextView.text = date
 
-        dateTextView.text = currentDate // 날짜를 TextView에 설정
 
         back.setOnClickListener { finish() }
 

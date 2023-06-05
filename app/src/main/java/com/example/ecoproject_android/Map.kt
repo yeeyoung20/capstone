@@ -2,6 +2,7 @@ package com.example.ecoproject_android
 
 import android.database.Cursor
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.naver.maps.geometry.LatLng
 import com.naver.maps.map.*
@@ -20,6 +21,12 @@ class Map : AppCompatActivity(), OnMapReadyCallback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_map)
+
+        //뒤로가기
+        val back = findViewById<Button>(R.id.back)
+
+        back.setOnClickListener { finish() }
+
         locationSource = FusedLocationSource(this, LOCATION_PERMISSTION_REQUEST_CODE)
 
         mapView = findViewById(R.id.mapView)
@@ -178,6 +185,8 @@ class Map : AppCompatActivity(), OnMapReadyCallback {
         cursor.close()
         dbHelper.close()
     }
+
+
 }
 
 

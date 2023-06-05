@@ -1,13 +1,14 @@
 {
   "project_info": {
     "project_number": "1060146823585",
+    "firebase_url": "https://ecoproject-8684e-default-rtdb.firebaseio.com",
     "project_id": "ecoproject-8684e",
     "storage_bucket": "ecoproject-8684e.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1060146823585:android:1d8edb1b5e44b12287cbe0",
+        "mobilesdk_app_id": "1:1060146823585:android:3e9aa81df5dd699787cbe0",
         "android_client_info": {
           "package_name": "com.example.ecoproject_android"
         }

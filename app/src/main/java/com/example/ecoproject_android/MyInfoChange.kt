@@ -28,6 +28,11 @@ class MyInfoChange : AppCompatActivity() {
         val changepwd = findViewById<EditText>(R.id.changepwd)
         val changepwdcheck = findViewById<EditText>(R.id.changepwdcheck)
 
+        val originalPassword = originalpwd.text.toString()
+        val newPassword = changepwd.text.toString()
+        val newPasswordCheck = changepwdcheck.text.toString()
+
+
         firebaseDatabase = FirebaseDatabase.getInstance()
 
         //수정완료 버튼

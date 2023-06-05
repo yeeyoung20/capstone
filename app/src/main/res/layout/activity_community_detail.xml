@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:fillViewport="true">
+        android:fillViewport="true" >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,6 +32,7 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:textSize="13dp"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
@@ -44,8 +45,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="제목입니다."
-                    />
+                    android:text="제목입니다." />
 
             </LinearLayout>
             <LinearLayout
@@ -54,10 +54,11 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:textSize="13dp"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:text="교환희망장소"/>
+                    android:text="교환희망장소" />
 
                 <TextView
                     android:id="@+id/change"
@@ -66,8 +67,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="교환희망장소입니다."
-                    />
+                    android:text="교환희망장소입니다." />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -75,10 +75,11 @@
                 android:orientation="horizontal">
 
                 <TextView
+                    android:textSize="13dp"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:padding="8dp"
-                    android:text="작성자 닉네임"/>
+                    android:text="작성자 닉네임" />
 
                 <TextView
                     android:id="@+id/userNickname"
@@ -87,19 +88,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="작성자 닉네임."
-                    />
+                    android:text="작성자 닉네임." />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal" >
 
                 <TextView
+                    android:textSize="13dp"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
-                    android:text="작성일"/>
+                    android:text="작성일" />
 
                 <TextView
                     android:id="@+id/date"
@@ -108,15 +109,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="작성일입니다."
-                    />
+                    android:text="작성일입니다." />
             </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
-                android:text="내용"/>
+                android:text="내용" />
 
             <TextView
                 android:id="@+id/content"
@@ -127,12 +127,25 @@
                 android:text="내용입니다." />
 
 
-            <Button
-                android:id="@+id/chatting"
-                android:text="채팅"
-                android:layout_marginTop="50dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                <Button
+                    android:id="@+id/chatting"
+                    android:text="채팅"
+                    android:layout_marginTop="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/delete"
+                    android:text="게시물 삭제"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="180dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
