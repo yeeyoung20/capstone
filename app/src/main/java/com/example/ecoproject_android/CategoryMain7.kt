@@ -41,112 +41,112 @@ class CategoryMain7 : AppCompatActivity() {
         //버튼 누르면 분리배출 방법 안내 예시
         fryingpan.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("fryingpan", "후라이팬")
+            intent.putExtra("data", "후라이팬")
             startActivity(intent)
         }
         scissors.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("scissors", "가위")
+            intent.putExtra("data", "가위")
             startActivity(intent)
         }
         rubberband.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("rubberband", "고무대야")
+            intent.putExtra("data", "고무대야")
             startActivity(intent)
         }
         rubberglove.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("rubberglove", "고무장갑")
+            intent.putExtra("data", "고무장갑")
             startActivity(intent)
         }
         bowl.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("bowl", "그릇")
+            intent.putExtra("data", "그릇")
             startActivity(intent)
         }
         woodenchopsticks.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("woodenchopsticks", "나무젓가락")
+            intent.putExtra("data", "나무젓가락")
             startActivity(intent)
         }
         skillet.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("skillet", "냄비")
+            intent.putExtra("data", "냄비")
             startActivity(intent)
         }
         cuttingboard.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("cuttingboard", "도마")
+            intent.putExtra("data", "도마")
             startActivity(intent)
         }
         coldbag.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("coldbag", "보냉백")
+            intent.putExtra("data", "보냉백")
             startActivity(intent)
         }
         plasticwrap.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("plasticwrap", "비닐랩")
+            intent.putExtra("data", "비닐랩")
             startActivity(intent)
         }
         straw.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("straw", "빨대")
+            intent.putExtra("data", "빨대")
             startActivity(intent)
         }
         breadclip.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("breadclip", "빵클립")
+            intent.putExtra("data", "빵클립")
             startActivity(intent)
         }
         grill.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("grill", "석쇠")
+            intent.putExtra("data", "석쇠")
             startActivity(intent)
         }
         utensils.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("utensils", "식사 도구")
+            intent.putExtra("data", "식사 도구")
             startActivity(intent)
         }
         kitchenknife.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("kitchenknife", "식칼")
+            intent.putExtra("data", "식칼")
             startActivity(intent)
         }
         cookware.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("cookware", "조리 기구")
+            intent.putExtra("data", "조리 기구")
             startActivity(intent)
         }
         cup.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("cup", "컵")
+            intent.putExtra("data", "컵")
             startActivity(intent)
         }
         cookingfoil.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("cookingfoil", "쿠킹 호일")
+            intent.putExtra("data", "쿠킹 호일")
             startActivity(intent)
         }
         tissue.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("tissue", "티슈, 냅킨")
+            intent.putExtra("data", "티슈, 냅킨")
             startActivity(intent)
         }
         jar.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("jar", "항아리")
+            intent.putExtra("data", "항아리")
             startActivity(intent)
         }
         butanegas.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("butanegas", "휴대용 부탄가스")
+            intent.putExtra("data", "휴대용 부탄가스")
             startActivity(intent)
         }
         onionnet.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("onionnet", "양파망")
+            intent.putExtra("data", "양파망")
             startActivity(intent)
         }
     }

@@ -28,47 +28,47 @@ class CategoryMain5 : AppCompatActivity() {
         //버튼 누르면 분리배출 방법 안내 예시
         paper.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("paper", "일반 종이")
+            intent.putExtra("data", "일반 종이")
             startActivity(intent)
         }
         cddvd.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("cddvd", "CD, DVD")
+            intent.putExtra("data", "CD, DVD")
             startActivity(intent)
         }
         videotape.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("videotape", "비디오 테이프")
+            intent.putExtra("data", "비디오 테이프")
             startActivity(intent)
         }
         stapler.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("stapler", "스테이플러, 심")
+            intent.putExtra("data", "스테이플러, 심")
             startActivity(intent)
         }
         magnet.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("magnet", "자석")
+            intent.putExtra("data", "자석")
             startActivity(intent)
         }
         book.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("book", "책, 노트, 잡지")
+            intent.putExtra("data", "책, 노트, 잡지")
             startActivity(intent)
         }
         cassettetape.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("cassettetape", "카세트 테이프")
+            intent.putExtra("data", "카세트 테이프")
             startActivity(intent)
         }
         cutterknife.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("cutterknife", "커터칼")
+            intent.putExtra("data", "커터칼")
             startActivity(intent)
         }
         writinginstrument.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("writinginstrument", "필기구")
+            intent.putExtra("data", "필기구")
             startActivity(intent)
         }
 

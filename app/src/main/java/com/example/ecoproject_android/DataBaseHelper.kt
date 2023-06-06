@@ -80,6 +80,6 @@ class DataBaseHelper(context: Context) :
 
         // database 의 파일 경로
         private var DB_PATH = ""
-        private const val DB_NAME = "LatLng.db"
+        private const val DB_NAME = "ecodb.db"
     }
 }

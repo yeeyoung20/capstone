@@ -31,7 +31,7 @@
     <!--선-->
     <View
         android:layout_marginTop="10dp"
-        android:background="#000"
+        android:background="#B8B8B8"
         android:layout_width="match_parent"
         android:layout_height="1dp" />
 
@@ -41,7 +41,8 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/content"
@@ -49,6 +50,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"/>
 
 </LinearLayout>

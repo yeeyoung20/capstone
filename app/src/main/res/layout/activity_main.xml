@@ -381,19 +381,19 @@
 
             <!-- 지도 -->
 
-            <LinearLayout
-                android:layout_width="380dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center"
-                android:layout_margin="10dp"
-                >
-                <fragment
-                    android:id="@+id/map_fragment"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:name="com.naver.maps.map.MapFragment"
-                    />
-            </LinearLayout>
+<!--            <LinearLayout-->
+<!--                android:layout_width="380dp"-->
+<!--                android:layout_height="150dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_margin="10dp"-->
+<!--                >-->
+<!--                <fragment-->
+<!--                    android:id="@+id/map_fragment"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:name="com.naver.maps.map.MapFragment"-->
+<!--                    />-->
+<!--            </LinearLayout>-->
 
         </LinearLayout>
 
