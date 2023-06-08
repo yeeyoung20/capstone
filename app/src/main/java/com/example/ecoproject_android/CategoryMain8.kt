@@ -43,127 +43,127 @@ class CategoryMain8 : AppCompatActivity() {
         //버튼 누르면 분리배출 방법 안내 예시
         eggshell.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("eggshell", "달걀 껍질")
+            intent.putExtra("data", "달걀 껍질")
             startActivity(intent)
         }
         nutshell.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("nutshell", "견과류 껍질")
+            intent.putExtra("data", "견과류 껍질")
             startActivity(intent)
         }
         chili.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("chili", "고추")
+            intent.putExtra("data", "고추")
             startActivity(intent)
         }
         fruitpeel.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("fruitpeel", "과일 껍질")
+            intent.putExtra("data", "과일 껍질")
             startActivity(intent)
         }
         fruitseed.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("fruitseed", "과일 씨")
+            intent.putExtra("data", "과일 씨")
             startActivity(intent)
         }
         skintangerine.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("skintangerine", "귤 껍질")
+            intent.putExtra("data", "귤 껍질")
             startActivity(intent)
         }
         animalbones.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("animalbones", "동물 뼈")
+            intent.putExtra("data", "동물 뼈")
             startActivity(intent)
         }
         garlic.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("garlic", "마늘")
+            intent.putExtra("data", "마늘")
             startActivity(intent)
         }
         skinmelon.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("skinmelon", "멜론 껍질")
+            intent.putExtra("data", "멜론 껍질")
             startActivity(intent)
         }
         bananapeel.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("bananapeel", "바나나 껍질")
+            intent.putExtra("data", "바나나 껍질")
             startActivity(intent)
         }
         applepeel.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("applepeel", "사과 껍질, 심, 씨방")
+            intent.putExtra("data", "사과 껍질, 심, 씨방")
             startActivity(intent)
         }
         skinwatermelon.setOnClickListener {
             val intent = Intent(this, CategoryDetail::class.java)
-            intent.putExtra("skinwatermelon", "수박 껍질")
+            intent.putExtra("data", "수박 껍질")
             startActivity(intent)
         }
         oil.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("oil", "식용유, 기름")
+            intent.putExtra("data", "식용유, 기름")
             startActivity(intent)
         }
         avocadopeel.setOnClickListener {
             val intent = Intent(this, CategoryDetail::class.java)
-            intent.putExtra("avocadopeel", "아보카도 껍질, 씨")
+            intent.putExtra("data", "아보카도 껍질, 씨")
             startActivity(intent)
         }
         medicine.setOnClickListener{
             val intent = Intent(this, CategoryDetail::class.java)
-            intent.putExtra("medicine", "약, 영양제")
+            intent.putExtra("data", "약, 영양제")
             startActivity(intent)
         }
         onion.setOnClickListener{
             val intent = Intent(this, CategoryDetail::class.java)
-            intent.putExtra("onion", "양파")
+            intent.putExtra("data", "양파")
             startActivity(intent)
         }
         orangepeel.setOnClickListener{
             val intent = Intent(this, CategoryDetail::class.java)
-            intent.putExtra("orangepeel", "오렌지 껍질")
+            intent.putExtra("data", "오렌지 껍질")
             startActivity(intent)
         }
         corner.setOnClickListener{
             val intent = Intent(this, CategoryDetail::class.java)
-            intent.putExtra("corner", "옥수수")
+            intent.putExtra("data", "옥수수")
             startActivity(intent)
         }
         jang.setOnClickListener{
             val intent = Intent(this, CategoryDetail::class.java)
-            intent.putExtra("jang", "장류")
+            intent.putExtra("data", "장류")
             startActivity(intent)
         }
         coffeegrounds.setOnClickListener{
             val intent = Intent(this, CategoryDetail::class.java)
-            intent.putExtra("coffeegrounds", "커피 찌꺼기")
+            intent.putExtra("data", "커피 찌꺼기")
             startActivity(intent)
         }
         coconutshell.setOnClickListener{
             val intent = Intent(this, CategoryDetail::class.java)
-            intent.putExtra("coconutshell", "코코넛 껍질")
+            intent.putExtra("data", "코코넛 껍질")
             startActivity(intent)
         }
         kiwishell.setOnClickListener{
             val intent = Intent(this, CategoryDetail::class.java)
-            intent.putExtra("kiwishell", "키위 껍질")
+            intent.putExtra("data", "키위 껍질")
             startActivity(intent)
         }
         teabag.setOnClickListener{
             val intent = Intent(this, CategoryDetail::class.java)
-            intent.putExtra("teabag", "티백")
+            intent.putExtra("data", "티백")
             startActivity(intent)
         }
         greenonion.setOnClickListener{
             val intent = Intent(this, CategoryDetail::class.java)
-            intent.putExtra("greenonion", "파")
+            intent.putExtra("data", "파")
             startActivity(intent)
         }
         pineapplepeel.setOnClickListener{
             val intent = Intent(this, CategoryDetail::class.java)
-            intent.putExtra("pineapplepeel", "파인애플 껍질, 줄기")
+            intent.putExtra("data", "파인애플 껍질, 줄기")
             startActivity(intent)
         }
     }

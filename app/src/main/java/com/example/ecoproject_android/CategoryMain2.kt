@@ -43,122 +43,122 @@ class CategoryMain2 : AppCompatActivity() {
         //버튼 누르면 분리배출 방법 안내 예시
         tv.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("tv", "TV")
+            intent.putExtra("data", "TV")
             startActivity(intent)
         }
         filter.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("filter", "공기청정기 필터")
+            intent.putExtra("data", "공기청정기 필터")
             startActivity(intent)
         }
         refrigerator.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("refrigerator", "냉장고")
+            intent.putExtra("data", "냉장고")
             startActivity(intent)
         }
         laptop.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("laptop", "노트북")
+            intent.putExtra("data", "노트북")
             startActivity(intent)
         }
         laptopbattery.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("laptopbattery", "노트북 배터리")
+            intent.putExtra("data", "노트북 배터리")
             startActivity(intent)
         }
         mouse.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("mouse", "마우스")
+            intent.putExtra("data", "마우스")
             startActivity(intent)
         }
         multitap.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("multitap", "멀티탭")
+            intent.putExtra("data", "멀티탭")
             startActivity(intent)
         }
         monitor.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("monitor", "모니터")
+            intent.putExtra("data", "모니터")
             startActivity(intent)
         }
         auxiliarybattery.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("auxiliarybattery", "보조배터리")
+            intent.putExtra("data", "보조배터리")
             startActivity(intent)
         }
         washingmachine.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("washingmachine", "세탁기")
+            intent.putExtra("data", "세탁기")
             startActivity(intent)
         }
         smallheater.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("smallheater", "소형 난방기구")
+            intent.putExtra("data", "소형 난방기구")
             startActivity(intent)
         }
         speaker.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("speaker", "스피커")
+            intent.putExtra("data", "스피커")
             startActivity(intent)
         }
         hotwatermat.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("hotwatermat", "온수매트")
+            intent.putExtra("data", "온수매트")
             startActivity(intent)
         }
         earphone.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("earphone", "이어폰")
+            intent.putExtra("data", "이어폰")
             startActivity(intent)
         }
         electricrazor.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("electricrazor", "전기면도기")
+            intent.putExtra("data", "전기면도기")
             startActivity(intent)
         }
         electricpad.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("electricpad", "전기장판")
+            intent.putExtra("data", "전기장판")
             startActivity(intent)
         }
         wire.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("wire", "전선")
+            intent.putExtra("data", "전선")
             startActivity(intent)
         }
         charger.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("charger", "충전기, 케이블")
+            intent.putExtra("data", "충전기, 케이블")
             startActivity(intent)
         }
         computer.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("computer", "컴퓨터")
+            intent.putExtra("data", "컴퓨터")
             startActivity(intent)
         }
         keyboard.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("keyboard", "키보드")
+            intent.putExtra("data", "키보드")
             startActivity(intent)
         }
         tablet.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("tablet", "태블릿")
+            intent.putExtra("data", "태블릿")
             startActivity(intent)
         }
         inkcartridge.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("inkcartridge", "토너, 잉크 카트리지")
+            intent.putExtra("data", "토너, 잉크 카트리지")
             startActivity(intent)
         }
         printer.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("printer", "프린터")
+            intent.putExtra("data", "프린터")
             startActivity(intent)
         }
         harddisk.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("harddisk", "하드디스크")
+            intent.putExtra("data", "하드디스크")
             startActivity(intent)
         }
 

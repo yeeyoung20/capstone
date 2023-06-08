@@ -79,9 +79,7 @@
         <activity
             android:name=".mypost"
             android:exported="true" />
-        <activity
-            android:name=".search_page"
-            android:exported="true" />
+
         <activity
             android:name=".MainActivityMorepage"
             android:exported="true" />
@@ -91,6 +89,8 @@
         <activity
             android:name=".MyInfoChange"
             android:exported="true" />
+        <activity android:name=".search_page"
+            android:exported="true"/>
 
         <activity
             android:name=".MainActivity"

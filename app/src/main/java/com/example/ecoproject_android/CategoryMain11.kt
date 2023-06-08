@@ -28,52 +28,52 @@ class CategoryMain11 : AppCompatActivity() {
         //버튼 누르면 분리배출 방법 안내 예시
         receipt.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("receipt", "영수증")
+            intent.putExtra("data", "영수증")
             startActivity(intent)
         }
         rubber.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("rubber", "고무")
+            intent.putExtra("data", "고무")
             startActivity(intent)
         }
         brokenglass.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("brokenglass", "깨진 유리")
+            intent.putExtra("data", "깨진 유리")
             startActivity(intent)
         }
         vinylother.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("vinylother", "비닐류 OTHER")
+            intent.putExtra("data", "비닐류 OTHER")
             startActivity(intent)
         }
         creditcard.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("creditcard", "신용카드")
+            intent.putExtra("data", "신용카드")
             startActivity(intent)
         }
         unacceptableplastic.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("unacceptableplastic", "재활용 불가 플라스틱")
+            intent.putExtra("data", "재활용 불가 플라스틱")
             startActivity(intent)
         }
         leaflet.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("leaflet", "전단지")
+            intent.putExtra("data", "전단지")
             startActivity(intent)
         }
         noncombustiblegarbage.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("noncombustiblegarbage", "타지 않는 쓰레기")
+            intent.putExtra("data", "타지 않는 쓰레기")
             startActivity(intent)
         }
         plasticother.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("plasticother", "플라스틱 OTHER")
+            intent.putExtra("data", "플라스틱 OTHER")
             startActivity(intent)
         }
         mixedpaper.setOnClickListener{
             val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("mixedpaper", "혼합종이")
+            intent.putExtra("data", "혼합종이")
             startActivity(intent)
         }
     }

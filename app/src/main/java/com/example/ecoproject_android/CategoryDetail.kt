@@ -560,1136 +560,740 @@ class CategoryDetail : AppCompatActivity() {
 
 
 
-
-        var data1_1 = intent.getStringExtra("wallpaper").toString()
-        var data1_2 = intent.getStringExtra("led").toString()
-        var data1_3 = intent.getStringExtra("furniture").toString()
-        var data1_4 = intent.getStringExtra("mirror").toString()
-        var data1_5 = intent.getStringExtra("tree").toString()
-        var data1_6 = intent.getStringExtra("ceramic").toString()
-        var data1_7 = intent.getStringExtra("latex").toString()
-        var data1_8 = intent.getStringExtra("matrix").toString()
-        var data1_9 = intent.getStringExtra("cushion").toString()
-        var data1_10 = intent.getStringExtra("pillow").toString()
-        var data1_11 = intent.getStringExtra("sofa").toString()
-        var data1_12 = intent.getStringExtra("candle").toString()
-        var data1_13 = intent.getStringExtra("chair").toString()
-        var data1_14 = intent.getStringExtra("bedding").toString()
-        var data1_15 = intent.getStringExtra("bulb").toString()
-        var data1_16 = intent.getStringExtra("bed").toString()
-        var data1_17 = intent.getStringExtra("cattower").toString()
-        var data1_18 = intent.getStringExtra("curtain").toString()
-        var data1_19 = intent.getStringExtra("paintbucket").toString()
-        var data1_20 = intent.getStringExtra("lamp").toString()
-        var data1_21 = intent.getStringExtra("pot").toString()
-
-        var data2_1 = intent.getStringExtra("tv").toString()
-        var data2_2 = intent.getStringExtra("filter").toString()
-        var data2_3 = intent.getStringExtra("refrigerator").toString()
-        var data2_4 = intent.getStringExtra("laptop").toString()
-        var data2_5 = intent.getStringExtra("laptopbattery").toString()
-        var data2_6 = intent.getStringExtra("mouse").toString()
-        var data2_7 = intent.getStringExtra("multitap").toString()
-        var data2_8 = intent.getStringExtra("monitor").toString()
-        var data2_9 = intent.getStringExtra("auxiliarybattery").toString()
-        var data2_10 = intent.getStringExtra("washingmachine").toString()
-        var data2_11 = intent.getStringExtra("smallheater").toString()
-        var data2_12 = intent.getStringExtra("speaker").toString()
-        var data2_13 = intent.getStringExtra("hotwatermat").toString()
-        var data2_14 = intent.getStringExtra("earphone").toString()
-        var data2_15 = intent.getStringExtra("electricrazor").toString()
-        var data2_16 = intent.getStringExtra("electricpad").toString()
-        var data2_17 = intent.getStringExtra("wire").toString()
-        var data2_18 = intent.getStringExtra("charger").toString()
-        var data2_19 = intent.getStringExtra("computer").toString()
-        var data2_20 = intent.getStringExtra("keyboard").toString()
-        var data2_21 = intent.getStringExtra("tablet").toString()
-        var data2_22 = intent.getStringExtra("inkcartridge").toString()
-        var data2_23 = intent.getStringExtra("printer").toString()
-        var data2_24 = intent.getStringExtra("harddisk").toString()
-
-        var data3_1 = intent.getStringExtra("scrapmetal").toString()
-        var data3_2 = intent.getStringExtra("battery").toString()
-        var data3_3 = intent.getStringExtra("golfbag").toString()
-        var data3_4 = intent.getStringExtra("ball").toString()
-        var data3_5 = intent.getStringExtra("racket").toString()
-        var data3_6 = intent.getStringExtra("mask").toString()
-        var data3_7 = intent.getStringExtra("mosquitorepellent").toString()
-        var data3_8 = intent.getStringExtra("wettissue").toString()
-        var data3_9 = intent.getStringExtra("sanitarypad").toString()
-        var data3_10 = intent.getStringExtra("moistureremover").toString()
-        var data3_11 = intent.getStringExtra("plant").toString()
-        var data3_12 = intent.getStringExtra("yogamat").toString()
-        var data3_13 = intent.getStringExtra("umbrella").toString()
-        var data3_14 = intent.getStringExtra("toy").toString()
-        var data3_15 = intent.getStringExtra("condom").toString()
-        var data3_16 = intent.getStringExtra("tape").toString()
-        var data3_17 = intent.getStringExtra("hotpack").toString()
-        var data3_18 = intent.getStringExtra("stringinstrument").toString()
-        var data3_19 = intent.getStringExtra("lighter").toString()
-
-        var data4_1 = intent.getStringExtra("toothpaste").toString()
-        var data4_2 = intent.getStringExtra("diatomitemat").toString()
-        var data4_3 = intent.getStringExtra("toiletroll").toString()
-        var data4_4 = intent.getStringExtra("waterfilter").toString()
-        var data4_5 = intent.getStringExtra("towel").toString()
-        var data4_6 = intent.getStringExtra("cleaningbrush").toString()
-        var data4_7 = intent.getStringExtra("toothbrush").toString()
-        var data4_8 = intent.getStringExtra("pumpcontainer").toString()
-
-        var data5_1 = intent.getStringExtra("paper").toString()
-        var data5_2 = intent.getStringExtra("cddvd").toString()
-        var data5_3 = intent.getStringExtra("videotape").toString()
-        var data5_4 = intent.getStringExtra("stapler").toString()
-        var data5_5 = intent.getStringExtra("magnet").toString()
-        var data5_6 = intent.getStringExtra("book").toString()
-        var data5_7 = intent.getStringExtra("cassettetape").toString()
-        var data5_8 = intent.getStringExtra("cutterknife").toString()
-        var data5_9 = intent.getStringExtra("writinginstrument").toString()
-
-        var data6_1 = intent.getStringExtra("cosmetics").toString()
-        var data6_2 = intent.getStringExtra("perfume").toString()
-        var data6_3 = intent.getStringExtra("cosmeticsstick").toString()
-        var data6_4 = intent.getStringExtra("cosmeticstube").toString()
-        var data6_5 = intent.getStringExtra("cosmeticspumptype").toString()
-
-        var data7_1 = intent.getStringExtra("fryingpan").toString()
-        var data7_2 = intent.getStringExtra("scissors").toString()
-        var data7_3 = intent.getStringExtra("rubberband").toString()
-        var data7_4 = intent.getStringExtra("rubberglove").toString()
-        var data7_5 = intent.getStringExtra("bowl").toString()
-        var data7_6 = intent.getStringExtra("woodenchopsticks").toString()
-        var data7_7 = intent.getStringExtra("skillet").toString()
-        var data7_8 = intent.getStringExtra("cuttingboard").toString()
-        var data7_9 = intent.getStringExtra("coldbag").toString()
-        var data7_10 = intent.getStringExtra("plasticwrap").toString()
-        var data7_11 = intent.getStringExtra("straw").toString()
-        var data7_12 = intent.getStringExtra("breadclip").toString()
-        var data7_13 = intent.getStringExtra("grill").toString()
-        var data7_14 = intent.getStringExtra("utensils").toString()
-        var data7_15 = intent.getStringExtra("kitchenknife").toString()
-        var data7_16 = intent.getStringExtra("cookware").toString()
-        var data7_17 = intent.getStringExtra("cup").toString()
-        var data7_18 = intent.getStringExtra("cookingfoil").toString()
-        var data7_19 = intent.getStringExtra("tissue").toString()
-        var data7_20 = intent.getStringExtra("jar").toString()
-        var data7_21 = intent.getStringExtra("butanegas").toString()
-        var data7_22 = intent.getStringExtra("onionnet").toString()
-
-        var data8_1 = intent.getStringExtra("eggshell").toString()
-        var data8_2 = intent.getStringExtra("nutshell").toString()
-        var data8_3 = intent.getStringExtra("chili").toString()
-        var data8_4 = intent.getStringExtra("fruitpeel").toString()
-        var data8_5 = intent.getStringExtra("fruitseed").toString()
-        var data8_6 = intent.getStringExtra("skintangerine").toString()
-        var data8_7 = intent.getStringExtra("animalbones").toString()
-        var data8_8 = intent.getStringExtra("garlic").toString()
-        var data8_9 = intent.getStringExtra("skinmelon").toString()
-        var data8_10 = intent.getStringExtra("bananapeel").toString()
-        var data8_11 = intent.getStringExtra("applepeel").toString()
-        var data8_12 = intent.getStringExtra("skinwatermelon").toString()
-        var data8_13 = intent.getStringExtra("oil").toString()
-        var data8_14 = intent.getStringExtra("avocadopeel").toString()
-        var data8_15 = intent.getStringExtra("medicine").toString()
-        var data8_16 = intent.getStringExtra("onion").toString()
-        var data8_17 = intent.getStringExtra("orangepeel").toString()
-        var data8_18 = intent.getStringExtra("corner").toString()
-        var data8_19 = intent.getStringExtra("jang").toString()
-        var data8_20 = intent.getStringExtra("coffeegrounds").toString()
-        var data8_21 = intent.getStringExtra("coconutshell").toString()
-        var data8_22 = intent.getStringExtra("kiwishell").toString()
-        var data8_23 = intent.getStringExtra("teabag").toString()
-        var data8_24 = intent.getStringExtra("greenonion").toString()
-        var data8_25 = intent.getStringExtra("pineapplepeel").toString()
-
-        var data9_1 = intent.getStringExtra("styrofoam").toString()
-        var data9_2 = intent.getStringExtra("gascontainer").toString()
-        var data9_3 = intent.getStringExtra("packagingbag").toString()
-        var data9_4 = intent.getStringExtra("eggplant").toString()
-        var data9_5 = intent.getStringExtra("snackbox").toString()
-        var data9_6 = intent.getStringExtra("confectionerybag").toString()
-        var data9_7 = intent.getStringExtra("oilbottle").toString()
-        var data9_8 = intent.getStringExtra("ramenbag").toString()
-        var data9_9 = intent.getStringExtra("sterilizationpack").toString()
-        var data9_10 = intent.getStringExtra("box").toString()
-        var data9_11 = intent.getStringExtra("deliveryplasticcontainer").toString()
-        var data9_12 = intent.getStringExtra("nonwovenbag").toString()
-        var data9_13 = intent.getStringExtra("milkpowder").toString()
-        var data9_14 = intent.getStringExtra("plasticbag").toString()
-        var data9_15 = intent.getStringExtra("plasticpackaging").toString()
-        var data9_16 = intent.getStringExtra("shoppingbag").toString()
-        var data9_17 = intent.getStringExtra("alcoholsodabottle").toString()
-        var data9_18 = intent.getStringExtra("silicon").toString()
-        var data9_19 = intent.getStringExtra("icepack").toString()
-        var data9_20 = intent.getStringExtra("aluminumcan").toString()
-        var data9_21 = intent.getStringExtra("aircap").toString()
-        var data9_22 = intent.getStringExtra("yogurtcontainer").toString()
-        var data9_23 = intent.getStringExtra("yogurtbottle").toString()
-        var data9_24 = intent.getStringExtra("milkpack").toString()
-        var data9_25 = intent.getStringExtra("glassbottle").toString()
-
-        var data10_1 = intent.getStringExtra("hanger").toString()
-        var data10_2 = intent.getStringExtra("bag").toString()
-        var data10_3 = intent.getStringExtra("leggings").toString()
-        var data10_4 = intent.getStringExtra("hat").toString()
-        var data10_5 = intent.getStringExtra("underwear").toString()
-        var data10_6 = intent.getStringExtra("stockings").toString()
-        var data10_7 = intent.getStringExtra("shoes").toString()
-        var data10_8 = intent.getStringExtra("glasses").toString()
-        var data10_9 = intent.getStringExtra("socks").toString()
-        var data10_10 = intent.getStringExtra("travelbag").toString()
-        var data10_11 = intent.getStringExtra("clothes").toString()
-        var data10_12 = intent.getStringExtra("wallet").toString()
-        var data10_13 = intent.getStringExtra("hanbok").toString()
-        var data10_14 = intent.getStringExtra("jewelry").toString()
-
-        var data11_1 = intent.getStringExtra("receipt").toString()
-        var data11_2 = intent.getStringExtra("rubber").toString()
-        var data11_3 = intent.getStringExtra("brokenglass").toString()
-        var data11_4 = intent.getStringExtra("vinylother").toString()
-        var data11_5 = intent.getStringExtra("creditcard").toString()
-        var data11_6 = intent.getStringExtra("unacceptableplastic").toString()
-        var data11_7 = intent.getStringExtra("leaflet").toString()
-        var data11_8 = intent.getStringExtra("noncombustiblegarbage").toString()
-        var data11_9 = intent.getStringExtra("plasticother").toString()
-        var data11_10 = intent.getStringExtra("mixedpaper").toString()
-
-
-        if(data1_1=="벽지") {
-            smallCategoryname.setText("벽지")
-            content.setText(wallpaper)
-
-            back.setOnClickListener{finish()}
-        }else if(data1_2=="LED") {
-            smallCategoryname.setText("LED")
-            content.setText(led)
-
-            back.setOnClickListener{finish()}
-        }else if(data1_3=="가구") {
-            smallCategoryname.setText("가구")
-            content.setText(furniture)
-
-            back.setOnClickListener{finish()}
-        }else if(data1_4=="거울") {
-            smallCategoryname.setText("거울")
-            content.setText(mirror)
-
-            back.setOnClickListener{finish()}
-        }else if(data1_5=="나무") {
-            smallCategoryname.setText("나무")
-            content.setText(tree)
-
-            back.setOnClickListener{finish()}
-        }else if(data1_6=="도자기") {
-            smallCategoryname.setText("도자기")
-            content.setText(ceramic)
-
-            back.setOnClickListener{finish()}
-        }else if(data1_7=="라텍스") {
-            smallCategoryname.setText("라텍스")
-            content.setText(latex)
-
-            back.setOnClickListener{finish()}
-        }else if(data1_8=="매트리스") {
-            smallCategoryname.setText("매트리스")
-            content.setText(matrix)
-
-            back.setOnClickListener{finish()}
-        }else if(data1_9=="방석") {
-            smallCategoryname.setText("방석")
-            content.setText(cushion)
-
-            back.setOnClickListener{finish()}
-        }else if(data1_10=="베개") {
-            smallCategoryname.setText("베개")
-            content.setText(pillow)
-
-            back.setOnClickListener{finish()}
-        }else if(data1_11=="소파") {
-            smallCategoryname.setText("소파")
-            content.setText(sofa)
-
-            back.setOnClickListener{finish()}
-        }else if(data1_12=="양초") {
-            smallCategoryname.setText("양초")
-            content.setText(candle)
-
-            back.setOnClickListener{finish()}
-        }else if(data1_13=="의자") {
-            smallCategoryname.setText("의자")
-            content.setText(chair)
-
-            back.setOnClickListener{finish()}
-        }else if(data1_14=="이불") {
-            smallCategoryname.setText("이불")
-            content.setText(bedding)
-
-            back.setOnClickListener{finish()}
-        }else if(data1_15=="전구(백열등)") {
-            smallCategoryname.setText("전구(백열등)")
-            content.setText(bulb)
-
-            back.setOnClickListener{finish()}
-        }else if(data1_16=="침대") {
-            smallCategoryname.setText("침대")
-            content.setText(bed)
-
-            back.setOnClickListener{finish()}
-        }else if(data1_17=="캣타워") {
-            smallCategoryname.setText("캣타워")
-            content.setText(cattower)
-
-            back.setOnClickListener{finish()}
-        }else if(data1_18=="커튼") {
-            smallCategoryname.setText("커튼")
-            content.setText(curtain)
-
-            back.setOnClickListener{finish()}
-        }else if(data1_19=="페인트통") {
-            smallCategoryname.setText("페인트통")
-            content.setText(paintbucket)
-
-            back.setOnClickListener{finish()}
-        }else if(data1_20=="형광등") {
-            smallCategoryname.setText("형광등")
-            content.setText(lamp)
-
-            back.setOnClickListener{finish()}
-        }
-        else if(data1_21=="화분") {
-            smallCategoryname.setText("화분")
-            content.setText(pot)
-
-            back.setOnClickListener{finish()}
-        }
-
-        if(data2_1=="TV") {
-            smallCategoryname.setText("TV")
-            content.setText(tv)
-
-            back.setOnClickListener{finish()}
-        }else if(data2_2=="공기청정기 필터") {
-            smallCategoryname.setText("공기청정기 필터")
-            content.setText(filter)
-
-            back.setOnClickListener{finish()}
-        }else if(data2_3=="냉장고") {
-            smallCategoryname.setText("냉장고")
-            content.setText(refrigerator)
-
-            back.setOnClickListener{finish()}
-        }else if(data2_4=="노트북") {
-            smallCategoryname.setText("노트북")
-            content.setText(laptop)
-
-            back.setOnClickListener{finish()}
-        }else if(data2_5=="노트북 배터리") {
-            smallCategoryname.setText("노트북 배터리")
-            content.setText(laptopbattery)
-
-            back.setOnClickListener{finish()}
-        }else if(data2_6=="마우스") {
-            smallCategoryname.setText("마우스")
-            content.setText(mouse)
-
-            back.setOnClickListener{finish()}
-        }else if(data2_7=="멀티탭") {
-            smallCategoryname.setText("멀티탭")
-            content.setText(multitap)
-
-            back.setOnClickListener{finish()}
-        }else if(data2_8=="모니터") {
-            smallCategoryname.setText("모니터")
-            content.setText(monitor)
-
-            back.setOnClickListener{finish()}
-        }else if(data2_9=="보조배터리") {
-            smallCategoryname.setText("보조배터리")
-            content.setText(auxiliarybattery)
-
-            back.setOnClickListener{finish()}
-        }else if(data2_10=="세탁기") {
-            smallCategoryname.setText("세탁기")
-            content.setText(washingmachine)
-
-            back.setOnClickListener{finish()}
-        }else if(data2_11=="소형 난방기구") {
-            smallCategoryname.setText("소형 난방기구")
-            content.setText(smallheater)
-
-            back.setOnClickListener{finish()}
-        }else if(data2_12=="스피커") {
-            smallCategoryname.setText("스피커")
-            content.setText(speaker)
-
-            back.setOnClickListener{finish()}
-        }else if(data2_13=="온수매트") {
-            smallCategoryname.setText("온수매트")
-            content.setText(hotwatermat)
-
-            back.setOnClickListener{finish()}
-        }else if(data2_14=="이어폰") {
-            smallCategoryname.setText("이어폰")
-            content.setText(earphone)
-
-            back.setOnClickListener{finish()}
-        }else if(data2_15=="전기면도기") {
-            smallCategoryname.setText("전기면도기")
-            content.setText(electricrazor)
-
-            back.setOnClickListener{finish()}
-        }else if(data2_16=="전기장판") {
-            smallCategoryname.setText("전기장판")
-            content.setText(electricpad)
-
-            back.setOnClickListener{finish()}
-        }else if(data2_17=="전선") {
-            smallCategoryname.setText("전선")
-            content.setText(wire)
-
-            back.setOnClickListener{finish()}
-        }else if(data2_18=="충전기, 케이블") {
-            smallCategoryname.setText("충전기, 케이블")
-            content.setText(charger)
-
-            back.setOnClickListener{finish()}
-        }else if(data2_19=="컴퓨터") {
-            smallCategoryname.setText("컴퓨터")
-            content.setText(computer)
-
-            back.setOnClickListener{finish()}
-        }else if(data2_20=="키보드") {
-            smallCategoryname.setText("키보드")
-            content.setText(keyboard)
-
-            back.setOnClickListener{finish()}
-        }
-        else if(data2_21=="태블릿") {
-            smallCategoryname.setText("태블릿")
-            content.setText(tablet)
-
-            back.setOnClickListener{finish()}
-        }else if(data2_22=="토너, 잉크 카트리지") {
-            smallCategoryname.setText("토너, 잉크 카트리지")
-            content.setText(inkcartridge)
-
-            back.setOnClickListener{finish()}
-        }else if(data2_23=="프린터") {
-            smallCategoryname.setText("프린터")
-            content.setText(printer)
-
-            back.setOnClickListener{finish()}
-        }else if(data2_24=="하드디스크") {
-            smallCategoryname.setText("하드디스크")
-            content.setText(harddisk)
-
-            back.setOnClickListener{finish()}
-        }
-
-        if(data3_1=="고철") {
-            smallCategoryname.setText("고철")
-            content.setText(scrapmetal)
-
-            back.setOnClickListener{finish()}
-        }else if(data3_2=="건전지") {
-            smallCategoryname.setText("건전지")
-            content.setText(battery)
-
-            back.setOnClickListener{finish()}
-        }else if(data3_3=="골프 가방") {
-            smallCategoryname.setText("골프 가방")
-            content.setText(golfbag)
-
-            back.setOnClickListener{finish()}
-        }else if(data3_4=="공") {
-            smallCategoryname.setText("공")
-            content.setText(ball)
-
-            back.setOnClickListener{finish()}
-        }else if(data3_5=="라켓") {
+        var data = intent.getStringExtra("data").toString()
+
+        back.setOnClickListener{finish()}
+
+        when (data){
+            "벽지"-> {
+                smallCategoryname.setText("벽지")
+                content.setText(wallpaper)
+            }
+            "LED" -> {
+                smallCategoryname.setText("LED")
+                content.setText(led)
+            }
+            "가구"-> {
+                smallCategoryname.setText("가구")
+                content.setText(furniture)
+            }
+            "거울"-> {
+                smallCategoryname.setText("거울")
+                content.setText(mirror)
+            }
+            "나무"-> {
+                smallCategoryname.setText("나무")
+                content.setText(tree)
+            }
+            "도자기"-> {
+                smallCategoryname.setText("도자기")
+                content.setText(ceramic)
+            }
+            "라텍스"-> {
+                smallCategoryname.setText("라텍스")
+                content.setText(latex)
+            }
+            "매트리스"-> {
+                smallCategoryname.setText("매트리스")
+                content.setText(matrix)
+            }
+            "방석"-> {
+                smallCategoryname.setText("방석")
+                content.setText(cushion)
+            }
+            "베개"-> {
+                smallCategoryname.setText("베개")
+                content.setText(pillow)
+            }
+            "소파"-> {
+                smallCategoryname.setText("소파")
+                content.setText(sofa)
+            }
+            "양초"-> {
+                smallCategoryname.setText("양초")
+                content.setText(candle)
+            }
+            "의자"-> {
+                smallCategoryname.setText("의자")
+                content.setText(chair)
+            }
+            "이불"-> {
+                smallCategoryname.setText("이불")
+                content.setText(bedding)
+            }
+            "전구(백열등)"-> {
+                smallCategoryname.setText("전구(백열등)")
+                content.setText(bulb)
+            }
+            "침대"-> {
+                smallCategoryname.setText("침대")
+                content.setText(bed)
+            }
+            "캣타워"-> {
+                smallCategoryname.setText("캣타워")
+                content.setText(cattower)
+            }
+            "커튼"-> {
+                smallCategoryname.setText("커튼")
+                content.setText(curtain)
+            }
+            "페인트통"-> {
+                smallCategoryname.setText("페인트통")
+                content.setText(paintbucket)
+            }
+            "형광등"-> {
+                smallCategoryname.setText("형광등")
+                content.setText(lamp)
+            }
+            "화분"-> {
+                smallCategoryname.setText("화분")
+                content.setText(pot)
+            }
+            "TV"-> {
+                smallCategoryname.setText("TV")
+                content.setText(tv)
+            }
+            "공기청정기 필터"-> {
+                smallCategoryname.setText("공기청정기 필터")
+                content.setText(filter)
+            }
+            "냉장고"-> {
+                smallCategoryname.setText("냉장고")
+                content.setText(refrigerator)
+            }
+            "노트북"-> {
+                smallCategoryname.setText("노트북")
+                content.setText(laptop)
+            }
+            "노트북 배터리"-> {
+                smallCategoryname.setText("노트북 배터리")
+                content.setText(laptopbattery)
+            }
+            "마우스"-> {
+                smallCategoryname.setText("마우스")
+                content.setText(mouse)
+            }
+            "멀티탭"-> {
+                smallCategoryname.setText("멀티탭")
+                content.setText(multitap)
+            }
+            "모니터"-> {
+                smallCategoryname.setText("모니터")
+                content.setText(monitor)
+            }
+            "보조배터리"-> {
+                smallCategoryname.setText("보조배터리")
+                content.setText(auxiliarybattery)
+            }
+            "세탁기"-> {
+                smallCategoryname.setText("세탁기")
+                content.setText(washingmachine)
+            }
+            "소형 난방기구"-> {
+                smallCategoryname.setText("소형 난방기구")
+                content.setText(smallheater)
+            }
+            "스피커"-> {
+                smallCategoryname.setText("스피커")
+                content.setText(speaker)
+            }
+            "온수매트"-> {
+                smallCategoryname.setText("온수매트")
+                content.setText(hotwatermat)
+            }
+            "이어폰"-> {
+                smallCategoryname.setText("이어폰")
+                content.setText(earphone)
+            }
+            "전기면도기"-> {
+                smallCategoryname.setText("전기면도기")
+                content.setText(electricrazor)
+            }
+            "전기장판"-> {
+                smallCategoryname.setText("전기장판")
+                content.setText(electricpad)
+            }
+            "전선"-> {
+                smallCategoryname.setText("전선")
+                content.setText(wire)
+            }
+            "충전기, 케이블"-> {
+                smallCategoryname.setText("충전기, 케이블")
+                content.setText(charger)
+            }
+            "컴퓨터"-> {
+                smallCategoryname.setText("컴퓨터")
+                content.setText(computer)
+            }
+            "키보드"-> {
+                smallCategoryname.setText("키보드")
+                content.setText(keyboard)
+            }
+            "태블릿"-> {
+                smallCategoryname.setText("태블릿")
+                content.setText(tablet)
+            }
+            "토너, 잉크 카트리지"-> {
+                smallCategoryname.setText("토너, 잉크 카트리지")
+                content.setText(inkcartridge)
+            }
+            "프린터"-> {
+                smallCategoryname.setText("프린터")
+                content.setText(printer)
+            }
+            "하드디스크"-> {
+                smallCategoryname.setText("하드디스크")
+                content.setText(harddisk)
+            }
+            "고철"-> {
+                smallCategoryname.setText("고철")
+                content.setText(scrapmetal)
+            }
+            "건전지"-> {
+                smallCategoryname.setText("건전지")
+                content.setText(battery)
+            }
+            "골프 가방"-> {
+                smallCategoryname.setText("골프 가방")
+                content.setText(golfbag)
+            }
+            "공"-> {
+                smallCategoryname.setText("공")
+                content.setText(ball)
+            }            "라켓"-> {
             smallCategoryname.setText("라켓")
             content.setText(racket)
-
-            back.setOnClickListener{finish()}
-        }else if(data3_6=="마스크") {
-            smallCategoryname.setText("마스크")
-            content.setText(mask)
-
-            back.setOnClickListener{finish()}
-        }else if(data3_7=="모기향") {
-            smallCategoryname.setText("모기향")
-            content.setText(mosquitorepellent)
-
-            back.setOnClickListener{finish()}
-        }else if(data3_8=="물티슈") {
-            smallCategoryname.setText("물티슈")
-            content.setText(wettissue)
-
-            back.setOnClickListener{finish()}
-        }else if(data3_9=="생리대") {
-            smallCategoryname.setText("생리대")
-            content.setText(sanitarypad)
-
-            back.setOnClickListener{finish()}
-        }else if(data3_10=="습기제거제") {
-            smallCategoryname.setText("습기제거제")
-            content.setText(moistureremover)
-
-            back.setOnClickListener{finish()}
-        }else if(data3_11=="식물") {
-            smallCategoryname.setText("식물")
-            content.setText(plant)
-
-            back.setOnClickListener{finish()}
-        }else if(data3_12=="요가 매트") {
-            smallCategoryname.setText("요가 매트")
-            content.setText(yogamat)
-
-            back.setOnClickListener{finish()}
-        }else if(data3_13=="우산") {
-            smallCategoryname.setText("우산")
-            content.setText(umbrella)
-
-            back.setOnClickListener{finish()}
-        }else if(data3_14=="장난감") {
-            smallCategoryname.setText("장난감")
-            content.setText(toy)
-
-            back.setOnClickListener{finish()}
-        }else if(data3_15=="콘돔") {
-            smallCategoryname.setText("콘돔")
-            content.setText(condom)
-
-            back.setOnClickListener{finish()}
-        }else if(data3_16=="테이프") {
-            smallCategoryname.setText("테이프")
-            content.setText(tape)
-
-            back.setOnClickListener{finish()}
-        }else if(data3_17=="핫팩") {
-            smallCategoryname.setText("핫팩")
-            content.setText(hotpack)
-
-            back.setOnClickListener{finish()}
-        }else if(data3_18=="현악기") {
-            smallCategoryname.setText("현악기")
-            content.setText(stringinstrument)
-
-            back.setOnClickListener{finish()}
-        }else if(data3_19=="라이터") {
-            smallCategoryname.setText("라이터")
-            content.setText(lighter)
-
-            back.setOnClickListener{finish()}
         }
+            "마스크"-> {
+                smallCategoryname.setText("마스크")
+                content.setText(mask)
+            }
+            "모기향"-> {
+                smallCategoryname.setText("모기향")
+                content.setText(mosquitorepellent)
+            }
+            "물티슈"-> {
+                smallCategoryname.setText("물티슈")
+                content.setText(wettissue)
+            }
+            "생리대"-> {
+                smallCategoryname.setText("생리대")
+                content.setText(sanitarypad)
+            }
+            "습기제거제"-> {
+                smallCategoryname.setText("습기제거제")
+                content.setText(moistureremover)
+            }
+            "식물"-> {
+                smallCategoryname.setText("식물")
+                content.setText(plant)
+            }
+            "요가 매트"-> {
+                smallCategoryname.setText("요가 매트")
+                content.setText(yogamat)
+            }
+            "우산"-> {
+                smallCategoryname.setText("우산")
+                content.setText(umbrella)
+            }
+            "장난감"-> {
+                smallCategoryname.setText("장난감")
+                content.setText(toy)
+            }
+            "콘돔"-> {
+                smallCategoryname.setText("콘돔")
+                content.setText(condom)
+            }
+            "테이프"-> {
+                smallCategoryname.setText("테이프")
+                content.setText(tape)
+            }
+            "핫팩"-> {
+                smallCategoryname.setText("핫팩")
+                content.setText(hotpack)
+            }
+            "현악기"-> {
+                smallCategoryname.setText("현악기")
+                content.setText(stringinstrument)
+            }
+            "라이터"-> {
+                smallCategoryname.setText("라이터")
+                content.setText(lighter)
+            }
+            "치약"-> {
+                smallCategoryname.setText("치약")
+                content.setText(toothpaste)
+            }
+            "규조토 매트"-> {
+                smallCategoryname.setText("규조토 매트")
+                content.setText(diatomitemat)
+            }
+            "두루마리 휴지"-> {
+                smallCategoryname.setText("두루마리 휴지")
+                content.setText(toiletroll)
+            }
+            "브리타 정수기 필터"-> {
+                smallCategoryname.setText("브리타 정수기 필터")
+                content.setText(waterfilter)
+            }
+            "수건"-> {
+                smallCategoryname.setText("수건")
+                content.setText(towel)
+            }
+            "총소 솔"-> {
+                smallCategoryname.setText("총소 솔")
+                content.setText(cleaningbrush)
+            }
+            "칫솔"-> {
+                smallCategoryname.setText("칫솔")
+                content.setText(toothbrush)
+            }
+            "펌프형 용기"-> {
+                smallCategoryname.setText("펌프형 용기")
+                content.setText(pumpcontainer)
+            }
+            "일반 종이"-> {
+                smallCategoryname.setText("일반 종이")
+                content.setText(paper)
+            }
+            "CD, DVD"-> {
+                smallCategoryname.setText("CD, DVD")
+                content.setText(cddvd)
+            }
+            "비디오 테이프"-> {
+                smallCategoryname.setText("비디오 테이프")
+                content.setText(videotape)
+            }
+            "스테이플러, 심"-> {
+                smallCategoryname.setText("스테이플러, 심")
+                content.setText(stapler)
+            }
+            "자석"-> {
+                smallCategoryname.setText("자석")
+                content.setText(magnet)
+            }
+            "책, 노트, 잡지"-> {
+                smallCategoryname.setText("책, 노트, 잡지")
+                content.setText(book)
+            }
+            "카세트 테이프"-> {
+                smallCategoryname.setText("카세트 테이프")
+                content.setText(cassettetape)
+            }
+            "커터칼"-> {
+                smallCategoryname.setText("커터칼")
+                content.setText(cutterknife)
+            }
+            "필기구"-> {
+                smallCategoryname.setText("필기구")
+                content.setText(writinginstrument)
+            }
+            "화장품"-> {
+                smallCategoryname.setText("화장품")
+                content.setText(cosmetics)
+            }
+            "향수"-> {
+                smallCategoryname.setText("향수")
+                content.setText(perfume)
+            }
+            "화장품(스틱)"-> {
+                smallCategoryname.setText("화장품(스틱)")
+                content.setText(cosmeticsstick)
+            }
+            "화장품(튜브)"-> {
+                smallCategoryname.setText("화장품(튜브)")
+                content.setText(cosmeticstube)
+            }
+            "화장품(펌프형)"-> {
+                smallCategoryname.setText("화장품(펌프형)")
+                content.setText(cosmeticspumptype)
+            }
+            "후라이팬"-> {
+                smallCategoryname.setText("후라이팬")
+                content.setText(fryingpan)
+            }
+            "가위"-> {
+                smallCategoryname.setText("가위")
+                content.setText(scissors)
+            }
+            "고무대야"-> {
+                smallCategoryname.setText("고무대야")
+                content.setText(rubberband)
+            }
+            "고무장갑"-> {
+                smallCategoryname.setText("고무장갑")
+                content.setText(rubberglove)
+            }
+            "그릇"-> {
+                smallCategoryname.setText("그릇")
+                content.setText(bowl)
+            }
+            "나무젓가락"-> {
+                smallCategoryname.setText("나무젓가락")
+                content.setText(woodenchopsticks)
+            }
+            "냄비"-> {
+                smallCategoryname.setText("냄비")
+                content.setText(skillet)
+            }
+            "도마"-> {
+                smallCategoryname.setText("도마")
+                content.setText(cuttingboard)
+            }
+            "보냉백"-> {
+                smallCategoryname.setText("보냉백")
+                content.setText(coldbag)
+            }
+            "비닐랩"-> {
+                smallCategoryname.setText("비닐랩")
+                content.setText(plasticwrap)
+            }
+            "빨대"-> {
+                smallCategoryname.setText("빨대")
+                content.setText(straw)
+            }
+            "빵클립"-> {
+                smallCategoryname.setText("빵클립")
+                content.setText(breadclip)
+            }
+            "석쇠"-> {
+                smallCategoryname.setText("석쇠")
+                content.setText(grill)
+            }
+            "식사 도구"-> {
+                smallCategoryname.setText("식사 도구")
+                content.setText(utensils)
+            }
+            "식칼"-> {
+                smallCategoryname.setText("식칼")
+                content.setText(kitchenknife)
+            }
+            "조리 기구"-> {
+                smallCategoryname.setText("조리 기구")
+                content.setText(cookware)
+            }
+            "컵"-> {
+                smallCategoryname.setText("컵")
+                content.setText(cup)
+            }
+            "쿠킹 호일"-> {
+                smallCategoryname.setText("쿠킹 호일")
+                content.setText(cookingfoil)
+            }
+            "티슈, 냅킨"-> {
+                smallCategoryname.setText("티슈, 냅킨")
+                content.setText(tissue)
+            }
+            "항아리"-> {
+                smallCategoryname.setText("항아리")
+                content.setText(jar)
+            }
+            "휴대용 부탄가스"-> {
+                smallCategoryname.setText("휴대용 부탄가스")
+                content.setText(butanegas)
+            }
+            "양파망"-> {
+                smallCategoryname.setText("양파망")
+                content.setText(onionnet)
+            }
+            "달걀 껍질"-> {
+                smallCategoryname.setText("달걀 껍질")
+                content.setText(eggshell)
+            }
+            "견과류 껍질"-> {
+                smallCategoryname.setText("견과류 껍질")
+                content.setText(nutshell)
+            }
+            "고추"-> {
+                smallCategoryname.setText("고추")
+                content.setText(chili)
+            }
+            "과일 껍질"-> {
+                smallCategoryname.setText("과일 껍질")
+                content.setText(fruitpeel)
+            }
+            "과일 씨"-> {
+                smallCategoryname.setText("과일 씨")
+                content.setText(fruitseed)
+            }
+            "귤 껍질"-> {
+                smallCategoryname.setText("귤 껍질")
+                content.setText(skintangerine)
+            }
+            "동물 뼈"-> {
+                smallCategoryname.setText("동물 뼈")
+                content.setText(animalbones)
+            }
+            "마늘"-> {
+                smallCategoryname.setText("마늘")
+                content.setText(garlic)
+            }
+            "멜론 껍질"-> {
+                smallCategoryname.setText("멜론 껍질")
+                content.setText(skinmelon)
+            }
+            "바나나 껍질"-> {
+                smallCategoryname.setText("바나나 껍질")
+                content.setText(bananapeel)
+            }
+            "사과 껍질, 심, 씨방"-> {
+                smallCategoryname.setText("사과 껍질, 심, 씨방")
+                content.setText(applepeel)
+            }
+            "수박 껍질"-> {
+                smallCategoryname.setText("수박 껍질")
+                content.setText(skinwatermelon)
+            }
+            "식용유, 기름"-> {
+                smallCategoryname.setText("식용유, 기름")
+                content.setText(oil)
+            }
+            "아보카도 껍질, 씨"-> {
+                smallCategoryname.setText("아보카도 껍질, 씨")
+                content.setText(avocadopeel)
+            }
+            "약, 영양제"-> {
+                smallCategoryname.setText("약, 영양제")
+                content.setText(medicine)
+            }
+            "양파"-> {
+                smallCategoryname.setText("양파")
+                content.setText(onion)
+            }
+            "오렌지 껍질"-> {
+                smallCategoryname.setText("오렌지 껍질")
+                content.setText(orangepeel)
+            }
+            "옥수수"-> {
+                smallCategoryname.setText("옥수수")
+                content.setText(corner)
+            }
+            "장류"-> {
+                smallCategoryname.setText("장류")
+                content.setText(jang)
+            }
+            "커피 찌꺼기"-> {
+                smallCategoryname.setText("커피 찌꺼기")
+                content.setText(coffeegrounds)
+            }
+            "코코넛 껍질"-> {
+                smallCategoryname.setText("코코넛 껍질")
+                content.setText(coconutshell)
+            }
+            "키위 껍질"-> {
+                smallCategoryname.setText("키위 껍질")
+                content.setText(kiwishell)
+            }
+            "티백"-> {
+                smallCategoryname.setText("티백")
+                content.setText(teabag)
+            }
+            "파"-> {
+                smallCategoryname.setText("파")
+                content.setText(greenonion)
+            }
+            "파인애플 껍질, 줄기"-> {
+                smallCategoryname.setText("파인애플 껍질, 줄기")
+                content.setText(pineapplepeel)
+            }
+            "스티로폼"-> {
+                smallCategoryname.setText("스티로폼")
+                content.setText(styrofoam)
+            }
+            "가스용기"-> {
+                smallCategoryname.setText("가스용기")
+                content.setText(gascontainer)
+            }
+            "개별 포장 봉지"-> {
+                smallCategoryname.setText("개별 포장 봉지")
+                content.setText(packagingbag)
+            }
+            "계란판"-> {
+                smallCategoryname.setText("계란판")
+                content.setText(eggplant)
+            }
+            "과자 박스"-> {
+                smallCategoryname.setText("과자 박스")
+                content.setText(snackbox)
+            }
+            "과자 봉지"-> {
+                smallCategoryname.setText("과자 봉지")
+                content.setText(confectionerybag)
+            }
+            "기름병"-> {
+                smallCategoryname.setText("기름병")
+                content.setText(oilbottle)
+            }
+            "라면 봉지"-> {
+                smallCategoryname.setText("라면 봉지")
+                content.setText(ramenbag)
+            }
+            "멸균팩"-> {
+                smallCategoryname.setText("멸균팩")
+                content.setText(sterilizationpack)
+            }
+            "박스"-> {
+                smallCategoryname.setText("박스")
+                content.setText(box)
+            }
+            "배달 플라스틱 용기"-> {
+                smallCategoryname.setText("배달 플라스틱 용기")
+                content.setText(deliveryplasticcontainer)
+            }
+            "부직포 가방"-> {
+                smallCategoryname.setText("부직포 가방")
+                content.setText(nonwovenbag)
+            }
+            "분유통"-> {
+                smallCategoryname.setText("분유통")
+                content.setText(milkpowder)
+            }
+            "비닐봉투"-> {
+                smallCategoryname.setText("비닐봉투")
+                content.setText(plasticbag)
+            }
+            "비닐포장재"-> {
+                smallCategoryname.setText("비닐포장재")
+                content.setText(plasticpackaging)
+            }
+            "쇼핑백"-> {
+                smallCategoryname.setText("쇼핑백")
+                content.setText(shoppingbag)
+            }
+            "술, 탄산음료병"-> {
+                smallCategoryname.setText("술, 탄산음료병")
+                content.setText(alcoholsodabottle)
+            }
+            "실리콘"-> {
+                smallCategoryname.setText("실리콘")
+                content.setText(silicon)
+            }
+            "아이스팩"-> {
+                smallCategoryname.setText("아이스팩")
+                content.setText(icepack)
+            }
+
+            "알루미늄 캔"-> {
+                smallCategoryname.setText("알루미늄 캔")
+                content.setText(aluminumcan)
+            }
+            "에어캡"-> {
+                smallCategoryname.setText("에어캡")
+                content.setText(aircap)
+            }
+            "요거트 용기"-> {
+                smallCategoryname.setText("요거트 용기")
+                content.setText(yogurtcontainer)
+            }
+            "요구르트 병"-> {
+                smallCategoryname.setText("요구르트 병")
+                content.setText(yogurtbottle)
+            }
+            "우유팩"-> {
+                smallCategoryname.setText("우유팩")
+                content.setText(milkpack)
+            }
+            "유리병"-> {
+                smallCategoryname.setText("유리병")
+                content.setText(glassbottle)
+            }
+            "옷걸이"-> {
+                smallCategoryname.setText("옷걸이")
+                content.setText(hanger)
+            }
+            "가방"-> {
+                smallCategoryname.setText("가방")
+                content.setText(bag)
+            }
+            "레깅스"-> {
+                smallCategoryname.setText("레깅스")
+                content.setText(leggings)
+            }
+            "모자"-> {
+                smallCategoryname.setText("모자")
+                content.setText(hat)
+            }
+            "속옷"-> {
+                smallCategoryname.setText("속옷")
+                content.setText(underwear)
+            }
+            "스타킹"-> {
+                smallCategoryname.setText("스타킹")
+                content.setText(stockings)
+            }
+            "신발"-> {
+                smallCategoryname.setText("신발")
+                content.setText(shoes)
+            }
+            "안경, 선글라스"-> {
+                smallCategoryname.setText("안경, 선글라스")
+                content.setText(glasses)
+            }
+            "양말"-> {
+                smallCategoryname.setText("양말")
+                content.setText(socks)
+            }
+            "여행용 가방"-> {
+                smallCategoryname.setText("여행용 가방")
+                content.setText(travelbag)
+            }
+            "의류"-> {
+                smallCategoryname.setText("의류")
+                content.setText(clothes)
+            }
+            "지갑"-> {
+                smallCategoryname.setText("지갑")
+                content.setText(wallet)
+            }
+            "한복"-> {
+                smallCategoryname.setText("한복")
+                content.setText(hanbok)
+            }
+            "주얼리"-> {
+                smallCategoryname.setText("주얼리")
+                content.setText(jewelry)
+            }
+            "영수증"-> {
+                smallCategoryname.setText("영수증")
+                content.setText(receipt)
+            }
+            "고무"-> {
+                smallCategoryname.setText("고무")
+                content.setText(rubber)
+            }
+            "깨진 유리"-> {
+                smallCategoryname.setText("깨진 유리")
+                content.setText(brokenglass)
+            }
+            "비닐류 OTHER"-> {
+                smallCategoryname.setText("비닐류 OTHER")
+                content.setText(vinylother)
+            }
+            "신용카드"-> {
+                smallCategoryname.setText("신용카드")
+                content.setText(creditcard)
+            }
+            "재활용 불가 플라스틱"-> {
+                smallCategoryname.setText("재활용 불가 플라스틱")
+                content.setText(unacceptableplastic)
+            }
+            "전단지"-> {
+                smallCategoryname.setText("전단지")
+                content.setText(leaflet)
+            }
+            "타지 않는 쓰레기"-> {
+                smallCategoryname.setText("타지 않는 쓰레기")
+                content.setText(noncombustiblegarbage)
+            }
+            "플라스틱 OTHER"-> {
+                smallCategoryname.setText("플라스틱 OTHER")
+                content.setText(plasticother)
+            }
+            "혼합종이"-> {
+                smallCategoryname.setText("혼합종이")
+                content.setText(mixedpaper)
+            }
 
-        if(data4_1=="치약") {
-            smallCategoryname.setText("치약")
-            content.setText(toothpaste)
-
-            back.setOnClickListener{finish()}
-        }else if(data4_2=="규조토 매트") {
-            smallCategoryname.setText("규조토 매트")
-            content.setText(diatomitemat)
-
-            back.setOnClickListener{finish()}
-        }else if(data4_3=="두루마리 휴지") {
-            smallCategoryname.setText("두루마리 휴지")
-            content.setText(toiletroll)
-
-            back.setOnClickListener{finish()}
-        }else if(data4_4=="브리타 정수기 필터") {
-            smallCategoryname.setText("브리타 정수기 필터")
-            content.setText(waterfilter)
-
-            back.setOnClickListener{finish()}
-        }else if(data4_5=="수건") {
-            smallCategoryname.setText("수건")
-            content.setText(towel)
-
-            back.setOnClickListener{finish()}
-        }else if(data4_6=="총소 솔") {
-            smallCategoryname.setText("총소 솔")
-            content.setText(cleaningbrush)
-
-            back.setOnClickListener{finish()}
-        }else if(data4_7=="칫솔") {
-            smallCategoryname.setText("칫솔")
-            content.setText(toothbrush)
-
-            back.setOnClickListener{finish()}
-        }else if(data4_8=="펌프형 용기") {
-            smallCategoryname.setText("펌프형 용기")
-            content.setText(pumpcontainer)
-
-            back.setOnClickListener{finish()}
-        }
-
-        if(data5_1=="일반 종이") {
-            smallCategoryname.setText("일반 종이")
-            content.setText(paper)
-
-            back.setOnClickListener{finish()}
-        }else if(data5_2=="CD, DVD") {
-            smallCategoryname.setText("CD, DVD")
-            content.setText(cddvd)
-
-            back.setOnClickListener{finish()}
-        }else if(data5_3=="비디오 테이프") {
-            smallCategoryname.setText("비디오 테이프")
-            content.setText(videotape)
-
-            back.setOnClickListener{finish()}
-        }else if(data5_4=="스테이플러, 심") {
-            smallCategoryname.setText("스테이플러, 심")
-            content.setText(stapler)
-
-            back.setOnClickListener{finish()}
-        }else if(data5_5=="자석") {
-            smallCategoryname.setText("자석")
-            content.setText(magnet)
-
-            back.setOnClickListener{finish()}
-        }else if(data5_6=="책, 노트, 잡지") {
-            smallCategoryname.setText("책, 노트, 잡지")
-            content.setText(book)
-
-            back.setOnClickListener{finish()}
-        }else if(data5_7=="카세트 테이프") {
-            smallCategoryname.setText("카세트 테이프")
-            content.setText(cassettetape)
-
-            back.setOnClickListener{finish()}
-        }else if(data5_8=="커터칼") {
-            smallCategoryname.setText("커터칼")
-            content.setText(cutterknife)
-
-            back.setOnClickListener{finish()}
-        }else if(data5_9=="필기구") {
-            smallCategoryname.setText("필기구")
-            content.setText(writinginstrument)
-
-            back.setOnClickListener{finish()}
-        }
-
-        if(data6_1=="화장품") {
-            smallCategoryname.setText("화장품")
-            content.setText(cosmetics)
-
-            back.setOnClickListener{finish()}
-        }else if(data6_2=="향수") {
-            smallCategoryname.setText("향수")
-            content.setText(perfume)
-
-            back.setOnClickListener{finish()}
-        }else if(data6_3=="화장품(스틱)") {
-            smallCategoryname.setText("화장품(스틱)")
-            content.setText(cosmeticsstick)
-
-            back.setOnClickListener{finish()}
-        }else if(data6_4=="화장품(튜브)") {
-            smallCategoryname.setText("화장품(튜브)")
-            content.setText(cosmeticstube)
-
-            back.setOnClickListener{finish()}
-        }else if(data6_5=="화장품(펌프형)") {
-            smallCategoryname.setText("화장품(펌프형)")
-            content.setText(cosmeticspumptype)
-
-            back.setOnClickListener{finish()}
-        }
-
-        if(data7_1=="후라이팬") {
-            smallCategoryname.setText("후라이팬")
-            content.setText(fryingpan)
-
-            back.setOnClickListener{finish()}
-        }else if(data7_2=="가위") {
-            smallCategoryname.setText("가위")
-            content.setText(scissors)
-
-            back.setOnClickListener{finish()}
-        }else if(data7_3=="고무대야") {
-            smallCategoryname.setText("고무대야")
-            content.setText(rubberband)
-
-            back.setOnClickListener{finish()}
-        }else if(data7_4=="고무장갑") {
-            smallCategoryname.setText("고무장갑")
-            content.setText(rubberglove)
-
-            back.setOnClickListener{finish()}
-        }else if(data7_5=="그릇") {
-            smallCategoryname.setText("그릇")
-            content.setText(bowl)
-
-            back.setOnClickListener{finish()}
-        }else if(data7_6=="나무젓가락") {
-            smallCategoryname.setText("나무젓가락")
-            content.setText(woodenchopsticks)
-
-            back.setOnClickListener{finish()}
-        }else if(data7_7=="냄비") {
-            smallCategoryname.setText("냄비")
-            content.setText(skillet)
-
-            back.setOnClickListener{finish()}
-        }else if(data7_8=="도마") {
-            smallCategoryname.setText("도마")
-            content.setText(cuttingboard)
-
-            back.setOnClickListener{finish()}
-        }else if(data7_9=="보냉백") {
-            smallCategoryname.setText("보냉백")
-            content.setText(coldbag)
-
-            back.setOnClickListener{finish()}
-        }else if(data7_10=="비닐랩") {
-            smallCategoryname.setText("비닐랩")
-            content.setText(plasticwrap)
-
-            back.setOnClickListener{finish()}
-        }else if(data7_11=="빨대") {
-            smallCategoryname.setText("빨대")
-            content.setText(straw)
-
-            back.setOnClickListener{finish()}
-        }else if(data7_12=="빵클립") {
-            smallCategoryname.setText("빵클립")
-            content.setText(breadclip)
-
-            back.setOnClickListener{finish()}
-        }else if(data7_13=="석쇠") {
-            smallCategoryname.setText("석쇠")
-            content.setText(grill)
-
-            back.setOnClickListener{finish()}
-        }else if(data7_14=="식사 도구") {
-            smallCategoryname.setText("식사 도구")
-            content.setText(utensils)
-
-            back.setOnClickListener{finish()}
-        }else if(data7_15=="식칼") {
-            smallCategoryname.setText("식칼")
-            content.setText(kitchenknife)
-
-            back.setOnClickListener{finish()}
-        }else if(data7_16=="조리 기구") {
-            smallCategoryname.setText("조리 기구")
-            content.setText(cookware)
-
-            back.setOnClickListener{finish()}
-        }else if(data7_17=="컵") {
-            smallCategoryname.setText("컵")
-            content.setText(cup)
-
-            back.setOnClickListener{finish()}
-        }else if(data7_18=="쿠킹 호일") {
-            smallCategoryname.setText("쿠킹 호일")
-            content.setText(cookingfoil)
-
-            back.setOnClickListener{finish()}
-        }else if(data7_19=="티슈, 냅킨") {
-            smallCategoryname.setText("티슈, 냅킨")
-            content.setText(tissue)
-
-            back.setOnClickListener{finish()}
-        }else if(data7_20=="항아리") {
-            smallCategoryname.setText("항아리")
-            content.setText(jar)
-
-            back.setOnClickListener{finish()}
-        }
-        else if(data7_21=="휴대용 부탄가스") {
-            smallCategoryname.setText("휴대용 부탄가스")
-            content.setText(butanegas)
-
-            back.setOnClickListener{finish()}
-        }else if(data7_22=="양파망") {
-            smallCategoryname.setText("양파망")
-            content.setText(onionnet)
-
-            back.setOnClickListener{finish()}
-        }
-
-        if(data8_1=="달걀 껍질") {
-            smallCategoryname.setText("달걀 껍질")
-            content.setText(eggshell)
-
-            back.setOnClickListener{finish()}
-        }else if(data8_2=="견과류 껍질") {
-            smallCategoryname.setText("견과류 껍질")
-            content.setText(nutshell)
-
-            back.setOnClickListener{finish()}
-        }else if(data8_3=="고추") {
-            smallCategoryname.setText("고추")
-            content.setText(chili)
-
-            back.setOnClickListener{finish()}
-        }else if(data8_4=="과일 껍질") {
-            smallCategoryname.setText("과일 껍질")
-            content.setText(fruitpeel)
-
-            back.setOnClickListener{finish()}
-        }else if(data8_5=="과일 씨") {
-            smallCategoryname.setText("과일 씨")
-            content.setText(fruitseed)
-
-            back.setOnClickListener{finish()}
-        }else if(data8_6=="귤 껍질") {
-            smallCategoryname.setText("귤 껍질")
-            content.setText(skintangerine)
-
-            back.setOnClickListener{finish()}
-        }else if(data8_7=="동물 뼈") {
-            smallCategoryname.setText("동물 뼈")
-            content.setText(animalbones)
-
-            back.setOnClickListener{finish()}
-        }else if(data8_8=="마늘") {
-            smallCategoryname.setText("마늘")
-            content.setText(garlic)
-
-            back.setOnClickListener{finish()}
-        }else if(data8_9=="멜론 껍질") {
-            smallCategoryname.setText("멜론 껍질")
-            content.setText(skinmelon)
-
-            back.setOnClickListener{finish()}
-        }else if(data8_10=="바나나 껍질") {
-            smallCategoryname.setText("바나나 껍질")
-            content.setText(bananapeel)
-
-            back.setOnClickListener{finish()}
-        }else if(data8_11=="사과 껍질, 심, 씨방") {
-            smallCategoryname.setText("사과 껍질, 심, 씨방")
-            content.setText(applepeel)
-
-            back.setOnClickListener{finish()}
-        }else if(data8_12=="수박 껍질") {
-            smallCategoryname.setText("수박 껍질")
-            content.setText(skinwatermelon)
-
-            back.setOnClickListener{finish()}
-        }else if(data8_13=="식용유, 기름") {
-            smallCategoryname.setText("식용유, 기름")
-            content.setText(oil)
-
-            back.setOnClickListener{finish()}
-        }else if(data8_14=="아보카도 껍질, 씨") {
-            smallCategoryname.setText("아보카도 껍질, 씨")
-            content.setText(avocadopeel)
-
-            back.setOnClickListener{finish()}
-        }else if(data8_15=="약, 영양제") {
-            smallCategoryname.setText("약, 영양제")
-            content.setText(medicine)
-
-            back.setOnClickListener{finish()}
-        }else if(data8_16=="양파") {
-            smallCategoryname.setText("양파")
-            content.setText(onion)
-
-            back.setOnClickListener{finish()}
-        }else if(data8_17=="오렌지 껍질") {
-            smallCategoryname.setText("오렌지 껍질")
-            content.setText(orangepeel)
-
-            back.setOnClickListener{finish()}
-        }else if(data8_18=="옥수수") {
-            smallCategoryname.setText("옥수수")
-            content.setText(corner)
-
-            back.setOnClickListener{finish()}
-        }else if(data8_19=="장류") {
-            smallCategoryname.setText("장류")
-            content.setText(jang)
-
-            back.setOnClickListener{finish()}
-        }else if(data8_20=="커피 찌꺼기") {
-            smallCategoryname.setText("커피 찌꺼기")
-            content.setText(coffeegrounds)
-
-            back.setOnClickListener{finish()}
-        }
-        else if(data8_21=="코코넛 껍질") {
-            smallCategoryname.setText("코코넛 껍질")
-            content.setText(coconutshell)
-
-            back.setOnClickListener{finish()}
-        }else if(data8_22=="키위 껍질") {
-            smallCategoryname.setText("키위 껍질")
-            content.setText(kiwishell)
-
-            back.setOnClickListener{finish()}
-        }else if(data8_23=="티백") {
-            smallCategoryname.setText("티백")
-            content.setText(teabag)
-
-            back.setOnClickListener{finish()}
-        }else if(data8_24=="파") {
-            smallCategoryname.setText("파")
-            content.setText(greenonion)
-
-            back.setOnClickListener{finish()}
-        }else if(data8_25=="파인애플 껍질, 줄기") {
-            smallCategoryname.setText("파인애플 껍질, 줄기")
-            content.setText(pineapplepeel)
-
-            back.setOnClickListener{finish()}
-        }
-
-        if(data9_1=="스티로폼") {
-            smallCategoryname.setText("스티로폼")
-            content.setText(styrofoam)
-
-            back.setOnClickListener{finish()}
-        }else if(data9_2=="가스용기") {
-            smallCategoryname.setText("가스용기")
-            content.setText(gascontainer)
-
-            back.setOnClickListener{finish()}
-        }else if(data9_3=="개별 포장 봉지") {
-            smallCategoryname.setText("개별 포장 봉지")
-            content.setText(packagingbag)
-
-            back.setOnClickListener{finish()}
-        }else if(data9_4=="계란판") {
-            smallCategoryname.setText("계란판")
-            content.setText(eggplant)
-
-            back.setOnClickListener{finish()}
-        }else if(data9_5=="과자 박스") {
-            smallCategoryname.setText("과자 박스")
-            content.setText(snackbox)
-
-            back.setOnClickListener{finish()}
-        }else if(data9_6=="과자 봉지") {
-            smallCategoryname.setText("과자 봉지")
-            content.setText(confectionerybag)
-
-            back.setOnClickListener{finish()}
-        }else if(data9_7=="기름병") {
-            smallCategoryname.setText("기름병")
-            content.setText(oilbottle)
-
-            back.setOnClickListener{finish()}
-        }else if(data9_8=="라면 봉지") {
-            smallCategoryname.setText("라면 봉지")
-            content.setText(ramenbag)
-
-            back.setOnClickListener{finish()}
-        }else if(data9_9=="멸균팩") {
-            smallCategoryname.setText("멸균팩")
-            content.setText(sterilizationpack)
-
-            back.setOnClickListener{finish()}
-        }else if(data9_10=="박스") {
-            smallCategoryname.setText("박스")
-            content.setText(box)
-
-            back.setOnClickListener{finish()}
-        }else if(data9_11=="배달 플라스틱 용기") {
-            smallCategoryname.setText("배달 플라스틱 용기")
-            content.setText(deliveryplasticcontainer)
-
-            back.setOnClickListener{finish()}
-        }else if(data9_12=="부직포 가방") {
-            smallCategoryname.setText("부직포 가방")
-            content.setText(nonwovenbag)
-
-            back.setOnClickListener{finish()}
-        }else if(data9_13=="분유통") {
-            smallCategoryname.setText("분유통")
-            content.setText(milkpowder)
-
-            back.setOnClickListener{finish()}
-        }else if(data9_14=="비닐봉투") {
-            smallCategoryname.setText("비닐봉투")
-            content.setText(plasticbag)
-
-            back.setOnClickListener{finish()}
-        }else if(data9_15=="비닐포장재") {
-            smallCategoryname.setText("비닐포장재")
-            content.setText(plasticpackaging)
-
-            back.setOnClickListener{finish()}
-        }else if(data9_16=="쇼핑백") {
-            smallCategoryname.setText("쇼핑백")
-            content.setText(shoppingbag)
-
-            back.setOnClickListener{finish()}
-        }else if(data9_17=="술, 탄산음료병") {
-            smallCategoryname.setText("술, 탄산음료병")
-            content.setText(alcoholsodabottle)
-
-            back.setOnClickListener{finish()}
-        }else if(data9_18=="실리콘") {
-            smallCategoryname.setText("실리콘")
-            content.setText(silicon)
-
-            back.setOnClickListener{finish()}
-        }else if(data9_19=="아이스팩") {
-            smallCategoryname.setText("아이스팩")
-            content.setText(icepack)
-
-            back.setOnClickListener{finish()}
-        }else if(data9_20=="알루미늄 캔") {
-            smallCategoryname.setText("알루미늄 캔")
-            content.setText(aluminumcan)
-
-            back.setOnClickListener{finish()}
-        }
-        else if(data9_21=="에어캡") {
-            smallCategoryname.setText("에어캡")
-            content.setText(aircap)
-
-            back.setOnClickListener{finish()}
-        }else if(data9_22=="요거트 용기") {
-            smallCategoryname.setText("요거트 용기")
-            content.setText(yogurtcontainer)
-
-            back.setOnClickListener{finish()}
-        }else if(data9_23=="요구르트 병") {
-            smallCategoryname.setText("요구르트 병")
-            content.setText(yogurtbottle)
-
-            back.setOnClickListener{finish()}
-        }else if(data9_24=="우유팩") {
-            smallCategoryname.setText("우유팩")
-            content.setText(milkpack)
-
-            back.setOnClickListener{finish()}
-        }else if(data9_25=="유리병") {
-            smallCategoryname.setText("유리병")
-            content.setText(glassbottle)
-
-            back.setOnClickListener{finish()}
-        }
-
-        if(data10_1=="옷걸이") {
-            smallCategoryname.setText("옷걸이")
-            content.setText(hanger)
-
-            back.setOnClickListener{finish()}
-        }else if(data10_2=="가방") {
-            smallCategoryname.setText("가방")
-            content.setText(bag)
-
-            back.setOnClickListener{finish()}
-        }else if(data10_3=="레깅스") {
-            smallCategoryname.setText("레깅스")
-            content.setText(leggings)
-
-            back.setOnClickListener{finish()}
-        }else if(data10_4=="모자") {
-            smallCategoryname.setText("모자")
-            content.setText(hat)
-
-            back.setOnClickListener{finish()}
-        }else if(data10_5=="속옷") {
-            smallCategoryname.setText("속옷")
-            content.setText(underwear)
-
-            back.setOnClickListener{finish()}
-        }else if(data10_6=="스타킹") {
-            smallCategoryname.setText("스타킹")
-            content.setText(stockings)
-
-            back.setOnClickListener{finish()}
-        }else if(data10_7=="신발") {
-            smallCategoryname.setText("신발")
-            content.setText(shoes)
-
-            back.setOnClickListener{finish()}
-        }else if(data10_8=="안경, 선글라스") {
-            smallCategoryname.setText("안경, 선글라스")
-            content.setText(glasses)
-
-            back.setOnClickListener{finish()}
-        }else if(data10_9=="양말") {
-            smallCategoryname.setText("양말")
-            content.setText(socks)
-
-            back.setOnClickListener{finish()}
-        }else if(data10_10=="여행용 가방") {
-            smallCategoryname.setText("여행용 가방")
-            content.setText(travelbag)
-
-            back.setOnClickListener{finish()}
-        }else if(data10_11=="의류") {
-            smallCategoryname.setText("의류")
-            content.setText(clothes)
-
-            back.setOnClickListener{finish()}
-        }else if(data10_12=="지갑") {
-            smallCategoryname.setText("지갑")
-            content.setText(wallet)
-
-            back.setOnClickListener{finish()}
-        }else if(data10_13=="한복") {
-            smallCategoryname.setText("한복")
-            content.setText(hanbok)
-
-            back.setOnClickListener{finish()}
-        }else if(data10_14=="주얼리") {
-            smallCategoryname.setText("주얼리")
-            content.setText(jewelry)
-
-            back.setOnClickListener{finish()}
-        }
-
-        if(data11_1=="영수증") {
-            smallCategoryname.setText("영수증")
-            content.setText(receipt)
-
-            back.setOnClickListener{finish()}
-        }else if(data11_2=="고무") {
-            smallCategoryname.setText("고무")
-            content.setText(rubber)
-
-            back.setOnClickListener{finish()}
-        }else if(data11_3=="깨진 유리") {
-            smallCategoryname.setText("깨진 유리")
-            content.setText(brokenglass)
-
-            back.setOnClickListener{finish()}
-        }else if(data11_4=="비닐류 OTHER") {
-            smallCategoryname.setText("비닐류 OTHER")
-            content.setText(vinylother)
-
-            back.setOnClickListener{finish()}
-        }else if(data11_5=="신용카드") {
-            smallCategoryname.setText("신용카드")
-            content.setText(creditcard)
-
-            back.setOnClickListener{finish()}
-        }else if(data11_6=="재활용 불가 플라스틱") {
-            smallCategoryname.setText("재활용 불가 플라스틱")
-            content.setText(unacceptableplastic)
-
-            back.setOnClickListener{finish()}
-        }else if(data11_7=="전단지") {
-            smallCategoryname.setText("전단지")
-            content.setText(leaflet)
-
-            back.setOnClickListener{finish()}
-        }else if(data11_8=="타지 않는 쓰레기") {
-            smallCategoryname.setText("타지 않는 쓰레기")
-            content.setText(noncombustiblegarbage)
-
-            back.setOnClickListener{finish()}
-        }else if(data11_9=="플라스틱 OTHER") {
-            smallCategoryname.setText("플라스틱 OTHER")
-            content.setText(plasticother)
-
-            back.setOnClickListener{finish()}
-        }else if(data11_10=="혼합종이") {
-            smallCategoryname.setText("혼합종이")
-            content.setText(mixedpaper)
-
-            back.setOnClickListener{finish()}
         }
     }
 }
