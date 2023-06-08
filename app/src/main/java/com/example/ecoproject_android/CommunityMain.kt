@@ -13,6 +13,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
+import java.net.URL
 
 
 class CommunityMain : AppCompatActivity() {
@@ -76,6 +77,10 @@ class CommunityMain : AppCompatActivity() {
                 intent.putExtra("change", post.change)
                 intent.putExtra("content", post.content)
                 intent.putExtra("userNickname", post.userNickname)
+                intent.putExtra("date", post.date)
+                intent.putExtra("imageUrl", post.imageUrl)
+                intent.putExtra("postId", post.postId)
+                intent.putExtra("email", post.email)
                 startActivity(intent)
             }else{
                 builder.setMessage("로그인 후 이용해주세요!")
@@ -133,5 +138,8 @@ data class Post(
     val userNickname: String? = null,
     val title: String? = null,
     val change: String? = null,
-    val content: String? = null
+    val content: String? = null,
+    val date: String? = null,
+    val postId: String? = null,
+    val imageUrl: String? = null // imageUrl 필드 추가
 )

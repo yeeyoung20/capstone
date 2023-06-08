@@ -52,7 +52,6 @@
     <!--    -->
 
     <TabHost
-
         android:id="@+id/tabhost"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -68,7 +67,7 @@
         <FrameLayout
             android:id="@android:id/tabcontent"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:orientation="vertical"
@@ -76,87 +75,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <ScrollView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="15dp"
+                        android:layout_height="match_parent"
                         android:background="@drawable/more_community_bg"
                         android:orientation="vertical">
 
-
-                        <Button
+                        <ListView
+                            android:id="@+id/listview"
+                            android:layout_weight="1"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:background="@drawable/more_button_bg"
-
-                            android:text="어쩌고 저쩌고" />
-
-                        <Button
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:background="@drawable/more_button_bg"
-                            android:text="와랄라라라"
-
-                            />
-
-                        <Button
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:background="@drawable/more_button_bg"
-                            android:text="흥 칫 뿡"
-
-                            />
-
-                        <Button
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:background="@drawable/more_button_bg"
-                            android:text="집에 가고 싶어요" />
-
-                        <Button
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:background="@drawable/more_button_bg"
-
-                            android:text="어쩌고 저쩌고" />
-
-                        <Button
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:background="@drawable/more_button_bg"
-                            android:text="와랄라라라"
-
-                            />
-
-                        <Button
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:background="@drawable/more_button_bg"
-                            android:text="흥 칫 뿡"
-
-                            />
-
-                        <Button
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:background="@drawable/more_button_bg"
-                            android:text="집에 가고 싶어요" />
+                            android:layout_height="match_parent" />
 
                     </LinearLayout>
-                </ScrollView>
-
 
             </LinearLayout>
 

@@ -149,12 +149,12 @@
 
 
                         <Button
-                            android:id="@+id/myanabadabtn"
+                            android:id="@+id/mypostbtn"
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
                             android:background="@drawable/more_button_bg"
                             android:drawableEnd="@drawable/doublearrowxml"
-                            android:text="내 아나바다"
+                            android:text="내 게시물"
                             android:layout_margin="5dp"
                             />
 

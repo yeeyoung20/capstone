@@ -22,7 +22,7 @@ class MainActivityMorepage : AppCompatActivity() {
 
         //val usermore = findViewById<Button>(R.id.usermore)
         val inmypage = findViewById<androidx.constraintlayout.widget.ConstraintLayout>(R.id.inmypage)
-        val myanabadabtn = findViewById<Button>(R.id.myanabadabtn)
+        val mypostbtn = findViewById<Button>(R.id.mypostbtn)
         val map = findViewById<Button>(R.id.map)
         val loginlogout = findViewById<Button>(R.id.loginlogout)
         val back=findViewById<LinearLayout>(R.id.back)
@@ -31,7 +31,7 @@ class MainActivityMorepage : AppCompatActivity() {
         back.setOnClickListener{finish()}
 
 
-        myanabadabtn.setOnClickListener{
+        mypostbtn.setOnClickListener{
             val intent= Intent(this, mypost::class.java)
             startActivity(intent)
         }
