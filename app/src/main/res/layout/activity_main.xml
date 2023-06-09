@@ -54,14 +54,24 @@
             <!--      배너줄      -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="135dp"
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewpager"
                     android:layout_gravity="center"
-                    android:background="@drawable/banner" />
+                    android:clipToPadding="false"
+                    android:clipChildren="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:layout_marginBottom="5dp"/>
+
+                <me.relex.circleindicator.CircleIndicator3
+                    android:id="@+id/indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:ci_drawable="@drawable/indicator_black"/>
             </LinearLayout>
             <!--      분리수거 메인 버튼      -->
             <LinearLayout
@@ -415,7 +425,7 @@
             android:id="@+id/main2_1"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:background="@drawable/main2_1"
+            android:background="@drawable/smain2_1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/main2_2"
             app:layout_constraintHorizontal_chainStyle="spread"
@@ -427,7 +437,7 @@
             android:id="@+id/main2_2"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:background="@drawable/main2_2"
+            android:background="@drawable/smain2_2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/main2_3"
             app:layout_constraintStart_toEndOf="@+id/main2_1"
@@ -438,7 +448,7 @@
             android:id="@+id/main2_3"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:background="@drawable/main2_3"
+            android:background="@drawable/smain2_3"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/main2_4"
             app:layout_constraintStart_toEndOf="@+id/main2_2"
@@ -448,7 +458,7 @@
             android:id="@+id/main2_4"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:background="@drawable/main2_4"
+            android:background="@drawable/smain2_4"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/main2_3"

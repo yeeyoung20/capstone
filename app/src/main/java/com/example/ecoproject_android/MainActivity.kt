@@ -1,11 +1,19 @@
 package com.example.ecoproject_android
 
+import ViewPagerAdapter
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
+import androidx.viewpager2.widget.ViewPager2
+import me.relex.circleindicator.CircleIndicator3
+
 
 class MainActivity : AppCompatActivity() {
+
+    private var banner = mutableListOf<Int>()
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -13,6 +21,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val search=findViewById<ImageButton>(R.id.searchid)
+        val viewpager = findViewById<ViewPager2>(R.id.viewpager)
+        val indicator = findViewById<CircleIndicator3>(R.id.indicator)
 
 
         val main1_1=findViewById<Button>(R.id.main1_1)
@@ -31,6 +41,10 @@ class MainActivity : AppCompatActivity() {
         val main2_3=findViewById<Button>(R.id.main2_3)
         val main2_4=findViewById<Button>(R.id.main2_4)
 
+        postToList()
+        viewpager.adapter = ViewPagerAdapter(this,banner)
+        viewpager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+        indicator.setViewPager(viewpager)
 
 
 
@@ -102,5 +116,14 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+    }
+
+    private fun addToList(bnimag:Int){
+        banner.add(bnimag)
+    }
+    private fun postToList(){
+        for(i in 1..5){
+            addToList(R.drawable.banner)
+        }
     }
 }
