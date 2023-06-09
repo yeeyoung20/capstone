@@ -114,6 +114,12 @@ class CommunityWrite : AppCompatActivity() {
                             "postId" to postId
                         )
 
+                        // 이미지가 선택되지 않았을 경우
+                        if (imageUri == null) {
+                            Toast.makeText(this, "이미지를 선택해주세요.", Toast.LENGTH_SHORT).show()
+                            return@setOnClickListener
+                        }
+
                         // 이미지 업로드
                         val uploadTask = imagesRef.child(postId).putFile(imageUri!!)
                         uploadTask.continueWithTask { task ->

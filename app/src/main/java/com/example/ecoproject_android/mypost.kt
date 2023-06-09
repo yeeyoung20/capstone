@@ -53,7 +53,6 @@ class mypost : AppCompatActivity() {
             val user = Firebase.auth.currentUser
 
             if (user != null) {
-                val selectedItem = adapter.getItem(position)
                 val post = postList[position] // 선택된 게시물 객체
 
                 // 현재 접속한 사용자의 이메일과 게시물 작성자의 이메일을 비교하여 동일한 경우에만 게시물 표시
@@ -84,8 +83,37 @@ class mypost : AppCompatActivity() {
                     .create()
                     .show()
             }
+
         }
 
+        valueEventListener = object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                postList.clear()
+                adapter.clear()
+
+                val user = Firebase.auth.currentUser
+                if (user != null) {
+                    for (postSnapshot in dataSnapshot.children) {
+                        val post = postSnapshot.getValue(Post::class.java)
+                        post?.let {
+                            // 현재 접속한 사용자의 이메일과 게시물 작성자의 이메일을 비교하여 동일한 경우에만 postList에 추가
+                            if (user.email == it.email) {
+                                postList.add(it)
+                                val data = "제목: ${it.title}\n 교환희망장소: ${it.change}\n 작성자: ${it.userNickname}"
+                                adapter.add(data)
+                            }
+                        }
+                    }
+                }
+
+                adapter.notifyDataSetChanged()
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                // Handle database error
+                // ...
+            }
+        }
 
         val myposttab = tabHost.newTabSpec("myposttab")
         myposttab.setIndicator("내가 쓴 글")
@@ -97,7 +125,6 @@ class mypost : AppCompatActivity() {
         mylikeposttab.setContent(R.id.mylike)
         tabHost.addTab(mylikeposttab)
     }
-
     override fun onStart() {
         super.onStart()
         postsRef.addValueEventListener(valueEventListener)
