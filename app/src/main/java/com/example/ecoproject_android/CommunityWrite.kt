@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.google.firebase.storage.FirebaseStorage
@@ -164,9 +166,13 @@ class CommunityWrite : AppCompatActivity() {
             // 선택한 이미지의 Uri 가져오기
             imageUri = data?.data
 
+            val img = findViewById<ImageView>(R.id.img)
+
             if (imageUri != null) {
                 // Firebase Storage에 이미지 업로드
                 uploadImage(imageUri!!)
+                // 이미지를 ImageView에 설정
+                Glide.with(this).load(imageUri).into(img)
             } else {
                 Toast.makeText(this, "이미지를 선택하지 않았습니다.", Toast.LENGTH_SHORT).show()
             }

@@ -35,6 +35,12 @@
         android:layout_width="match_parent"
         android:layout_height="1dp" />
 
+    <ImageView
+        android:id="@+id/image"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+
     <TextView
         android:text="버리는 방법"
         android:textSize="20dp"

@@ -93,28 +93,42 @@
             android:layout_marginLeft="5dp"
             android:background="@drawable/edittextbox"
             android:layout_width="match_parent"
-            android:layout_height="200dp" />
+            android:layout_height="150dp" />
 
-        <!--이미지-->
-        <TextView
-            android:text="이미지"
-            android:textSize="15dp"
-            android:textColor="#000"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
 
-        <!--사진 업로드 버튼-->
-        <Button
-            android:id="@+id/image"
-            android:text="사진 업로드"
-            android:textSize="15dp"
-            android:textColor="#000"
-            android:backgroundTint="#7AFFFFFF"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <!--이미지-->
+            <TextView
+                android:text="이미지"
+                android:textSize="15dp"
+                android:textColor="#000"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!--사진 업로드 버튼-->
+            <Button
+                android:id="@+id/image"
+                android:text="사진 업로드"
+                android:textSize="15dp"
+                android:textColor="#000"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="#7AFFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/img"
+            android:layout_margin="15dp"
+            android:layout_width="160dp"
+            android:layout_height="180dp" />
+
     </LinearLayout>
+
+
 
     <!--하단 돌아가기, 완료 버튼-->
     <LinearLayout
