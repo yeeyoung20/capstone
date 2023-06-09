@@ -139,7 +139,6 @@ class Map : AppCompatActivity(), OnMapReadyCallback {
 
             // 현재 위치 변경 시 호출되는 메서드
             // 가장 가까운 마커를 찾고 경로 안내를 시작하는 메서드 호출
-            findNearestMarkerAndNavigate(locationSource.lastLocation)
         }
     }
 
@@ -201,121 +200,7 @@ class Map : AppCompatActivity(), OnMapReadyCallback {
     }
 
     // 가장 가까운 마커를 찾고 경로 안내를 시작하는 메서드
-    private fun findNearestMarkerAndNavigate(lastLocation: android.location.Location?) {
-        if (lastLocation != null && markersPosition != null && markersPosition!!.isNotEmpty()) {
-            val currentPosition = LatLng(lastLocation.latitude, lastLocation.longitude)
-            var nearestMarker: Marker? = null
-            var shortestDistance = Double.MAX_VALUE
 
-            for (marker in activeMarkers!!) {
-                val markerPosition = marker.position
-                val distance = calculateDistance(currentPosition, markerPosition)
-                if (distance < shortestDistance) {
-                    shortestDistance = distance
-                    nearestMarker = marker
-                }
-            }
 
-            // 가장 가까운 마커가 존재하면 해당 마커까지 경로 안내 시작
-            if (nearestMarker != null) {
-                navigateToMarker(nearestMarker.position)
-            }
-        }
-    }
-
-    // 두 위치간 거리 계산
-    private fun calculateDistance(position1: LatLng, position2: LatLng): Double {
-        val latDiff = Math.toRadians(position2.latitude - position1.latitude)
-        val lngDiff = Math.toRadians(position2.longitude - position1.longitude)
-        val a = Math.sin(latDiff / 2) * Math.sin(latDiff / 2) +
-                Math.cos(Math.toRadians(position1.latitude)) * Math.cos(Math.toRadians(position2.latitude)) *
-                Math.sin(lngDiff / 2) * Math.sin(lngDiff / 2)
-        val c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
-        val earthRadius = 6371 // 지구 반지름 (단위: km)
-        return earthRadius * c
-    }
-
-    // 선택한 마커까지 경로 안내 시작
-    private fun navigateToMarker(markerPosition: LatLng) {
-        val currentPosition = locationSource.lastLocation
-        if (currentPosition != null) {
-            val start = LatLng(currentPosition.latitude, currentPosition.longitude)
-            val end = markerPosition
-
-            // 경로 안내 생성
-            val request = createDirectionRequest(start, end)
-            sendDirectionRequest(request)
-        }
-    }
-
-    // 경로 안내를 위한 Direction API 요청 생성
-    private fun createDirectionRequest(start: LatLng, end: LatLng): Request {
-        val url = "https://naveropenapi.apigw.ntruss.com/map-direction/v1/driving"
-        val clientId = "gltf29rywr" // 본인의 네이버 클라이언트 ID 입력
-        val clientSecret = "pp0hbjM5trHLFo0r1lazxHTDI7se0njR8o1opx9V" // 본인의 네이버 클라이언트 시크릿 입력
-
-        val requestUrl = "$url?start=${start.longitude},${start.latitude}&goal=${end.longitude},${end.latitude}"
-        val request = Request.Builder()
-            .url(requestUrl)
-            .header("gltf29rywr", clientId)
-            .header("pp0hbjM5trHLFo0r1lazxHTDI7se0njR8o1opx9V", clientSecret)
-            .build()
-
-        return request
-    }
-
-    // 경로 안내를 위한 Direction API 요청 전송
-    private fun sendDirectionRequest(request: Request) {
-        val client = OkHttpClient()
-        client.newCall(request).enqueue(object : Callback {
-            override fun onFailure(call: Call, e: IOException) {
-                // 요청 실패 시 처리
-                e.printStackTrace()
-            }
-
-            override fun onResponse(call: Call, response: Response) {
-                // 요청 성공 시 처리
-                response.body?.let { responseBody ->
-                    val responseData = responseBody.string()
-                    try {
-                        val jsonObject = JSONObject(responseData)
-                        val route = jsonObject.getJSONArray("route").getJSONObject(0)
-                        val path = route.getJSONObject("summary").getString("path")
-                        runOnUiThread {
-                            drawPath(path)
-                        }
-                    } catch (e: JSONException) {
-                        e.printStackTrace()
-                    }
-                }
-            }
-        })
-    }
-
-    // 경로 그리기
-    private fun drawPath(path: String) {
-        val pathCoordinates = parsePathCoordinates(path)
-
-        val pathOverlay = PathOverlay()
-        pathOverlay.coords = pathCoordinates
-        pathOverlay.map = naverMap
-    }
-
-    // 경로 좌표 파싱
-    private fun parsePathCoordinates(path: String): List<LatLng> {
-        val coordinates = path.split(";")
-        val pathCoordinates = mutableListOf<LatLng>()
-
-        for (coordinate in coordinates) {
-            val latLng = coordinate.split(",")
-            if (latLng.size == 2) {
-                val lat = latLng[1].toDouble()
-                val lng = latLng[0].toDouble()
-                pathCoordinates.add(LatLng(lat, lng))
-            }
-        }
-
-        return pathCoordinates
-    }
 }
 
