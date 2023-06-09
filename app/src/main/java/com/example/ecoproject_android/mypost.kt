@@ -66,6 +66,7 @@ class mypost : AppCompatActivity() {
                     intent.putExtra("date", post.date)
                     intent.putExtra("imageUrl", post.imageUrl)
                     intent.putExtra("postId", post.postId)
+                    intent.putExtra("email", post.email)
                     startActivity(intent)
                 } else {
                     // 다른 사용자의 게시물인 경우에 대한 처리
