@@ -29,7 +29,9 @@ class MyInfoChange : AppCompatActivity() {
         setContentView(R.layout.activity_my_info_change)
 
         val userEmail = findViewById<TextView>(R.id.userEmail)
-        val userNickname = findViewById<EditText>(R.id.userNickname)
+        val userNickname = findViewById<TextView>(R.id.userNickname)
+        val changeNickname = findViewById<EditText>(R.id.changeNickname)
+
         originalpwd = findViewById<EditText>(R.id.originalpwd)
         changepwd = findViewById<EditText>(R.id.changepwd)
         changepwdcheck = findViewById<EditText>(R.id.changepwdcheck)
@@ -90,21 +92,56 @@ class MyInfoChange : AppCompatActivity() {
 
         // 수정완료 누르면
         finishchange.setOnClickListener {
-            val nickname = userNickname.text.toString()
+            val originalPassword = originalpwd.text.toString()
+            val newNickname = changeNickname.text.toString()
             val newPassword = changepwd.text.toString()
             val newPasswordCheck = changepwdcheck.text.toString()
 
+            if (originalPassword.isNotEmpty()) {
+                // 현재 비밀번호 확인
+                val user = Firebase.auth.currentUser
 
-            checkDuplicateNickname(nickname) { isDuplicate ->
-                if (isDuplicate) {
-                    Toast.makeText(this, "이미 사용 중인 닉네임입니다.", Toast.LENGTH_SHORT).show()
-                } else {
-                    updateNicknameAndChangePassword(nickname, newPassword, newPasswordCheck)
+                if (user != null) {
+                    val credential = EmailAuthProvider.getCredential(user.email.toString(), originalPassword)
+
+                    user.reauthenticate(credential)
+                        .addOnSuccessListener {
+                            // 현재 사용자 인증 성공
+
+                            // 닉네임만 변경
+                            if (newNickname.isNotEmpty()) {
+                                updateNickname(newNickname)
+                                Toast.makeText(this@MyInfoChange, "닉네임이 성공적으로 변경되었습니다.", Toast.LENGTH_SHORT).show()
+                            }
+
+                            // 비밀번호만 변경
+                            if (newPassword.isNotEmpty() && newPassword == newPasswordCheck) {
+                                // 새 비밀번호가 일치하고 비밀번호 변경 필요
+                                user.updatePassword(newPassword)
+                                    .addOnSuccessListener {
+                                        // 비밀번호 변경 후 데이터베이스 업데이트
+                                        updatePasswordInDatabase(user.email.toString(), newPassword)
+                                        // 비밀번호 변경 성공
+                                        Toast.makeText(this@MyInfoChange, "비밀번호가 성공적으로 변경되었습니다.", Toast.LENGTH_SHORT).show()
+                                    }
+                                    .addOnFailureListener { error ->
+                                        // 비밀번호 변경 실패
+                                        Toast.makeText(this@MyInfoChange, "비밀번호 변경에 실패했습니다. 다시 시도해주세요.", Toast.LENGTH_SHORT).show()
+                                    }
+                            } else if (newPassword.isNotEmpty() && newPassword != newPasswordCheck) {
+                                // 새 비밀번호와 비밀번호 확인이 일치하지 않음
+                                Toast.makeText(this@MyInfoChange, "새 비밀번호와 비밀번호 확인이 일치하지 않습니다.", Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                        .addOnFailureListener { error ->
+                            // 현재 사용자 인증 실패
+                            Toast.makeText(this@MyInfoChange, "현재 비밀번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show()
+                        }
                 }
+            } else {
+                Toast.makeText(this, "현재 비밀번호를 입력해주세요.", Toast.LENGTH_SHORT).show()
             }
         }
-
-
 
         //로그아웃
         logout.setOnClickListener {
@@ -192,80 +229,59 @@ class MyInfoChange : AppCompatActivity() {
             })
     }
 
-    private fun checkDuplicateNickname(nickname: String, callback: (Boolean) -> Unit) {
-        val usersRef: DatabaseReference = firebaseDatabase.getReference("users")
-
-        usersRef.orderByChild("userNickname").equalTo(nickname)
-            .addListenerForSingleValueEvent(object : ValueEventListener {
-                override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    // Check if there are any existing users with the same nickname
-                    val isDuplicate = dataSnapshot.exists()
-                    callback(isDuplicate)
-                }
-
-                override fun onCancelled(databaseError: DatabaseError) {
-                    // Error occurred while checking duplicate nicknames
-                    callback(true) // Treat as duplicate to avoid potential issues
-                }
-            })
-    }
-
-    private fun updateNicknameAndChangePassword(nickname: String, newPassword: String, newPasswordCheck: String) {
+    private fun updateNickname(newNickname: String) {
         val user = Firebase.auth.currentUser
 
         if (user != null) {
-            val originalPassword = originalpwd.text.toString()
-
-            if (originalPassword.isNotEmpty() && newPassword.isNotEmpty() && newPasswordCheck.isNotEmpty()) {
-                val credential = EmailAuthProvider.getCredential(user.email.toString(), originalPassword)
-
-                user.reauthenticate(credential)
-                    .addOnSuccessListener {
-                        // 현재 사용자 인증 성공
-                        val databaseReference = firebaseDatabase.getReference("users")
-                        databaseReference.orderByChild("email").equalTo(user.email)
-                            .addListenerForSingleValueEvent(object : ValueEventListener {
-                                override fun onDataChange(dataSnapshot: DataSnapshot) {
-                                    for (snapshot in dataSnapshot.children) {
-                                        snapshot.ref.child("userNickname").setValue(nickname)
-                                            .addOnSuccessListener {
-                                                // 닉네임 변경 성공
-                                                if (newPassword == newPasswordCheck) {
-                                                    snapshot.ref.child("userPwd").setValue(newPassword)                                                        .addOnSuccessListener {
-                                                            // 비밀번호 변경 성공
-                                                            Toast.makeText(this@MyInfoChange, "닉네임과 비밀번호가 성공적으로 변경되었습니다.", Toast.LENGTH_SHORT).show()
-                                                        }
-                                                        .addOnFailureListener { error ->
-                                                            // 비밀번호 변경 실패
-                                                            Toast.makeText(this@MyInfoChange, "비밀번호 변경에 실패했습니다. 다시 시도해주세요.", Toast.LENGTH_SHORT).show()
-                                                        }
-                                                } else {
-                                                    // 새로운 비밀번호와 비밀번호 확인이 일치하지 않을 경우
-                                                    Toast.makeText(this@MyInfoChange, "새로운 비밀번호와 비밀번호 확인이 일치하지 않습니다.", Toast.LENGTH_SHORT).show()
-                                                }
-                                            }
-                                            .addOnFailureListener { error ->
-                                                // 닉네임 변경 실패
-                                                Toast.makeText(this@MyInfoChange, "닉네임 변경에 실패했습니다. 다시 시도해주세요.", Toast.LENGTH_SHORT).show()
-                                            }
-                                    }
+            val databaseReference = firebaseDatabase.getReference("users")
+            databaseReference.orderByChild("email").equalTo(user.email)
+                .addListenerForSingleValueEvent(object : ValueEventListener {
+                    override fun onDataChange(dataSnapshot: DataSnapshot) {
+                        for (snapshot in dataSnapshot.children) {
+                            snapshot.ref.child("userNickname").setValue(newNickname)
+                                .addOnSuccessListener {
+                                    // 닉네임 변경 성공
+                                    Toast.makeText(this@MyInfoChange, "닉네임이 성공적으로 변경되었습니다.", Toast.LENGTH_SHORT).show()
                                 }
-
-                                override fun onCancelled(databaseError: DatabaseError) {
-                                    // Query canceled or failed
+                                .addOnFailureListener { error ->
+                                    // 닉네임 변경 실패
                                     Toast.makeText(this@MyInfoChange, "닉네임 변경에 실패했습니다. 다시 시도해주세요.", Toast.LENGTH_SHORT).show()
                                 }
-                            })
+                        }
                     }
-                    .addOnFailureListener { error ->
-                        // 현재 사용자 인증 실패
-                        Toast.makeText(this, "현재 비밀번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show()
+
+                    override fun onCancelled(databaseError: DatabaseError) {
+                        // Query canceled or failed
+                        Toast.makeText(this@MyInfoChange, "닉네임 변경에 실패했습니다. 다시 시도해주세요.", Toast.LENGTH_SHORT).show()
                     }
-            } else {
-                Toast.makeText(this, "비밀번호를 입력해주세요.", Toast.LENGTH_SHORT).show()
-            }
+                })
         }
     }
 
+    // 데이터베이스에 비밀번호를 업데이트하는 함수
+    private fun updatePasswordInDatabase(email: String, newPassword: String) {
+        val databaseReference = firebaseDatabase.getReference("users")
+        databaseReference.orderByChild("email").equalTo(email)
+            .addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    for (snapshot in dataSnapshot.children) {
+                        snapshot.ref.child("userPwd").setValue(newPassword)
+                            .addOnSuccessListener {
+                                // 비밀번호 업데이트 성공
+                                Toast.makeText(this@MyInfoChange, "비밀번호가 성공적으로 변경되었습니다.", Toast.LENGTH_SHORT).show()
+                            }
+                            .addOnFailureListener { error ->
+                                // 비밀번호 업데이트 실패
+                                Toast.makeText(this@MyInfoChange, "비밀번호 변경에 실패했습니다. 다시 시도해주세요.", Toast.LENGTH_SHORT).show()
+                            }
+                    }
+                }
+
+                override fun onCancelled(databaseError: DatabaseError) {
+                    // 쿼리 취소 시
+                    Toast.makeText(this@MyInfoChange, "비밀번호 변경에 실패했습니다. 다시 시도해주세요.", Toast.LENGTH_SHORT).show()
+                }
+            })
+    }
 
 }
