@@ -355,6 +355,6 @@ class Map : AppCompatActivity(), OnMapReadyCallback {
         pathOverlay.map = naverMap
     }
 
-
+//test
 
 }
