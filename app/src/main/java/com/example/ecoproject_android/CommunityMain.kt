@@ -17,7 +17,7 @@ import java.net.URL
 
 
 class CommunityMain : AppCompatActivity() {
-    private lateinit var adapter: ArrayAdapter<String>
+    private lateinit var adapter: PostAdapter
     private lateinit var listView: ListView
     private lateinit var database: FirebaseDatabase
     private lateinit var postsRef: DatabaseReference
@@ -35,7 +35,7 @@ class CommunityMain : AppCompatActivity() {
         val builder = AlertDialog.Builder(this)
         listView = findViewById(R.id.listview)
 
-        adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1)
+        adapter = PostAdapter(this, R.layout.activity_list_item_layout, postList)
         listView.adapter = adapter
 
         database = FirebaseDatabase.getInstance()
@@ -106,8 +106,6 @@ class CommunityMain : AppCompatActivity() {
                     val post = postSnapshot.getValue(Post::class.java)
                     post?.let {
                         postList.add(it)
-                        val data = "제목: ${it.title}\n 교환희망장소: ${it.change}\n 작성자: ${it.userNickname}"
-                        adapter.add(data)
                     }
                 }
 
