@@ -12,7 +12,7 @@ import com.google.firebase.ktx.Firebase
 
 class mypost : AppCompatActivity() {
 
-    private lateinit var adapter: ArrayAdapter<String>
+    private lateinit var adapter: PostAdapter
     private lateinit var listView: ListView
     private lateinit var database: FirebaseDatabase
     private lateinit var postsRef: DatabaseReference
@@ -33,8 +33,9 @@ class mypost : AppCompatActivity() {
         val builder = AlertDialog.Builder(this)
         listView = findViewById(R.id.listview)
 
-        adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1)
+        adapter = PostAdapter(this, R.layout.activity_list_item_layout, postList)
         listView.adapter = adapter
+
 
         database = FirebaseDatabase.getInstance()
         postsRef = database.getReference("posts")
@@ -100,8 +101,6 @@ class mypost : AppCompatActivity() {
                             // 현재 접속한 사용자의 이메일과 게시물 작성자의 이메일을 비교하여 동일한 경우에만 postList에 추가
                             if (user.email == it.email) {
                                 postList.add(it)
-                                val data = "제목: ${it.title}\n 교환희망장소: ${it.change}\n 작성자: ${it.userNickname}"
-                                adapter.add(data)
                             }
                         }
                     }
