@@ -132,6 +132,14 @@ class MyInfoChange : AppCompatActivity() {
                                 // 새 비밀번호와 비밀번호 확인이 일치하지 않음
                                 Toast.makeText(this@MyInfoChange, "새 비밀번호와 비밀번호 확인이 일치하지 않습니다.", Toast.LENGTH_SHORT).show()
                             }
+
+                            // 지역만 변경
+                            val newZone = changezone.selectedItem.toString()
+                            if (newZone.isNotEmpty()) {
+                                updateZone(newZone)
+                                Toast.makeText(this@MyInfoChange, "지역이 성공적으로 변경되었습니다.", Toast.LENGTH_SHORT).show()
+                            }
+
                         }
                         .addOnFailureListener { error ->
                             // 현재 사용자 인증 실패
@@ -229,6 +237,7 @@ class MyInfoChange : AppCompatActivity() {
             })
     }
 
+    // 데이터베이스 닉네임 변경 함수
     private fun updateNickname(newNickname: String) {
         val user = Firebase.auth.currentUser
 
@@ -258,7 +267,7 @@ class MyInfoChange : AppCompatActivity() {
         }
     }
 
-    // 데이터베이스에 비밀번호를 업데이트하는 함수
+    // 데이터베이스 비밀번호 변경 함수
     private fun updatePasswordInDatabase(email: String, newPassword: String) {
         val databaseReference = firebaseDatabase.getReference("users")
         databaseReference.orderByChild("email").equalTo(email)
@@ -283,5 +292,36 @@ class MyInfoChange : AppCompatActivity() {
                 }
             })
     }
+
+    // 데이터베이스 지역 변경 함수
+    private fun updateZone(newZone: String) {
+        val user = Firebase.auth.currentUser
+
+        if (user != null) {
+            val databaseReference = firebaseDatabase.getReference("users")
+            databaseReference.orderByChild("email").equalTo(user.email)
+                .addListenerForSingleValueEvent(object : ValueEventListener {
+                    override fun onDataChange(dataSnapshot: DataSnapshot) {
+                        for (snapshot in dataSnapshot.children) {
+                            snapshot.ref.child("zone").setValue(newZone)
+                                .addOnSuccessListener {
+                                    // 지역 변경 성공
+                                    Toast.makeText(this@MyInfoChange, "지역이 성공적으로 변경되었습니다.", Toast.LENGTH_SHORT).show()
+                                }
+                                .addOnFailureListener { error ->
+                                    // 지역 변경 실패
+                                    Toast.makeText(this@MyInfoChange, "지역 변경에 실패했습니다. 다시 시도해주세요.", Toast.LENGTH_SHORT).show()
+                                }
+                        }
+                    }
+
+                    override fun onCancelled(databaseError: DatabaseError) {
+                        // 쿼리 취소 시
+                        Toast.makeText(this@MyInfoChange, "지역 변경에 실패했습니다. 다시 시도해주세요.", Toast.LENGTH_SHORT).show()
+                    }
+                })
+        }
+    }
+
 
 }
