@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,10 +7,16 @@
     android:orientation="vertical"
     tools:context=".CategoryMain11">
 
-    <!--맨 위 뒤로가기, 카테고리 이름, 검색창-->
-    <LinearLayout
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <Button
             android:id="@+id/back"
             android:background="@drawable/back"
@@ -25,114 +31,22 @@
             android:textColor="#000"
             android:layout_width="310dp"
             android:layout_height="wrap_content" />
-    </LinearLayout>
+        />
 
-    <View
-        android:layout_marginTop="10dp"
-        android:background="#000"
-        android:layout_width="match_parent"
-        android:layout_height="2dp" />
 
-    <!--메뉴 스크롤-->
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+    </com.google.android.material.card.MaterialCardView>
 
-            <Button
-                android:id="@+id/receipt"
-                android:text="영수증"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/rubber"
-                android:text="고무"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/brokenglass"
-                android:text="깨진 유리"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/vinylother"
-                android:text="비닐류 OTHER"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/creditcard"
-                android:text="신용카드"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/unacceptableplastic"
-                android:text="재활용 불가 플라스틱"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/leaflet"
-                android:text="전단지"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/noncombustiblegarbage"
-                android:text="타지 않는 쓰레기"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/plasticother"
-                android:text="플라스틱 OTHER"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/mixedpaper"
-                android:text="혼합종이"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

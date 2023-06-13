@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,10 +7,16 @@
     android:orientation="vertical"
     tools:context=".CategoryMain1">
 
-    <!--맨 위 뒤로가기, 카테고리 이름, 검색창-->
-    <LinearLayout
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <Button
             android:id="@+id/back"
             android:background="@drawable/back"
@@ -25,213 +31,22 @@
             android:textColor="#000"
             android:layout_width="310dp"
             android:layout_height="wrap_content" />
-    </LinearLayout>
+         />
 
-    <View
-        android:layout_marginTop="10dp"
-        android:background="#000"
-        android:layout_width="match_parent"
-        android:layout_height="2dp" />
 
-    <!--메뉴 스크롤-->
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+    </com.google.android.material.card.MaterialCardView>
 
-            <Button
-                android:id="@+id/wallpaper"
-                android:text="벽지"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/led"
-                android:text="LED"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/furniture"
-                android:text="가구"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/mirror"
-                android:text="거울"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/tree"
-                android:text="나무"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/ceramic"
-                android:text="도자기"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/latex"
-                android:text="라텍스"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/matrix"
-                android:text="매트리스"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/cushion"
-                android:text="방석"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/pillow"
-                android:text="베개"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/sofa"
-                android:text="소파"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/candle"
-                android:text="양초"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/chair"
-                android:text="의자"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/bedding"
-                android:text="이불"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/bulb"
-                android:text="전구(백열등)"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/bed"
-                android:text="침대"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/cattower"
-                android:text="캣타워"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/curtain"
-                android:text="커튼"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/paintbucket"
-                android:text="페인트통"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/lamp"
-                android:text="형광등"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/pot"
-                android:text="화분"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,76 +1,64 @@
 package com.example.ecoproject_android
 
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.database.Cursor
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class CategoryMain5 : AppCompatActivity() {
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: RecyclerView_Item_Adapter2
+    private  var mList= ArrayList<RecyclerView_Item_Data2>()
+
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category_main5)
 
         val back=findViewById<Button>(R.id.back)
-        val paper=findViewById<Button>(R.id.paper)
-        val cddvd=findViewById<Button>(R.id.cddvd)
-        val videotape=findViewById<Button>(R.id.videotape)
-        val stapler=findViewById<Button>(R.id.stapler)
-        val magnet=findViewById<Button>(R.id.magnet)
-        val book=findViewById<Button>(R.id.book)
-        val cassettetape=findViewById<Button>(R.id.cassettetape)
-        val cutterknife=findViewById<Button>(R.id.cutterknife)
-        val writinginstrument=findViewById<Button>(R.id.writinginstrument)
 
+        getVal()//검색 아이템 추가
+
+
+        recyclerView = findViewById(R.id.RecyclerView)
+        recyclerView.setHasFixedSize(true)
+        recyclerView.layoutManager= LinearLayoutManager(this)
+
+        adapter = RecyclerView_Item_Adapter2(mList)
+        recyclerView.adapter=adapter
 
         //뒤로가기
         back.setOnClickListener{finish()}
-        //버튼 누르면 분리배출 방법 안내 예시
-        paper.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "일반 종이")
+
+
+        adapter.onItemClick = {
+            val intent = Intent(this, CategoryDetail::class.java)
+            val RecyclerView_Item_Data = it
+            val title = RecyclerView_Item_Data?.title
+            intent.putExtra("data", title)
             startActivity(intent)
         }
-        cddvd.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "CD, DVD")
-            startActivity(intent)
-        }
-        videotape.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "비디오 테이프")
-            startActivity(intent)
-        }
-        stapler.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "스테이플러, 심")
-            startActivity(intent)
-        }
-        magnet.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "자석")
-            startActivity(intent)
-        }
-        book.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "책, 노트, 잡지")
-            startActivity(intent)
-        }
-        cassettetape.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "카세트 테이프")
-            startActivity(intent)
-        }
-        cutterknife.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "커터칼")
-            startActivity(intent)
-        }
-        writinginstrument.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "필기구")
-            startActivity(intent)
+    }
+    open fun getVal() {
+        val dbHelper = DataBaseHelper(this)
+        val db = dbHelper.readableDatabase
+        val cursor: Cursor = db.rawQuery("SELECT * FROM Images where name='일반 종이' or name='CD, DVD' or name='비디오 테이프' or name='스테이플러, 심' or name='자석' or name='책, 노트, 잡지' or name='카세트 테이프' or name='커터칼' or name='필기구'  ", null)
+
+        while (cursor.moveToNext()) {
+            val name= cursor.getString(0)
+            val byteArray = cursor.getBlob(1)
+            if (byteArray != null) {
+                mList.add(RecyclerView_Item_Data2(name, byteArray))
+            }
         }
 
+        cursor.close()
+        dbHelper.close()
     }
 }
+

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,10 +7,16 @@
     android:orientation="vertical"
     tools:context=".CategoryMain10">
 
-    <!--맨 위 뒤로가기, 카테고리 이름, 검색창-->
-    <LinearLayout
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <Button
             android:id="@+id/back"
             android:background="@drawable/back"
@@ -25,149 +31,22 @@
             android:textColor="#000"
             android:layout_width="310dp"
             android:layout_height="wrap_content" />
-    </LinearLayout>
+        />
 
-    <View
-        android:layout_marginTop="10dp"
-        android:background="#000"
-        android:layout_width="match_parent"
-        android:layout_height="2dp" />
-    <!--메뉴 스크롤-->
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
 
-            <Button
-                android:id="@+id/hanger"
-                android:text="옷걸이"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/bag"
-                android:text="가방"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/leggings"
-                android:text="레깅스"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/hat"
-                android:text="모자"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/underwear"
-                android:text="속옷"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/stockings"
-                android:text="스타킹"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/shoes"
-                android:text="신발"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/glasses"
-                android:text="안경,선글라스"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/socks"
-                android:text="양말"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/travelbag"
-                android:text="여행용 가방"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/clothes"
-                android:text="의류"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/wallet"
-                android:text="지갑"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/hanbok"
-                android:text="한복"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/jewelry"
-                android:text="주얼리"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

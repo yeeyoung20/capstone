@@ -1,138 +1,64 @@
 package com.example.ecoproject_android
 
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.database.Cursor
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class CategoryMain3 : AppCompatActivity() {
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: RecyclerView_Item_Adapter2
+    private  var mList= ArrayList<RecyclerView_Item_Data2>()
+
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category_main3)
 
         val back=findViewById<Button>(R.id.back)
-        val scrapmetal=findViewById<Button>(R.id.scrapmetal)
-        val battery=findViewById<Button>(R.id.battery)
-        val golfbag=findViewById<Button>(R.id.golfbag)
-        val ball=findViewById<Button>(R.id.ball)
-        val racket=findViewById<Button>(R.id.racket)
-        val mask=findViewById<Button>(R.id.mask)
-        val mosquitorepellent=findViewById<Button>(R.id.mosquitorepellent)
-        val wettissue=findViewById<Button>(R.id.wettissue)
-        val sanitarypad=findViewById<Button>(R.id.sanitarypad)
-        val moistureremover=findViewById<Button>(R.id.moistureremover)
-        val plant=findViewById<Button>(R.id.plant)
-        val yogamat=findViewById<Button>(R.id.yogamat)
-        val umbrella=findViewById<Button>(R.id.umbrella)
-        val toy=findViewById<Button>(R.id.toy)
-        val condom=findViewById<Button>(R.id.condom)
-        val tape=findViewById<Button>(R.id.tape)
-        val hotpack=findViewById<Button>(R.id.hotpack)
-        val stringinstrument=findViewById<Button>(R.id.stringinstrument)
-        val lighter=findViewById<Button>(R.id.lighter)
+
+        getVal()//검색 아이템 추가
 
 
+        recyclerView = findViewById(R.id.RecyclerView)
+        recyclerView.setHasFixedSize(true)
+        recyclerView.layoutManager= LinearLayoutManager(this)
+
+        adapter = RecyclerView_Item_Adapter2(mList)
+        recyclerView.adapter=adapter
 
         //뒤로가기
         back.setOnClickListener{finish()}
 
-        //버튼 누르면 분리배출 방법 안내 예시
-        scrapmetal.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "고철")
+
+        adapter.onItemClick = {
+            val intent = Intent(this, CategoryDetail::class.java)
+            val RecyclerView_Item_Data = it
+            val title = RecyclerView_Item_Data?.title
+            intent.putExtra("data", title)
             startActivity(intent)
         }
-        battery.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "건전지")
-            startActivity(intent)
-        }
-        golfbag.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "골프 가방")
-            startActivity(intent)
-        }
-        ball.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "공")
-            startActivity(intent)
-        }
-        racket.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "라켓")
-            startActivity(intent)
-        }
-        mask.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "마스크")
-            startActivity(intent)
-        }
-        mosquitorepellent.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "모기향")
-            startActivity(intent)
-        }
-        wettissue.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "물티슈")
-            startActivity(intent)
-        }
-        sanitarypad.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "생리대")
-            startActivity(intent)
-        }
-        moistureremover.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "습기제거제")
-            startActivity(intent)
-        }
-        plant.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "식물")
-            startActivity(intent)
-        }
-        yogamat.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "요가 매트")
-            startActivity(intent)
-        }
-        umbrella.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "우산")
-            startActivity(intent)
-        }
-        toy.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "장난감")
-            startActivity(intent)
-        }
-        condom.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "콘돔")
-            startActivity(intent)
-        }
-        tape.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "테이프")
-            startActivity(intent)
-        }
-        hotpack.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "핫팩")
-            startActivity(intent)
-        }
-        stringinstrument.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "현악기")
-            startActivity(intent)
-        }
-        lighter.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "라이터")
-            startActivity(intent)
+    }
+    open fun getVal() {
+        val dbHelper = DataBaseHelper(this)
+        val db = dbHelper.readableDatabase
+        val cursor: Cursor = db.rawQuery("SELECT * FROM Images where name='고철' or name='건전지' or name='골프 가방' or name='공' or name='라켓' or name='마스크' or name='모기향' or name='물티슈' or name='생리대' or name='습기제거제' or name='식물' or name='요가매트' or name='우산' or name='장난감' or name='콘돔' or name='테이프' or name='핫팩' or name='현악기' or name='라이터' ", null)
+
+        while (cursor.moveToNext()) {
+            val name= cursor.getString(0)
+            val byteArray = cursor.getBlob(1)
+            if (byteArray != null) {
+                mList.add(RecyclerView_Item_Data2(name, byteArray))
+            }
         }
 
+        cursor.close()
+        dbHelper.close()
     }
 }
+

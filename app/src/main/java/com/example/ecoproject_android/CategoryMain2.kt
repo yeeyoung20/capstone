@@ -1,166 +1,64 @@
 package com.example.ecoproject_android
 
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.database.Cursor
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class CategoryMain2 : AppCompatActivity() {
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: RecyclerView_Item_Adapter2
+    private  var mList= ArrayList<RecyclerView_Item_Data2>()
+
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category_main2)
 
         val back=findViewById<Button>(R.id.back)
-        val tv=findViewById<Button>(R.id.tv)
-        val filter=findViewById<Button>(R.id.filter)
-        val refrigerator=findViewById<Button>(R.id.refrigerator)
-        val laptop=findViewById<Button>(R.id.laptop)
-        val laptopbattery=findViewById<Button>(R.id.laptopbattery)
-        val mouse=findViewById<Button>(R.id.mouse)
-        val multitap=findViewById<Button>(R.id.multitap)
-        val monitor=findViewById<Button>(R.id.monitor)
-        val auxiliarybattery=findViewById<Button>(R.id.auxiliarybattery)
-        val washingmachine=findViewById<Button>(R.id.washingmachine)
-        val smallheater=findViewById<Button>(R.id.smallheater)
-        val speaker=findViewById<Button>(R.id.speaker)
-        val hotwatermat=findViewById<Button>(R.id.hotwatermat)
-        val earphone=findViewById<Button>(R.id.earphone)
-        val electricrazor=findViewById<Button>(R.id.electricrazor)
-        val electricpad=findViewById<Button>(R.id.electricpad)
-        val wire=findViewById<Button>(R.id.wire)
-        val charger=findViewById<Button>(R.id.charger)
-        val computer=findViewById<Button>(R.id.computer)
-        val keyboard=findViewById<Button>(R.id.keyboard)
-        val tablet=findViewById<Button>(R.id.tablet)
-        val inkcartridge=findViewById<Button>(R.id.inkcartridge)
-        val printer=findViewById<Button>(R.id.printer)
-        val harddisk=findViewById<Button>(R.id.harddisk)
 
+        getVal()//검색 아이템 추가
+
+
+        recyclerView = findViewById(R.id.RecyclerView)
+        recyclerView.setHasFixedSize(true)
+        recyclerView.layoutManager= LinearLayoutManager(this)
+
+        adapter = RecyclerView_Item_Adapter2(mList)
+        recyclerView.adapter=adapter
 
         //뒤로가기
         back.setOnClickListener{finish()}
-        //버튼 누르면 분리배출 방법 안내 예시
-        tv.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "TV")
+
+
+        adapter.onItemClick = {
+            val intent = Intent(this, CategoryDetail::class.java)
+            val RecyclerView_Item_Data = it
+            val title = RecyclerView_Item_Data?.title
+            intent.putExtra("data", title)
             startActivity(intent)
         }
-        filter.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "공기청정기 필터")
-            startActivity(intent)
-        }
-        refrigerator.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "냉장고")
-            startActivity(intent)
-        }
-        laptop.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "노트북")
-            startActivity(intent)
-        }
-        laptopbattery.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "노트북 배터리")
-            startActivity(intent)
-        }
-        mouse.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "마우스")
-            startActivity(intent)
-        }
-        multitap.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "멀티탭")
-            startActivity(intent)
-        }
-        monitor.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "모니터")
-            startActivity(intent)
-        }
-        auxiliarybattery.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "보조배터리")
-            startActivity(intent)
-        }
-        washingmachine.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "세탁기")
-            startActivity(intent)
-        }
-        smallheater.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "소형 난방기구")
-            startActivity(intent)
-        }
-        speaker.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "스피커")
-            startActivity(intent)
-        }
-        hotwatermat.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "온수매트")
-            startActivity(intent)
-        }
-        earphone.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "이어폰")
-            startActivity(intent)
-        }
-        electricrazor.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "전기면도기")
-            startActivity(intent)
-        }
-        electricpad.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "전기장판")
-            startActivity(intent)
-        }
-        wire.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "전선")
-            startActivity(intent)
-        }
-        charger.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "충전기, 케이블")
-            startActivity(intent)
-        }
-        computer.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "컴퓨터")
-            startActivity(intent)
-        }
-        keyboard.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "키보드")
-            startActivity(intent)
-        }
-        tablet.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "태블릿")
-            startActivity(intent)
-        }
-        inkcartridge.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "토너, 잉크 카트리지")
-            startActivity(intent)
-        }
-        printer.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "프린터")
-            startActivity(intent)
-        }
-        harddisk.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "하드디스크")
-            startActivity(intent)
+    }
+    open fun getVal() {
+        val dbHelper = DataBaseHelper(this)
+        val db = dbHelper.readableDatabase
+        val cursor: Cursor = db.rawQuery("SELECT * FROM Images where name='TV' or name='공기청정기' or name='냉장고' or name='노트북' or name='노트북 배터리' or name='마우스' or name='멀티탭' or name='모니터' or name='보조배터리' or name='세탁기' or name='소형 난방기구' or name='스피커' or name='온수매트' or name='이어폰' or name='전기면도기' or name='전기장판' or name='전선' or name='충전기, 케이블' or name='컴퓨터' or name='키보드' or name='태블릿' or name='토너, 잉크 카트리지' or name='프린터' or name='하드디스크' ", null)
+
+        while (cursor.moveToNext()) {
+            val name= cursor.getString(0)
+            val byteArray = cursor.getBlob(1)
+            if (byteArray != null) {
+                mList.add(RecyclerView_Item_Data2(name, byteArray))
+            }
         }
 
+        cursor.close()
+        dbHelper.close()
     }
 }
+

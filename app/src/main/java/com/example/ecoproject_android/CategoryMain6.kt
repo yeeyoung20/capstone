@@ -1,51 +1,64 @@
 package com.example.ecoproject_android
 
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.database.Cursor
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class CategoryMain6 : AppCompatActivity() {
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: RecyclerView_Item_Adapter2
+    private  var mList= ArrayList<RecyclerView_Item_Data2>()
+
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category_main6)
 
         val back=findViewById<Button>(R.id.back)
-        val cosmetics=findViewById<Button>(R.id.cosmetics)
-        val perfume=findViewById<Button>(R.id.perfume)
-        val cosmeticsstick=findViewById<Button>(R.id.cosmeticsstick)
-        val cosmeticstube=findViewById<Button>(R.id.cosmeticstube)
-        val cosmeticspumptype=findViewById<Button>(R.id.cosmeticspumptype)
+
+        getVal()//검색 아이템 추가
+
+
+        recyclerView = findViewById(R.id.RecyclerView)
+        recyclerView.setHasFixedSize(true)
+        recyclerView.layoutManager= LinearLayoutManager(this)
+
+        adapter = RecyclerView_Item_Adapter2(mList)
+        recyclerView.adapter=adapter
 
         //뒤로가기
         back.setOnClickListener{finish()}
-        //버튼 누르면 분리배출 방법 안내 예시
-        cosmetics.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "화장품")
+
+
+        adapter.onItemClick = {
+            val intent = Intent(this, CategoryDetail::class.java)
+            val RecyclerView_Item_Data = it
+            val title = RecyclerView_Item_Data?.title
+            intent.putExtra("data", title)
             startActivity(intent)
         }
-        perfume.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "향수")
-            startActivity(intent)
-        }
-        cosmeticsstick.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "화장품(스틱)")
-            startActivity(intent)
-        }
-        cosmeticstube.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "화장품(튜브)")
-            startActivity(intent)
-        }
-        cosmeticspumptype.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "화장품(펌프형)")
-            startActivity(intent)
+    }
+    open fun getVal() {
+        val dbHelper = DataBaseHelper(this)
+        val db = dbHelper.readableDatabase
+        val cursor: Cursor = db.rawQuery("SELECT * FROM Images where name='화장품' or name='향수' or name='화장품(스틱)' or name='화장품(튜브)' or name='화장품(펌프형)' ", null)
+
+        while (cursor.moveToNext()) {
+            val name= cursor.getString(0)
+            val byteArray = cursor.getBlob(1)
+            if (byteArray != null) {
+                mList.add(RecyclerView_Item_Data2(name, byteArray))
+            }
         }
 
+        cursor.close()
+        dbHelper.close()
     }
 }
+

@@ -23,7 +23,7 @@
         android:layout_height="wrap_content" >
 
         <ImageView
-            android:id="@+id/user"
+            android:id="@+id/userimg"
             android:layout_marginLeft="15dp"
             android:src="@drawable/user"
             android:layout_width="100dp"

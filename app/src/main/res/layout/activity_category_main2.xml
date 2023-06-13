@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,10 +7,16 @@
     android:orientation="vertical"
     tools:context=".CategoryMain2">
 
-    <!--맨 위 뒤로가기, 카테고리 이름, 검색창-->
-    <LinearLayout
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <Button
             android:id="@+id/back"
             android:background="@drawable/back"
@@ -23,243 +29,24 @@
             android:gravity="center"
             android:layout_gravity="center"
             android:textColor="#000"
-            android:layout_width="320dp"
+            android:layout_width="310dp"
             android:layout_height="wrap_content" />
-    </LinearLayout>
-
-    <View
-        android:layout_marginTop="10dp"
-        android:background="#000"
-        android:layout_width="match_parent"
-        android:layout_height="2dp" />
+        />
 
 
-    <!--메뉴 스크롤-->
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+    </com.google.android.material.card.MaterialCardView>
 
-            <Button
-                android:id="@+id/tv"
-                android:text="TV"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/filter"
-                android:text="공기청정기 필터"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/refrigerator"
-                android:text="냉장고"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/laptop"
-                android:text="노트북"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/laptopbattery"
-                android:text="노트북 배터리"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/mouse"
-                android:text="마우스"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/multitap"
-                android:text="멀티탭"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/monitor"
-                android:text="모니터"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/auxiliarybattery"
-                android:text="보조배터리"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/washingmachine"
-                android:text="세탁기"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/smallheater"
-                android:text="소형 난방기구"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/speaker"
-                android:text="스피커"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/hotwatermat"
-                android:text="온수매트"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/earphone"
-                android:text="이어폰"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/electricrazor"
-                android:text="전기면도기"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/electricpad"
-                android:text="전기장판"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/wire"
-                android:text="전선"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/charger"
-                android:text="충전기, 케이블"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/computer"
-                android:text="컴퓨터"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/keyboard"
-                android:text="키보드"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/tablet"
-                android:text="태블릿"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/inkcartridge"
-                android:text="토너,잉크 카트리지"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/printer"
-                android:text="프린터"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/harddisk"
-                android:text="하드디스크"
-                android:textSize="20dp"
-                android:textColor="#000"
-                android:gravity="left"
-                android:backgroundTint="#fff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

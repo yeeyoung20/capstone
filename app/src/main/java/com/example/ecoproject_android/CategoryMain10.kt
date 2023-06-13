@@ -1,106 +1,64 @@
 package com.example.ecoproject_android
 
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.database.Cursor
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 class CategoryMain10 : AppCompatActivity() {
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: RecyclerView_Item_Adapter2
+    private  var mList= ArrayList<RecyclerView_Item_Data2>()
+
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category_main10)
 
         val back=findViewById<Button>(R.id.back)
-        val hanger=findViewById<Button>(R.id.hanger)
-        val bag=findViewById<Button>(R.id.bag)
-        val leggings=findViewById<Button>(R.id.leggings)
-        val hat=findViewById<Button>(R.id.hat)
-        val underwear=findViewById<Button>(R.id.underwear)
-        val stockings=findViewById<Button>(R.id.stockings)
-        val shoes=findViewById<Button>(R.id.shoes)
-        val glasses=findViewById<Button>(R.id.glasses)
-        val socks=findViewById<Button>(R.id.socks)
-        val travelbag=findViewById<Button>(R.id.travelbag)
-        val clothes=findViewById<Button>(R.id.clothes)
-        val wallet=findViewById<Button>(R.id.wallet)
-        val hanbok=findViewById<Button>(R.id.hanbok)
-        val jewelry=findViewById<Button>(R.id.jewelry)
 
+        getVal()//검색 아이템 추가
+
+
+        recyclerView = findViewById(R.id.RecyclerView)
+        recyclerView.setHasFixedSize(true)
+        recyclerView.layoutManager= LinearLayoutManager(this)
+
+        adapter = RecyclerView_Item_Adapter2(mList)
+        recyclerView.adapter=adapter
 
         //뒤로가기
         back.setOnClickListener{finish()}
 
-        //버튼 누르면 분리배출 방법 안내 예시
-        hanger.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "옷걸이")
-            startActivity(intent)
-        }
-        bag.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "가방")
-            startActivity(intent)
-        }
-        leggings.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "레깅스")
-            startActivity(intent)
-        }
-        hat.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "모자")
-            startActivity(intent)
-        }
-        underwear.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "속옷")
-            startActivity(intent)
-        }
-        stockings.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "스타킹")
-            startActivity(intent)
-        }
-        shoes.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "신발")
-            startActivity(intent)
-        }
-        glasses.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "안경, 선글라스")
-            startActivity(intent)
-        }
-        socks.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "양말")
-            startActivity(intent)
-        }
-        travelbag.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "여행용 가방")
-            startActivity(intent)
-        }
-        clothes.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "의류")
-            startActivity(intent)
-        }
-        wallet.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "지갑")
-            startActivity(intent)
-        }
-        hanbok.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "한복")
-            startActivity(intent)
-        }
-        jewelry.setOnClickListener{
-            val intent= Intent(this, CategoryDetail::class.java)
-            intent.putExtra("data", "주얼리")
+
+        adapter.onItemClick = {
+            val intent = Intent(this, CategoryDetail::class.java)
+            val RecyclerView_Item_Data = it
+            val title = RecyclerView_Item_Data?.title
+            intent.putExtra("data", title)
             startActivity(intent)
         }
     }
+    open fun getVal() {
+        val dbHelper = DataBaseHelper(this)
+        val db = dbHelper.readableDatabase
+        val cursor: Cursor = db.rawQuery("SELECT * FROM Images where name='옷걸이' or name='가방' or name='레깅스' or name='모자' or name='속옷' or name='스타킹' or name='신발' or name='안경, 선글라스' or name='양말' or name='여행용 가방' or name='의류' or name='지갑' or name='한복' or name='주얼리'", null)
+
+        while (cursor.moveToNext()) {
+            val name= cursor.getString(0)
+            val byteArray = cursor.getBlob(1)
+            if (byteArray != null) {
+                mList.add(RecyclerView_Item_Data2(name, byteArray))
+            }
+        }
+
+        cursor.close()
+        dbHelper.close()
+    }
 }
+
