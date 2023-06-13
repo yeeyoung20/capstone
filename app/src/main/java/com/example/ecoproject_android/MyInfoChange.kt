@@ -11,7 +11,9 @@ import com.google.firebase.auth.EmailAuthProvider
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
+import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import com.kakao.sdk.user.model.User
 import kotlin.collections.Map
 
 class MyInfoChange : AppCompatActivity() {
@@ -31,6 +33,7 @@ class MyInfoChange : AppCompatActivity() {
         val userEmail = findViewById<TextView>(R.id.userEmail)
         val userNickname = findViewById<TextView>(R.id.userNickname)
         val changeNickname = findViewById<EditText>(R.id.changeNickname)
+        val changeimg = findViewById<ImageButton>(R.id.changeimg)
 
         originalpwd = findViewById<EditText>(R.id.originalpwd)
         changepwd = findViewById<EditText>(R.id.changepwd)
@@ -89,6 +92,10 @@ class MyInfoChange : AppCompatActivity() {
 
         }
 
+        // 프로필 이미지 변경
+        changeimg.setOnClickListener {
+
+        }
 
         // 수정완료 누르면
         finishchange.setOnClickListener {
@@ -96,6 +103,7 @@ class MyInfoChange : AppCompatActivity() {
             val newNickname = changeNickname.text.toString()
             val newPassword = changepwd.text.toString()
             val newPasswordCheck = changepwdcheck.text.toString()
+            val newZone = changezone.selectedItem.toString()
 
             if (originalPassword.isNotEmpty()) {
                 // 현재 비밀번호 확인
@@ -133,12 +141,33 @@ class MyInfoChange : AppCompatActivity() {
                                 Toast.makeText(this@MyInfoChange, "새 비밀번호와 비밀번호 확인이 일치하지 않습니다.", Toast.LENGTH_SHORT).show()
                             }
 
-                            // 지역만 변경
-                            val newZone = changezone.selectedItem.toString()
-                            if (newZone.isNotEmpty()) {
-                                updateZone(newZone)
-                                Toast.makeText(this@MyInfoChange, "지역이 성공적으로 변경되었습니다.", Toast.LENGTH_SHORT).show()
-                            }
+                            // 데이터베이스에서 지역 정보 가져오기
+                            val database: FirebaseDatabase = FirebaseDatabase.getInstance()
+                            val userRef: DatabaseReference = database.getReference("users")
+                            userRef.orderByChild("email").equalTo(user.email)
+                                .addListenerForSingleValueEvent(object : ValueEventListener {
+                                    override fun onDataChange(dataSnapshot: DataSnapshot) {
+                                        // 해당 사용자의 데이터가 존재하는 경우
+                                        if (dataSnapshot.exists()) {
+                                            for (snapshot in dataSnapshot.children) {
+                                                val userMap: Map<String, String> =
+                                                    snapshot.getValue() as Map<String, String>
+                                                val zone = userMap["zone"]
+
+                                                // 지역만 변경
+                                                if (newZone != zone) {
+                                                    updateZone(newZone)
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                override fun onCancelled(error: DatabaseError) {
+                                    // 데이터베이스 조회 실패
+                                    Toast.makeText(this@MyInfoChange, "데이터베이스 조회에 실패했습니다.", Toast.LENGTH_SHORT
+                                    ).show()
+                                }
+                            })
 
                         }
                         .addOnFailureListener { error ->
@@ -303,15 +332,23 @@ class MyInfoChange : AppCompatActivity() {
                 .addListenerForSingleValueEvent(object : ValueEventListener {
                     override fun onDataChange(dataSnapshot: DataSnapshot) {
                         for (snapshot in dataSnapshot.children) {
-                            snapshot.ref.child("zone").setValue(newZone)
-                                .addOnSuccessListener {
-                                    // 지역 변경 성공
-                                    Toast.makeText(this@MyInfoChange, "지역이 성공적으로 변경되었습니다.", Toast.LENGTH_SHORT).show()
-                                }
-                                .addOnFailureListener { error ->
-                                    // 지역 변경 실패
-                                    Toast.makeText(this@MyInfoChange, "지역 변경에 실패했습니다. 다시 시도해주세요.", Toast.LENGTH_SHORT).show()
-                                }
+                            val userZone = snapshot.child("zone").getValue(String::class.java)
+                            if (userZone != newZone) {
+                                snapshot.ref.child("zone").setValue(newZone)
+                                    .addOnSuccessListener {
+                                        // 지역 변경 성공
+                                        Toast.makeText(this@MyInfoChange, "지역이 성공적으로 변경되었습니다.", Toast.LENGTH_SHORT).show()
+                                    }
+                                    .addOnFailureListener { error ->
+                                        // 지역 변경 실패
+                                        Toast.makeText(this@MyInfoChange, "지역 변경에 실패했습니다. 다시 시도해주세요.", Toast.LENGTH_SHORT).show()
+                                    }
+                            } else {
+                                // 새로운 지역이 선택되지 않았거나, 선택한 지역이 원래 지역과 같은 경우
+                                Toast.makeText(this@MyInfoChange, "지역이 변경되지 않았습니다.", Toast.LENGTH_SHORT).show()
+                            }
+                            // 새로운 지역이 선택되지 않았거나, 선택한 지역이 원래 지역과 같은 경우에도 종료
+                            return
                         }
                     }
 
@@ -322,6 +359,5 @@ class MyInfoChange : AppCompatActivity() {
                 })
         }
     }
-
 
 }
