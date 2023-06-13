@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CategoryMain9">
+
+    <!--맨 위 뒤로가기, 카테고리 이름, 검색창-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <Button
+            android:id="@+id/back"
+            android:background="@drawable/back"
+            android:layout_marginTop="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <TextView
+            android:text="용기/포장재"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="#000"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="10dp"
+        android:background="#000"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+    <!--메뉴 스크롤-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/styrofoam"
+                android:text="스티로폼"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/gascontainer"
+                android:text="가스용기"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/packagingbag"
+                android:text="개별 포장 봉지"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/eggplant"
+                android:text="계란판"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/snackbox"
+                android:text="과자 박스"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/confectionerybag"
+                android:text="과자 봉지"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/oilbottle"
+                android:text="기름병"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/ramenbag"
+                android:text="라면 봉지"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/sterilizationpack"
+                android:text="멸균팩"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/box"
+                android:text="박스"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/deliveryplasticcontainer"
+                android:text="배달 플라스틱 용기"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/nonwovenbag"
+                android:text="부직포 가방"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/milkpowder"
+                android:text="분유통"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/plasticbag"
+                android:text="비닐봉투"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/plasticpackaging"
+                android:text="비닐포장재"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/shoppingbag"
+                android:text="쇼핑백"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/alcoholsodabottle"
+                android:text="술,탄산음료병"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/silicon"
+                android:text="실리콘"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/icepack"
+                android:text="아이스팩"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/aluminumcan"
+                android:text="알루미늄 캔"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/aircap"
+                android:text="에어캡"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/yogurtcontainer"
+                android:text="요거트 용기"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/yogurtbottle"
+                android:text="요구르트 병"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/milkpack"
+                android:text="우유팩"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/glassbottle"
+                android:text="유리병"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

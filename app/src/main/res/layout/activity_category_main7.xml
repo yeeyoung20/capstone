@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CategoryMain7">
+
+    <!--맨 위 뒤로가기, 카테고리 이름, 검색창-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        <Button
+            android:id="@+id/back"
+            android:background="@drawable/back"
+            android:layout_marginTop="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <TextView
+            android:text="주방용품"
+            android:textSize="30dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="#000"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="10dp"
+        android:background="#000"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+
+    <!--메뉴 스크롤-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/fryingpan"
+                android:text="후라이팬"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/scissors"
+                android:text="가위"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/rubberband"
+                android:text="고무대야"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/rubberglove"
+                android:text="고무장갑"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/bowl"
+                android:text="그릇"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/woodenchopsticks"
+                android:text="나무젓가락"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/skillet"
+                android:text="냄비"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/cuttingboard"
+                android:text="도마"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/coldbag"
+                android:text="보냉팩"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/plasticwrap"
+                android:text="비닐랩"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/straw"
+                android:text="빨대"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/breadclip"
+                android:text="빵클립"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/grill"
+                android:text="석쇠"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/utensils"
+                android:text="식사 도구"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/kitchenknife"
+                android:text="식칼"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/cookware"
+                android:text="조리 기구"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/cup"
+                android:text="컵"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/cookingfoil"
+                android:text="쿠킹 호일"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/tissue"
+                android:text="티슈, 냅킨"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/jar"
+                android:text="항아리"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/butanegas"
+                android:text="휴대용 부탄가스"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/onionnet"
+                android:text="양파망"
+                android:textSize="20dp"
+                android:textColor="#000"
+                android:gravity="left"
+                android:backgroundTint="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
