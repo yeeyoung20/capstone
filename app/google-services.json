@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "673877817450",
+    "firebase_url": "https://ecoproject-8749f-default-rtdb.firebaseio.com",
+    "project_id": "ecoproject-8749f",
+    "storage_bucket": "ecoproject-8749f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:673877817450:android:a9b4e0ad91dcecd1fa3213",
+        "android_client_info": {
+          "package_name": "com.example.ecoproject_android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "673877817450-p7loj9sqbqkib37scdjm1dv25go286nr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ecoproject_android",
+            "certificate_hash": "1c5c83c0d54696ced41c71f10301ce27afc3027b"
+          }
+        },
+        {
+          "client_id": "673877817450-75k9pv5brmgubm18egsev6qkd3bndbic.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrmsQ70EiTX2w0Pqxw7FKqaS2aqJ3Nocg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "673877817450-75k9pv5brmgubm18egsev6qkd3bndbic.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
