@@ -4,10 +4,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
@@ -51,15 +53,27 @@ class MainActivityMorepage : AppCompatActivity() {
             val database: FirebaseDatabase = FirebaseDatabase.getInstance()
             val usersRef: DatabaseReference = database.getReference("users")
 
-            // 닉네임을 가져오기 위해 해당 사용자의 데이터를 조회합니다.
+            // 데이터를 가져오기 위해 해당 사용자의 데이터를 조회합니다.
             usersRef.orderByChild("email").equalTo(user.email).addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
                     // 해당 사용자의 데이터가 존재하는 경우
                     if (dataSnapshot.exists()) {
                         for (snapshot in dataSnapshot.children) {
                             val userMap: Map<String, String> = snapshot.getValue() as Map<String, String>
+
+                            // 닉네임 가져오기
                             val nickname = userMap["userNickname"]
                             usernameTextView.text = nickname
+
+                            // 이미지 파일이 있으면 가져와서 출력
+                            val userprofileimg = userMap["profileimg"]
+                            if (userprofileimg != null) {
+                                val userimg = findViewById<ImageView>(R.id.userimg)
+                                Glide.with(this@MainActivityMorepage)
+                                    .load(userprofileimg)
+                                    .into(userimg)
+                            }
+
                         }
                     }
                 }
