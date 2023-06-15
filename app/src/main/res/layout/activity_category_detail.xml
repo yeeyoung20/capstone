@@ -73,7 +73,7 @@
                 android:padding="30dp">
             <TextView
                 android:text="버리는 방법"
-                android:textSize="24dp"
+                android:textSize="22dp"
                 android:fontFamily="@font/nixgonfonts_b__2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -87,7 +87,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:textSize="20dp"
+                android:textSize="18dp"
                 android:fontFamily="@font/nixgonfonts_m__2"
                 />
             </LinearLayout>
