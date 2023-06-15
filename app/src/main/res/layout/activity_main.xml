@@ -282,7 +282,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nixgonfonts_b__2"
                     android:textColor="@color/black"
-                    android:text="오늘의 아나바다"
+                    android:text="오늘의 옷 나눔"
                     android:textSize="25dp"
                     android:layout_marginLeft="10dp"/>
             </LinearLayout>

@@ -19,6 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+
     <LinearLayout
         android:paddingRight="10dp"
         android:layout_width="match_parent"
@@ -30,13 +31,26 @@
             android:src="@drawable/user"
             android:layout_width="100dp"
             android:layout_height="100dp"/>
-        <ImageButton
-            android:id="@+id/changeimg"
-            android:src="@drawable/changeimg"
-            android:backgroundTint="#fff"
-            android:layout_gravity="bottom"
-            android:layout_width="30dp"
-            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom">
+            <Button
+                android:id="@+id/imgdel"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_margin="6dp"
+                android:background="@drawable/xicon"
+                />
+            <ImageButton
+                android:id="@+id/changeimg"
+                android:src="@drawable/changeimg"
+                android:backgroundTint="#fff"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+        </LinearLayout>
+
         <LinearLayout
             android:layout_gravity="center"
             android:orientation="vertical"

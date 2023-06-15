@@ -47,6 +47,7 @@ class MainActivityMorepage : AppCompatActivity() {
         }
         //로그인 돼있으면 '로그아웃하기'로 텍스트 변경/기능 구현
         //로그아웃 돼있으면 '로그인하기'로 텍스트 변경/기능 구현
+
         val user = Firebase.auth.currentUser
         val builder = AlertDialog.Builder(this)
 
