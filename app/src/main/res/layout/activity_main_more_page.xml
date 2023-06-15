@@ -8,29 +8,43 @@
     android:orientation="vertical"
     android:background="#E5F1EB">
 
-    <LinearLayout
-        android:id="@+id/back"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="right"
-        android:orientation="vertical"
-        android:background="#fff">
+        android:layout_height="60dp">
+
         <Button
+            android:id="@+id/loginlogout"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:background="@color/white"
+            android:text="로그인하기"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/back"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/back"
             android:layout_width="15dp"
             android:layout_height="15dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="28dp"
             android:background="@drawable/xicon"
-            />
-        <View
-            android:layout_width="390dp"
-            android:layout_height="1dp"
-            android:layout_gravity="center"
-            android:background="#A8C8A8"
-            />
-    </LinearLayout>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.484" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+    <View
+        android:layout_width="390dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:background="#A8C8A8"
+        />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -110,7 +124,12 @@
                     app:layout_constraintTop_toTopOf="parent"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
+            <View
+                android:layout_width="390dp"
+                android:layout_height="1dp"
+                android:layout_gravity="center"
+                android:background="#A8C8A8"
+                />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -212,21 +231,6 @@
 
                 </LinearLayout>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp">
-
-                    <Button
-                        android:id="@+id/loginlogout"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:text="로그인하기"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </LinearLayout>
 

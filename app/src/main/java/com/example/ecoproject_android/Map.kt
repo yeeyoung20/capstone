@@ -3,15 +3,12 @@ package com.example.ecoproject_android
 import android.database.Cursor
 import android.os.Bundle
 import android.util.Log
-import android.view.MotionEvent
-import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isInvisible
 import com.google.android.material.card.MaterialCardView
 import com.naver.maps.geometry.LatLng
 import com.naver.maps.map.*
@@ -66,7 +63,6 @@ class Map : AppCompatActivity(), OnMapReadyCallback {
         back.setOnClickListener { finish() }
 
         locationSource = FusedLocationSource(this, LOCATION_PERMISSTION_REQUEST_CODE)
-        //getRouteData()
         mapView = findViewById(R.id.mapView)
         mapView.onCreate(savedInstanceState)
         mapView.getMapAsync(this);
@@ -137,8 +133,8 @@ class Map : AppCompatActivity(), OnMapReadyCallback {
         LocationButtonView.map = naverMap
 
         // 카메라 초기 위치 설정
-        val initialPosition = LatLng(37.506855, 127.066242)
-        val cameraUpdate = CameraUpdate.scrollTo(initialPosition)
+//        val initialPosition = LatLng(37.506855, 127.066242)
+//        val cameraUpdate = CameraUpdate.scrollTo(initialPosition)
         naverMap.moveCamera(
             CameraUpdate.toCameraPosition(
                 CameraPosition(

@@ -31,10 +31,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
-                    android:text="환경구조"
+                    android:text="ECOPRO"
                     android:textColor="#007521"
                     android:textSize="30dp"
                     android:textStyle="bold"
+                    android:fontFamily="@font/nixgonfonts_b__2"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -86,14 +87,15 @@
 
                     <Button
                         android:id="@+id/main1_1"
-                        android:layout_width="70dp"
-                        android:layout_height="60dp"
+                        android:layout_width="80dp"
+                        android:layout_height="70dp"
                         android:background="@drawable/main_category_shdow"
                         android:backgroundTint="#fff"
                         android:drawableTop="@drawable/smain1_1xml"
                         android:text="가구/인테리어"
                         android:textColor="#000"
-                        android:textSize="8dp"
+                        android:textSize="11dp"
+                        android:fontFamily="@font/nixgonfonts_m__2"
                         app:layout_constraintBottom_toTopOf="@id/main1_5"
                         app:layout_constraintEnd_toStartOf="@id/main1_2"
                         app:layout_constraintHorizontal_chainStyle="spread"
@@ -103,14 +105,15 @@
 
                     <Button
                         android:id="@+id/main1_2"
-                        android:layout_width="70dp"
-                        android:layout_height="60dp"
+                        android:layout_width="80dp"
+                        android:layout_height="70dp"
                         android:background="@drawable/main_category_shdow"
                         android:backgroundTint="#fff"
                         android:drawableTop="@drawable/smain1_2xml"
                         android:text="가전제품"
                         android:textColor="#000"
-                        android:textSize="8dp"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/nixgonfonts_m__2"
                         app:layout_constraintBottom_toTopOf="@id/main1_6"
                         app:layout_constraintEnd_toStartOf="@id/main1_3"
                         app:layout_constraintStart_toEndOf="@id/main1_1"
@@ -118,14 +121,15 @@
 
                     <Button
                         android:id="@+id/main1_3"
-                        android:layout_width="70dp"
-                        android:layout_height="60dp"
+                        android:layout_width="80dp"
+                        android:layout_height="70dp"
                         android:background="@drawable/main_category_shdow"
                         android:backgroundTint="#fff"
                         android:drawableTop="@drawable/smain1_3xml"
                         android:text="생활용품"
                         android:textColor="#000"
-                        android:textSize="8dp"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/nixgonfonts_m__2"
                         app:layout_constraintBottom_toTopOf="@id/main1_7"
                         app:layout_constraintEnd_toStartOf="@id/main1_4"
                         app:layout_constraintStart_toEndOf="@id/main1_2"
@@ -133,14 +137,15 @@
 
                     <Button
                         android:id="@+id/main1_4"
-                        android:layout_width="70dp"
-                        android:layout_height="60dp"
+                        android:layout_width="80dp"
+                        android:layout_height="70dp"
                         android:background="@drawable/main_category_shdow"
                         android:backgroundTint="#fff"
                         android:drawableTop="@drawable/smain1_4xml"
                         android:text="욕실용품"
                         android:textColor="#000"
-                        android:textSize="8dp"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/nixgonfonts_m__2"
                         app:layout_constraintBottom_toTopOf="@id/main1_8"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@id/main1_3"
@@ -148,14 +153,15 @@
 
                     <Button
                         android:id="@+id/main1_5"
-                        android:layout_width="70dp"
-                        android:layout_height="60dp"
+                        android:layout_width="80dp"
+                        android:layout_height="70dp"
                         android:background="@drawable/main_category_shdow"
                         android:backgroundTint="#fff"
                         android:drawableTop="@drawable/smain1_5xml"
                         android:text="도서/문구"
                         android:textColor="#000"
-                        android:textSize="8dp"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/nixgonfonts_m__2"
                         app:layout_constraintBottom_toTopOf="@id/main1_9"
                         app:layout_constraintEnd_toStartOf="@id/main1_6"
                         app:layout_constraintStart_toStartOf="parent"
@@ -163,14 +169,15 @@
 
                     <Button
                         android:id="@+id/main1_6"
-                        android:layout_width="70dp"
-                        android:layout_height="60dp"
+                        android:layout_width="80dp"
+                        android:layout_height="70dp"
                         android:background="@drawable/main_category_shdow"
                         android:backgroundTint="#fff"
                         android:drawableTop="@drawable/smain1_6xml"
                         android:text="미용/화장품"
                         android:textColor="#000"
-                        android:textSize="8dp"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/nixgonfonts_m__2"
                         app:layout_constraintBottom_toTopOf="@id/main1_10"
                         app:layout_constraintEnd_toStartOf="@id/main1_7"
                         app:layout_constraintStart_toEndOf="@id/main1_5"
@@ -178,14 +185,15 @@
 
                     <Button
                         android:id="@+id/main1_7"
-                        android:layout_width="70dp"
-                        android:layout_height="60dp"
+                        android:layout_width="80dp"
+                        android:layout_height="70dp"
                         android:background="@drawable/main_category_shdow"
                         android:backgroundTint="#fff"
                         android:drawableTop="@drawable/smain1_7xml"
                         android:text="주방용"
                         android:textColor="#000"
-                        android:textSize="8dp"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/nixgonfonts_m__2"
                         app:layout_constraintBottom_toTopOf="@id/main1_11"
                         app:layout_constraintEnd_toStartOf="@id/main1_8"
                         app:layout_constraintStart_toEndOf="@id/main1_6"
@@ -193,14 +201,15 @@
 
                     <Button
                         android:id="@+id/main1_8"
-                        android:layout_width="70dp"
-                        android:layout_height="60dp"
+                        android:layout_width="80dp"
+                        android:layout_height="70dp"
                         android:background="@drawable/main_category_shdow"
                         android:backgroundTint="#fff"
                         android:drawableTop="@drawable/smain1_8xml"
                         android:text="식품"
                         android:textColor="#000"
-                        android:textSize="8dp"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/nixgonfonts_m__2"
                         app:layout_constraintBottom_toTopOf="@id/view"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@id/main1_7"
@@ -208,14 +217,15 @@
 
                     <Button
                         android:id="@+id/main1_11"
-                        android:layout_width="70dp"
-                        android:layout_height="60dp"
+                        android:layout_width="80dp"
+                        android:layout_height="70dp"
                         android:background="@drawable/main_category_shdow"
                         android:backgroundTint="#fff"
                         android:drawableTop="@drawable/smain1_11xml"
                         android:text="기타"
                         android:textColor="#000"
-                        android:textSize="8dp"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/nixgonfonts_m__2"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@id/view"
                         app:layout_constraintStart_toEndOf="@id/main1_10"
@@ -223,14 +233,15 @@
 
                     <Button
                         android:id="@+id/main1_9"
-                        android:layout_width="70dp"
-                        android:layout_height="60dp"
+                        android:layout_width="80dp"
+                        android:layout_height="70dp"
                         android:background="@drawable/main_category_shdow"
                         android:backgroundTint="#fff"
                         android:drawableTop="@drawable/smain1_9xml"
                         android:text="용기/포장재"
                         android:textColor="#000"
-                        android:textSize="8dp"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/nixgonfonts_m__2"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@id/main1_10"
                         app:layout_constraintStart_toStartOf="parent"
@@ -238,14 +249,15 @@
 
                     <Button
                         android:id="@+id/main1_10"
-                        android:layout_width="70dp"
-                        android:layout_height="60dp"
+                        android:layout_width="80dp"
+                        android:layout_height="70dp"
                         android:background="@drawable/main_category_shdow"
                         android:backgroundTint="#fff"
                         android:drawableTop="@drawable/smain1_10xml"
                         android:text="패션/잡화"
                         android:textColor="#000"
-                        android:textSize="8dp"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/nixgonfonts_m__2"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@id/main1_11"
                         app:layout_constraintStart_toEndOf="@id/main1_9"
@@ -253,8 +265,8 @@
 
                     <View
                         android:id="@+id/view"
-                        android:layout_width="70dp"
-                        android:layout_height="60dp"
+                        android:layout_width="80dp"
+                        android:layout_height="70dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@id/main1_11"
@@ -268,6 +280,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/nixgonfonts_b__2"
+                    android:textColor="@color/black"
                     android:text="오늘의 아나바다"
                     android:textSize="25dp"
                     android:layout_marginLeft="10dp"/>
@@ -380,10 +394,13 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp">
+                android:layout_marginTop="20dp">
                 <TextView
+                    android:id="@+id/mainmapbtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/nixgonfonts_b__2"
+                    android:textColor="@color/black"
                     android:text="내 주변 의류수거함"
                     android:textSize="25dp"
                     android:layout_marginLeft="10dp"/>
@@ -391,19 +408,18 @@
 
             <!-- 지도 -->
 
-<!--            <LinearLayout-->
-<!--                android:layout_width="380dp"-->
-<!--                android:layout_height="150dp"-->
-<!--                android:layout_gravity="center"-->
-<!--                android:layout_margin="10dp"-->
-<!--                >-->
-<!--                <fragment-->
-<!--                    android:id="@+id/map_fragment"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:name="com.naver.maps.map.MapFragment"-->
-<!--                    />-->
-<!--            </LinearLayout>-->
+            <LinearLayout
+                android:layout_width="380dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                >
+                <com.naver.maps.map.MapView
+                    android:id="@+id/mainmapView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:name="com.naver.maps.map.MapFragment"/>
+            </LinearLayout>
 
         </LinearLayout>
 

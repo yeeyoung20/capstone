@@ -19,10 +19,24 @@ class ViewPagerAdapter(private val context: Context, private var banner: List<In
         init {
             banner.setOnClickListener { v: View ->
                 val position = adapterPosition
-                Toast.makeText(itemView.context, "You clicked on item #${position}", Toast.LENGTH_SHORT).show()
-               if (position == 1){
-                   val myIntent = Intent(Intent.ACTION_VIEW, Uri.parse("http://www.naver.com"))
-                   context.startActivity(myIntent)
+                //Toast.makeText(itemView.context, "You clicked on item #${position}", Toast.LENGTH_SHORT).show()
+               when (position) {
+                   0 -> {
+                       val myIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.greenpeace.org/korea/make-a-change/"))
+                       context.startActivity(myIntent)
+                   }
+                   1 -> {
+                       val myIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://tmoneywelfarefoundation.or.kr/pages/?p=23&b=B_1_1&m=read&bn=2104&vn="))
+                       context.startActivity(myIntent)
+                   }
+                   2 -> {
+                       val myIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.me.go.kr/home/web/board/read.do?pagerOffset=0&maxPageItems=6&maxIndexPages=10&searchKey=&searchValue=&menuId=10392&orgCd=&boardId=1605300&boardMasterId=713&boardCategoryId=&rn=5"))
+                       context.startActivity(myIntent)
+                   }
+                   3 -> {
+                       val myIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.me.go.kr/home/web/board/read.do?menuId=10392&boardMasterId=713&boardId=1606280"))
+                       context.startActivity(myIntent)
+                   }
                }
             }
         }

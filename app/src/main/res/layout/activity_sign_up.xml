@@ -34,10 +34,11 @@
     <EditText
         android:id="@+id/userId"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
+        android:layout_height="40dp"
+        android:textSize="26dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
+        android:paddingLeft="10dp"
         android:background="@drawable/signup_shadow"
         android:elevation="5dp"/>
     <TextView
@@ -51,10 +52,11 @@
     <EditText
         android:id="@+id/userPwd"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
+        android:layout_height="40dp"
+        android:textSize="26dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
+        android:paddingLeft="10dp"
         android:background="@drawable/signup_shadow"
         android:elevation="5dp" />
     <TextView
@@ -68,10 +70,11 @@
     <EditText
         android:id="@+id/passCheck"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
+        android:layout_height="40dp"
+        android:textSize="26dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
+        android:paddingLeft="10dp"
         android:background="@drawable/signup_shadow"
         android:elevation="5dp" />
     <TextView
@@ -85,10 +88,11 @@
     <EditText
         android:id="@+id/userNickname"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
+        android:layout_height="40dp"
+        android:textSize="26dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
+        android:paddingLeft="10dp"
         android:background="@drawable/signup_shadow"
         android:elevation="5dp"/>
     <TextView
@@ -102,8 +106,8 @@
     <Spinner
         android:id="@+id/settingzone"
         android:layout_width="match_parent"
-        android:layout_height="33dp"
-        android:textSize="20dp"
+        android:layout_height="40dp"
+        android:textSize="26dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:background="@drawable/signup_shadow"

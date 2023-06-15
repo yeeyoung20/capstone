@@ -69,8 +69,9 @@ dependencies {
     implementation'com.google.android.gms:play-services-location:17.0.0'//현재 위치 가져오게하는 종속성
     implementation 'com.squareup.okhttp3:okhttp:4.9.3'
     implementation 'com.google.code.gson:gson:2.8.7'
-    implementation 'com.squareup.retrofit2:retrofit:2.x.x'
-    implementation 'com.squareup.retrofit2:converter-gson:2.x.x'
+    implementation "com.squareup.retrofit2:retrofit:2.9.0" // 버전 2.x.x에서 2.9.0으로 변경
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0" // 버전 2.x.x에서 2.9.0으로 변경
+    implementation 'com.google.android.gms:play-services-location:x.x.x'
 
     implementation 'com.navercorp.nid:oauth:5.6.0'
     implementation"org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9"

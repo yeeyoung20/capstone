@@ -27,7 +27,7 @@ class MainActivityMorepage : AppCompatActivity() {
         val mypostbtn = findViewById<Button>(R.id.mypostbtn)
         val map = findViewById<Button>(R.id.map)
         val loginlogout = findViewById<Button>(R.id.loginlogout)
-        val back=findViewById<LinearLayout>(R.id.back)
+        val back=findViewById<Button>(R.id.back)
         val usernameTextView = findViewById<TextView>(R.id.username)
 
         back.setOnClickListener{finish()}
@@ -39,8 +39,11 @@ class MainActivityMorepage : AppCompatActivity() {
         }
 
         map.setOnClickListener {
-            val intent = Intent(this, Map::class.java)
+            val activityName = "com.example.ecoproject_android.Map"
+            val activityClass = Class.forName(activityName)
+            val intent = Intent(this, activityClass)
             startActivity(intent)
+
         }
         //로그인 돼있으면 '로그아웃하기'로 텍스트 변경/기능 구현
         //로그아웃 돼있으면 '로그인하기'로 텍스트 변경/기능 구현

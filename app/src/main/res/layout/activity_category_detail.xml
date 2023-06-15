@@ -8,33 +8,48 @@
     tools:context=".CategoryDetail">
 
     <!--맨 위 뒤로가기, 카테고리 이름-->
-    <LinearLayout
+    <com.google.android.material.card.MaterialCardView
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    app:cardUseCompatPadding="true"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_weight="1"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="match_parent">
+
         <Button
             android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="6dp"
             android:background="@drawable/back"
-            android:layout_marginTop="10dp"
-            android:layout_width="40dp"
-            android:layout_height="40dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/smallCategoryname"
-            android:text="소분류 이름"
-            android:textSize="30dp"
-            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:gravity="center"
+            android:text="소분류 이름"
             android:textColor="#000"
-            android:layout_width="320dp"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+            android:textSize="24dp"
+            android:fontFamily="@font/nixgonfonts_b__2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <!--선-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <View
-        android:layout_marginTop="10dp"
-        android:background="#B8B8B8"
-        android:layout_width="match_parent"
-        android:layout_height="1dp" />
+</com.google.android.material.card.MaterialCardView>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -48,12 +63,18 @@
             <ImageView
                 android:id="@+id/img"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_margin="20dp"/>
+                android:layout_height="300dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/main_category_shdow"
+                android:padding="30dp">
             <TextView
                 android:text="버리는 방법"
-                android:textSize="20dp"
-                android:layout_marginLeft="20dp"
+                android:textSize="24dp"
+                android:fontFamily="@font/nixgonfonts_b__2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"/>
@@ -61,12 +82,15 @@
             <TextView
                 android:id="@+id/content"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="40dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:fontFamily="@font/nixgonfonts_m__2"
+                />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
