@@ -1,13 +1,28 @@
 package com.example.ecoproject_android
 
 import ViewPagerAdapter
+import android.content.Context
 import android.content.Intent
 import android.database.Cursor
 import android.os.Bundle
+import android.util.AttributeSet
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.bumptech.glide.Glide
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+import com.google.firebase.storage.FirebaseStorage
 import com.naver.maps.geometry.LatLng
 import com.naver.maps.map.CameraPosition
 import com.naver.maps.map.CameraUpdate
@@ -30,10 +45,16 @@ class MainActivity : AppCompatActivity() , OnMapReadyCallback{
     private var currentLocation: LatLng? = null
     private var markersPosition: Vector<LatLng>? = null
     private var activeMarkers: Vector<Marker>? = null
+
+    private lateinit var adapter: PostAdapter
+    private lateinit var listView: ListView
+    private lateinit var database: FirebaseDatabase
+    private lateinit var postsRef: DatabaseReference
+    private lateinit var valueEventListener: ValueEventListener
+    private var postList: MutableList<Post> = mutableListOf() // 초기화 변경
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
         setContentView(R.layout.activity_main)
 
         val search=findViewById<ImageButton>(R.id.searchid)
@@ -44,8 +65,6 @@ class MainActivity : AppCompatActivity() , OnMapReadyCallback{
         locationSource = FusedLocationSource(this, LOCATION_PERMISSTION_REQUEST_CODE)
         mainmap.onCreate(savedInstanceState)
         mainmap.getMapAsync(this);
-
-
 
 
         val main1_1=findViewById<Button>(R.id.main1_1)
@@ -143,7 +162,86 @@ class MainActivity : AppCompatActivity() , OnMapReadyCallback{
             startActivity(intent)
         }
 
+
+
+        postList = mutableListOf()
+        listView = findViewById(R.id.listview)
+
+        adapter = PostAdapter(this, R.layout.activity_list_item_layout, postList)
+        listView.adapter = adapter
+
+        database = FirebaseDatabase.getInstance()
+        postsRef = database.getReference("posts")
+        val builder = AlertDialog.Builder(this)
+
+
+        val user = FirebaseAuth.getInstance().currentUser
+        listView.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
+            if(user!=null){
+                val post = postList[position] // 선택된 게시물 객체
+
+                // CommunityDetail 액티비티로 전환하고 선택된 게시물의 정보를 전달
+                val intent = Intent(this, CommunityDetail::class.java)
+                intent.putExtra("title", post.title)
+                intent.putExtra("change", post.change)
+                intent.putExtra("content", post.content)
+                intent.putExtra("userNickname", post.userNickname)
+                intent.putExtra("date", post.date)
+                intent.putExtra("imageUrl", post.imageUrl)
+                intent.putExtra("postId", post.postId)
+                intent.putExtra("email", post.email)
+                startActivity(intent)
+            }else{
+                builder.setMessage("로그인 후 이용해주세요!")
+                    .setPositiveButton("확인") { dialog, id ->
+                        val intent = Intent(this, SignIn::class.java)
+                        startActivity(intent)
+                    }
+                    .setNegativeButton("취소") { dialog, id ->
+
+                    }
+                    .create()
+                    .show()
+            }
+
+        }
+
+        valueEventListener = object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                postList.clear()
+                adapter.clear()
+
+                for (postSnapshot in dataSnapshot.children) {
+                    val post = postSnapshot.getValue(Post::class.java)
+                    post?.let {
+                        postList.add(it)
+                    }
+                }
+
+                adapter.notifyDataSetChanged()
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                // Handle database error
+                // ...
+            }
+        }
+
     }
+
+    override fun onStart() {
+        super.onStart()
+        postsRef.addValueEventListener(valueEventListener)
+    }
+
+    override fun onStop() {
+        super.onStop()
+        postsRef.removeEventListener(valueEventListener)
+    }
+
+
+
+
 
     private fun addToList(bnimag:Int){
         banner.add(bnimag)

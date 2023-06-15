@@ -31,6 +31,7 @@ class CommunityDetail : AppCompatActivity() {
         val contentTextView = findViewById<TextView>(R.id.content)
         val dateTextView = findViewById<TextView>(R.id.date)
         val userNickname = findViewById<TextView>(R.id.userNickname)
+        val userimg = findViewById<ImageView>(R.id.userimg)
 
         val img = findViewById<ImageView>(R.id.img)
 
@@ -67,7 +68,28 @@ class CommunityDetail : AppCompatActivity() {
             if (nowUserEmail == email) {
                 delete.visibility = View.VISIBLE
             }
+
         }
+
+        // 프로필 이미지 출력
+        val usersRef = FirebaseDatabase.getInstance().reference.child("users")
+        usersRef.orderByChild("email").equalTo(email).addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                for (snapshot in dataSnapshot.children) {
+                    val profileimg = snapshot.child("profileimg").getValue(String::class.java)
+                    if (!profileimg.isNullOrEmpty()) {
+                        Glide.with(this@CommunityDetail)
+                            .load(profileimg)
+                            .into(userimg)
+                    }
+                }
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                // 프로필 이미지 로드 실패 시 처리할 로직을 작성하세요.
+            }
+        })
+
 
         // 게시물 삭제
         delete.setOnClickListener {
