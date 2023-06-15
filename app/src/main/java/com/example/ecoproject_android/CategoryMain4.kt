@@ -47,7 +47,7 @@ class CategoryMain4 : AppCompatActivity() {
     open fun getVal() {
         val dbHelper = DataBaseHelper(this)
         val db = dbHelper.readableDatabase
-        val cursor: Cursor = db.rawQuery("SELECT * FROM Images where name='치약' or name='규조토 매트' or name='두루마리 휴지' or name='브리타 정수기 필터' or name='수건' or name='총소 솔' or name='칫솔' or name='펌프형 용기' ", null)
+        val cursor: Cursor = db.rawQuery("SELECT * FROM Images where name='치약' or name='규조토 매트' or name='두루마리 휴지' or name='브리타 정수기 필터' or name='수건' or name='청소 솔' or name='칫솔' or name='펌프형 용기' ", null)
 
         while (cursor.moveToNext()) {
             val name= cursor.getString(0)
