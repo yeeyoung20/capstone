@@ -16,6 +16,8 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageException
+import com.google.firebase.storage.StorageReference
 import kotlin.collections.Map
 
 
@@ -43,6 +45,7 @@ class MyInfoChange : AppCompatActivity() {
         val userNickname = findViewById<TextView>(R.id.userNickname)
         val changeNickname = findViewById<EditText>(R.id.changeNickname)
         val changeimg = findViewById<ImageButton>(R.id.changeimg)
+        val imgdel = findViewById<Button>(R.id.imgdel)
 
         originalpwd = findViewById<EditText>(R.id.originalpwd)
         changepwd = findViewById<EditText>(R.id.changepwd)
@@ -119,6 +122,11 @@ class MyInfoChange : AppCompatActivity() {
             openGallery()
         }
 
+        // 프로필 이미지 삭제
+        imgdel.setOnClickListener{
+            deleteProfileImage()
+        }
+
         // 수정완료 누르면
         finishchange.setOnClickListener {
             val originalPassword = originalpwd.text.toString()
@@ -129,8 +137,6 @@ class MyInfoChange : AppCompatActivity() {
 
             if (originalPassword.isNotEmpty()) {
                 // 현재 비밀번호 확인
-                val user = Firebase.auth.currentUser
-
                 if (user != null) {
                     val credential = EmailAuthProvider.getCredential(user.email.toString(), originalPassword)
 
@@ -194,8 +200,6 @@ class MyInfoChange : AppCompatActivity() {
                             if (imageUri != null) {
                                 saveProfile()
                             }
-
-
 
                         }
                             .addOnFailureListener { error ->
@@ -406,16 +410,19 @@ class MyInfoChange : AppCompatActivity() {
             imageUri = data.data
 
             // 선택한 이미지를 ImageView에 설정
-            val userimg = findViewById<ImageView>(R.id.userimg)
-            userimg.setImageURI(imageUri)
+            if (imageUri != null) {
+                val userimg = findViewById<ImageView>(R.id.userimg)
+                userimg.setImageURI(imageUri)
+            }
+
         }
     }
 
     // 이미지 데이터베이스 삽입
     private fun saveProfile() {
         val userId = FirebaseAuth.getInstance().currentUser?.uid
-        if (userId != null) {
-            val storageRef = FirebaseStorage.getInstance().reference.child("profile_images").child(userId)
+            if (userId != null) {
+                val storageRef = FirebaseStorage.getInstance().reference.child("profile_images").child(userId)
 
             // 이미지를 스토리지에 업로드
             storageRef.putFile(imageUri!!)
@@ -425,13 +432,13 @@ class MyInfoChange : AppCompatActivity() {
                         .addOnSuccessListener { downloadUri ->
                             val imageUrl = downloadUri.toString()
 
-                            // 유저 데이터베이스에 이미지 URL 저장
-                            val user = Firebase.auth.currentUser
-                            val userEmail = findViewById<TextView>(R.id.userEmail)
+                                // 유저 데이터베이스에 이미지 URL 저장
+                                val user = Firebase.auth.currentUser
+                                val userEmail = findViewById<TextView>(R.id.userEmail)
 
-                            if (user != null) {
-                                // Firebase Realtime Database의 레퍼런스를 가져옵니다.
-                                val database: FirebaseDatabase = FirebaseDatabase.getInstance()
+                                if (user != null) {
+                                    // Firebase Realtime Database의 레퍼런스를 가져옵니다.
+                                    val database: FirebaseDatabase = FirebaseDatabase.getInstance()
                                 val usersRef: DatabaseReference = database.getReference("users")
 
                                 userEmail.text = user.email
@@ -472,7 +479,7 @@ class MyInfoChange : AppCompatActivity() {
                                             // 조회 취소 또는 실패 시 동작할 코드 작성
                                         }
                                     })
-                                        }
+                                }
                         }
                         .addOnFailureListener { exception ->
                             // 이미지 다운로드 URL 가져오기 실패
@@ -484,6 +491,74 @@ class MyInfoChange : AppCompatActivity() {
                 }
         }
     }
+
+
+    // 프로필 사진 삭제
+    private fun deleteProfileImage() {
+        val user = FirebaseAuth.getInstance().currentUser
+        val userEmail = findViewById<TextView>(R.id.userEmail)
+
+        if (user != null) {
+
+            val database = FirebaseDatabase.getInstance()
+            val usersRef = database.getReference("users")
+            val storage = FirebaseStorage.getInstance()
+            val storageRef = storage.reference
+
+            val userId = FirebaseAuth.getInstance().currentUser?.uid
+
+            userEmail.text = user.email
+
+            usersRef.orderByChild("email").equalTo(user.email)
+                .addListenerForSingleValueEvent(object : ValueEventListener {
+                    override fun onDataChange(dataSnapshot: DataSnapshot) {
+                        if (dataSnapshot.exists()) {
+                            for (userSnapshot in dataSnapshot.children) {
+                                val userKey = userSnapshot.key
+                                val userData = userSnapshot.value as HashMap<String, Any>?
+
+                                // 프로필 이미지 데이터 삭제
+                                userData?.let {
+                                    it.remove("profileimg")
+
+                                    // 데이터 업데이트
+                                    usersRef.child(userKey!!).setValue(it)
+                                        .addOnSuccessListener {
+                                            // 데이터 삭제 성공 시 동작할 코드 작성
+                                            Toast.makeText(this@MyInfoChange, "프로필 이미지 삭제 성공.", Toast.LENGTH_SHORT).show()
+
+                                            // 스토리지 이미지 삭제
+                                            val profileImgRef: StorageReference = storageRef.child("profile_images/$userId")
+                                            profileImgRef.delete()
+                                                .addOnSuccessListener {
+                                                    // 스토리지 이미지 삭제 성공 시 동작할 코드 작성
+                                                    Toast.makeText(this@MyInfoChange, "스토리지 이미지 삭제 성공.", Toast.LENGTH_SHORT).show()
+                                                }
+                                                .addOnFailureListener { exception ->
+                                                    // 스토리지 이미지 삭제 실패 시 동작할 코드 작성
+                                                    val errorCode = (exception as StorageException).errorCode
+                                                    Toast.makeText(this@MyInfoChange, "스토리지 이미지 삭제 실패. 오류 코드: $errorCode", Toast.LENGTH_SHORT).show()
+                                                }
+                                        }
+                                        .addOnFailureListener { e ->
+                                            // 데이터 삭제 실패 시 동작할 코드 작성
+                                            Toast.makeText(this@MyInfoChange, "프로필 이미지 삭제 실패.", Toast.LENGTH_SHORT).show()
+                                        }
+                                }
+                            }
+                        } else {
+                            // 사용자를 찾지 못한 경우
+                            Toast.makeText(this@MyInfoChange, "사용자를 찾지 못했습니다.", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+
+                    override fun onCancelled(databaseError: DatabaseError) {
+                        // 조회 취소 또는 실패 시 동작할 코드 작성
+                    }
+                })
+        }
+    }
+
 
 
 }
