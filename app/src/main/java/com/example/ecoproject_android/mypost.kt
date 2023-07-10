@@ -5,12 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
-import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
-import kotlin.collections.Map
 
 class mypost : AppCompatActivity() {
 
@@ -52,46 +50,8 @@ class mypost : AppCompatActivity() {
         }
 
 
-        val user = Firebase.auth.currentUser
-
-        if (user != null) {
-
-            // Firebase Realtime Database의 레퍼런스를 가져옵니다.
-            val database: FirebaseDatabase = FirebaseDatabase.getInstance()
-            val usersRef: DatabaseReference = database.getReference("users")
-
-            // 데이터를 가져오기 위해 해당 사용자의 데이터를 조회합니다.
-            usersRef.orderByChild("email").equalTo(user.email)
-                .addListenerForSingleValueEvent(object : ValueEventListener {
-                    override fun onDataChange(dataSnapshot: DataSnapshot) {
-                        // 해당 사용자의 데이터가 존재하는 경우
-                        if (dataSnapshot.exists()) {
-                            for (snapshot in dataSnapshot.children) {
-                                val userMap: Map<String, String> =
-                                    snapshot.getValue() as Map<String, String>
-
-                                // 이미지 파일이 있으면 가져와서 출력
-                                val userprofileimg = userMap["profileimg"]
-                                if (userprofileimg != null) {
-                                    val userimg = findViewById<ImageView>(R.id.userimg)
-                                    Glide.with(this@mypost)
-                                        .load(userprofileimg)
-                                        .into(userimg)
-                                }
-
-                            }
-                        }
-                    }
-
-                    override fun onCancelled(databaseError: DatabaseError) {
-                        // 조회 중 에러가 발생한 경우
-                        // 에러 처리 로직을 추가하세요.
-                    }
-                })
-        }
-
-
         listView.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
+            val user = Firebase.auth.currentUser
 
             if (user != null) {
                 val post = postList[position] // 선택된 게시물 객체

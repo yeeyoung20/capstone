@@ -100,6 +100,7 @@ class SignIn : AppCompatActivity() {
                             //
                         }
                     })
+                    finish()
                 }
                 override fun onError(errorCode: Int, message: String) {
                     val naverAccessToken = NaverIdLoginSDK.getAccessToken()

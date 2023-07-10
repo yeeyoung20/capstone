@@ -2,7 +2,11 @@ package com.example.ecoproject_android
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.*
+import android.widget.ArrayAdapter
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Spinner
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -14,6 +18,7 @@ class SignUp : AppCompatActivity() {
 
     private lateinit var auth : FirebaseAuth
     private lateinit var firebaseDatabase: FirebaseDatabase
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -68,15 +73,16 @@ class SignUp : AppCompatActivity() {
                                             val intent = Intent(this@SignUp, SignIn::class.java)
                                             startActivity(intent)
 
+                                            val userUid = auth.currentUser!!.uid
                                             // Firebase Realtime Database에 사용자 데이터 삽입
-                                            val databaseReference = firebaseDatabase.getReference("users").push()
+                                            val databaseReference = firebaseDatabase.getReference("users").child(userUid)
 
                                             val user = hashMapOf<String, String>()
+                                            user["userUid"]=userUid
                                             user["email"] = email
                                             user["userPwd"] = password
                                             user["userNickname"] = userNickname
                                             user["zone"] = zone
-
                                             databaseReference.setValue(user)
                                         } else {
                                             Toast.makeText(this@SignUp, "이미 존재하는 계정이거나, 회원가입에 실패했습니다.", Toast.LENGTH_SHORT).show()

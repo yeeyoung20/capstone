@@ -23,6 +23,10 @@
             android:name=".activity_list_item_layout"
             android:exported="false" />
         <activity
+            android:name=".ChatActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+        <activity
             android:name=".list_item_layout"
             android:exported="false" />
 
@@ -122,6 +126,7 @@
                     android:scheme="kakao9d721d8f1977f66ad631a660ba63619b" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

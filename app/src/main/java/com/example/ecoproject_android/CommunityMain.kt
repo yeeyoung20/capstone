@@ -1,19 +1,15 @@
 package com.example.ecoproject_android
 
-import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.widget.AdapterView
-import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ListView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.tasks.Tasks
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
-import com.google.firebase.ktx.Firebase
-import java.net.URL
 
 
 class CommunityMain : AppCompatActivity() {
@@ -40,6 +36,8 @@ class CommunityMain : AppCompatActivity() {
 
         database = FirebaseDatabase.getInstance()
         postsRef = database.getReference("posts")
+
+
 
         val user = FirebaseAuth.getInstance().currentUser
 
@@ -71,6 +69,7 @@ class CommunityMain : AppCompatActivity() {
                 val selectedItem = adapter.getItem(position)
                 val post = postList[position] // 선택된 게시물 객체
 
+
                 // CommunityDetail 액티비티로 전환하고 선택된 게시물의 정보를 전달
                 val intent = Intent(this, CommunityDetail::class.java)
                 intent.putExtra("title", post.title)
@@ -81,6 +80,7 @@ class CommunityMain : AppCompatActivity() {
                 intent.putExtra("imageUrl", post.imageUrl)
                 intent.putExtra("postId", post.postId)
                 intent.putExtra("email", post.email)
+                intent.putExtra("userUid", post.userUid)
                 startActivity(intent)
             }else{
                 builder.setMessage("로그인 후 이용해주세요!")
@@ -129,15 +129,9 @@ class CommunityMain : AppCompatActivity() {
         super.onStop()
         postsRef.removeEventListener(valueEventListener)
     }
+
+
+
 }
 
-data class Post(
-    val email: String? = null,
-    val userNickname: String? = null,
-    val title: String? = null,
-    val change: String? = null,
-    val content: String? = null,
-    val date: String? = null,
-    val postId: String? = null,
-    val imageUrl: String? = null // imageUrl 필드 추가
-)
+

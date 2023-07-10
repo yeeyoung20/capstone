@@ -2,6 +2,7 @@ package com.example.ecoproject_android
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
@@ -42,6 +43,8 @@ class CommunityDetail : AppCompatActivity() {
         val date = intent.getStringExtra("date")
         val imageUrl = intent.getStringExtra("imageUrl")
         val email = intent.getStringExtra("email")
+        val userUid = intent.getStringExtra("userUid")
+
 
         // 추출한 데이터를 TextView에 설정
         titleTextView.text = title
@@ -67,6 +70,7 @@ class CommunityDetail : AppCompatActivity() {
 
             if (nowUserEmail == email) {
                 delete.visibility = View.VISIBLE
+                chatting.visibility= View.INVISIBLE
             }
 
         }
@@ -143,7 +147,8 @@ class CommunityDetail : AppCompatActivity() {
         }
 
         chatting.setOnClickListener {
-            val intent = Intent(this, ChattingMain::class.java)
+            val intent = Intent(this, ChatActivity::class.java)
+            intent.putExtra("userUid",userUid)
             startActivity(intent)
         }
     }

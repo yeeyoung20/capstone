@@ -105,8 +105,10 @@ class CommunityWrite : AppCompatActivity() {
                     val postRef = database.getReference("posts").push()
                     val postId = postRef.key
 
+
                     if (postId != null) {
                         val post = mapOf(
+                            "userUid" to user.uid,
                             "email" to email,
                             "userNickname" to userNickname.text.toString(),
                             "title" to a,
