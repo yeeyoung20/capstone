@@ -9,12 +9,15 @@
         android:id="@+id/conversioncard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="8dp">
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             app:cardCornerRadius="100dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +43,7 @@
             android:id="@+id/userName"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="16dp"
             android:fontFamily="@font/nixgonfonts_m__2"
             android:text="대화 상대 이름"
             android:textColor="@color/black"
@@ -54,7 +57,7 @@
             android:id="@+id/userMessage"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="16dp"
             android:fontFamily="@font/nixgonfonts_l__2"
             android:text="대화 내용"
             android:textColor="@color/black"
@@ -63,8 +66,28 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/cardView"
             app:layout_constraintTop_toBottomOf="@id/viewSupporter" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <View
+            android:id="@+id/checkmessage"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/rectangle"
+            android:elevation="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="#A8C8A8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="8dp"
+        />
 
 
 </com.google.android.material.card.MaterialCardView>

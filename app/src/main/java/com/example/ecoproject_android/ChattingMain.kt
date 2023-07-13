@@ -5,6 +5,7 @@ package com.example.ecoproject_android
 
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.AdapterView
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -18,6 +19,9 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import java.util.Date
+import java.util.Locale
+import java.text.SimpleDateFormat
+
 
 
 class ChattingMain : AppCompatActivity() {
@@ -107,81 +111,155 @@ class ChattingMain : AppCompatActivity() {
 //
 //    }
 
-
-//    private val valueEventListener = object : ValueEventListener {
+//    private val valueEventListener = object : ChildEventListener {
+//        override fun onChildAdded(dataSnapshot: DataSnapshot, previousChildName: String?) {
 //
+//            val senderId = dataSnapshot.child("senderId").getValue(String::class.java)
+//            val receiverId = dataSnapshot.child("receiverId").getValue(String::class.java)
+//            val userId = FirebaseAuth.getInstance().currentUser!!.uid
 //
+//            if (userId == senderId) {
+//                val conversionName =
+//                    dataSnapshot.child("receiverNickname").getValue(String::class.java)
+//                val conversionId = dataSnapshot.child("receiverId").getValue(String::class.java)
+//                val message = dataSnapshot.child("message").getValue(String::class.java)
+//                val date = dataSnapshot.child("date").getValue(String::class.java)
+//                val chat = Chat(
+//                    senderId = senderId,
+//                    receiverId = receiverId,
+//                    message = message,
+//                    date = date,
+//                    conversionId = conversionId,
+//                    nickname = conversionName
+//                )
+//                Log.d("정렬",conversations.toString())
+//                conversations.add(chat)
+//                conversations.sortByDescending { it.date }
+//                conversationsAdapter.notifyDataSetChanged()
+//                chatRectclerView.visibility = View.VISIBLE
+//                chatRectclerView.smoothScrollToPosition(0)
+//                Log.d("정렬",conversations.toString())
+//
+//            } else {
+//                val conversionName =
+//                    dataSnapshot.child("senderNickname").getValue(String::class.java)
+//                val conversionId = dataSnapshot.child("senderId").getValue(String::class.java)
+//                val message = dataSnapshot.child("message").getValue(String::class.java)
+//                val date = dataSnapshot.child("date").getValue(String::class.java)
+//                val chat = Chat(
+//                    senderId = senderId,
+//                    receiverId = receiverId,
+//                    message = message,
+//                    date = date,
+//                    conversionId = conversionId,
+//                    nickname = conversionName
+//                )
+//                Log.d("정렬",conversations.toString())
+//                conversations.add(chat)
+//                conversations.sortByDescending { it.date }
+//                conversationsAdapter.notifyDataSetChanged()
+//                chatRectclerView.smoothScrollToPosition(0)
+//                chatRectclerView.visibility = View.VISIBLE
+//                Log.d("정렬",conversations.toString())
+//            }
+//            Log.d("정렬",conversations.toString())
+//            conversations.sortByDescending { it.date }
+//            conversationsAdapter.notifyDataSetChanged()
+//            chatRectclerView.smoothScrollToPosition(0)
+//            chatRectclerView.visibility = View.VISIBLE
+//            Log.d("정렬",conversations.toString())
+//
+//        }
+//
+//        override fun onChildChanged(dataSnapshot: DataSnapshot, previousChildName: String?) {
+//            val senderId = dataSnapshot.child("senderId").getValue(String::class.java)
+//            val receiverId = dataSnapshot.child("receiverId").getValue(String::class.java)
+//
+//            for (i in conversations.indices) {
+//                if (conversations[i].senderId == senderId && conversations[i].receiverId == receiverId) {
+//                    conversations[i].message = dataSnapshot.child("message").getValue(String::class.java)
+//                    conversations[i].date = dataSnapshot.child("date").getValue(String::class.java)
+//                    break
+//                }
+//            }
+//            conversations.sortByDescending { it.date }
+//            conversationsAdapter.notifyDataSetChanged()
+//            chatRectclerView.smoothScrollToPosition(0)
+//            chatRectclerView.visibility = View.VISIBLE
+//        }
+//
+//        override fun onChildRemoved(snapshot: DataSnapshot) {
+//            TODO("Not yet implemented")
+//        }
+//
+//        override fun onChildMoved(snapshot: DataSnapshot, previousChildName: String?) {
+//            TODO("Not yet implemented")
+//        }
+//
+//        override fun onCancelled(error: DatabaseError) {
+//            TODO("Not yet implemented")
+//        }
 //    }
 
     private val valueEventListener = object : ChildEventListener {
         override fun onChildAdded(dataSnapshot: DataSnapshot, previousChildName: String?) {
-            val senderId = dataSnapshot.child("senderId").getValue(String::class.java)
-            val receiverId = dataSnapshot.child("receiverId").getValue(String::class.java)
             val userId = FirebaseAuth.getInstance().currentUser!!.uid
-
-            if (userId == senderId) {
-                val conversionName = dataSnapshot.child("receiverNickname").getValue(String::class.java)
-                val conversionId = dataSnapshot.child("receiverId").getValue(String::class.java)
-                val message = dataSnapshot.child("message").getValue(String::class.java)
-                val date = dataSnapshot.child("date").getValue(String::class.java)
-                val chat = Chat(
-                    senderId = senderId,
-                    receiverId = receiverId,
-                    message = message,
-                    date = date,
-                    conversionId = conversionId,
-                    nickname = conversionName
-                )
-                conversations.add(chat)
-                conversations.sortBy { it.date }
-                conversationsAdapter.notifyDataSetChanged()
-            } else {
-                val conversionName = dataSnapshot.child("senderNickname").getValue(String::class.java)
-                val conversionId = dataSnapshot.child("senderId").getValue(String::class.java)
-                val message = dataSnapshot.child("message").getValue(String::class.java)
-                val date = dataSnapshot.child("date").getValue(String::class.java)
-                val chat = Chat(
-                    senderId = senderId,
-                    receiverId = receiverId,
-                    message = message,
-                    date = date,
-                    conversionId = conversionId,
-                    nickname = conversionName
-                )
-                conversations.add(chat)
-                Log.d("wwwwwwwwwwwwwwww",conversations.toString())
-                conversations.sortBy { it.date }
-                conversationsAdapter.notifyDataSetChanged()
-                chatRectclerView.smoothScrollToPosition(0)
+            val chat = dataSnapshot.getValue(Chat::class.java)
+            if (userId.equals(chat!!.senderId) ) {
+                chat.conversionId = chat.receiverId
+                chat.nickname = chat.receiverNickname
+            }else{
+                chat.conversionId = chat.senderId
+                chat.nickname = chat.senderNickname
             }
+            conversations.add(chat)
+            conversations.sortByDescending { it.date }
+            conversationsAdapter.notifyDataSetChanged()
+            chatRectclerView.smoothScrollToPosition(0)
+            chatRectclerView.visibility = View.VISIBLE
         }
 
         override fun onChildChanged(dataSnapshot: DataSnapshot, previousChildName: String?) {
-            // 데이터가 변경될 때 호출됨, 여기에 필요한 기능을 추가하세요.
+            for (i in conversations.indices){
+
+                val senderId = dataSnapshot.child("senderId").getValue(String::class.java)
+                val receiverId = dataSnapshot.child("receiverId").getValue(String::class.java)
+                if(conversations[i].senderId.equals(senderId) && conversations[i].receiverId.equals(receiverId)) {
+                    conversations[i].message=dataSnapshot.child("message").getValue(String::class.java)
+                    conversations[i].date=dataSnapshot.child("date").getValue(String::class.java)
+                    break
+               }
+
+            }
+            conversations.sortByDescending { it.date }
+            conversationsAdapter.notifyDataSetChanged()
+            chatRectclerView.smoothScrollToPosition(0)
+            chatRectclerView.visibility = View.VISIBLE
         }
 
-        override fun onChildRemoved(dataSnapshot: DataSnapshot) {
-            // 데이터가 제거될 때 호출됨
+        override fun onChildRemoved(snapshot: DataSnapshot) {
+            TODO("Not yet implemented")
         }
 
-        override fun onChildMoved(dataSnapshot: DataSnapshot, previousChildName: String?) {
-            // 데이터가 이동될 때 호출됨
+        override fun onChildMoved(snapshot: DataSnapshot, previousChildName: String?) {
+            TODO("Not yet implemented")
         }
 
-        override fun onCancelled(databaseError: DatabaseError) {
-            // 작업이 취소될 때 호출됨
+        override fun onCancelled(error: DatabaseError) {
+            TODO("Not yet implemented")
         }
+
     }
-    private fun listenConversations() {
-        val conversationsRef = database.getReference("conversations")
-        val userId = FirebaseAuth.getInstance().currentUser!!.uid
-        conversationsRef.orderByChild("senderId").equalTo(userId)
-            .addChildEventListener(valueEventListener)
-        conversationsRef.orderByChild("receiverId").equalTo(userId)
-            .addChildEventListener(valueEventListener)
-        Log.d("Dwwwww",chatRectclerView.toString())
-        Log.d("Dwwwww",conversationsRef.toString())
-    }
+        private fun listenConversations() {
+            val conversationsRef = database.getReference("conversations")
+            val userId = FirebaseAuth.getInstance().currentUser!!.uid
+            conversationsRef.orderByChild("senderId").equalTo(userId)
+                .addChildEventListener(valueEventListener)
+            conversationsRef.orderByChild("receiverId").equalTo(userId)
+                .addChildEventListener(valueEventListener)
+
+        }
+
 
 }
 

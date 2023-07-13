@@ -22,20 +22,13 @@ data class User(
 )
 
 data class Chat(
-    val senderId: String? = null,
-    val receiverId: String? = null,
-    val message : String?=null,
-    val date : String?=null,
-    val receiverNickname: String? = null,
-    val senderNickname: String? = null,
-    val conversionId : String ?=null,
-    val nickname: String?=null
-)
-
-data class Conversations(
-    val senderId: String? = null,
-    val receiverId: String? = null,
+    var senderId: String? = null,
+    var receiverId: String? = null,
     var message : String?=null,
     var date : String?=null,
-    val nickname: String?=null
+    var receiverNickname: String? = null,
+    var senderNickname: String? = null,
+    var conversionId : String ?=null,
+    var nickname: String?=null
 )
+
