@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.*
@@ -13,7 +15,7 @@ import com.google.firebase.ktx.Firebase
 class mypost : AppCompatActivity() {
 
     private lateinit var adapter: PostAdapter
-    private lateinit var listView: ListView
+    private lateinit var listView: RecyclerView
     private lateinit var database: FirebaseDatabase
     private lateinit var postsRef: DatabaseReference
     private lateinit var valueEventListener: ValueEventListener
@@ -33,8 +35,8 @@ class mypost : AppCompatActivity() {
         val builder = AlertDialog.Builder(this)
         listView = findViewById(R.id.listview)
 
-        adapter = PostAdapter(this, R.layout.activity_list_item_layout, postList)
-        listView.adapter = adapter
+        //adapter = PostAdapter(this, R.layout.activity_list_item_layout, postList)
+
 
 
         database = FirebaseDatabase.getInstance()
@@ -50,12 +52,10 @@ class mypost : AppCompatActivity() {
         }
 
 
-        listView.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
+        adapter = PostAdapter(this, R.layout.activity_list_item_layout, postList) { post ->
             val user = Firebase.auth.currentUser
 
             if (user != null) {
-                val post = postList[position] // 선택된 게시물 객체
-
                 // 현재 접속한 사용자의 이메일과 게시물 작성자의 이메일을 비교하여 동일한 경우에만 게시물 표시
                 if (user.email == post.email) {
                     // CommunityDetail 액티비티로 전환하고 선택된 게시물의 정보를 전달
@@ -85,13 +85,15 @@ class mypost : AppCompatActivity() {
                     .create()
                     .show()
             }
-
         }
+        listView.adapter = adapter
+        listView.layoutManager = LinearLayoutManager(this) // Add this line
+
 
         valueEventListener = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 postList.clear()
-                adapter.clear()
+                //adapter.clear()
 
                 val user = Firebase.auth.currentUser
                 if (user != null) {

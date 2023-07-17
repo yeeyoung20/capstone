@@ -9,7 +9,6 @@ import android.widget.Button
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.naver.maps.geometry.LatLng
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -18,8 +17,8 @@ class search_page : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var searvhView: SearchView
     private lateinit var back: Button
-    private  var mList= ArrayList<RecyclerView_Item_Data>()
-    private lateinit var adapter: RecyclerView_Item_Adapter
+    private  var mList= ArrayList<search_Item_Data>()
+    private lateinit var adapter: search_Adapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search_page)
@@ -37,7 +36,7 @@ class search_page : AppCompatActivity() {
 
         getVal()//검색 아이템 추가
 
-        adapter = RecyclerView_Item_Adapter(mList)
+        adapter = search_Adapter(mList)
         recyclerView.adapter=adapter
 
         //searchView 메소드
@@ -69,7 +68,7 @@ class search_page : AppCompatActivity() {
     private fun filterList(query : String?){
         if(query != null){
             recyclerView.visibility = View.VISIBLE
-            val filteredList = ArrayList<RecyclerView_Item_Data>()
+            val filteredList = ArrayList<search_Item_Data>()
             for (i in mList){
                 if(i.title.toLowerCase(Locale.ROOT).contains(query)){
                     filteredList.add(i)
@@ -95,7 +94,7 @@ class search_page : AppCompatActivity() {
             val name= cursor.getString(0)
             val byteArray = cursor.getBlob(1)
             if (byteArray != null) {
-                mList.add(RecyclerView_Item_Data(name, byteArray))
+                mList.add(search_Item_Data(name, byteArray))
             }
         }
 

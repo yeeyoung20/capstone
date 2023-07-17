@@ -1,28 +1,21 @@
 package com.example.ecoproject_android
 
 import ViewPagerAdapter
-import android.content.Context
 import android.content.Intent
 import android.database.Cursor
 import android.os.Bundle
-import android.util.AttributeSet
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
-import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
-import com.google.firebase.storage.FirebaseStorage
 import com.naver.maps.geometry.LatLng
 import com.naver.maps.map.CameraPosition
 import com.naver.maps.map.CameraUpdate
@@ -47,7 +40,7 @@ class MainActivity : AppCompatActivity() , OnMapReadyCallback{
     private var activeMarkers: Vector<Marker>? = null
 
     private lateinit var adapter: PostAdapter
-    private lateinit var listView: ListView
+    private lateinit var listView: RecyclerView
     private lateinit var database: FirebaseDatabase
     private lateinit var postsRef: DatabaseReference
     private lateinit var valueEventListener: ValueEventListener
@@ -98,47 +91,58 @@ class MainActivity : AppCompatActivity() , OnMapReadyCallback{
         }
 
         main1_1.setOnClickListener{
-            val intent= Intent(this, CategoryMain1::class.java)
+            val intent= Intent(this, CategoryMaindetail::class.java)
+            intent.putExtra("categoryname", "Furniture")
             startActivity(intent)
         }
         main1_2.setOnClickListener{
-            val intent= Intent(this, CategoryMain2::class.java)
+            val intent= Intent(this, CategoryMaindetail::class.java)
+            intent.putExtra("categoryname", "HomeAppliances")
             startActivity(intent)
         }
         main1_3.setOnClickListener{
-            val intent= Intent(this, CategoryMain3::class.java)
+            val intent= Intent(this, CategoryMaindetail::class.java)
+            intent.putExtra("categoryname", "DailySupplies")
             startActivity(intent)
         }
         main1_4.setOnClickListener{
-            val intent= Intent(this, CategoryMain4::class.java)
+            val intent= Intent(this, CategoryMaindetail::class.java)
+            intent.putExtra("categoryname", "BathroomSupplies")
             startActivity(intent)
         }
         main1_5.setOnClickListener{
-            val intent= Intent(this, CategoryMain5::class.java)
+            val intent= Intent(this, CategoryMaindetail::class.java)
+            intent.putExtra("categoryname", "Phrase")
             startActivity(intent)
         }
         main1_6.setOnClickListener{
-            val intent= Intent(this, CategoryMain6::class.java)
+            val intent= Intent(this, CategoryMaindetail::class.java)
+            intent.putExtra("categoryname", "Cosmetics")
             startActivity(intent)
         }
         main1_7.setOnClickListener{
-            val intent= Intent(this, CategoryMain7::class.java)
+            val intent= Intent(this, CategoryMaindetail::class.java)
+            intent.putExtra("categoryname", "Kichenware")
             startActivity(intent)
         }
         main1_8.setOnClickListener{
-            val intent= Intent(this, CategoryMain8::class.java)
+            val intent= Intent(this, CategoryMaindetail::class.java)
+            intent.putExtra("categoryname", "Food")
             startActivity(intent)
         }
         main1_9.setOnClickListener{
-            val intent= Intent(this, CategoryMain9::class.java)
+            val intent= Intent(this, CategoryMaindetail::class.java)
+            intent.putExtra("categoryname", "Packaging")
             startActivity(intent)
         }
         main1_10.setOnClickListener{
-            val intent= Intent(this, CategoryMain10::class.java)
+            val intent= Intent(this, CategoryMaindetail::class.java)
+            intent.putExtra("categoryname", "Fashion")
             startActivity(intent)
         }
         main1_11.setOnClickListener{
-            val intent= Intent(this, CategoryMain11::class.java)
+            val intent= Intent(this, CategoryMaindetail::class.java)
+            intent.putExtra("categoryname", "Other")
             startActivity(intent)
         }
         main2_1.setOnClickListener {
@@ -167,8 +171,8 @@ class MainActivity : AppCompatActivity() , OnMapReadyCallback{
         postList = mutableListOf()
         listView = findViewById(R.id.listview)
 
-        adapter = PostAdapter(this, R.layout.activity_list_item_layout, postList)
-        listView.adapter = adapter
+
+
 
         database = FirebaseDatabase.getInstance()
         postsRef = database.getReference("posts")
@@ -176,10 +180,8 @@ class MainActivity : AppCompatActivity() , OnMapReadyCallback{
 
 
         val user = FirebaseAuth.getInstance().currentUser
-        listView.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
-            if(user!=null){
-                val post = postList[position] // 선택된 게시물 객체
-
+        adapter = PostAdapter(this, R.layout.activity_main_list_item_layout, postList) { post ->
+            if (user != null) {
                 // CommunityDetail 액티비티로 전환하고 선택된 게시물의 정보를 전달
                 val intent = Intent(this, CommunityDetail::class.java)
                 intent.putExtra("title", post.title)
@@ -191,7 +193,7 @@ class MainActivity : AppCompatActivity() , OnMapReadyCallback{
                 intent.putExtra("postId", post.postId)
                 intent.putExtra("email", post.email)
                 startActivity(intent)
-            }else{
+            } else {
                 builder.setMessage("로그인 후 이용해주세요!")
                     .setPositiveButton("확인") { dialog, id ->
                         val intent = Intent(this, SignIn::class.java)
@@ -203,13 +205,17 @@ class MainActivity : AppCompatActivity() , OnMapReadyCallback{
                     .create()
                     .show()
             }
-
         }
+
+        listView.adapter = adapter
+       // listView.layoutManager = LinearLayoutManager(this) // Add this line
+        listView.setLayoutManager(LinearLayoutManager(this, RecyclerView.HORIZONTAL,false)) // 가로
+
 
         valueEventListener = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 postList.clear()
-                adapter.clear()
+               // adapter.clear()
 
                 for (postSnapshot in dataSnapshot.children) {
                     val post = postSnapshot.getValue(Post::class.java)

@@ -82,7 +82,7 @@
                         android:background="@drawable/more_community_bg"
                         android:orientation="vertical">
 
-                        <ListView
+                        <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/listview"
                             android:layout_weight="1"
                             android:layout_width="match_parent"

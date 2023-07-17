@@ -14,6 +14,7 @@ class ChattingMainAdapter (private val context : Context, private  val userMessa
         var userMessage : TextView = view.findViewById(R.id.userMessage)
         var username : TextView = view.findViewById(R.id.userName)
         var conversioncard : ConstraintLayout = view.findViewById(R.id.conversioncard)
+        var checkmessage : View = view.findViewById(R.id.checkmessage)
     }
 
 
@@ -31,9 +32,12 @@ class ChattingMainAdapter (private val context : Context, private  val userMessa
         val userMessageList = userMessageList[position]
         holder.userMessage.setText(userMessageList.message)
         holder.username.setText(userMessageList.nickname)
+        holder.checkmessage.visibility = if (userMessageList.isChecked) View.GONE else View.VISIBLE
         holder.conversioncard.setOnClickListener {
             val intent = Intent(context,ChatActivity::class.java)
             intent.putExtra("userUid",userMessageList.conversionId)
+            holder.checkmessage.visibility=View.GONE
+            userMessageList.isChecked = true
             context.startActivity(intent)
         }
     }
