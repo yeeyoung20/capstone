@@ -38,7 +38,6 @@ class mypost : AppCompatActivity() {
         //adapter = PostAdapter(this, R.layout.activity_list_item_layout, postList)
 
 
-
         database = FirebaseDatabase.getInstance()
         postsRef = database.getReference("posts")
 
