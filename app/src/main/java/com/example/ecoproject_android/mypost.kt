@@ -122,10 +122,6 @@ class mypost : AppCompatActivity() {
         myposttab.setContent(R.id.mypost)
         tabHost.addTab(myposttab)
 
-        val mylikeposttab = tabHost.newTabSpec("myposttab")
-        mylikeposttab.setIndicator("내가 쓴 글")
-        mylikeposttab.setContent(R.id.mylike)
-        tabHost.addTab(mylikeposttab)
     }
     override fun onStart() {
         super.onStart()
