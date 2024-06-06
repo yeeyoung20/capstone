@@ -11,7 +11,6 @@ import android.widget.Toast
 import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
-import com.example.ecoproject_android.databinding.ActivitySignInBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
@@ -116,14 +115,16 @@ class SignIn : AppCompatActivity() {
                 getString(R.string.naver_client_secret),
                 "앱 이름"
             )
+            NaverIdLoginSDK.initialize(this@SignIn,getString(R.string.naver_client_id),getString(R.string.naver_client_secret),"EcoProject");
             NaverIdLoginSDK.authenticate(this@SignIn, oAuthLoginCallback)
+
+
         }//네이버 로그인
 
         signup.setOnClickListener {
             val intent = Intent(this, SignUp::class.java)
             startActivity(intent)
         }
-
 
         //카카오 로그인
         val callback: (OAuthToken?, Throwable?) -> Unit = { token, error ->
@@ -163,6 +164,7 @@ class SignIn : AppCompatActivity() {
                 finish()
             }
         }
+
         kakaologin.setOnClickListener {
             if (UserApiClient.instance.isKakaoTalkLoginAvailable(this)) {
                 UserApiClient.instance.loginWithKakaoTalk(this, callback = callback)
